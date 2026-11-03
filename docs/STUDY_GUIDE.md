@@ -238,3 +238,20 @@ some for turns. It's a rough guess; the Directions button opens Google Maps for 
 The grey box on the Me tab is only an example, not your data. It used to show things like "City, FL" and "CompTIA Security+", which only fit one person. Now it uses placeholders like "City, State" and "Mon YYYY", so any new user can copy the shape and fill in their own facts.
 ELI5: it's like a blank form at the doctor's office. The labels (NAME, JOB) stay the same for everyone; only the answers change.
 Code: just text inside the `<pre class="small fmt">` tag in `web/index.html`. Nothing in the logic changed.
+
+
+## Chapter 18: More job sites, job summaries, red flags with "why" (v0.7.0)
+**New sources.** `remotive()`, `jobicy()` and `themuse()` in `feed/fetch_jobs.py`. Each one asks its site ONCE per day, then `match_career()` sorts every job into a career by its title (for example "help desk" goes to Help desk / IT). Fewer requests means we follow each site's rules; Remotive says at most 4 a day.
+ELI5: instead of asking the store 17 times "got any help desk jobs? any support jobs?", we grab the whole list once and sort it at home.
+
+**Job summary.** `about(html)` cuts the description into bullets and sentences (`pieces()`), then sorts each one using word patterns:
+- words like "required", "must", "years of", "certification" go in **What they want**
+- "preferred", "a plus", "nice to have" go in **Nice to have**
+- "you will", "troubleshoot", "respond" go in **What you'd do**
+It only copies sentences from the posting and never writes new ones, so it can't make anything up.
+
+**Red flags with why.** In `config/feed.json`, each red flag is now `{"label": ..., "why": ...}`. `flag_info()` returns a list of `{label, why, level}`: "red" means a scam sign (2 or more and the job is dropped), "check" means worth a look. In the app, `flagBlock()` draws a `<details>` box. That's a built-in HTML tap-to-open box, so no extra code is needed for the dropdown.
+
+**When things break**
+- A site changes its API, so its jobs vanish. The robot prints `! Remotive failed: ...` in the GitHub Actions log and just skips that site. Turn it off in `sources` until it's fixed.
+- A summary looks empty. Some postings (Adzuna's especially) only include a short snippet. Tap **Apply on site** to read the full description.

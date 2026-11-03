@@ -137,7 +137,26 @@ function sourceLine(j) {
   const u = safeUrl(j.sourceUrl);
   if (j.source === "Adzuna") return `<div class="source">${u ? `<a href="${esc(u)}" target="_blank" rel="noopener">Jobs by Adzuna</a>` : "Jobs by Adzuna"}</div>`;
   if (j.source === "Himalayas") return `<div class="source">via ${u ? `<a href="${esc(u)}" target="_blank" rel="noopener">Himalayas</a>` : "Himalayas"}${j.posted ? " · posted " + esc(nice(j.posted)) : ""}</div>`;
-  return j.source ? `<div class="source">${esc(j.source)}</div>` : "";
+  if (j.source) return `<div class="source">via ${u ? `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(j.source)}</a>` : esc(j.source)}${j.posted ? " · posted " + esc(nice(j.posted)) : ""}</div>`;
+  return "";
+}
+// "What this job is": built by the feed robot from the posting's own words (never made up).
+function aboutBlock(j) {
+  const a = j.about; if (!a) return "";
+  const list = (h, xs) => xs && xs.length ? `<p class="small"><b>${h}</b></p><ul class="small">${xs.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>` : "";
+  const facts = [j.type, j.remote, a.years != null ? `asks for ${a.years}+ yr experience` : "no years of experience listed", a.degree ? "mentions a degree" : ""].filter(Boolean).join(" · ");
+  const body = list("What you'd do", a.does) + list("What they want", a.wants) + list("Nice to have", a.nice);
+  return `<details class="about"><summary>What this job is &amp; what they want</summary><p class="small">${esc(facts)}</p>${body || `<p class="small">The posting doesn't spell this out. Open it on the site to read the full description.</p>`}</details>`;
+}
+// Red flags (scam signs) and softer "check this" notes, each with a tap-to-open WHY.
+function flagBlock(j) {
+  const info = j.flagInfo;
+  if (!info) return j.flags && j.flags.length ? `<p class="flag">⚑ ${esc(j.flags.join(" · "))}</p>` : "";
+  const grp = (lvl, icon, word) => {
+    const xs = info.filter((f) => f.level === lvl); if (!xs.length) return "";
+    return `<details class="flags ${lvl}"><summary>${icon} ${xs.length} ${word}${xs.length > 1 ? "s" : ""} <span class="q" aria-hidden="true">?</span></summary><ul>${xs.map((f) => `<li><b>${esc(f.label)}</b>${f.why ? ": " + esc(f.why) : ""}</li>`).join("")}</ul></details>`;
+  };
+  return grp("red", "⚑", "red flag") + grp("check", "⚠", "thing to check");
 }
 
 let setupFilled = false;   // fill the form once, so a background refresh never wipes what you're typing
@@ -227,7 +246,7 @@ function renderJobs() {
       <div class="meta">${esc(j.company)} · ${esc(j.location)}</div>
       <div class="chips">${chip(j.pay || "Pay not listed", "plain")}${takeHomeChip(j.pay, j.hourly)}${commuteChip((me.profile || {}).city || "", (me.profile || {}).zip, `${j.location} ${j.remote}`)}${payChip(j.paycheck)}${j.hourly && j.hourly < floor ? chip("Below your floor", "bad") : ""}</div>
       ${j.summary ? `<p class="why">${esc(j.summary)}</p>` : ""}
-      ${j.flags && j.flags.length ? `<p class="flag">⚑ ${esc(j.flags.join(" · "))}</p>` : ""}
+      ${aboutBlock(j)}${flagBlock(j)}
       ${j.skills && j.skills.length ? `<p class="small">Mentions: ${esc(j.skills.join(", "))}</p>` : ""}
       <div class="actions">
         ${safeUrl(j.applyUrl) ? `<a class="btn" href="${esc(safeUrl(j.applyUrl))}" target="_blank" rel="noopener">Apply on site</a>` : ""}

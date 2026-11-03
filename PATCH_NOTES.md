@@ -1,5 +1,16 @@
 # Patch notes
 
+## v0.7.0 (2026-11-03): more job sites, job summaries, red flags explained
+
+### Features
+- 3 new free job sites: **Remotive** and **Jobicy** (remote US jobs) and **The Muse** (entry-level jobs in Miami / Fort Lauderdale plus remote). Turn any of them off in `config/feed.json` → `sources`.
+- Every job card has **"What this job is & what they want"**: what you'd do, what they require, nice-to-haves, years of experience asked and whether a degree is mentioned. It's built only from the posting's own words.
+- Red flags now open with a **?** that explains WHY each one is a warning.
+- New yellow **"thing to check"** notes (the job still shows): commission only, 1099 contractor, personal Gmail/Yahoo email to apply, "hired immediately", starter-kit fees, reshipping, no company name, very short description, pay far above normal.
+
+### Buffs
+- The "Where jobs come from" card lists all sources, and every job links back to the site it came from.
+
 ## v0.6.4 (2026-11-03): blank resume facts template
 
 ### Buffs
