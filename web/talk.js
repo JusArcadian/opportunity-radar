@@ -26,7 +26,7 @@
       "What's the next step after today, and how soon do you decide?",
       "Who should I follow up with, and what's the best way to reach them?"],
     meetup: ["How did you get started in this field?",
-      "What would you tell a beginner who's studying for Security+ to focus on next?",
+      "What would you tell a beginner in this field to focus on next?",
       "Are there beginner-friendly projects, CTFs or volunteer roles in this group?",
       "What does a normal day look like in your job?",
       "Do you know anyone hiring for entry-level IT or security roles?"],
@@ -44,9 +44,9 @@
     hiring: ["Printed copies of your resume (Saved tab → My resume → Print)", "Your availability: days and hours you can work",
       "Dress one step nicer than the job's uniform", "Get one name and follow up within 24 hours"],
     meetup: ["Phone charged, with your LinkedIn QR code ready", "A goal: meet 3 people and add them to your People list",
-      "Send a LinkedIn note within 48 hours (Template 1 on your sheet)"],
+      "Send a LinkedIn note within 48 hours"],
     job: ["Two printed copies of your resume", "Practice your 30-second intro out loud twice",
-      "Send a thank-you note the same day (Template 4 on your sheet)"],
+      "Send a thank-you note the same day"],
     general: ["Your 30-second intro practiced once out loud", "Follow up with anyone you meet within 48 hours"],
   };
 

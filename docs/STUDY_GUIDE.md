@@ -232,3 +232,9 @@ some for turns. It's a rough guess; the Directions button opens Google Maps for 
 - **Cron**: a schedule written as five fields.
 - **Cache**: saved copies of files for speed and offline use.
 - **localStorage**: the browser's per-site notebook on your device.
+
+
+## Chapter 17: A template anyone can use (v0.6.4)
+The grey box on the Me tab is only an example, not your data. It used to show things like "City, FL" and "CompTIA Security+", which only fit one person. Now it uses placeholders like "City, State" and "Mon YYYY", so any new user can copy the shape and fill in their own facts.
+ELI5: it's like a blank form at the doctor's office. The labels (NAME, JOB) stay the same for everyone; only the answers change.
+Code: just text inside the `<pre class="small fmt">` tag in `web/index.html`. Nothing in the logic changed.

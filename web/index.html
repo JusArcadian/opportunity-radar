@@ -30,13 +30,13 @@
     <h1>Set up Radar</h1>
     <p class="lede">Tell Radar what you're looking for. You can change this any time on the Me tab. Everything stays on this phone.</p>
     <form id="setupForm" novalidate>
-      <label>Your first name<input id="s-name" type="text" autocomplete="given-name" placeholder="Terrence"></label>
+      <label>Your first name<input id="s-name" type="text" autocomplete="given-name" placeholder="Your first name"></label>
       <fieldset><legend>Jobs to look for</legend><div id="s-careers" class="checks"></div></fieldset>
       <label>Lowest pay you'll take ($ per hour)<input id="s-floor" type="number" inputmode="decimal" min="0" step="0.5" value="17"></label>
       <fieldset><legend>Where</legend>
         <label class="check"><input id="s-remote" type="checkbox" checked> Remote jobs (anywhere in the US)</label>
         <label class="check"><input id="s-local" type="checkbox"> Local jobs near me (when available)</label>
-        <label>Home ZIP<input id="s-zip" type="text" inputmode="numeric" maxlength="5" placeholder="33034"></label>
+        <label>Home ZIP<input id="s-zip" type="text" inputmode="numeric" maxlength="5" placeholder="e.g. 33101"></label>
         <label>Home city<select id="s-city"></select></label>
         <label>How far will you travel? (miles)<input id="s-miles" type="number" inputmode="numeric" min="1" max="100" value="20"></label>
         <label>Weekly apply goal<input id="s-goal" type="number" inputmode="numeric" min="1" max="50" value="5"></label>
@@ -211,17 +211,18 @@
         <div class="actions"><button class="btn" type="button" id="editProfile">Edit what I'm looking for</button></div></div>
       <div class="card"><h3 class="title">My resume facts</h3>
         <p class="why">Radar builds every resume from these, in your own words, and never adds anything. One thing per line:</p>
-        <pre class="small fmt">NAME: Your Name
-CONTACT: City, FL · phone · email
-JOB: Title | Company | City, ST | Feb 2026 – Jul 2026
+        <pre class="small fmt">NAME: First Last
+CONTACT: City, State · phone · email
+JOB: Job title | Company | City, State | Mon YYYY – Mon YYYY (or Present)
 - something you did there
-PROJECT: Project name | Oct 2026
-- something you built
-SKILLS Help desk: skill one; skill two
-EDUCATION: School or coursework
-CERT: Certificate name
-STUDYING: CompTIA Security+
-SUMMARY store: (optional) your own summary for store jobs</pre>
+- another thing you did there
+PROJECT: Project name | Mon YYYY
+- something you made, built or led
+SKILLS Group name: skill one; skill two; skill three
+EDUCATION: School name, degree or coursework
+CERT: Certificate name, who gave it
+STUDYING: (optional) a class or certificate you're working on
+SUMMARY: (optional) 1–2 sentences about you, in your words</pre>
         <label for="m-facts" class="small">Your facts</label>
         <textarea id="m-facts" rows="10" placeholder="Paste or type your facts here"></textarea>
         <div class="actions"><button class="btn primary" type="button" id="saveFacts">Save my facts</button><button class="btn" type="button" id="remakeAll">Remake all my resumes</button></div>
@@ -239,7 +240,7 @@ SUMMARY store: (optional) your own summary for store jobs</pre>
       <div class="card"><h3 class="title">Start over</h3><p class="why">Deletes everything Radar saved on this phone.</p>
         <div class="actions"><button class="btn danger" type="button" id="resetBtn">Delete my Radar data</button></div>
         <div class="actions" id="resetConfirm" hidden><span class="small">Are you sure? This can't be undone.</span><button class="btn danger" type="button" id="resetYes">Yes, delete</button><button class="btn quiet" type="button" id="resetNo">Keep it</button></div></div>
-      <p class="small">Opportunity Radar v0.6.1</p>
+      <p class="small">Opportunity Radar v0.6.4</p>
     </div>
   </section>
 </main>

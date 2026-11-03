@@ -149,8 +149,8 @@ function renderSetup() {
   const p = me.profile || {};
   $("s-name").value = p.name || ""; $("s-floor").value = p.floor ?? 17; $("s-resume").value = p.resume || "";
   $("s-remote").checked = p.remote !== false; $("s-local").checked = !!p.local;
-  $("s-city").innerHTML = Object.keys(CITIES).map((c) => `<option value="${c}">${c.replace(/\b\w/g, (m) => m.toUpperCase())}</option>`).join("");
-  $("s-zip").value = p.zip || "33034"; $("s-city").value = p.city || "florida city"; $("s-miles").value = p.maxMi || 20; $("s-goal").value = p.goal || 5;
+  $("s-city").innerHTML = `<option value="">Pick your city (South Florida list)</option>` + Object.keys(CITIES).map((c) => `<option value="${c}">${c.replace(/\b\w/g, (m) => m.toUpperCase())}</option>`).join("");
+  $("s-zip").value = p.zip || ""; $("s-city").value = p.city || ""; $("s-miles").value = p.maxMi || 20; $("s-goal").value = p.goal || 5;
   const careers = feed.meta.careers.length ? feed.meta.careers : [{ key: "helpdesk", label: "Help desk / IT" }];
   $("s-careers").innerHTML = careers.map((c) => `<label class="check"><input type="checkbox" value="${esc(c.key)}" ${(p.careers || ["helpdesk", "support"]).includes(c.key) ? "checked" : ""}> ${esc(c.label)}</label>`).join("");
   $("s-skills").innerHTML = (feed.meta.skills || []).map((s) => `<label class="check"><input type="checkbox" value="${esc(s)}" ${(p.skills || []).includes(s) ? "checked" : ""}> ${esc(s)}</label>`).join("") || '<p class="small">Skills load with the job feed.</p>';
@@ -209,10 +209,10 @@ function renderJobs() {
   list = me.ui.filter === "Skipped" ? list.filter((j) => me.skipped[j.id]) : list.filter((j) => !me.skipped[j.id]);
   if (!$("showBelow").checked) list = list.filter((j) => !j.hourly || j.hourly >= floor);
   if (me.ui.filter === "Remote") list = list.filter((j) => j.remote === "Remote");
-  const P = me.profile, home = P.city || "florida city", maxMi = P.maxMi || 20;
+  const P = me.profile, home = P.city || "", maxMi = P.maxMi || 20;
   if (me.ui.filter === "Local") list = list.filter((j) => j.remote !== "Remote" && inArea(home, maxMi, j.location));
   if (me.ui.filter === "Near me") list = list.filter((j) => inArea(home, maxMi, `${j.location} ${j.remote}`));
-  $("localSources").innerHTML = localSources(P.zip || "33034", home.replace(/\b\w/g, (m) => m.toUpperCase())).map((x) => `<div><a href="${esc(x.url)}" target="_blank" rel="noopener"><b>${esc(x.name)}</b></a> ${chip(x.who === "auto" ? "Radar can check this" : "You check this", x.who === "auto" ? "good" : "plain")}<div class="small">${esc(x.why)}</div></div>`).join("");
+  $("localSources").innerHTML = localSources(P.zip || "", (home || "").replace(/\b\w/g, (m) => m.toUpperCase())).map((x) => `<div><a href="${esc(x.url)}" target="_blank" rel="noopener"><b>${esc(x.name)}</b></a> ${chip(x.who === "auto" ? "Radar can check this" : "You check this", x.who === "auto" ? "good" : "plain")}<div class="small">${esc(x.why)}</div></div>`).join("");
   list.sort(me.ui.filter === "Newest" ? (a, b) => (b.posted || "").localeCompare(a.posted || "") : (a, b) => b.fit - a.fit || (b.hourly || 0) - (a.hourly || 0));
   if (!feed.jobs.length) { $("jobs").innerHTML = `<p class="empty">${feedError ? "Jobs will show up when you're back online." : feedLoaded ? "No jobs in the feed yet. The daily robot fills this in every morning." : "Loading jobs…"}</p>`; return; }
   let hint = "";
@@ -225,13 +225,13 @@ function renderJobs() {
       <div class="chips">${fitDots(j.fit)}${chip(careerOf(j.career).label, "plain")}</div>
       <h3 class="title">${esc(j.title)}</h3>
       <div class="meta">${esc(j.company)} · ${esc(j.location)}</div>
-      <div class="chips">${chip(j.pay || "Pay not listed", "plain")}${takeHomeChip(j.pay, j.hourly)}${commuteChip((me.profile || {}).city || "florida city", (me.profile || {}).zip, `${j.location} ${j.remote}`)}${payChip(j.paycheck)}${j.hourly && j.hourly < floor ? chip("Below your floor", "bad") : ""}</div>
+      <div class="chips">${chip(j.pay || "Pay not listed", "plain")}${takeHomeChip(j.pay, j.hourly)}${commuteChip((me.profile || {}).city || "", (me.profile || {}).zip, `${j.location} ${j.remote}`)}${payChip(j.paycheck)}${j.hourly && j.hourly < floor ? chip("Below your floor", "bad") : ""}</div>
       ${j.summary ? `<p class="why">${esc(j.summary)}</p>` : ""}
       ${j.flags && j.flags.length ? `<p class="flag">⚑ ${esc(j.flags.join(" · "))}</p>` : ""}
       ${j.skills && j.skills.length ? `<p class="small">Mentions: ${esc(j.skills.join(", "))}</p>` : ""}
       <div class="actions">
         ${safeUrl(j.applyUrl) ? `<a class="btn" href="${esc(safeUrl(j.applyUrl))}" target="_blank" rel="noopener">Apply on site</a>` : ""}
-        ${j.location && !/remote/i.test(`${j.location} ${j.remote || ""}`) ? `<a class="btn quiet" href="${esc(mapsLink((me.profile || {}).zip || "33034", j.location))}" target="_blank" rel="noopener">Directions</a>` : ""}
+        ${j.location && !/remote/i.test(`${j.location} ${j.remote || ""}`) ? `<a class="btn quiet" href="${esc(mapsLink((me.profile || {}).zip || "", j.location))}" target="_blank" rel="noopener">Directions</a>` : ""}
         <button class="btn primary" type="button" data-save="${esc(j.id)}">Save</button>
         ${me.skipped[j.id] ? `<button class="btn quiet" type="button" data-unskip="${esc(j.id)}">Bring back</button>` : `<button class="btn quiet" type="button" data-skip="${esc(j.id)}">Skip</button>`}
       </div>${sourceLine(j)}</article>`).join("");
@@ -249,10 +249,10 @@ function renderSaved() {
       <div class="chips">${chip(s.status, STATUS_CLS[s.status])}${listingChip(l)}${s.appliedOn ? chip("Applied " + nice(s.appliedOn), "plain") : ""}</div>
       <h3 class="title">${esc(j.title)}</h3>
       <div class="meta">${esc(j.company)}${j.location ? " · " + esc(j.location) : ""}${j.pay ? " · " + esc(j.pay) : ""}</div>
-      <div class="chips">${takeHomeChip(j.pay, j.hourly)}${commuteChip(me.profile.city || "florida city", me.profile.zip, j.location)}</div>
+      <div class="chips">${takeHomeChip(j.pay, j.hourly)}${commuteChip(me.profile.city || "", me.profile.zip, j.location)}</div>
       <div class="actions">
         ${safeUrl(j.applyUrl) ? `<a class="btn" href="${esc(safeUrl(j.applyUrl))}" target="_blank" rel="noopener">Apply on site</a>` : ""}
-        ${j.location && !/remote/i.test(`${j.location} ${j.remote || ""}`) ? `<a class="btn quiet" href="${esc(mapsLink((me.profile || {}).zip || "33034", j.location))}" target="_blank" rel="noopener">Directions</a>` : ""}
+        ${j.location && !/remote/i.test(`${j.location} ${j.remote || ""}`) ? `<a class="btn quiet" href="${esc(mapsLink((me.profile || {}).zip || "", j.location))}" target="_blank" rel="noopener">Directions</a>` : ""}
         ${s.resume ? `<button class="btn primary" type="button" data-viewresume="${esc(id)}">My resume</button>` : `<button class="btn" type="button" data-makeresume="${esc(id)}">Make my resume</button>`}
         <button class="btn" type="button" data-seetalk="job|${esc(id)}">Talking points</button>
         <button class="btn quiet" type="button" data-tailor="${esc(id)}">Copy AI prompt (cover letter + research)</button>
@@ -431,7 +431,7 @@ function inArea(home, maxMi, loc) {
 // Places worth checking for local jobs. "auto" = the morning run searches it; "you" = open it yourself
 // (these sites need your login or don't allow bots, so Radar never scans them).
 function localSources(zip, cityName) {
-  const z = encodeURIComponent(zip || ""), city = cityName || "Florida City", g = (q) => "https://www.google.com/search?q=" + encodeURIComponent(q);
+  const z = encodeURIComponent(zip || ""), city = cityName || "my area", g = (q) => "https://www.google.com/search?q=" + encodeURIComponent(q);
   return [
     { name: "Indeed near you (15 mi)", who: "auto", url: `https://www.indeed.com/jobs?l=${z}&radius=15`, why: "Biggest list of local hourly and IT jobs." },
     { name: "Google jobs near you", who: "auto", url: g(`jobs near ${zip}`) + "&ibp=htl;jobs", why: "Pulls from many job sites, including small local companies." },
@@ -489,7 +489,7 @@ MY RESUME:
 ${p.resume || me.facts || "(ask me to paste my resume)"}`;
 }
 function followPrompt(s) {
-  return `Hi, I applied for the ${s.job.title} role on ${nice(s.appliedOn)} and wanted to say I'm still very interested. I'd love to bring my customer support experience and my Security+ studies to your team. Happy to share anything else that helps. Thank you, ${me.profile.name || ""}`.trim();
+  return `Hi, I applied for the ${s.job.title} role on ${nice(s.appliedOn)} and wanted to say I'm still very interested. I'd love to bring my experience to your team. Happy to share anything else that helps. Thank you, ${me.profile.name || ""}`.trim();
 }
 async function copy(text, done) {
   try { await navigator.clipboard.writeText(text); toast(done); }

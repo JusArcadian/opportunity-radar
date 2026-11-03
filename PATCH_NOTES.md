@@ -1,5 +1,16 @@
 # Patch notes
 
+## v0.6.4 (2026-11-03): blank resume facts template
+
+### Buffs
+- Me → My resume facts: the example format is now a general blank template anyone can follow (City, State; Job title; Mon YYYY; Group name) instead of examples tied to one person's location, field or cert.
+
+## v0.6.3 (2026-11-02): fresh install for everyone
+
+### Bugs fixed
+- New visitors no longer see Terrence's details: setup starts blank (name, ZIP, city), the follow-up message and
+  talking points no longer mention Security+ or "your sheet" templates. Your own saved profile is unchanged.
+
 ## v0.6.2 (2026-11-02)
 
 ### Nerfs (on purpose)

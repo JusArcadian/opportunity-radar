@@ -7,16 +7,16 @@
   invent a skill or a job you don't have.
 
   The facts format (one thing per line):
-    NAME: Terrence Young
-    CONTACT: City, FL · phone · email
-    JOB: Title | Company | City, ST | Feb 2026 – Jul 2026
+    NAME: First Last
+    CONTACT: City, State · phone · email
+    JOB: Job title | Company | City, State | Mon YYYY – Mon YYYY
     - a bullet about that job
-    PROJECT: Name | Oct 2026
+    PROJECT: Project name | Mon YYYY
     - a bullet
-    SKILLS Help desk: skill one; skill two; skill three
-    EDUCATION: Cybersecurity coursework, Miami Dade College
-    CERT: Claude 101, Anthropic
-    STUDYING: CompTIA Security+
+    SKILLS Group name: skill one; skill two; skill three
+    EDUCATION: School name, degree or coursework
+    CERT: Certificate name, who gave it
+    STUDYING: a class or certificate in progress
     SUMMARY store: (optional) your own summary for store/retail jobs
     SUMMARY it: (optional) your own summary for IT jobs
     SUMMARY: (optional) your own summary for any other job
