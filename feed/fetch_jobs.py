@@ -224,6 +224,8 @@ def main():
             key = (j["title"].lower(), j["company"].lower())
             if not j["title"] or too_senior(j["title"]) or key in seen:
                 continue
+            if (j.get("hourly") or 0) > CONFIG.get("max_entry_hourly", 999):   # pay far above entry level = not for a beginner
+                continue
             if len(j["flags"]) >= 2:  # 2+ scam warning signs = never show it
                 print(f"    dropped likely scam: {j['title']} ({', '.join(j['flags'])})")
                 continue

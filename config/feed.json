@@ -37,7 +37,10 @@
       "bench_low": null, "bench_mid": null, "bench_source": ""
     }
   ],
-  "skip_title_words": ["senior", "sr.", "sr ", "lead", "manager", "director", "principal", "staff ", "head of", "architect", "iii", "iv"],
+  "skip_title_words": ["senior", "sr.", "sr ", "lead", "manager", "director", "principal", "staff ", "head of", "architect", "iii", "iv",
+    "supervisor", "vice president", "vp ", "market development", "account executive", "business development", "sales executive"],
+  "_max_entry_hourly": "Jobs whose LOWEST pay is above this are almost never entry level, so the feed skips them.",
+  "max_entry_hourly": 45,
   "local": {
     "_help": "Local (non-remote) jobs come from Adzuna, which needs a free API key. Leave enabled=false until you add the key as a GitHub secret.",
     "enabled": false,

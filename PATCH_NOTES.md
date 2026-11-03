@@ -1,5 +1,11 @@
 # Patch notes
 
+## v0.6.2 (2026-11-02)
+
+### Nerfs (on purpose)
+- The daily feed skips jobs that aren't entry level: titles with supervisor, VP, market/business development,
+  account/sales executive, and any job whose lowest pay is over $45/hr (`max_entry_hourly` in config/feed.json).
+
 ## v0.6.1 (2026-11-02)
 
 ### Bugs fixed
