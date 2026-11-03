@@ -1,4 +1,4 @@
-# Opportunity Radar (app)
+# Opportunity Radar (App)
 
 An installable phone app that finds entry-level tech jobs every morning, lets you save the good ones,
 warns you when a saved listing closes, reminds you to follow up, and shows which skills to learn next.
