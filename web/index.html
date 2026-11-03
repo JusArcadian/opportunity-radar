@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Opportunity Radar</title>
+  <meta name="description" content="Find entry-level tech jobs, save the good ones, and never miss a follow-up.">
+  <meta name="theme-color" content="#1F2A44">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Radar">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top"><div class="row">
+  <div class="brand"><img src="icons/icon-192.png" alt="" width="26" height="26">Radar</div>
+  <div class="grow sub" id="stamp">Loading jobs…</div>
+  <button class="iconbtn" id="refresh" type="button">Refresh</button>
+</div></header>
+
+<main class="wrap">
+  <div id="notice" class="banner" hidden></div>
+
+  <!-- First-time setup -->
+  <section id="v-setup" hidden>
+    <h1>Set up Radar</h1>
+    <p class="lede">Tell Radar what you're looking for. You can change this any time on the Me tab. Everything stays on this phone.</p>
+    <form id="setupForm" novalidate>
+      <label>Your first name<input id="s-name" type="text" autocomplete="given-name" placeholder="Terrence"></label>
+      <fieldset><legend>Jobs to look for</legend><div id="s-careers" class="checks"></div></fieldset>
+      <label>Lowest pay you'll take ($ per hour)<input id="s-floor" type="number" inputmode="decimal" min="0" step="0.5" value="17"></label>
+      <fieldset><legend>Where</legend>
+        <label class="check"><input id="s-remote" type="checkbox" checked> Remote jobs (anywhere in the US)</label>
+        <label class="check"><input id="s-local" type="checkbox"> Local jobs near me (when available)</label>
+        <label>Home ZIP<input id="s-zip" type="text" inputmode="numeric" maxlength="5" placeholder="33034"></label>
+        <label>Home city<select id="s-city"></select></label>
+        <label>How far will you travel? (miles)<input id="s-miles" type="number" inputmode="numeric" min="1" max="100" value="20"></label>
+        <label>Weekly apply goal<input id="s-goal" type="number" inputmode="numeric" min="1" max="50" value="5"></label>
+      </fieldset>
+      <fieldset><legend>Skills and certs you already have</legend><div id="s-skills" class="checks cols"></div></fieldset>
+      <label>Your resume (paste it here; used only to build AI prompts on this phone)<textarea id="s-resume" rows="5" placeholder="Paste your resume text…"></textarea></label>
+      <button class="btn primary" type="submit">Save and show my jobs</button>
+    </form>
+  </section>
+
+  <section id="v-today" hidden>
+    <h1 id="hello">Today</h1>
+    <p class="lede" id="feedInfo"></p>
+    <div class="tiles" id="tiles"></div>
+    <div id="installCard"></div>
+    <h2>Needs your attention</h2>
+    <div class="list" id="attention"></div>
+  </section>
+
+  <section id="v-jobs" hidden>
+    <h1>Jobs</h1>
+    <p class="lede">Best matches first. Save the good ones, skip the rest.</p>
+    <div class="filters" role="group" aria-label="Filter jobs" id="jobFilters"></div>
+    <details class="card" style="margin-bottom:10px"><summary style="cursor:pointer;font-weight:700">Local job sources near you</summary><div class="list" id="localSources" style="margin-top:8px"></div></details>
+    <label class="check small" id="belowWrap"><input id="showBelow" type="checkbox"> Show jobs below my pay floor</label>
+    <div class="list" id="jobs"></div>
+  </section>
+
+  <section id="v-saved" hidden>
+    <h1>Saved</h1>
+    <p class="lede">Your bookmarks. Radar marks a listing when it closes.</p>
+    <div class="actions" style="margin-bottom:12px"><button class="btn primary" type="button" id="openAdd">+ Add any job</button></div>
+    <form id="addForm" class="card" hidden novalidate>
+      <h3 class="title">Add any job</h3>
+      <p class="small" style="margin:0">Help desk, Best Buy, GameStop, Publix, anything. Radar makes you a resume for it.</p>
+      <label>Job title<input id="a-title" type="text" placeholder="Sales Associate, Help Desk Technician…"></label>
+      <label>Company<input id="a-company" type="text" placeholder="Best Buy, Publix, GameStop…"></label>
+      <label>Job link (optional)<input id="a-link" type="url" inputmode="url" placeholder="https://…"></label>
+      <label>Location<input id="a-loc" type="text" placeholder="Cutler Bay, FL or Remote (US)"></label>
+      <label>Pay<input id="a-pay" type="text" placeholder="$15-$17/hr"></label>
+      <label>Kind of job<select id="a-kind"><option value="">Auto-detect</option><option value="it">IT / tech</option><option value="other">Other</option><option value="store">Store / retail</option></select></label>
+      <label>Job description (optional: paste it for a better resume)<textarea id="a-desc" rows="4" placeholder="Paste the duties and requirements"></textarea></label>
+      <label class="check"><input id="a-auto" type="checkbox" checked> Make my resume for this job automatically</label>
+      <p class="small" id="addMsg"></p>
+      <div class="actions"><button class="btn primary" type="submit">Save job</button><button class="btn quiet" type="button" id="cancelAdd">Cancel</button></div>
+    </form>
+    <div class="list" id="saved"></div>
+  </section>
+
+  <!-- One resume, opened from a saved job -->
+  <section id="v-resume" hidden>
+    <div class="actions noprint" style="margin-top:16px"><button class="btn quiet" type="button" data-tab="saved">‹ Back to Saved</button></div>
+    <h1 class="noprint" id="r-title">Resume</h1>
+    <p class="lede noprint" id="r-note"></p>
+    <div class="actions noprint" style="margin-bottom:12px">
+      <button class="btn primary" type="button" id="r-print">Print / Save as PDF</button>
+      <button class="btn" type="button" id="r-copy">Copy as text</button>
+      <label class="small" for="r-kind" style="flex-direction:row;align-items:center;gap:6px;font-weight:600">Remake as
+        <select class="btn" id="r-kind"><option value="it">IT / tech</option><option value="other">Other</option><option value="store">Store / retail</option></select></label>
+    </div>
+    <div class="card paper" id="r-body"></div>
+  </section>
+
+  <section id="v-events" hidden>
+    <div class="filters" role="group" aria-label="Events or talking points" id="eventSwitch">
+      <button type="button" data-eventview="events" aria-pressed="true">Events</button>
+      <button type="button" data-eventview="talk" aria-pressed="false">Talking points</button>
+    </div>
+    <div id="eventsPane">
+      <h1>Events</h1>
+      <p class="lede">Career fairs, hiring events, meetups, anything. Set Going to Yes and Radar makes your talking points.</p>
+      <div class="actions" style="margin-bottom:12px"><button class="btn primary" type="button" id="openEvent">+ Add any event</button></div>
+      <form id="eventForm" class="card" hidden novalidate>
+        <h3 class="title">Add any event</h3>
+        <label>Event<input id="ev-name" type="text" placeholder="Career fair, hiring event, meetup…"></label>
+        <label>Date<input id="ev-date" type="date"></label>
+        <label>Time<input id="ev-time" type="time"></label>
+        <label>Group or company<input id="ev-group" type="text" placeholder="Publix, Miami Dade College, HackMiami…"></label>
+        <label>Where<input id="ev-where" type="text" placeholder="Address or Online"></label>
+        <label>Cost<input id="ev-cost" type="text" placeholder="Free"></label>
+        <label>Link (optional)<input id="ev-link" type="url" inputmode="url" placeholder="https://…"></label>
+        <label>Going?<select id="ev-going"><option>Maybe</option><option>No</option><option selected>Yes</option></select></label>
+        <label>Notes<textarea id="ev-notes" rows="2" placeholder="Who's speaking, what to wear, parking…"></textarea></label>
+        <p class="small" id="eventMsg"></p>
+        <div class="actions"><button class="btn primary" type="submit">Save event</button><button class="btn quiet" type="button" id="cancelEvent">Cancel</button></div>
+      </form>
+      <div class="list" id="eventList"></div>
+    </div>
+    <div id="talkPane" hidden>
+      <h1>Talking points</h1>
+      <p class="lede">What to say and what to ask, for your events and jobs. Built from your resume facts only. [your example] means: add a real story of yours.</p>
+      <div class="list" id="talkList"></div>
+    </div>
+  </section>
+
+  <section id="v-skills" hidden>
+    <h1>Skill gaps</h1>
+    <p class="lede">Skills and certs that show up most in today's jobs for you. Tap "I have this" to update your profile.</p>
+    <div class="list" id="skills"></div>
+  </section>
+
+  <section id="v-gigs" hidden>
+    <div class="filters" role="group" aria-label="Gigs or deals" id="moneySwitch">
+      <button type="button" data-moneyview="gigs" aria-pressed="true">Gigs</button>
+      <button type="button" data-moneyview="deals" aria-pressed="false">Deals</button>
+    </div>
+  <div id="gigsPane">
+    <h1>Gigs</h1>
+    <p class="lede">Quick-pay side work in one place: sign up, track where you stand, and log what you earn.</p>
+    <div class="tiles" id="gigTiles"></div>
+    <div class="alert info" style="margin-top:12px"><p><b>Stay safe:</b> real gig sites never ask you to pay to join, buy equipment, or move the chat to Telegram or WhatsApp. Pay amounts change, so check each site.</p></div>
+    <form id="earnForm" class="card" novalidate style="margin-top:12px">
+      <h3 class="title">Log money you earned</h3>
+      <div class="grid2">
+        <label>Date<input id="e-date" type="date"></label>
+        <label>Amount ($)<input id="e-amt" type="number" inputmode="decimal" min="0" step="0.01" placeholder="10.00"></label>
+      </div>
+      <label>From<select id="e-gig"></select></label>
+      <label>Note (optional)<input id="e-note" type="text" placeholder="20-min website test"></label>
+      <div class="actions"><button class="btn primary" type="submit">Add</button></div>
+      <div class="list" id="earnList"></div>
+    </form>
+    <h2>Gig sites</h2>
+    <div class="filters" role="group" aria-label="Filter gigs" id="gigFilters"></div>
+    <div class="list" id="gigs"></div>
+    <p class="small" id="gigChecked"></p>
+  </div>
+
+  <div id="dealsPane" hidden>
+    <h1>Deals</h1>
+    <p class="lede">Found something on Marketplace? Check if it's a good deal and what you'd make flipping it.</p>
+    <form id="dealForm" class="card" novalidate>
+      <h3 class="title">Check a deal</h3>
+      <label>What is it?<input id="d-item" type="text" placeholder="RTX 3060 12GB"></label>
+      <div class="grid2">
+        <label>Asking price ($)<input id="d-ask" type="number" inputmode="decimal" min="0" step="1" placeholder="180"></label>
+        <label>Typical used price ($)<input id="d-used" type="number" inputmode="decimal" min="0" step="1" placeholder="230"></label>
+      </div>
+      <p class="small">Typical used price: run ATLAS's Deal Checker (button below) or look at eBay listings for the same item.</p>
+      <div class="grid2">
+        <label>Shipping if you resell ($)<input id="d-ship" type="number" inputmode="decimal" min="0" step="1" value="12"></label>
+        <label>eBay fee (%)<input id="d-fee" type="number" inputmode="decimal" min="0" step="0.1" value="13.6"></label>
+      </div>
+      <label>Listing link (optional)<input id="d-link" type="url" inputmode="url" placeholder="https://www.facebook.com/marketplace/item/..."></label>
+      <div id="dealResult"></div>
+      <div class="actions">
+        <button class="btn primary" type="submit">Save to my deals</button>
+        <button class="btn" type="button" id="copyDealCmd">Copy ATLAS command</button>
+      </div>
+    </form>
+    <div class="alert info" style="margin-top:12px"><p><b>Before you pay:</b> meet in a public place (police station lots are great), see it running
+      (GPU: a game or stress test; CPU/RAM: boot to BIOS), check for bent pins or burn marks, and never pay a deposit, use Zelle to "hold" it, or share a code.</p></div>
+    <form id="wantForm" class="card" novalidate style="margin-top:12px">
+      <h3 class="title">Want list</h3>
+      <p class="small">Things you're hunting for and the most you'll pay. Tip: save the same search in Facebook Marketplace to get alerts.</p>
+      <div class="grid2">
+        <label>Item<input id="w-item" type="text" placeholder="Ryzen 7 5800X3D"></label>
+        <label>Max price ($)<input id="w-max" type="number" inputmode="decimal" min="0" step="1" placeholder="200"></label>
+      </div>
+      <div class="actions"><button class="btn primary" type="submit">Add</button></div>
+      <div class="list" id="wantList"></div>
+    </form>
+    <h2>Deals I checked</h2>
+    <div class="list" id="dealList"></div>
+  </div>
+  </section>
+
+  <section id="v-me" hidden>
+    <h1>Me</h1>
+    <div class="list">
+      <div class="card"><h3 class="title">Profile</h3><p class="why" id="meSummary"></p>
+        <div class="actions"><button class="btn" type="button" id="editProfile">Edit what I'm looking for</button></div></div>
+      <div class="card"><h3 class="title">My resume facts</h3>
+        <p class="why">Radar builds every resume from these, in your own words, and never adds anything. One thing per line:</p>
+        <pre class="small fmt">NAME: Your Name
+CONTACT: City, FL · phone · email
+JOB: Title | Company | City, ST | Feb 2026 – Jul 2026
+- something you did there
+PROJECT: Project name | Oct 2026
+- something you built
+SKILLS Help desk: skill one; skill two
+EDUCATION: School or coursework
+CERT: Certificate name
+STUDYING: CompTIA Security+
+SUMMARY store: (optional) your own summary for store jobs</pre>
+        <label for="m-facts" class="small">Your facts</label>
+        <textarea id="m-facts" rows="10" placeholder="Paste or type your facts here"></textarea>
+        <div class="actions"><button class="btn primary" type="button" id="saveFacts">Save my facts</button><button class="btn" type="button" id="remakeAll">Remake all my resumes</button></div>
+        <p class="small" id="factsMsg"></p></div>
+      <div class="card"><h3 class="title">Install Radar on your phone</h3>
+        <p class="why">iPhone: open this page in Safari, tap Share, then <b>Add to Home Screen</b>. Android: tap the menu (⋮), then <b>Install app</b>.</p>
+        <div class="actions"><button class="btn primary" type="button" id="installBtn" hidden>Install Radar</button></div></div>
+      <div class="card"><h3 class="title">Back up your data</h3>
+        <p class="why">Radar keeps your saved jobs on this phone only. Download a backup file now and then, and load it on a new phone.</p>
+        <div class="actions"><button class="btn" type="button" id="exportBtn">Download backup</button>
+          <label class="btn" for="importFile">Load backup</label><input id="importFile" type="file" accept="application/json" hidden></div>
+        <p class="small" id="backupMsg"></p></div>
+      <div class="card"><h3 class="title">Where jobs come from</h3>
+        <p class="why">Remote jobs: <a href="https://himalayas.app" target="_blank" rel="noopener">Himalayas</a>. Local jobs: <a href="https://www.adzuna.com" target="_blank" rel="noopener">Jobs by Adzuna</a> (when turned on). Pay ranges compared with U.S. Bureau of Labor Statistics data. Radar never applies for you.</p></div>
+      <div class="card"><h3 class="title">Start over</h3><p class="why">Deletes everything Radar saved on this phone.</p>
+        <div class="actions"><button class="btn danger" type="button" id="resetBtn">Delete my Radar data</button></div>
+        <div class="actions" id="resetConfirm" hidden><span class="small">Are you sure? This can't be undone.</span><button class="btn danger" type="button" id="resetYes">Yes, delete</button><button class="btn quiet" type="button" id="resetNo">Keep it</button></div></div>
+      <p class="small">Opportunity Radar v0.6.1</p>
+    </div>
+  </section>
+</main>
+
+<nav class="tabs" aria-label="Sections"><div class="row">
+  <button type="button" data-tab="today"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg>Today</button>
+  <button type="button" data-tab="jobs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2"/></svg><span>Jobs <span class="badge" id="b-new" hidden></span></span></button>
+  <button type="button" data-tab="saved"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg>Saved</button>
+  <button type="button" data-tab="events"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Events</button>
+  <button type="button" data-tab="skills"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Skills</button>
+  <button type="button" data-tab="gigs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .9-3 2s1.3 1.7 3 2 3 .9 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v2M12 16v2"/></svg>Money</button>
+  <button type="button" data-tab="me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>Me</button>
+</div></nav>
+<div class="toast" id="toast" role="status" hidden></div>
+<script src="resume.js"></script>
+<script src="talk.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

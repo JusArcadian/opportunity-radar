@@ -1,0 +1,19 @@
+# Comments must be on their own line (an inline comment breaks the rule).
+
+# backups are zips of the project, keep them on your PC only
+backups/
+
+# Python leftovers
+__pycache__/
+*.pyc
+
+# PyCharm settings and the virtual environment
+.idea/
+.venv/
+
+# secrets: API keys go in GitHub Secrets, never in files
+.env
+*.key
+
+# your personal resume facts (phone number, email): never upload
+private/

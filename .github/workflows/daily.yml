@@ -1,0 +1,65 @@
+# daily.yml - the free robot that keeps Radar fresh.
+#
+# ELI5: GitHub lends us a computer for a few minutes every morning.
+#   Job 1 "feed":   runs feed/fetch_jobs.py, then saves the new job list into the repo.
+#   Job 2 "deploy": publishes the web/ folder as the live app on GitHub Pages.
+# You can also run it any time: GitHub > Actions > "Daily feed + deploy" > Run workflow.
+
+name: Daily feed + deploy
+
+on:
+  schedule:
+    - cron: "40 11 * * *"     # 11:40 UTC = 7:40 AM Eastern (6:40 AM in winter)
+  workflow_dispatch: {}        # the "Run workflow" button
+  push:
+    branches: [main]
+    paths: ["web/**", ".github/workflows/daily.yml"]
+
+permissions:
+  contents: write     # lets the robot save the new job list
+  pages: write        # lets it publish the app
+  id-token: write     # required by GitHub Pages
+
+concurrency:
+  group: radar-daily
+  cancel-in-progress: false
+
+jobs:
+  feed:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build today's job feed
+        env:
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}     # optional, for local jobs
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+        run: python feed/fetch_jobs.py
+      - name: Save the new feed
+        run: |
+          git config user.name "radar-bot"
+          git config user.email "radar-bot@users.noreply.github.com"
+          git add web/data feed/state
+          git diff --cached --quiet || git commit -m "feed: $(date -u +%Y-%m-%d)"
+          git push
+
+  deploy:
+    needs: feed
+    if: always() && (needs.feed.result == 'success' || needs.feed.result == 'skipped')
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.pages.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main          # get the commit the feed job just made
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+      - id: pages
+        uses: actions/deploy-pages@v4

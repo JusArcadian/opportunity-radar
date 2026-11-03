@@ -1,0 +1,16 @@
+{
+  "name": "Opportunity Radar",
+  "short_name": "Radar",
+  "description": "Find entry-level tech jobs, save the good ones, and never miss a follow-up.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F3F5F9",
+  "theme_color": "#1F2A44",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+ "jobs": [
+  {
+   "title": "IT Support Specialist (sample)",
+   "companyName": "Example Health Co",
+   "companySlug": "example-health",
+   "minSalary": 45000,
+   "maxSalary": 52000,
+   "salaryPeriod": "year",
+   "currency": "USD",
+   "pubDate": 1792572253,
+   "expiryDate": 1795250653,
+   "applicationLink": "https://example.com/apply/1",
+   "guid": "https://himalayas.app/companies/example-health/jobs/it-support-specialist",
+   "excerpt": "Tier 1 help desk for a remote clinic network.",
+   "description": "Support Microsoft 365, Active Directory and ServiceNow tickets. CompTIA A+ preferred. MFA resets.",
+   "employmentType": "Full Time"
+  },
+  {
+   "title": "Senior Systems Engineer (sample)",
+   "companyName": "Example Corp",
+   "companySlug": "example-corp",
+   "minSalary": 120000,
+   "maxSalary": 140000,
+   "salaryPeriod": "year",
+   "currency": "USD",
+   "pubDate": 1792658653,
+   "applicationLink": "https://example.com/apply/2",
+   "guid": "https://himalayas.app/companies/example-corp/jobs/senior-systems-engineer",
+   "excerpt": "Senior role.",
+   "description": "Lead stuff."
+  },
+  {
+   "title": "Remote Data Entry Support (sample)",
+   "companyName": "Quick Cash LLC",
+   "companySlug": "quick-cash",
+   "minSalary": 45,
+   "maxSalary": 60,
+   "salaryPeriod": "hour",
+   "currency": "USD",
+   "pubDate": 1792658653,
+   "applicationLink": "https://example.com/apply/3",
+   "guid": "https://himalayas.app/companies/quick-cash/jobs/remote-data-entry-support",
+   "excerpt": "Interview on Telegram.",
+   "description": "Interview via Telegram. You must purchase equipment from our vendor; we send a check."
+  },
+  {
+   "title": "Expired Help Desk (sample)",
+   "companyName": "Old Co",
+   "companySlug": "old-co",
+   "pubDate": 1789202653,
+   "expiryDate": 1792572253,
+   "applicationLink": "https://example.com/apply/4",
+   "guid": "https://himalayas.app/companies/old-co/jobs/expired-help-desk",
+   "excerpt": "x",
+   "description": "x"
+  }
+ ]
+}

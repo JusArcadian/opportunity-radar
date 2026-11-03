@@ -1,0 +1,69 @@
+{
+  "_readme": "The ONE file that controls what the daily job feed looks for. Edit, commit, and the next run uses it.",
+  "max_per_query": 20,
+  "keep_days": 21,
+  "closed_checks_per_run": 40,
+  "careers": [
+    {
+      "key": "helpdesk", "label": "Help desk / IT",
+      "queries": ["help desk", "IT support", "service desk", "desktop support"],
+      "bench_low": 19.70, "bench_mid": 29.74,
+      "bench_source": "BLS OOH, Computer user support specialists, May 2025 ($40,980 / $61,860 per year / 2080)"
+    },
+    {
+      "key": "support", "label": "Tech / customer support",
+      "queries": ["technical support", "customer support specialist", "product support"],
+      "bench_low": 19.70, "bench_mid": 29.74,
+      "bench_source": "Same as help desk (BLS computer user support specialists)"
+    },
+    {
+      "key": "security", "label": "Security / SOC",
+      "queries": ["SOC analyst", "security analyst", "cybersecurity intern"],
+      "bench_low": null, "bench_mid": null, "bench_source": ""
+    },
+    {
+      "key": "python", "label": "Python / automation",
+      "queries": ["junior python", "automation engineer junior", "python developer entry level"],
+      "bench_low": null, "bench_mid": null, "bench_source": ""
+    },
+    {
+      "key": "network", "label": "Network technician",
+      "queries": ["network technician", "NOC technician"],
+      "bench_low": null, "bench_mid": null, "bench_source": ""
+    },
+    {
+      "key": "cloud", "label": "Cloud support",
+      "queries": ["cloud support associate"],
+      "bench_low": null, "bench_mid": null, "bench_source": ""
+    }
+  ],
+  "skip_title_words": ["senior", "sr.", "sr ", "lead", "manager", "director", "principal", "staff ", "head of", "architect", "iii", "iv"],
+  "local": {
+    "_help": "Local (non-remote) jobs come from Adzuna, which needs a free API key. Leave enabled=false until you add the key as a GitHub secret.",
+    "enabled": false,
+    "places": ["Miami, FL", "Fort Lauderdale, FL", "West Palm Beach, FL"],
+    "distance_miles": 25
+  },
+  "skills": [
+    "CompTIA A+", "Network+", "Security+", "CySA+", "ITIL", "CCNA", "Active Directory", "Azure", "Entra ID", "Intune",
+    "AWS", "Google Workspace", "Microsoft 365", "Office 365", "Exchange", "ServiceNow", "Zendesk", "Jira", "Salesforce",
+    "Windows Server", "macOS", "Linux", "PowerShell", "Python", "SQL", "Bash", "JavaScript", "REST API", "SIEM", "Splunk",
+    "Wireshark", "NIST", "Vulnerability management", "Incident response", "TCP/IP", "DNS", "DHCP", "VPN", "MFA", "Ticketing"
+  ],
+  "red_flags": {
+    "pay to train": "Asks you to pay for training",
+    "purchase equipment": "Asks you to buy equipment",
+    "buy equipment": "Asks you to buy equipment",
+    "telegram": "Interview over Telegram",
+    "whatsapp": "Interview over WhatsApp",
+    "signal app": "Interview over Signal",
+    "google hangouts interview": "Chat-only interview",
+    "send a check": "Check-deposit pattern",
+    "deposit a check": "Check-deposit pattern",
+    "gift card": "Gift cards mentioned",
+    "crypto": "Crypto payments mentioned",
+    "no experience needed $": "Big pay for no experience",
+    "social security number": "Asks for SSN early",
+    "bank account details": "Asks for bank details early"
+  }
+}
