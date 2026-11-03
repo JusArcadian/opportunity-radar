@@ -300,5 +300,13 @@ Then the same `fromResume()` from Chapter 20 reads it.
 ## Chapter 22: Never "come back tomorrow" (v0.8.1)
 **Why the list was empty:** Radar's job list is made by the robot on GitHub, not on your phone. A new user (or a new job type) has to wait for the robot's next run.
 **Fix 1: `searchNow()` in app.js.** If the filtered list is empty, it builds links like `https://www.indeed.com/jobs?q=crew%20member&l=33034`. `encodeURIComponent()` turns spaces into `%20` so the link works. Each job type has search words (`search` in the feed, or `SEARCH_WORDS` as a backup).
-**Fix 2: a schedule of 3 runs a day.** In `.github/workflows/daily.yml`, `cron: "40 11,17,23 * * *"` means "minute 40 of hours 11, 17 and 23 (UTC time)". Cron's 5 slots are: minute, hour, day of month, month, day of week.
-**Fix 3: run the feed on push when the search settings change.** `contains(join(github.event.commits.*.modified, ' '), 'config/')` asks "did this push change a file in config/?"
+**What we tried and undid:** running the robot 3 times a day (`cron: "40 11,17,23 * * *"` = minute 40 of hours 11, 17 and 23 UTC; cron's 5 slots are minute, hour, day of month, month, day of week). Fix 1 already solves waiting, so once a day is simpler. Lesson: fix the person's problem (waiting) in the app, not with more robot runs.
+
+
+## Chapter 23: Cutting a feature cleanly (v0.8.2)
+Removing a tab means removing **all three parts** together, or the app breaks:
+1. the HTML (the `<section id="v-gigs">` and its nav button)
+2. the JavaScript that draws it (`renderGigs`, `renderDeals`) and the buttons that talk to it (`$("dealForm")…`)
+3. the calls to those functions (`render()` and `loadGigs()`)
+If you remove the HTML but keep `$("dealForm").addEventListener(...)`, `$("dealForm")` is `null` and the whole app stops with "Cannot read properties of null."
+We kept the old data fields in `blank()` (`gigs`, `deals`…) so old backups still load, and saved the removed code in `docs/money_tab_moved_out.txt`.

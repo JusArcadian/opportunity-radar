@@ -100,10 +100,8 @@ function freshJobs() {
 }
 
 /* ---------------------------------------------------------------- views */
-const TABS = ["today", "jobs", "saved", "events", "skills", "gigs", "me"];
+const TABS = ["today", "jobs", "saved", "events", "skills", "me"];
 let view = "today";
-// Money tab (gigs + price checker) is off for new users; people who set up Radar before it was a choice keep it.
-const moneyOn = () => !me.profile || me.profile.money !== false;
 function setTab(tab) {
   if (!me.profile) tab = "setup";
   view = tab; setupFilled = false;
@@ -111,8 +109,7 @@ function setTab(tab) {
   ["setup", "resume", ...TABS].forEach((v) => ($("v-" + v).hidden = v !== tab));
   document.querySelectorAll("nav.tabs button").forEach((b) => b.setAttribute("aria-current", b.dataset.tab === tab ? "page" : "false"));
   document.querySelector("nav.tabs").hidden = tab === "setup";
-  const money = moneyOn(); document.querySelector('nav.tabs button[data-tab="gigs"]').hidden = !money;
-  if (tab === "gigs" && !money) return setTab("today");
+  if (tab === "gigs") return setTab("today");   // the Money tab moved out of Radar in v0.8.2
   window.scrollTo(0, 0);
   render();
 }
@@ -121,7 +118,7 @@ function render() {
   const n = $("notice");
   n.hidden = !feedError; n.className = "banner bad"; n.textContent = feedError;
   if (!me.profile || view === "setup") { renderSetup(); return; }
-  renderToday(); renderJobs(); renderSaved(); renderEvents(); renderSkills(); renderGigs(); renderDeals(); renderMe();
+  renderToday(); renderJobs(); renderSaved(); renderEvents(); renderSkills(); renderMe();
   if (view === "resume") renderResume();
   const fresh = freshJobs().length;
   $("b-new").textContent = fresh; $("b-new").hidden = !fresh;
@@ -170,7 +167,6 @@ function renderSetup() {
   if (setupFilled && feed.meta.careers.length) return;
   setupFilled = feed.meta.careers.length > 0;
   const p = me.profile || {};
-  $("s-money").checked = me.profile ? me.profile.money !== false : false;
   $("s-name").value = p.name || ""; $("s-floor").value = p.floor ?? 17; $("s-resume").value = p.resume || "";
   $("s-remote").checked = p.remote !== false; $("s-local").checked = !!p.local;
   $("s-city").innerHTML = `<option value="">Pick your city (South Florida list)</option>` + Object.keys(CITIES).map((c) => `<option value="${c}">${c.replace(/\b\w/g, (m) => m.toUpperCase())}</option>`).join("");
@@ -281,7 +277,6 @@ $("setupForm").addEventListener("submit", (ev) => {
     zip: $("s-zip").value.trim(), city: $("s-city").value, maxMi: parseFloat($("s-miles").value) || 20, goal: parseInt($("s-goal").value) || 5,
     skills: [...document.querySelectorAll("#s-skills input:checked")].map((i) => i.value),
     resume: $("s-resume").value.trim(),
-    money: $("s-money").checked,
   };
   persist(); toast("Saved. Here are your jobs."); setTab("jobs");
 });
@@ -397,104 +392,6 @@ function renderSkills() {
   }).join("");
 }
 
-/* ---------------------------------------------------------------- GIGS (quick-pay side work)
-  ELI5: data/gigs.json is a list of gig sites (what they pay, how fast, what they need).
-  YOUR part lives in me.gigs (where you stand with each site) and me.earnings (money you logged).
-*/
-let gigData = { gigs: [], categories: [], speed_labels: {}, checked: "" };
-async function loadGigs() {
-  try { gigData = await fetch("data/gigs.json", { cache: "no-store" }).then((r) => r.json()); } catch { /* offline: keep last */ }
-  if (me.profile) renderGigs();
-}
-const GIG_STATUS = ["Not started", "Signed up", "Approved", "Earning", "Not for me"];
-const GIG_CLS = { "Signed up": "warn", Approved: "violet", Earning: "good", "Not for me": "plain" };
-const money = (n) => "$" + (+n || 0).toLocaleString([], { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-const az = (a, b) => String(a).localeCompare(String(b), undefined, { sensitivity: "base" });
-function gigName(id) { const g = gigData.gigs.find((x) => x.id === id); return g ? g.name : "Other"; }
-function renderGigs() {
-  me.gigs = me.gigs || {}; me.earnings = me.earnings || [];
-  const month = todayISO().slice(0, 7), ui = me.ui;
-  const thisMonth = me.earnings.filter((e) => (e.date || "").startsWith(month)).reduce((t, e) => t + (+e.amt || 0), 0);
-  const total = me.earnings.reduce((t, e) => t + (+e.amt || 0), 0);
-  const active = Object.values(me.gigs).filter((g) => g.status === "Approved" || g.status === "Earning").length;
-  $("gigTiles").innerHTML = `<div class="tile"><b>${money(thisMonth)}</b><span>Earned this month</span></div>
-    <div class="tile"><b>${money(total)}</b><span>Earned in total</span></div>
-    <div class="tile"><b>${active}</b><span>Sites you're approved on</span></div>`;
-  // earnings form: sites A to Z, plus "Other"
-  const keep = $("e-gig").dataset.picked;                      // the site you picked last (kept while the list redraws)
-  $("e-gig").innerHTML = `<option value="">Pick a site…</option>` + gigData.gigs.slice().sort((a, b) => az(a.name, b.name)).map((g) => `<option value="${esc(g.id)}">${esc(g.name)}</option>`).join("") + `<option value="other">Other</option>`;
-  $("e-gig").value = keep || "";
-  if (!$("e-date").value) $("e-date").value = todayISO();
-  $("earnList").innerHTML = me.earnings.slice().sort((a, b) => b.date.localeCompare(a.date)).slice(0, 8).map((e) =>
-    `<div class="earn"><span class="small">${esc(nice(e.date))}</span><span class="grow">${esc(gigName(e.gig))}${e.note ? " · " + esc(e.note) : ""}</span><b>${money(e.amt)}</b>
-     <button class="x" type="button" data-delearn="${esc(e.id)}" aria-label="Delete">×</button></div>`).join("");
-  // filters: All, then categories A to Z
-  const cats = ["All", ...gigData.categories.slice().sort(az)];
-  if (!cats.includes(ui.gigFilter)) ui.gigFilter = "All";
-  $("gigFilters").innerHTML = cats.map((c) => `<button type="button" data-gigfilter="${esc(c)}" aria-pressed="${ui.gigFilter === c}">${esc(c)}</button>`).join("");
-  const order = { fast: 0, medium: 1, slow: 2 };
-  const list = gigData.gigs.filter((g) => ui.gigFilter === "All" || g.category === ui.gigFilter)
-    .sort((a, b) => (order[a.speed] ?? 3) - (order[b.speed] ?? 3) || az(a.name, b.name));
-  $("gigs").innerHTML = list.map((g) => {
-    const st = (me.gigs[g.id] || {}).status || "Not started";
-    return `<article class="card"><div class="chips">${chip(g.category, "plain")}${chip(gigData.speed_labels[g.speed] || "", g.speed === "fast" ? "good" : g.speed === "slow" ? "warn" : "")}${st !== "Not started" ? chip(st, GIG_CLS[st]) : ""}</div>
-      <h3 class="title">${esc(g.name)}</h3>
-      <dl class="gigrow"><dt>Pays</dt><dd>${esc(g.pay)}</dd><dt>Paid how</dt><dd>${esc(g.paid)}</dd><dt>You need</dt><dd>${esc(g.needs)}</dd></dl>
-      <div class="actions gigact">${safeUrl(g.url) ? `<a class="btn primary" href="${esc(safeUrl(g.url))}" target="_blank" rel="noopener">Open site</a>` : ""}
-        <label class="small">Where I stand <select data-gigstatus="${esc(g.id)}">${GIG_STATUS.map((x) => `<option ${x === st ? "selected" : ""}>${x}</option>`).join("")}</select></label></div>
-      ${safeUrl(g.source) ? `<p class="small">Numbers from <a href="${esc(safeUrl(g.source))}" target="_blank" rel="noopener">this source</a>. They can change.</p>` : ""}</article>`;
-  }).join("") || `<p class="small">Loading gig sites…</p>`;
-  $("gigChecked").textContent = gigData.checked ? `Gig list last checked ${nice(gigData.checked)}.` : "";
-}
-
-/* ---------------------------------------------------------------- DEALS (Marketplace deal checker)
-  ELI5: compare the asking price to what the same thing usually sells for used. Then work out what's left
-  if you resold it on eBay: price - eBay fee - order fee - shipping - what you paid = profit.
-  Same math as ATLAS's tools/deal_check.py (which looks up the used price for you).
-*/
-const DEAL = { great: 0.70, good: 0.90, fair: 1.05, orderFee: 0.40 };
-function dealMath(ask, used, ship, feePct) {
-  if (!(ask > 0) || !(used > 0)) return null;
-  const ratio = ask / used, fee = used * feePct / 100 + DEAL.orderFee;
-  const verdict = ratio <= DEAL.great ? ["GREAT DEAL", "good"] : ratio <= DEAL.good ? ["Good deal", "good"]
-    : ratio <= DEAL.fair ? ["Fair price", "warn"] : ["Overpriced", "bad"];
-  const profit = used - fee - ship - ask;
-  const maxFor40 = used - fee - ship - 40;                       // most you can pay and still make $40
-  return { ratio, fee, profit, maxFor40, verdict };
-}
-function dealInputs() {
-  return { item: $("d-item").value.trim(), ask: parseFloat($("d-ask").value), used: parseFloat($("d-used").value),
-    ship: parseFloat($("d-ship").value) || 0, fee: parseFloat($("d-fee").value) || 0, link: $("d-link").value.trim() };
-}
-function renderDealResult() {
-  const d = dealInputs(), m = dealMath(d.ask, d.used, d.ship, d.fee);
-  $("dealResult").innerHTML = !m ? `<p class="small">Type the asking price and the typical used price to see the verdict.</p>` :
-    `<div class="chips">${chip(m.verdict[0], m.verdict[1])}${chip(Math.round(m.ratio * 100) + "% of typical used price", "plain")}</div>
-     <dl class="gigrow"><dt>Flip profit</dt><dd><b>${money(m.profit)}</b> ${m.profit > 0 ? "" : "(not worth flipping)"}</dd>
-       <dt>eBay fees</dt><dd>${money(m.fee)}</dd>
-       <dt>Pay at most</dt><dd>${m.maxFor40 > 0 ? money(m.maxFor40) + " to make $40" : "Too cheap to flip for $40"}</dd></dl>
-     ${d.ask < 0.5 * d.used ? `<p class="small bad-text">⚠️ Under half the normal price: be extra careful (could be broken, stolen or a scam).</p>` : ""}`;
-}
-function renderDeals() {
-  me.deals = me.deals || []; me.wants = me.wants || [];
-  const view = me.ui.moneyView || "gigs";
-  $("gigsPane").hidden = view !== "gigs"; $("dealsPane").hidden = view !== "deals";
-  document.querySelectorAll("[data-moneyview]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.moneyview === view)));
-  renderDealResult();
-  $("wantList").innerHTML = me.wants.slice().sort((a, b) => az(a.item, b.item)).map((w) =>
-    `<div class="earn"><span class="grow">${esc(w.item)}</span><b>${money(w.max)}</b>
-     <button class="x" type="button" data-delwant="${esc(w.id)}" aria-label="Delete">×</button></div>`).join("");
-  $("dealList").innerHTML = me.deals.slice().sort((a, b) => b.date.localeCompare(a.date)).map((d) => {
-    const m = dealMath(d.ask, d.used, d.ship, d.fee);
-    return `<article class="card"><div class="chips">${m ? chip(m.verdict[0], m.verdict[1]) : ""}${chip(nice(d.date), "plain")}</div>
-      <h3 class="title">${esc(d.item)}</h3>
-      <dl class="gigrow"><dt>Asking</dt><dd>${money(d.ask)}</dd><dt>Typical used</dt><dd>${money(d.used)}</dd>
-        <dt>Flip profit</dt><dd>${m ? money(m.profit) : "-"}</dd></dl>
-      <div class="actions">${safeUrl(d.link) ? `<a class="btn" href="${esc(safeUrl(d.link))}" target="_blank" rel="noopener">Open listing</a>` : ""}
-        <button class="btn quiet" type="button" data-deldeal="${esc(d.id)}">Delete</button></div></article>`;
-  }).join("") || `<p class="small">Nothing saved yet.</p>`;
-}
-
 function renderMe() {
   const p = me.profile;
   const labels = p.careers.map((k) => careerOf(k).label || k).join(", ");
@@ -567,7 +464,7 @@ function searchNow(filter) {
     ].map(([n, u]) => `<a class="btn" href="${esc(u)}" target="_blank" rel="noopener">${esc(n)}</a>`).join("");
   };
   const why = filter === "Skipped" ? "You haven't skipped anything." : feedError ? "You're offline, so Radar's list can't load." :
-    "Radar's list doesn't have a match right now. It looks for new jobs 3 times a day.";
+    "Radar's list doesn't have a match right now. It looks for new jobs every morning.";
   return `<div class="card"><h3 class="title">Search right now</h3><p class="why">${why} You don't have to wait: these open real searches for the jobs you picked${remoteOnly ? " (remote)" : zip ? ` near ${esc(zip)}` : ""}.</p>
     ${kinds.map((k) => `<p class="small"><b>${esc(k.label)}</b></p><div class="actions">${links(k)}</div>`).join("")}
     <p class="small">Found one you like? Go to <b>Saved → + Add any job</b> and Radar makes your resume for it.${!zip && !remoteOnly ? " Add your ZIP in Me → Edit what I'm looking for for searches near you." : ""}</p></div>`;
@@ -686,11 +583,6 @@ document.addEventListener("click", (ev) => {
   const b = ev.target.closest("button"); if (!b) return;
   const d = b.dataset;
   if (d.tab) return setTab(d.tab);
-  if (d.moneyview) { me.ui.moneyView = d.moneyview; persist(); return renderDeals(); }
-  if (d.delwant) { me.wants = me.wants.filter((w) => w.id !== d.delwant); persist(); return renderDeals(); }
-  if (d.deldeal) { me.deals = me.deals.filter((x) => x.id !== d.deldeal); persist(); toast("Deleted"); return renderDeals(); }
-  if (d.gigfilter) { me.ui.gigFilter = d.gigfilter; persist(); return renderGigs(); }
-  if (d.delearn) { me.earnings = me.earnings.filter((e) => e.id !== d.delearn); persist(); toast("Deleted"); return renderGigs(); }
   if (d.filter) { me.ui.filter = d.filter; persist(); return renderJobs(); }
   if (d.save) return saveJob(d.save);
   if (d.skip) { me.skipped[d.skip] = todayISO(); persist(); toast("Skipped"); return render(); }
@@ -721,45 +613,6 @@ document.addEventListener("change", (ev) => {
     persist(); toast(made ? "Going. Your talking points are ready." : "Going: " + e.going); renderEvents(); renderToday();
   }
   if (ev.target.id === "showBelow") renderJobs();
-  if (ev.target.id === "e-gig") ev.target.dataset.picked = ev.target.value;
-  if (ev.target.dataset.gigstatus) {
-    me.gigs[ev.target.dataset.gigstatus] = { status: ev.target.value, since: todayISO() };
-    persist(); toast(ev.target.value); renderGigs();
-  }
-});
-
-// deals: live verdict while typing, save, want list, copy the ATLAS command
-$("dealForm").addEventListener("input", renderDealResult);
-$("dealForm").addEventListener("submit", (ev) => {
-  ev.preventDefault();
-  const d = dealInputs();
-  if (!d.item || !(d.ask > 0) || !(d.used > 0)) { toast("Add the item, asking price and typical used price."); return; }
-  if (d.link && !safeUrl(d.link)) { toast("The link should start with https://"); return; }
-  me.deals.push({ id: "d" + Date.now(), date: todayISO(), ...d });
-  persist(); toast("Saved"); renderDeals();
-});
-$("copyDealCmd").onclick = () => {
-  const d = dealInputs();
-  if (!d.item || !(d.ask > 0)) { toast("Add the item and asking price first."); return; }
-  copy(`python tools/deal_check.py "${d.item.replace(/"/g, "")}" --price ${d.ask}`, "Copied. Paste it in the ATLAS folder's terminal.");
-};
-$("wantForm").addEventListener("submit", (ev) => {
-  ev.preventDefault();
-  const item = $("w-item").value.trim(), max = parseFloat($("w-max").value);
-  if (!item || !(max > 0)) { toast("Add the item and the most you'll pay."); return; }
-  me.wants.push({ id: "w" + Date.now(), item, max }); persist();
-  $("w-item").value = ""; $("w-max").value = ""; renderDeals();
-});
-
-// log gig earnings
-$("earnForm").addEventListener("submit", (ev) => {
-  ev.preventDefault();
-  const amt = parseFloat($("e-amt").value);
-  if (!(amt > 0) || !$("e-date").value || !$("e-gig").value) { toast("Add a date, an amount and where it came from."); return; }
-  me.earnings.push({ id: "e" + Date.now(), date: $("e-date").value, gig: $("e-gig").value, amt, note: $("e-note").value.trim() });
-  const g = me.gigs[$("e-gig").value];
-  if ($("e-gig").value !== "other" && (!g || g.status !== "Earning")) me.gigs[$("e-gig").value] = { status: "Earning", since: todayISO() };
-  persist(); $("e-amt").value = ""; $("e-note").value = ""; toast("Added " + money(amt)); renderGigs();
 });
 
 // add a job from anywhere
@@ -910,4 +763,3 @@ document.addEventListener("visibilitychange", () => { if (document.visibilitySta
 /* ---------------------------------------------------------------- start */
 setTab(me.profile ? me.ui.tab || "today" : "setup");
 loadFeed();
-loadGigs();

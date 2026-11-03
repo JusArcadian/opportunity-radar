@@ -9,11 +9,11 @@ name: Daily feed + deploy
 
 on:
   schedule:
-    - cron: "40 11 * * *"     # 11:40 UTC = 7:40 AM Eastern (6:40 AM in winter)
+      - cron: "40 11,17,23 * * *"   # 3 times a day: about 6:40 AM, 12:40 PM and 6:40 PM Eastern
   workflow_dispatch: {}        # the "Run workflow" button
   push:
     branches: [main, master]
-    paths: ["web/**", ".github/workflows/daily.yml"]
+      paths: ["web/**", "config/**", "feed/**", ".github/workflows/daily.yml"]
 
 permissions:
   contents: write     # lets the robot save the new job list
@@ -26,7 +26,7 @@ concurrency:
 
 jobs:
   feed:
-    if: github.event_name != 'push'
+      if: github.event_name != 'push' || contains(join(github.event.commits.*.modified, ' '), 'config/') || contains(join(github.event.commits.*.modified, ' '), 'feed/fetch_jobs.py')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

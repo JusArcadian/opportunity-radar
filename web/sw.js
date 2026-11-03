@@ -8,7 +8,7 @@
     and falls back to the last saved copy when you're offline.
   Bump VERSION whenever you change an app file, so phones pick up the new version.
 */
-const VERSION = "radar-v0.8.1";
+const VERSION = "radar-v0.8.2";
 const APP_FILES = [
   "./", "./index.html", "./styles.css", "./resume.js", "./talk.js", "./app.js", "./manifest.webmanifest",
   "./icons/icon-192.png", "./icons/icon-512.png", "./icons/maskable-512.png", "./icons/apple-touch-icon.png"

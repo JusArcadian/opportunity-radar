@@ -1,11 +1,18 @@
 # Patch notes
 
+## v0.8.2 (2026-11-03): Radar is only about jobs
+
+### Nerfs
+- **Removed the Money tab** (Gigs and the used-tech Deals checker). Radar now has 6 tabs: Today, Jobs, Saved, Events, Skills, Me. The code and gig list are kept in `docs/money_tab_moved_out.txt` and `docs/gigs.json`, so they can move to another project. Your old gig and deal entries are still inside your backup file, not deleted.
+
+### Bugs fixed
+- The "Search right now" box said Radar updates 3 times a day; it updates every morning.
+
 ## v0.8.1 (2026-11-03): no waiting for jobs
 
 ### Features
 - **Search right now.** When Radar's list has nothing for you (new user, new job type, a quiet day), the Jobs tab shows one-tap **Indeed / Google / Snagajob** searches for exactly the kinds of jobs you picked, near your ZIP or remote. No more "check back tomorrow."
-- **The robot looks for jobs 3 times a day** (about 6:40 AM, 12:40 PM and 6:40 PM Eastern) instead of once.
-- Changing `config/feed.json` or the feed script now refreshes the job list as soon as you push. You don't have to wait for the next scheduled run.
+- (Tried updating the job list 3 times a day, then went back to once a day: "Search right now" already means nobody waits.)
 
 ### Buffs
 - "Local job sources near you" works anywhere in the US: the Florida-only links (CareerSource South Florida, Miami Craigslist, Miami-Dade jobs) became nationwide ones (American Job Centers from the U.S. Dept. of Labor, Craigslist for your city, city/county jobs near your ZIP).

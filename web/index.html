@@ -47,7 +47,6 @@
       </fieldset>
       <details class="fold"><summary>Skills and certificates you have <span class="small" id="s-skillCount"></span></summary><p class="small">Reading your resume checks these for you. Add or remove any.</p><div id="s-skills" class="checks cols"></div></details>
 
-      <label class="check"><input id="s-money" type="checkbox"> Show the Money tab (side gigs and a price checker for used tech)</label>
       <button class="btn primary" type="submit">Save and show my jobs</button>
     </form>
   </section>
@@ -143,71 +142,6 @@
     <div class="list" id="skills"></div>
   </section>
 
-  <section id="v-gigs" hidden>
-    <div class="filters" role="group" aria-label="Gigs or deals" id="moneySwitch">
-      <button type="button" data-moneyview="gigs" aria-pressed="true">Gigs</button>
-      <button type="button" data-moneyview="deals" aria-pressed="false">Deals</button>
-    </div>
-  <div id="gigsPane">
-    <h1>Gigs</h1>
-    <p class="lede">Quick-pay side work in one place: sign up, track where you stand, and log what you earn.</p>
-    <div class="tiles" id="gigTiles"></div>
-    <div class="alert info" style="margin-top:12px"><p><b>Stay safe:</b> real gig sites never ask you to pay to join, buy equipment, or move the chat to Telegram or WhatsApp. Pay amounts change, so check each site.</p></div>
-    <form id="earnForm" class="card" novalidate style="margin-top:12px">
-      <h3 class="title">Log money you earned</h3>
-      <div class="grid2">
-        <label>Date<input id="e-date" type="date"></label>
-        <label>Amount ($)<input id="e-amt" type="number" inputmode="decimal" min="0" step="0.01" placeholder="10.00"></label>
-      </div>
-      <label>From<select id="e-gig"></select></label>
-      <label>Note (optional)<input id="e-note" type="text" placeholder="20-min website test"></label>
-      <div class="actions"><button class="btn primary" type="submit">Add</button></div>
-      <div class="list" id="earnList"></div>
-    </form>
-    <h2>Gig sites</h2>
-    <div class="filters" role="group" aria-label="Filter gigs" id="gigFilters"></div>
-    <div class="list" id="gigs"></div>
-    <p class="small" id="gigChecked"></p>
-  </div>
-
-  <div id="dealsPane" hidden>
-    <h1>Deals</h1>
-    <p class="lede">Found something on Marketplace? Check if it's a good deal and what you'd make flipping it.</p>
-    <form id="dealForm" class="card" novalidate>
-      <h3 class="title">Check a deal</h3>
-      <label>What is it?<input id="d-item" type="text" placeholder="RTX 3060 12GB"></label>
-      <div class="grid2">
-        <label>Asking price ($)<input id="d-ask" type="number" inputmode="decimal" min="0" step="1" placeholder="180"></label>
-        <label>Typical used price ($)<input id="d-used" type="number" inputmode="decimal" min="0" step="1" placeholder="230"></label>
-      </div>
-      <p class="small">Typical used price: run ATLAS's Deal Checker (button below) or look at eBay listings for the same item.</p>
-      <div class="grid2">
-        <label>Shipping if you resell ($)<input id="d-ship" type="number" inputmode="decimal" min="0" step="1" value="12"></label>
-        <label>eBay fee (%)<input id="d-fee" type="number" inputmode="decimal" min="0" step="0.1" value="13.6"></label>
-      </div>
-      <label>Listing link (optional)<input id="d-link" type="url" inputmode="url" placeholder="https://www.facebook.com/marketplace/item/..."></label>
-      <div id="dealResult"></div>
-      <div class="actions">
-        <button class="btn primary" type="submit">Save to my deals</button>
-        <button class="btn" type="button" id="copyDealCmd">Copy ATLAS command</button>
-      </div>
-    </form>
-    <div class="alert info" style="margin-top:12px"><p><b>Before you pay:</b> meet in a public place (police station lots are great), see it running
-      (GPU: a game or stress test; CPU/RAM: boot to BIOS), check for bent pins or burn marks, and never pay a deposit, use Zelle to "hold" it, or share a code.</p></div>
-    <form id="wantForm" class="card" novalidate style="margin-top:12px">
-      <h3 class="title">Want list</h3>
-      <p class="small">Things you're hunting for and the most you'll pay. Tip: save the same search in Facebook Marketplace to get alerts.</p>
-      <div class="grid2">
-        <label>Item<input id="w-item" type="text" placeholder="Ryzen 7 5800X3D"></label>
-        <label>Max price ($)<input id="w-max" type="number" inputmode="decimal" min="0" step="1" placeholder="200"></label>
-      </div>
-      <div class="actions"><button class="btn primary" type="submit">Add</button></div>
-      <div class="list" id="wantList"></div>
-    </form>
-    <h2>Deals I checked</h2>
-    <div class="list" id="dealList"></div>
-  </div>
-  </section>
 
   <section id="v-me" hidden>
     <h1>Me</h1>
@@ -256,7 +190,7 @@ SUMMARY: (optional) 1–2 sentences about you, in your words</pre></details>
       <div class="card"><h3 class="title">Start over</h3><p class="why">Deletes everything Radar saved on this phone.</p>
         <div class="actions"><button class="btn danger" type="button" id="resetBtn">Delete my Radar data</button></div>
         <div class="actions" id="resetConfirm" hidden><span class="small">Are you sure? This can't be undone.</span><button class="btn danger" type="button" id="resetYes">Yes, delete</button><button class="btn quiet" type="button" id="resetNo">Keep it</button></div></div>
-      <p class="small">Opportunity Radar v0.8.1</p>
+      <p class="small">Opportunity Radar v0.8.2</p>
     </div>
   </section>
 </main>
@@ -267,7 +201,6 @@ SUMMARY: (optional) 1–2 sentences about you, in your words</pre></details>
   <button type="button" data-tab="saved"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg>Saved</button>
   <button type="button" data-tab="events"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Events</button>
   <button type="button" data-tab="skills"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Skills</button>
-  <button type="button" data-tab="gigs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .9-3 2s1.3 1.7 3 2 3 .9 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v2M12 16v2"/></svg>Money</button>
   <button type="button" data-tab="me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>Me</button>
 </div></nav>
 <div class="toast" id="toast" role="status" hidden></div>
