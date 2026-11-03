@@ -12,7 +12,7 @@ on:
     - cron: "40 11 * * *"     # 11:40 UTC = 7:40 AM Eastern (6:40 AM in winter)
   workflow_dispatch: {}        # the "Run workflow" button
   push:
-    branches: [main]
+    branches: [main, master]
     paths: ["web/**", ".github/workflows/daily.yml"]
 
 permissions:
@@ -56,7 +56,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main          # get the commit the feed job just made
+          ref: ${{ github.ref_name }}          # get the commit the feed job just made
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
