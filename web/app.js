@@ -81,7 +81,7 @@ function listingOf(id, job) {
   if (job && job.expires && job.expires < todayISO()) return "Closed";
   const st = status[id];
   if (st && st.status && st.status !== "Open") return st.status;
-  if (id.startsWith("me:")) return "";
+  if (id.startsWith("me:") || id.startsWith("sheet:")) return "";
   const inFeed = feed.jobs.some((j) => j.id === id);
   if (inFeed || (st && st.status === "Open")) return "Open";
   return feed.jobs.length ? "Unknown" : "";
@@ -102,6 +102,8 @@ function freshJobs() {
 /* ---------------------------------------------------------------- views */
 const TABS = ["today", "jobs", "saved", "events", "skills", "gigs", "me"];
 let view = "today";
+// Money tab (gigs + price checker) is off for new users; people who set up Radar before it was a choice keep it.
+const moneyOn = () => !me.profile || me.profile.money !== false;
 function setTab(tab) {
   if (!me.profile) tab = "setup";
   view = tab; setupFilled = false;
@@ -109,6 +111,8 @@ function setTab(tab) {
   ["setup", "resume", ...TABS].forEach((v) => ($("v-" + v).hidden = v !== tab));
   document.querySelectorAll("nav.tabs button").forEach((b) => b.setAttribute("aria-current", b.dataset.tab === tab ? "page" : "false"));
   document.querySelector("nav.tabs").hidden = tab === "setup";
+  const money = moneyOn(); document.querySelector('nav.tabs button[data-tab="gigs"]').hidden = !money;
+  if (tab === "gigs" && !money) return setTab("today");
   window.scrollTo(0, 0);
   render();
 }
@@ -166,16 +170,106 @@ function renderSetup() {
   if (setupFilled && feed.meta.careers.length) return;
   setupFilled = feed.meta.careers.length > 0;
   const p = me.profile || {};
+  $("s-money").checked = me.profile ? me.profile.money !== false : false;
   $("s-name").value = p.name || ""; $("s-floor").value = p.floor ?? 17; $("s-resume").value = p.resume || "";
   $("s-remote").checked = p.remote !== false; $("s-local").checked = !!p.local;
   $("s-city").innerHTML = `<option value="">Pick your city (South Florida list)</option>` + Object.keys(CITIES).map((c) => `<option value="${c}">${c.replace(/\b\w/g, (m) => m.toUpperCase())}</option>`).join("");
   $("s-zip").value = p.zip || ""; $("s-city").value = p.city || ""; $("s-miles").value = p.maxMi || 20; $("s-goal").value = p.goal || 5;
   const careers = feed.meta.careers.length ? feed.meta.careers : [{ key: "helpdesk", label: "Help desk / IT" }];
-  $("s-careers").innerHTML = careers.map((c) => `<label class="check"><input type="checkbox" value="${esc(c.key)}" ${(p.careers || ["helpdesk", "support"]).includes(c.key) ? "checked" : ""}> ${esc(c.label)}</label>`).join("");
-  $("s-skills").innerHTML = (feed.meta.skills || []).map((s) => `<label class="check"><input type="checkbox" value="${esc(s)}" ${(p.skills || []).includes(s) ? "checked" : ""}> ${esc(s)}</label>`).join("") || '<p class="small">Skills load with the job feed.</p>';
+  $("s-careers").innerHTML = [...careers].sort((a, b) => a.label.localeCompare(b.label)).map((c) => `<label class="check"><input type="checkbox" value="${esc(c.key)}" ${(p.careers || ["helpdesk", "support"]).includes(c.key) ? "checked" : ""}> ${esc(c.label)}</label>`).join("");
+  $("s-skills").innerHTML = [...new Set([...(feed.meta.skills || []), ...(p.skills || [])])].map((s) => `<label class="check"><input type="checkbox" value="${esc(s)}" ${(p.skills || []).includes(s) ? "checked" : ""}> ${esc(s)}</label>`).join("") || '<p class="small">Skills load with the job feed.</p>';
+  skillCount();
 }
+/* ---------------------------------------------------------------- read any resume (v0.8.0)
+   ELI5: a .docx file is secretly a zip folder. Inside is word/document.xml, which holds the text.
+   We unzip just that one file with the browser's built-in DecompressionStream, then keep the words. */
+// PDFs: pdf.js (Mozilla's free PDF reader, Apache-2.0) is stored inside the app in web/vendor/pdfjs/,
+// so the file never leaves the phone. It only downloads the first time someone picks a PDF.
+async function pdfText(file) {
+  const pdfjs = await import("./vendor/pdfjs/pdf.min.mjs");
+  pdfjs.GlobalWorkerOptions.workerSrc = "./vendor/pdfjs/pdf.worker.min.mjs";
+  const doc = await pdfjs.getDocument({ data: new Uint8Array(await file.arrayBuffer()) }).promise;
+  const out = [];
+  for (let n = 1; n <= doc.numPages; n++) {
+    const items = (await (await doc.getPage(n)).getTextContent()).items.filter((i) => i.str !== undefined);
+    const rows = new Map();   // group words that sit on the same line (same height on the page)
+    items.forEach((i) => { const y = Math.round(i.transform[5] / 3); if (!rows.has(y)) rows.set(y, []); rows.get(y).push(i); });
+    [...rows.entries()].sort((a, b) => b[0] - a[0]).forEach(([, xs]) => {
+      xs.sort((a, b) => a.transform[4] - b.transform[4]);
+      let line = "", end = null;
+      xs.forEach((i) => { const gap = end === null ? 0 : i.transform[4] - end; line += (line && gap > 2 && !line.endsWith(" ") && !i.str.startsWith(" ") ? (gap > 25 ? "   " : " ") : "") + i.str; end = i.transform[4] + (i.width || 0); });
+      if (line.trim()) out.push(line.trim());
+    });
+  }
+  return out.join("\n");
+}
+async function fileText(file) {
+  if (/\.pdf$/i.test(file.name)) return pdfText(file);
+  if (!/\.docx$/i.test(file.name)) return file.text();
+  const buf = new Uint8Array(await file.arrayBuffer()), dv = new DataView(buf.buffer);
+  let eocd = -1; for (let i = buf.length - 22; i >= 0; i--) if (dv.getUint32(i, true) === 0x06054b50) { eocd = i; break; }
+  if (eocd < 0) throw new Error("not a docx");
+  let off = dv.getUint32(eocd + 16, true); const count = dv.getUint16(eocd + 10, true);
+  for (let n = 0; n < count; n++) {
+    const method = dv.getUint16(off + 10, true), size = dv.getUint32(off + 20, true), nameLen = dv.getUint16(off + 28, true);
+    const extra = dv.getUint16(off + 30, true), comment = dv.getUint16(off + 32, true), local = dv.getUint32(off + 42, true);
+    const name = new TextDecoder().decode(buf.slice(off + 46, off + 46 + nameLen));
+    if (name === "word/document.xml") {
+      const start = local + 30 + dv.getUint16(local + 26, true) + dv.getUint16(local + 28, true), data = buf.slice(start, start + size);
+      const xml = method === 0 ? new TextDecoder().decode(data)
+        : await new Response(new Blob([data]).stream().pipeThrough(new DecompressionStream("deflate-raw"))).text();
+      return xml.replace(/<w:tab\/>/g, " ").replace(/<\/w:p>/g, "\n").replace(/<[^>]+>/g, "")
+        .replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&apos;/g, "'");
+    }
+    off += 46 + nameLen + extra + comment;
+  }
+  throw new Error("no text found");
+}
+function readResume(text) {
+  const r = window.ResumeMaker.fromResume(text);
+  return r.jobs ? r : null;
+}
+function skillCount() { const n = document.querySelectorAll("#s-skills input:checked").length; $("s-skillCount").textContent = n ? `(${n} checked)` : ""; }
+document.addEventListener("change", (e) => { if (e.target.closest && e.target.closest("#s-skills")) skillCount(); });
+function checkSkills(found) {
+  const box = $("s-skills"), have = [...box.querySelectorAll("input")];
+  let n = 0;
+  found.forEach((sk) => {
+    const low = sk.toLowerCase(), hit = have.find((i) => i.value.toLowerCase() === low || (low.length > 3 && i.value.toLowerCase().includes(low)) || (i.value.length > 3 && low.includes(i.value.toLowerCase())));
+    if (hit) { if (!hit.checked) { hit.checked = true; n++; } return; }
+    box.insertAdjacentHTML("beforeend", `<label class="check"><input type="checkbox" value="${esc(sk)}" checked> ${esc(sk)}</label>`); n++;
+  });
+  return n;
+}
+$("s-resumeFile").onchange = async (ev) => {
+  const f = ev.target.files[0]; if (!f) return;
+  try { $("s-resume").value = await fileText(f); $("s-read").click(); }
+  catch { $("s-readMsg").textContent = "Couldn't read that file. Open it, copy all the text, and paste it in the box instead."; }
+  ev.target.value = "";
+};
+$("s-read").onclick = () => {
+  const r = readResume($("s-resume").value);
+  if (!r) { $("s-readMsg").textContent = "Radar couldn't find your jobs. Make sure each job has dates, like \"Jan 2024 - Present\"."; return; }
+  if (!me.facts.trim() || confirm("Replace the resume facts you already saved with the ones from this resume?")) me.facts = r.facts;
+  const n = checkSkills(r.skills); skillCount(); persist();
+  $("s-readMsg").textContent = `Found ${r.jobs} job${r.jobs === 1 ? "" : "s"} and checked ${n} skill${n === 1 ? "" : "s"} below. You can fix anything later on Me → My resume facts.`;
+};
+$("m-convert").onclick = () => {
+  const r = readResume($("m-facts").value);
+  if (!r) { $("factsMsg").textContent = "Paste your normal resume in the box first. Each job needs dates, like \"Jan 2024 - Present\"."; return; }
+  $("m-facts").value = r.facts; $("factsMsg").textContent = `Turned it into ${r.jobs} job${r.jobs === 1 ? "" : "s"}. Check it, fix anything, then tap Save my facts.`;
+};
+$("m-resumeFile").onchange = async (ev) => {
+  const f = ev.target.files[0]; if (!f) return;
+  try { const r = readResume(await fileText(f)); if (!r) throw new Error();
+    $("m-facts").value = r.facts; $("factsMsg").textContent = `Read ${r.jobs} job${r.jobs === 1 ? "" : "s"} from ${f.name}. Check it, then tap Save my facts.`; }
+  catch { $("factsMsg").textContent = "Couldn't read that file. Open it, copy all the text, paste it in the box, and tap Turn a pasted resume into facts."; }
+  ev.target.value = "";
+};
+
 $("setupForm").addEventListener("submit", (ev) => {
   ev.preventDefault();
+  if ($("s-resume").value.trim() && !me.facts.trim()) { const r = readResume($("s-resume").value); if (r) { me.facts = r.facts; checkSkills(r.skills); } }
   const careers = [...document.querySelectorAll("#s-careers input:checked")].map((i) => i.value);
   if (!careers.length) { toast("Pick at least one kind of job."); return; }
   me.profile = {
@@ -187,6 +281,7 @@ $("setupForm").addEventListener("submit", (ev) => {
     zip: $("s-zip").value.trim(), city: $("s-city").value, maxMi: parseFloat($("s-miles").value) || 20, goal: parseInt($("s-goal").value) || 5,
     skills: [...document.querySelectorAll("#s-skills input:checked")].map((i) => i.value),
     resume: $("s-resume").value.trim(),
+    money: $("s-money").checked,
   };
   persist(); toast("Saved. Here are your jobs."); setTab("jobs");
 });
@@ -194,7 +289,7 @@ $("setupForm").addEventListener("submit", (ev) => {
 function renderToday() {
   const h = new Date().getHours(), name = me.profile.name;
   $("hello").textContent = (h < 12 ? "Good morning" : h < 18 ? "Good afternoon" : "Good evening") + (name ? ", " + name : "");
-  $("feedInfo").textContent = feed.jobs.length ? `${myJobs().length} jobs match what you're looking for. New ones arrive every morning.` : "";
+  $("feedInfo").textContent = feed.jobs.length ? `${myJobs().length} job${myJobs().length === 1 ? "" : "s"} match${myJobs().length === 1 ? "es" : ""} what you're looking for. New ones arrive every morning.` : "";
   const saved = Object.entries(me.saved);
   const fresh = freshJobs();
   const count = (fn) => saved.filter(([, s]) => fn(s.status)).length;
@@ -271,14 +366,17 @@ function renderSaved() {
       <div class="chips">${takeHomeChip(j.pay, j.hourly)}${commuteChip(me.profile.city || "", me.profile.zip, j.location)}</div>
       ${s.notes ? `<p class="why">${esc(s.notes)}</p>` : ""}
       <div class="actions">
-        ${safeUrl(s.docLink) ? `<a class="btn" href="${esc(safeUrl(s.docLink))}" target="_blank" rel="noopener">Tailored resume (Docs)</a>` : ""}
         ${safeUrl(j.applyUrl) ? `<a class="btn" href="${esc(safeUrl(j.applyUrl))}" target="_blank" rel="noopener">Apply on site</a>` : ""}
-        ${j.location && !/remote/i.test(`${j.location} ${j.remote || ""}`) ? `<a class="btn quiet" href="${esc(mapsLink((me.profile || {}).zip || "", j.location))}" target="_blank" rel="noopener">Directions</a>` : ""}
         ${s.resume ? `<button class="btn primary" type="button" data-viewresume="${esc(id)}">My resume</button>` : `<button class="btn" type="button" data-makeresume="${esc(id)}">Make my resume</button>`}
-        <button class="btn" type="button" data-seetalk="job|${esc(id)}">Talking points</button>
-        <button class="btn quiet" type="button" data-tailor="${esc(id)}">Copy AI prompt (cover letter + research)</button>
         <label class="small" for="st-${esc(id)}" style="flex-direction:row;align-items:center;gap:6px;font-weight:600">Status
           <select class="btn" id="st-${esc(id)}" data-statussel="${esc(id)}">${BSTAT.map((x) => `<option ${x === s.status ? "selected" : ""}>${x}</option>`).join("")}</select></label>
+      </div>
+      <details class="fold more"><summary>More</summary><div class="actions">
+        ${safeUrl(s.docLink) ? `<a class="btn" href="${esc(safeUrl(s.docLink))}" target="_blank" rel="noopener">Tailored resume (Docs)</a>` : ""}
+        <button class="btn" type="button" data-seetalk="job|${esc(id)}">Talking points</button>
+        ${j.location && !/remote/i.test(`${j.location} ${j.remote || ""}`) ? `<a class="btn" href="${esc(mapsLink((me.profile || {}).zip || "", j.location))}" target="_blank" rel="noopener">Directions</a>` : ""}
+        <button class="btn" type="button" data-tailor="${esc(id)}">Help writing a cover letter</button>
+      </div><p class="small">Cover letter help copies a ready-made request. Paste it into a free AI chat like ChatGPT or Claude, and check what it writes before you send it.</p></details>
       </div>${sourceLine(j)}</article>`;
   }).join("");
 }
@@ -400,7 +498,7 @@ function renderDeals() {
 function renderMe() {
   const p = me.profile;
   const labels = p.careers.map((k) => careerOf(k).label || k).join(", ");
-  $("meSummary").textContent = `Looking for: ${labels}. Pay floor: $${p.floor}/hr. ${p.remote ? "Remote" : ""}${p.remote && p.local ? " + " : ""}${p.local ? "local" : ""} jobs. ${p.skills.length} skills on file.${me.facts.trim() ? " Resume facts saved: every saved job gets a resume." : " Add your resume facts below to get automatic resumes."}`;
+  $("meSummary").textContent = `Looking for: ${labels}. Pay floor: $${p.floor}/hr. ${p.remote ? "Remote" : ""}${p.remote && p.local ? " + " : ""}${p.local ? "local" : ""} jobs. ${p.skills.length} skill${p.skills.length === 1 ? "" : "s"} on file.${me.facts.trim() ? " Resume facts saved: every saved job gets a resume." : " Add your resume facts below to get automatic resumes."}`;
   if (document.activeElement !== $("m-facts")) $("m-facts").value = me.facts || "";
   $("installBtn").hidden = !installEvent;
 }
@@ -493,7 +591,7 @@ function tailorPrompt(s) {
   const j = s.job, p = me.profile;
   return `Tailor my resume for this job. Rules: only use facts from MY RESUME below. You may reorder, choose and reword bullets to match the job's language and write a new 2-3 sentence summary. Never add a job, skill, tool, certification, degree, number or years of experience I don't list. If the job needs something I don't have, tell me separately instead of putting it in the resume.
 
-Also give me: a 3-paragraph cover letter that mentions 2 specific facts about the company (research it and cite sources), 4 interview talking points, and 3 smart questions to ask.
+Also give me: a 3-paragraph cover letter that mentions 2 specific facts about the company (research it and cite sources), 4 interview talking points, and 3 good questions to ask.
 
 JOB: ${j.title} at ${j.company} (${j.location || ""}${j.pay ? ", " + j.pay : ""})
 Posting: ${j.applyUrl || j.sourceUrl || "(no link)"}
@@ -582,7 +680,7 @@ document.addEventListener("click", (ev) => {
   if (d.delevent) { me.events = me.events.filter((e) => e.id !== d.delevent); persist(); toast("Deleted"); return renderEvents(); }
   if (d.makeresume) { if (makeResume(d.makeresume)) { persist(); showResume(d.makeresume); } return; }
   if (d.viewresume) return showResume(d.viewresume);
-  if (d.tailor) return copy(tailorPrompt(me.saved[d.tailor]), "Prompt copied. Paste it into Claude.");
+  if (d.tailor) return copy(tailorPrompt(me.saved[d.tailor]), "Copied. Paste it into ChatGPT or Claude.");
   if (d.prep) return copy(prepPrompt(me.saved[d.prep]), "Prep prompt copied. Paste it into Claude.");
   if (d.copyfollow) return copy(followPrompt(me.saved[d.copyfollow]), "Follow-up message copied.");
   if (d.followed) { me.saved[d.followed].appliedOn = todayISO(); persist(); toast("Next reminder in 7 days"); return render(); }

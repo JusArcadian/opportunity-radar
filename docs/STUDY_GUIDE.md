@@ -261,3 +261,37 @@ It only copies sentences from the posting and never writes new ones, so it can't
 A **backup** is a photo of everything; loading it swaps your whole app for the photo. An **import file** is a box of extra stuff; loading it puts the new things on the shelf next to what's already there.
 Code: `mergeIn(d)` in `web/app.js`. For each saved job it builds a key from `title|company` and skips it if you already have one with that key, so nothing is doubled. Events use `name|date`. Facts are only filled in if yours are empty. The file says which kind it is with `"radarMerge": true`.
 **When things break:** "That file isn't a Radar backup" means the file has no `saved` section or isn't valid JSON. Don't edit it in Word; use Notepad.
+
+
+## Chapter 20: Reading anyone's resume (v0.8.0)
+**`fromResume(text)` in `web/resume.js`** reads a normal resume line by line:
+1. **Section titles.** Lines like "Experience", "Education" or "Skills" switch the "drawer" that the next lines go into (`HEAD` list).
+2. **Job lines are found by their dates.** `RANGE` is a pattern for "Jan 2024 - Present", "06/2021 – 05/2023" or "2019-2021". The words around the date become title | company | place. If the line before it is short, it's treated as part of the job header (for resumes that put the company on its own line).
+3. **Bullets.** Lines starting with • or -, or longer sentences, go under the current job.
+4. **Commas that aren't separators** get hidden first by `guard()`: "Profits Management, Inc." and "(Concessions, Usher)" stay in one piece.
+5. It writes everything back as `JOB:` / `SKILLS` / `EDUCATION:` lines and never adds words.
+
+**.docx files** are zip folders. `fileText()` in `app.js` finds `word/document.xml` inside the zip and unpacks it with the browser's built-in `DecompressionStream("deflate-raw")`, so there's no library to install. Each `</w:p>` (end of a Word paragraph) becomes a new line.
+
+**New job types** live in `config/feed.json` → `careers`. `remote_search: false` means "mostly in-person, don't ask the remote-only site." New resume types are in `KINDS` in `resume.js`. `kindOf()` checks the most specific type first (IT, then food, warehouse, care, driver, office, store).
+
+**When things break**
+- "Radar couldn't find your jobs" means the resume has no dates next to the jobs. Add dates like "Jan 2024 - Present".
+- A job's title and company are swapped: fix it in Me → My resume facts (the format is `JOB: Title | Company | City, State | dates`).
+- An old .doc (not .docx) or PDF won't read. Copy the text and paste it instead.
+
+
+## Chapter 21: PDFs and the "for the people" polish (v0.8.0)
+**PDF reading (`pdfText()` in app.js).** A PDF doesn't store lines of text the way a Word file does. It stores little pieces of words, each with an x/y position on the page. pdf.js hands us those pieces, and we:
+1. group the pieces that share the same height on the page (the `y` number), so they become one line
+2. sort each line left to right (the `x` number)
+3. add a space where there's a gap between pieces
+Then the same `fromResume()` from Chapter 20 reads it.
+`import("./vendor/pdfjs/pdf.min.mjs")` loads the reader only when someone actually picks a PDF, so the app stays fast for everyone else.
+
+**`<details>` folds** (the Skills box, "Show the format", "More" on saved jobs) are a built-in HTML tap-to-open box, so no JavaScript is needed. This is how we cut noise: rare actions stay one tap away instead of on screen all the time.
+
+**Design rule we followed:** every screen shows the 2–3 things most people need, in plain words, with no buzzwords. Everything else is folded or optional.
+
+**When things break**
+- PDF says "Couldn't read that file": it's probably a scanned image with no real text in it. Copy and paste won't work either; type the facts in or use the Word version.

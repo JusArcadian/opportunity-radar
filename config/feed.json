@@ -40,7 +40,6 @@
       "bench_source": "Same as help desk (BLS computer user support specialists)",
       "title_words": [
         "customer support",
-        "customer service",
         "support specialist",
         "support associate",
         "support representative",
@@ -109,6 +108,187 @@
       "title_words": [
         "cloud support"
       ]
+    },
+    {
+      "key": "food",
+      "label": "Restaurant / food service",
+      "remote_search": false,
+      "queries": [
+        "crew member",
+        "restaurant team member",
+        "barista",
+        "line cook"
+      ],
+      "title_words": [
+        "crew member",
+        "cook",
+        "barista",
+        "server",
+        "host",
+        "hostess",
+        "dishwasher",
+        "food service",
+        "kitchen",
+        "busser",
+        "shift leader",
+        "chipotle",
+        "starbucks",
+        "mcdonald",
+        "chick-fil-a",
+        "taco bell",
+        "wendy",
+        "subway",
+        "panera"
+      ],
+      "bench_low": null,
+      "bench_mid": null,
+      "bench_source": ""
+    },
+    {
+      "key": "retail",
+      "label": "Retail / store",
+      "remote_search": false,
+      "queries": [
+        "retail sales associate",
+        "cashier",
+        "stock associate"
+      ],
+      "title_words": [
+        "sales associate",
+        "retail",
+        "cashier",
+        "stock",
+        "merchandis",
+        "store associate",
+        "sales floor",
+        "key holder",
+        "publix",
+        "target",
+        "walmart",
+        "best buy",
+        "gamestop",
+        "home depot",
+        "lowe's",
+        "cvs",
+        "walgreens",
+        "costco",
+        "grocery",
+        "bagger"
+      ],
+      "bench_low": null,
+      "bench_mid": null,
+      "bench_source": ""
+    },
+    {
+      "key": "warehouse",
+      "label": "Warehouse / logistics",
+      "remote_search": false,
+      "queries": [
+        "warehouse associate",
+        "package handler"
+      ],
+      "title_words": [
+        "warehouse",
+        "package handler",
+        "forklift",
+        "picker",
+        "packer",
+        "material handler",
+        "loader",
+        "fulfillment",
+        "inventory associate",
+        "shipping",
+        "receiving"
+      ],
+      "bench_low": null,
+      "bench_mid": null,
+      "bench_source": ""
+    },
+    {
+      "key": "callcenter",
+      "label": "Call center / customer service",
+      "remote_search": true,
+      "queries": [
+        "customer service representative",
+        "call center representative"
+      ],
+      "title_words": [
+        "customer service representative",
+        "call center",
+        "contact center",
+        "customer care",
+        "customer service agent",
+        "inbound sales"
+      ],
+      "bench_low": null,
+      "bench_mid": null,
+      "bench_source": ""
+    },
+    {
+      "key": "office",
+      "label": "Office / admin",
+      "remote_search": true,
+      "queries": [
+        "administrative assistant",
+        "receptionist",
+        "data entry"
+      ],
+      "title_words": [
+        "administrative assistant",
+        "admin assistant",
+        "receptionist",
+        "front desk",
+        "data entry",
+        "office assistant",
+        "office coordinator",
+        "clerk",
+        "scheduler"
+      ],
+      "bench_low": null,
+      "bench_mid": null,
+      "bench_source": ""
+    },
+    {
+      "key": "care",
+      "label": "Healthcare support",
+      "remote_search": false,
+      "queries": [
+        "medical assistant",
+        "patient care technician",
+        "caregiver"
+      ],
+      "title_words": [
+        "medical assistant",
+        "patient care",
+        "caregiver",
+        "home health aide",
+        "cna",
+        "pharmacy technician",
+        "medical receptionist",
+        "phlebotom",
+        "dental assistant"
+      ],
+      "bench_low": null,
+      "bench_mid": null,
+      "bench_source": ""
+    },
+    {
+      "key": "driver",
+      "label": "Driver / delivery",
+      "remote_search": false,
+      "queries": [
+        "delivery driver",
+        "courier"
+      ],
+      "title_words": [
+        "delivery driver",
+        "driver",
+        "courier",
+        "delivery associate"
+      ],
+      "bench_low": null,
+      "bench_mid": null,
+      "bench_source": ""
     }
   ],
   "skip_title_words": [
@@ -184,7 +364,27 @@
     "DHCP",
     "VPN",
     "MFA",
-    "Ticketing"
+    "Ticketing",
+    "Customer service",
+    "Cash handling",
+    "POS / register",
+    "Food safety",
+    "ServSafe",
+    "Food prep",
+    "Stocking",
+    "Inventory",
+    "Forklift",
+    "Safe lifting",
+    "Data entry",
+    "Scheduling",
+    "Microsoft Office",
+    "Excel",
+    "Phone etiquette",
+    "CPR / First aid",
+    "Bilingual (Spanish)",
+    "Valid driver's license",
+    "Teamwork",
+    "Sales"
   ],
   "red_flags": {
     "pay to train": {
@@ -326,5 +526,6 @@
       "Internship"
     ],
     "pages": 2
-  }
+  },
+  "_remote_search": "remote_search: false = these jobs are mostly in-person, so don't ask the remote-only sites (Himalayas) about them. Local sources (The Muse, Adzuna) still find them."
 }

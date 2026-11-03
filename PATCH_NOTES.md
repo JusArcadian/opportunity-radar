@@ -1,5 +1,33 @@
 # Patch notes
 
+## v0.8.0 (2026-11-03): Radar for any job, any resume
+
+### Features
+- **Read any resume.** In Setup, paste your resume or pick a **.docx / .txt** file and tap **Read my resume**. Radar finds your jobs (by their dates), bullets, skills, education and certificates, fills **My resume facts** for you, and checks your skills. On the Me tab: **Fill from a resume file** and **Turn a pasted resume into facts** (you review before saving). It all runs on the phone: no AI, nothing uploaded. PDF: copy the text and paste it.
+- **7 new kinds of jobs:** Call center / customer service, Driver / delivery, Healthcare support, Office / admin, Restaurant / food service, Retail / store, Warehouse / logistics.
+- **Resumes for those jobs.** New resume types (Restaurant, Warehouse, Office, Healthcare, Driver) pick your best-matching bullets and skills for each kind of job.
+- 20 everyday skills added (Cash handling, POS / register, Food safety, ServSafe, Forklift, Data entry, CPR / First aid, Bilingual (Spanish), and more). Skills found in your resume that aren't on the list get added for you.
+
+- **PDF resumes.** Pick a PDF and Radar reads it on the phone. It uses Mozilla's free pdf.js reader, stored inside the app in `web/vendor/pdfjs/`, so the file is never uploaded.
+- **About Radar and your privacy** card on the Me tab, in plain words: what Radar does and doesn't do.
+- **Money tab is optional.** New users choose it in Setup (off by default). Anyone who set up Radar earlier keeps it.
+
+### Buffs
+- **Setup starts with your resume.** Skills sit in a folded box that your resume fills in for you, instead of a wall of 60 checkboxes.
+- **Saved job cards are calmer**: Apply, My resume and Status up front. Talking points, Directions, Tailored resume and cover letter help are under **More**.
+- "Copy AI prompt" is now **Help writing a cover letter**, with one line explaining how to use it.
+- The resume-facts format example is folded under **Show the format**.
+- Home city label says honestly that distance and drive times only work in South Florida for now.
+- Job types and resume types are listed A to Z.
+- In-person job types skip the remote-only job site, so the robot makes fewer wasted requests.
+
+### Bugs fixed
+- "1 jobs match" → "1 job matches"; "1 skills on file" → "1 skill on file".
+- The "Listing not seen today" chip no longer shows on jobs you added yourself or imported from your sheet.
+
+### Nerfs
+- In-person jobs mostly come from The Muse (and Adzuna once it's turned on), so expect fewer of them than remote jobs for now. The "Local job sources near you" links (Indeed, Snagajob, store career pages) fill the gap.
+
 ## v0.7.1 (2026-11-03): bring your Google Sheet into the app
 
 ### Features

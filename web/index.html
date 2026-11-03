@@ -31,18 +31,23 @@
     <p class="lede">Tell Radar what you're looking for. You can change this any time on the Me tab. Everything stays on this phone.</p>
     <form id="setupForm" novalidate>
       <label>Your first name<input id="s-name" type="text" autocomplete="given-name" placeholder="Your first name"></label>
+      <label>Start with your resume (optional). Radar reads your jobs and skills from it, so you type less<textarea id="s-resume" rows="5" placeholder="Paste your resume text…"></textarea></label>
+      <div class="actions"><label class="btn" for="s-resumeFile">Pick a file (PDF, Word or text)</label><input id="s-resumeFile" type="file" accept=".pdf,.docx,.txt,application/pdf,text/plain" hidden>
+        <button class="btn" type="button" id="s-read">Read my resume</button></div>
+      <p class="small" id="s-readMsg">Works with PDF, Word (.docx) and text files. Your resume never leaves this phone.</p>
       <fieldset><legend>Jobs to look for</legend><div id="s-careers" class="checks"></div></fieldset>
       <label>Lowest pay you'll take ($ per hour)<input id="s-floor" type="number" inputmode="decimal" min="0" step="0.5" value="17"></label>
       <fieldset><legend>Where</legend>
         <label class="check"><input id="s-remote" type="checkbox" checked> Remote jobs (anywhere in the US)</label>
         <label class="check"><input id="s-local" type="checkbox"> Local jobs near me (when available)</label>
         <label>Home ZIP<input id="s-zip" type="text" inputmode="numeric" maxlength="5" placeholder="e.g. 33101"></label>
-        <label>Home city<select id="s-city"></select></label>
+        <label>Home city (distance and drive times work in South Florida for now)<select id="s-city"></select></label>
         <label>How far will you travel? (miles)<input id="s-miles" type="number" inputmode="numeric" min="1" max="100" value="20"></label>
         <label>Weekly apply goal<input id="s-goal" type="number" inputmode="numeric" min="1" max="50" value="5"></label>
       </fieldset>
-      <fieldset><legend>Skills and certs you already have</legend><div id="s-skills" class="checks cols"></div></fieldset>
-      <label>Your resume (paste it here; used only to build AI prompts on this phone)<textarea id="s-resume" rows="5" placeholder="Paste your resume text…"></textarea></label>
+      <details class="fold"><summary>Skills and certificates you have <span class="small" id="s-skillCount"></span></summary><p class="small">Reading your resume checks these for you. Add or remove any.</p><div id="s-skills" class="checks cols"></div></details>
+
+      <label class="check"><input id="s-money" type="checkbox"> Show the Money tab (side gigs and a price checker for used tech)</label>
       <button class="btn primary" type="submit">Save and show my jobs</button>
     </form>
   </section>
@@ -77,7 +82,7 @@
       <label>Job link (optional)<input id="a-link" type="url" inputmode="url" placeholder="https://…"></label>
       <label>Location<input id="a-loc" type="text" placeholder="Cutler Bay, FL or Remote (US)"></label>
       <label>Pay<input id="a-pay" type="text" placeholder="$15-$17/hr"></label>
-      <label>Kind of job<select id="a-kind"><option value="">Auto-detect</option><option value="it">IT / tech</option><option value="other">Other</option><option value="store">Store / retail</option></select></label>
+      <label>Kind of job<select id="a-kind"><option value="">Auto-detect</option><option value="drive">Driver / delivery</option><option value="care">Healthcare support</option><option value="it">IT / tech</option><option value="office">Office / admin</option><option value="other">Other</option><option value="food">Restaurant / food service</option><option value="store">Store / retail</option><option value="warehouse">Warehouse / logistics</option></select></label>
       <label>Job description (optional: paste it for a better resume)<textarea id="a-desc" rows="4" placeholder="Paste the duties and requirements"></textarea></label>
       <label class="check"><input id="a-auto" type="checkbox" checked> Make my resume for this job automatically</label>
       <p class="small" id="addMsg"></p>
@@ -95,7 +100,7 @@
       <button class="btn primary" type="button" id="r-print">Print / Save as PDF</button>
       <button class="btn" type="button" id="r-copy">Copy as text</button>
       <label class="small" for="r-kind" style="flex-direction:row;align-items:center;gap:6px;font-weight:600">Remake as
-        <select class="btn" id="r-kind"><option value="it">IT / tech</option><option value="other">Other</option><option value="store">Store / retail</option></select></label>
+        <select class="btn" id="r-kind"><option value="drive">Driver / delivery</option><option value="care">Healthcare support</option><option value="it">IT / tech</option><option value="office">Office / admin</option><option value="other">Other</option><option value="food">Restaurant / food service</option><option value="store">Store / retail</option><option value="warehouse">Warehouse / logistics</option></select></label>
     </div>
     <div class="card paper" id="r-body"></div>
   </section>
@@ -210,8 +215,8 @@
       <div class="card"><h3 class="title">Profile</h3><p class="why" id="meSummary"></p>
         <div class="actions"><button class="btn" type="button" id="editProfile">Edit what I'm looking for</button></div></div>
       <div class="card"><h3 class="title">My resume facts</h3>
-        <p class="why">Radar builds every resume from these, in your own words, and never adds anything. One thing per line:</p>
-        <pre class="small fmt">NAME: First Last
+        <p class="why">Radar builds every resume from these, in your own words, and never adds anything. The easiest way to fill this in: pick your resume file below.</p>
+        <details class="fold"><summary>Show the format</summary><pre class="small fmt">NAME: First Last
 CONTACT: City, State · phone · email
 JOB: Job title | Company | City, State | Mon YYYY – Mon YYYY (or Present)
 - something you did there
@@ -222,9 +227,11 @@ SKILLS Group name: skill one; skill two; skill three
 EDUCATION: School name, degree or coursework
 CERT: Certificate name, who gave it
 STUDYING: (optional) a class or certificate you're working on
-SUMMARY: (optional) 1–2 sentences about you, in your words</pre>
+SUMMARY: (optional) 1–2 sentences about you, in your words</pre></details>
         <label for="m-facts" class="small">Your facts</label>
         <textarea id="m-facts" rows="10" placeholder="Paste or type your facts here"></textarea>
+        <div class="actions"><label class="btn" for="m-resumeFile">Fill from a resume file</label><input id="m-resumeFile" type="file" accept=".pdf,.docx,.txt,application/pdf,text/plain" hidden>
+          <button class="btn" type="button" id="m-convert">Turn a pasted resume into facts</button></div>
         <div class="actions"><button class="btn primary" type="button" id="saveFacts">Save my facts</button><button class="btn" type="button" id="remakeAll">Remake all my resumes</button></div>
         <p class="small" id="factsMsg"></p></div>
       <div class="card"><h3 class="title">Install Radar on your phone</h3>
@@ -237,10 +244,19 @@ SUMMARY: (optional) 1–2 sentences about you, in your words</pre>
         <p class="small" id="backupMsg"></p></div>
       <div class="card"><h3 class="title">Where jobs come from</h3>
         <p class="why">Remote jobs: <a href="https://himalayas.app" target="_blank" rel="noopener">Himalayas</a>, <a href="https://remotive.com" target="_blank" rel="noopener">Remotive</a> and <a href="https://jobicy.com" target="_blank" rel="noopener">Jobicy</a>. Entry-level jobs near you: <a href="https://www.themuse.com" target="_blank" rel="noopener">The Muse</a>. Local jobs: <a href="https://www.adzuna.com" target="_blank" rel="noopener">Jobs by Adzuna</a> (when turned on). Pay ranges compared with U.S. Bureau of Labor Statistics data. Radar never applies for you.</p></div>
+      <div class="card"><h3 class="title">About Radar and your privacy</h3>
+        <p class="why">Radar is free. It finds job postings, helps you track what you applied to, and builds resumes from facts you give it.</p>
+        <ul class="small">
+          <li>No account. Everything you type stays on this phone.</li>
+          <li>Your resume is read on this phone and is never uploaded.</li>
+          <li>Radar never applies for you and never messages anyone.</li>
+          <li>Jobs come from public job sites. Radar isn't part of any of them, and can't promise a posting is real, so check the red flags.</li>
+          <li>Pay and take-home numbers are estimates. Your real paycheck can be different.</li>
+        </ul></div>
       <div class="card"><h3 class="title">Start over</h3><p class="why">Deletes everything Radar saved on this phone.</p>
         <div class="actions"><button class="btn danger" type="button" id="resetBtn">Delete my Radar data</button></div>
         <div class="actions" id="resetConfirm" hidden><span class="small">Are you sure? This can't be undone.</span><button class="btn danger" type="button" id="resetYes">Yes, delete</button><button class="btn quiet" type="button" id="resetNo">Keep it</button></div></div>
-      <p class="small">Opportunity Radar v0.7.1</p>
+      <p class="small">Opportunity Radar v0.8.0</p>
     </div>
   </section>
 </main>

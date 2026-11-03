@@ -145,3 +145,9 @@ details.flags.check summary{color:#c98a00}
 details.flags ul,details.about ul{margin:6px 0 2px 18px;padding:0}
 details.flags li{font-size:13px;margin:4px 0}
 .q{display:inline-block;width:16px;height:16px;line-height:16px;text-align:center;border-radius:50%;border:1px solid currentColor;font-size:11px;margin-left:4px}
+
+/* v0.8.0 polish: folded sections */
+details.fold{margin:8px 0;border:1px solid var(--line,rgba(127,127,127,.25));border-radius:12px;padding:8px 12px}
+details.fold>summary{cursor:pointer;font-weight:600;font-size:14px}
+details.fold.more{border:none;padding:0 2px;margin-top:2px}
+details.fold.more>summary{font-size:13px;color:var(--muted,inherit)}

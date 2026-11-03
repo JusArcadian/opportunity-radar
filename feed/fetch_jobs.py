@@ -398,7 +398,7 @@ def main():
     once = remotive() + jobicy() + themuse()          # these search ONCE, then sort jobs into careers
     by_key = {c["key"]: c for c in CONFIG["careers"]}
     for career in CONFIG["careers"]:
-        found = himalayas(career) + adzuna(career) + [j for j in once if j["career"] == career["key"]]
+        found = (himalayas(career) if career.get("remote_search", True) else []) + adzuna(career) + [j for j in once if j["career"] == career["key"]]
         kept = 0
         for j in found:
             key = (j["title"].lower(), j["company"].lower())
