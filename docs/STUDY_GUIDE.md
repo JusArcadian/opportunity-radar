@@ -255,3 +255,9 @@ It only copies sentences from the posting and never writes new ones, so it can't
 **When things break**
 - A site changes its API, so its jobs vanish. The robot prints `! Remotive failed: ...` in the GitHub Actions log and just skips that site. Turn it off in `sources` until it's fixed.
 - A summary looks empty. Some postings (Adzuna's especially) only include a short snippet. Tap **Apply on site** to read the full description.
+
+
+## Chapter 19: Import vs. backup (v0.7.1)
+A **backup** is a photo of everything; loading it swaps your whole app for the photo. An **import file** is a box of extra stuff; loading it puts the new things on the shelf next to what's already there.
+Code: `mergeIn(d)` in `web/app.js`. For each saved job it builds a key from `title|company` and skips it if you already have one with that key, so nothing is doubled. Events use `name|date`. Facts are only filled in if yours are empty. The file says which kind it is with `"radarMerge": true`.
+**When things break:** "That file isn't a Radar backup" means the file has no `saved` section or isn't valid JSON. Don't edit it in Word; use Notepad.

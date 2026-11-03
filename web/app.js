@@ -269,7 +269,9 @@ function renderSaved() {
       <h3 class="title">${esc(j.title)}</h3>
       <div class="meta">${esc(j.company)}${j.location ? " · " + esc(j.location) : ""}${j.pay ? " · " + esc(j.pay) : ""}</div>
       <div class="chips">${takeHomeChip(j.pay, j.hourly)}${commuteChip(me.profile.city || "", me.profile.zip, j.location)}</div>
+      ${s.notes ? `<p class="why">${esc(s.notes)}</p>` : ""}
       <div class="actions">
+        ${safeUrl(s.docLink) ? `<a class="btn" href="${esc(safeUrl(s.docLink))}" target="_blank" rel="noopener">Tailored resume (Docs)</a>` : ""}
         ${safeUrl(j.applyUrl) ? `<a class="btn" href="${esc(safeUrl(j.applyUrl))}" target="_blank" rel="noopener">Apply on site</a>` : ""}
         ${j.location && !/remote/i.test(`${j.location} ${j.remote || ""}`) ? `<a class="btn quiet" href="${esc(mapsLink((me.profile || {}).zip || "", j.location))}" target="_blank" rel="noopener">Directions</a>` : ""}
         ${s.resume ? `<button class="btn primary" type="button" data-viewresume="${esc(id)}">My resume</button>` : `<button class="btn" type="button" data-makeresume="${esc(id)}">Make my resume</button>`}
@@ -753,9 +755,25 @@ $("exportBtn").onclick = () => {
 };
 $("importFile").onchange = async (ev) => {
   const file = ev.target.files[0]; if (!file) return;
-  try { const data = JSON.parse(await file.text()); if (!data.saved) throw new Error(); me = Object.assign(blank(), data); persist(); $("backupMsg").textContent = "Backup loaded."; render(); }
-  catch { $("backupMsg").textContent = "That file isn't a Radar backup."; }
+  try {
+    const data = JSON.parse(await file.text()); if (!data.saved) throw new Error();
+    if (data.radarMerge) { $("backupMsg").textContent = mergeIn(data); persist(); render(); }   // an import file: ADD to what you have
+    else { me = Object.assign(blank(), data); persist(); $("backupMsg").textContent = "Backup loaded."; render(); }   // a full backup: REPLACE
+  } catch { $("backupMsg").textContent = "That file isn't a Radar backup."; }
+  ev.target.value = "";
 };
+// Import file (radarMerge: true): adds saved jobs, events and facts WITHOUT deleting anything you already have.
+function mergeIn(d) {
+  const key = (j) => `${(j.title || "").toLowerCase()}|${(j.company || "").toLowerCase()}`;
+  const have = new Set(Object.values(me.saved).map((s) => key(s.job)));
+  let jobs = 0, evs = 0;
+  Object.entries(d.saved || {}).forEach(([id, s]) => { if (!me.saved[id] && !have.has(key(s.job))) { me.saved[id] = s; jobs++; } });
+  const evHave = new Set(me.events.map((e) => `${e.name}|${e.date}`));
+  (d.events || []).forEach((e) => { if (!evHave.has(`${e.name}|${e.date}`)) { me.events.push(e); evs++; } });
+  if (d.facts && !me.facts.trim()) me.facts = d.facts;
+  if (d.profile && me.profile) ["zip", "city", "maxMi", "goal", "floor"].forEach((k) => { if (!me.profile[k] && d.profile[k]) me.profile[k] = d.profile[k]; });
+  return `Added ${jobs} saved job${jobs === 1 ? "" : "s"} and ${evs} event${evs === 1 ? "" : "s"}. Nothing you already had was changed.`;
+}
 $("resetBtn").onclick = () => { $("resetConfirm").hidden = false; };
 $("resetNo").onclick = () => { $("resetConfirm").hidden = true; };
 $("resetYes").onclick = () => { me = blank(); persist(); $("resetConfirm").hidden = true; toast("Deleted"); setTab("setup"); };

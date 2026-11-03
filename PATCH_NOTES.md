@@ -1,5 +1,11 @@
 # Patch notes
 
+## v0.7.1 (2026-11-03): bring your Google Sheet into the app
+
+### Features
+- **Import files.** Me → Load backup now understands an *import file* (`"radarMerge": true`). It ADDS saved jobs, events and resume facts and never deletes anything. Loading it twice doesn't make duplicates. A normal full backup still replaces everything, as before.
+- Saved jobs can show **notes** and a **Tailored resume (Docs)** button.
+
 ## v0.7.0 (2026-11-03): more job sites, job summaries, red flags explained
 
 ### Features
