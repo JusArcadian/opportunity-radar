@@ -436,7 +436,8 @@ def main():
         "generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "count": len(all_jobs),
         "sources": sorted({j["source"] for j in all_jobs}),
-        "careers": [{k: c[k] for k in ("key", "label", "bench_low", "bench_mid", "bench_source")} for c in CONFIG["careers"]],
+        "careers": [{**{k: c[k] for k in ("key", "label", "bench_low", "bench_mid", "bench_source")}, "search": c["queries"][0],
+                     "remote_search": c.get("remote_search", True)} for c in CONFIG["careers"]],
         "skills": CONFIG["skills"],
     }
     OUT_DIR.mkdir(parents=True, exist_ok=True)

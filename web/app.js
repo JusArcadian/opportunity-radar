@@ -334,7 +334,7 @@ function renderJobs() {
     const n = nearestLocal(home, myJobs(), (j) => j.location);
     hint = `<div class="alert info"><p><b>No in-person jobs within ${maxMi} miles yet.</b>${n ? ` Nearest: ${esc(n.j.title)} at ${esc(n.j.company)}, ${esc(n.j.location)} (~${n.c.miles} mi).` : ""} Raise the distance in Me → Edit what I'm looking for.</p></div>`;
   }
-  if (!list.length) { $("jobs").innerHTML = hint + `<p class="empty">Nothing here right now. Try another filter, or check back tomorrow.</p>`; return; }
+  if (!list.length) { $("jobs").innerHTML = hint + searchNow(me.ui.filter); return; }
   $("jobs").innerHTML = hint + list.map((j) => `<article class="card">
       <div class="chips">${fitDots(j.fit)}${chip(careerOf(j.career).label, "plain")}</div>
       <h3 class="title">${esc(j.title)}</h3>
@@ -549,18 +549,41 @@ function inArea(home, maxMi, loc) {
 }
 // Places worth checking for local jobs. "auto" = the morning run searches it; "you" = open it yourself
 // (these sites need your login or don't allow bots, so Radar never scans them).
+// No jobs to show? Never make people wait for the next update: give them one-tap searches for
+// exactly the kinds of jobs they picked, near their ZIP (or remote), on the biggest free job sites.
+const SEARCH_WORDS = { helpdesk: "help desk", support: "technical support", security: "security analyst", python: "python developer entry level",
+  network: "network technician", cloud: "cloud support", food: "restaurant crew member", retail: "retail sales associate", warehouse: "warehouse associate",
+  callcenter: "customer service representative", office: "administrative assistant", care: "medical assistant", driver: "delivery driver" };
+function searchNow(filter) {
+  const P = me.profile || {}, zip = P.zip || "", remoteOnly = filter === "Remote" || (!P.local && P.remote !== false);
+  const where = remoteOnly ? "remote" : (zip || "");
+  const kinds = (P.careers || []).map((k) => ({ label: careerOf(k).label || k, q: careerOf(k).search || SEARCH_WORDS[k] || k }));
+  const links = (k) => {
+    const q = encodeURIComponent(k.q), l = encodeURIComponent(where);
+    return [
+      ["Indeed", `https://www.indeed.com/jobs?q=${q}&l=${l}`],
+      ["Google", "https://www.google.com/search?ibp=htl;jobs&q=" + encodeURIComponent(`${k.q} jobs ${remoteOnly ? "remote" : "near " + (zip || "me")}`)],
+      ...(remoteOnly ? [] : [["Snagajob", `https://www.snagajob.com/search?q=${q}&w=${encodeURIComponent(zip)}`]]),
+    ].map(([n, u]) => `<a class="btn" href="${esc(u)}" target="_blank" rel="noopener">${esc(n)}</a>`).join("");
+  };
+  const why = filter === "Skipped" ? "You haven't skipped anything." : feedError ? "You're offline, so Radar's list can't load." :
+    "Radar's list doesn't have a match right now. It looks for new jobs 3 times a day.";
+  return `<div class="card"><h3 class="title">Search right now</h3><p class="why">${why} You don't have to wait: these open real searches for the jobs you picked${remoteOnly ? " (remote)" : zip ? ` near ${esc(zip)}` : ""}.</p>
+    ${kinds.map((k) => `<p class="small"><b>${esc(k.label)}</b></p><div class="actions">${links(k)}</div>`).join("")}
+    <p class="small">Found one you like? Go to <b>Saved → + Add any job</b> and Radar makes your resume for it.${!zip && !remoteOnly ? " Add your ZIP in Me → Edit what I'm looking for for searches near you." : ""}</p></div>`;
+}
 function localSources(zip, cityName) {
   const z = encodeURIComponent(zip || ""), city = cityName || "my area", g = (q) => "https://www.google.com/search?q=" + encodeURIComponent(q);
   return [
-    { name: "Indeed near you (15 mi)", who: "auto", url: `https://www.indeed.com/jobs?l=${z}&radius=15`, why: "Biggest list of local hourly and IT jobs." },
+    { name: "Indeed near you (15 mi)", who: "auto", url: `https://www.indeed.com/jobs?l=${z}&radius=15`, why: "Biggest list of local jobs of every kind." },
     { name: "Google jobs near you", who: "auto", url: g(`jobs near ${zip}`) + "&ibp=htl;jobs", why: "Pulls from many job sites, including small local companies." },
-    { name: "Store career sites", who: "auto", url: g(`hiring near ${zip} Publix OR "Best Buy" OR GameStop OR Target OR Walmart`), why: "Publix, Best Buy, GameStop, Target, Walmart post here first." },
+    { name: "Store and restaurant career sites", who: "auto", url: g(`hiring near ${zip} Target OR Walmart OR Publix OR Chipotle OR Starbucks OR "Home Depot"`), why: "Big chains post openings on their own sites first." },
     { name: "Snagajob (hourly)", who: "auto", url: `https://www.snagajob.com/search?w=${z}`, why: "Hourly and part-time jobs near you." },
-    { name: "Government jobs", who: "auto", url: g(`Miami-Dade County jobs OR City of Homestead jobs OR ${city} jobs`), why: "County and city jobs: steady, good benefits, IT roles too." },
-    { name: "CareerSource South Florida", who: "auto", url: g("CareerSource South Florida job fair"), why: "Free job center: job fairs and hiring events near you." },
+    { name: "Government jobs", who: "auto", url: g(`${cityName ? city + " " : ""}city OR county jobs near ${zip}`), why: "City and county jobs: steady pay and good benefits." },
+    { name: "Free job center near you", who: "auto", url: `https://www.careeronestop.org/LocalHelp/AmericanJobCenters/find-american-job-centers.aspx?location=${z}`, why: "American Job Centers (U.S. Dept. of Labor): free resume help, job fairs and hiring events." },
     { name: "Nextdoor", who: "you", url: "https://nextdoor.com/", why: "Neighbors post small-business and local gigs. Search \"hiring\"." },
-    { name: "Facebook job groups", who: "you", url: `https://www.facebook.com/search/groups/?q=${encodeURIComponent(city + " FL jobs")}`, why: "Local hiring groups. Watch for scams: never pay to apply." },
-    { name: "Craigslist Miami jobs", who: "you", url: "https://miami.craigslist.org/search/jjj", why: "Small local businesses. Scam-check everything." },
+    { name: "Facebook job groups", who: "you", url: `https://www.facebook.com/search/groups/?q=${encodeURIComponent(city + " jobs")}`, why: "Local hiring groups. Watch for scams: never pay to apply." },
+    { name: "Craigslist jobs", who: "you", url: "https://www.craigslist.org/", why: "Pick your city, then Jobs. Small local businesses. Scam-check everything." },
   ];
 }
 

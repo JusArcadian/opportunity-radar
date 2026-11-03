@@ -295,3 +295,10 @@ Then the same `fromResume()` from Chapter 20 reads it.
 
 **When things break**
 - PDF says "Couldn't read that file": it's probably a scanned image with no real text in it. Copy and paste won't work either; type the facts in or use the Word version.
+
+
+## Chapter 22: Never "come back tomorrow" (v0.8.1)
+**Why the list was empty:** Radar's job list is made by the robot on GitHub, not on your phone. A new user (or a new job type) has to wait for the robot's next run.
+**Fix 1: `searchNow()` in app.js.** If the filtered list is empty, it builds links like `https://www.indeed.com/jobs?q=crew%20member&l=33034`. `encodeURIComponent()` turns spaces into `%20` so the link works. Each job type has search words (`search` in the feed, or `SEARCH_WORDS` as a backup).
+**Fix 2: a schedule of 3 runs a day.** In `.github/workflows/daily.yml`, `cron: "40 11,17,23 * * *"` means "minute 40 of hours 11, 17 and 23 (UTC time)". Cron's 5 slots are: minute, hour, day of month, month, day of week.
+**Fix 3: run the feed on push when the search settings change.** `contains(join(github.event.commits.*.modified, ' '), 'config/')` asks "did this push change a file in config/?"
