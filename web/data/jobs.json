@@ -1,9 +1,10 @@
 {
  "meta": {
-  "generated": "2026-11-03T18:40:23Z",
-  "count": 213,
+  "generated": "2026-11-04T18:53:24Z",
+  "count": 222,
   "sources": [
    "Himalayas",
+   "Jobicy",
    "The Muse"
   ],
   "careers": [
@@ -189,6 +190,46 @@
   ]
  },
  "jobs": [
+  {
+   "id": "him:piedmont-healthcare/jobs/is-service-ctr-technician",
+   "title": "IS Service Ctr Technician",
+   "company": "Piedmont Healthcare",
+   "companySlug": "piedmont-healthcare",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-11-03",
+   "expires": "2027-01-02",
+   "applyUrl": "https://himalayas.app/companies/piedmont-healthcare/jobs/is-service-ctr-technician?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/piedmont-healthcare/jobs/is-service-ctr-technician",
+   "source": "Himalayas",
+   "career": "helpdesk",
+   "summary": "OverviewAt Piedmont Healthcare, you\u2019ll love a shared purpose, be motivated to be your best, and be recognized for your contributions.",
+   "skills": [
+    "Customer service"
+   ],
+   "flags": [],
+   "type": "Full Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "Provides tier 1 phone support assisting with clinical and technical questions and issues for PHC work force members.",
+     "Responsible for all aspects of incident management including first level phone support including logging, analyzing, resolving, and follow up on application functional issues.",
+     "Perform timely advanced technical duties regarding enterprise system and network monitoring and computer operations in a distributed system environment."
+    ],
+    "wants": [
+     "H.S. Diploma or General Education Degree (GED) Required",
+     "1 year of experience in IS customer service or clinical application support/usage Required"
+    ],
+    "nice": [
+     "Associate\u2019s Degree from a recognized college or university in an IT related field Preferred",
+     "HDI-SCA - Help Desk Support Center Analyst Certification HDI Service Center Agent certification Preferred"
+    ],
+    "years": 1,
+    "degree": true
+   }
+  },
   {
    "id": "him:the-helmsman-group-llc/jobs/it-specialist-5949254529",
    "title": "IT SPECIALIST",
@@ -863,6 +904,143 @@
    }
   },
   {
+   "id": "him:alpaca/jobs/it-operations-specialist",
+   "title": "IT Operations Specialist",
+   "company": "Alpaca",
+   "companySlug": "alpaca",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-11-04",
+   "expires": "2027-01-03",
+   "applyUrl": "https://himalayas.app/companies/alpaca/jobs/it-operations-specialist?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/alpaca/jobs/it-operations-specialist",
+   "source": "Himalayas",
+   "career": "helpdesk",
+   "summary": "Who We Are:Alpaca is a US-headquartered, global leader in agent-first brokerage infrastructure for stocks, ETFs, options, crypto, fixed income, 24/5 trading, and more.",
+   "skills": [
+    "Intune",
+    "AWS",
+    "Google Workspace",
+    "Exchange",
+    "macOS",
+    "Linux",
+    "NIST",
+    "Inventory"
+   ],
+   "flags": [
+    "Crypto payments mentioned"
+   ],
+   "type": "Full Time",
+   "flagInfo": [
+    {
+     "label": "Crypto payments mentioned",
+     "why": "Being paid in, or asked to move, crypto is a common scam and money-laundering setup for entry-level 'jobs'.",
+     "level": "red"
+    }
+   ],
+   "about": {
+    "does": [
+     "Diagnose and resolve complex cross-platform problems across macOS, Windows, and Linux",
+     "Self-starter and fast responder in a fast-paced environment; clear communicator and team player across the IT team and other teams (business partners)"
+    ],
+    "wants": [
+     "Other related duties as required",
+     "6+ years in IT operations / systems engineering\u2014you\u2019ve owned, hardened, and improved systems, not just answered tickets",
+     "Experience with Google Workspace, 1Password, enterprise SaaS admin, EDR, and SSO / identity workflows",
+     "Hands-on with cloud (GCP and/or AWS) and IaC (e.g. Terraform)\u2014comfortable in IaC-first environments",
+     "Bachelor\u2019s degree in IT, Computer Science, or related field"
+    ],
+    "nice": [],
+    "years": 6,
+    "degree": true
+   }
+  },
+  {
+   "id": "him:piedmont-healthcare/jobs/epic-application-coord-ambulatory-3012017084",
+   "title": "EPIC Application Coord - Ambulatory",
+   "company": "Piedmont Healthcare",
+   "companySlug": "piedmont-healthcare",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-11-03",
+   "expires": "2027-01-02",
+   "applyUrl": "https://himalayas.app/companies/piedmont-healthcare/jobs/epic-application-coord-ambulatory-3012017084?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/piedmont-healthcare/jobs/epic-application-coord-ambulatory-3012017084",
+   "source": "Himalayas",
+   "career": "helpdesk",
+   "summary": "OverviewThe position of Application Coordinator is responsible for the design, build, testing, validation, and ongoing support of clinical and/or revenue cycle applications.",
+   "skills": [
+    "NIST"
+   ],
+   "flags": [],
+   "type": "Full Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "The position of Application Coordinator is responsible for the design, build, testing, validation, and ongoing support of clinical and/or revenue cycle applications.",
+     "The Application Coordinator is responsible for being on-call periodically on a 24/7 basis to provide tier III level support of the Epic clinical and/or revenue cycle applications.",
+     "This position is responsible for the implementation of configuration changes to the Epic system as approved by the appropriate committee.",
+     "The Application Coordinator is a representative of the Information Services team and is responsible for establishing and maintaining critical business relationships with fellow Pie"
+    ],
+    "wants": [
+     "Bachelor\u2019s Degree or current clinical licensure in nursing, radiology, pharmacy, respiratory or related field is Required or",
+     "In Lieu of degree or clinical licensure, four (4) years of experience in business administration, information technology or science, healthcare or related field Required",
+     "3 years of healthcare or IT experience to include one (1) year of EMR (Electronic Medical Record) application experience Required or",
+     "In lieu of degree or clinical licensure, seven (7) years of healthcare or IT experience to include one (1) year of EMR (Electronic Medical Record) application experience Required",
+     "EPIC - EPIC Certification Upon Hire Required or"
+    ],
+    "nice": [
+     "1 year working directly with Epic applications in a clinical or IS field relevant to the position is Preferred"
+    ],
+    "years": 1,
+    "degree": true
+   }
+  },
+  {
+   "id": "him:waterfall-technology-consulting-partners/jobs/epiccare-inpatient-quality-analyst-perm-remote",
+   "title": "EpicCare Inpatient Quality Analyst - Perm - Remote",
+   "company": "Waterfall Technology Consulting Partners",
+   "companySlug": "waterfall-technology-consulting-partners",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "$76,500-$95,800/yr",
+   "hourly": 36.78,
+   "posted": "2026-11-03",
+   "expires": "2027-01-02",
+   "applyUrl": "https://himalayas.app/companies/waterfall-technology-consulting-partners/jobs/epiccare-inpatient-quality-analyst-perm-remote?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/waterfall-technology-consulting-partners/jobs/epiccare-inpatient-quality-analyst-perm-remote",
+   "source": "Himalayas",
+   "career": "helpdesk",
+   "summary": "Our client is seeking an Epic Application Analyst who would be responsible for performing Epic application system analysis and design to include requirements, specifications, configuration, documentation, testing, and implementation of systems.",
+   "skills": [],
+   "flags": [],
+   "type": "Full Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "Will assist with resolution of issues, tracks issues and provide update to peers, leadership and clients with minimal to moderate supervision",
+     "Will also be involved in providing Epic application support, troubleshooting, training and reporting activities.",
+     "May also be involved in providing non-Epic application support and troubleshooting for integrated third-party applications."
+    ],
+    "wants": [
+     "Plans and conducts requirements gathering for Epic projects and requests",
+     "Associates degree in computer science, information systems, healthcare, business or equivalent experience required",
+     "5 years of related Epic Inpatient experience",
+     "EpicCare Inpatient certification",
+     "Epic Orders certification"
+    ],
+    "nice": [
+     "WORK LOCATION: Although this role is remote, an onsite schedule is preferred."
+    ],
+    "years": 5,
+    "degree": true
+   }
+  },
+  {
    "id": "him:digacore/jobs/level-3-it-technician",
    "title": "Level 3 IT Technician",
    "company": "Digacore",
@@ -1042,52 +1220,6 @@
    }
   },
   {
-   "id": "him:fullsteam/jobs/technical-support-specialist",
-   "title": "Technical Support Specialist",
-   "company": "Fullsteam",
-   "companySlug": "fullsteam",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "$20-$32/yr",
-   "hourly": 19.71,
-   "posted": "2026-11-02",
-   "expires": "2027-01-01",
-   "applyUrl": "https://himalayas.app/companies/fullsteam/jobs/technical-support-specialist?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/fullsteam/jobs/technical-support-specialist",
-   "source": "Himalayas",
-   "career": "helpdesk",
-   "summary": "It's fun to work in a company where people truly BELIEVE in what they're doing!",
-   "skills": [
-    "Salesforce",
-    "Linux",
-    "Customer service",
-    "Microsoft Office",
-    "Excel",
-    "Sales"
-   ],
-   "flags": [],
-   "type": "Full Time",
-   "flagInfo": [],
-   "about": {
-    "does": [
-     "Provide technical assistance: Respond to user inquiries, troubleshoot issues, and guide users on resolving problems.",
-     "Handle customer inquiries: Take ownership of customer phone calls, emails, and other support requests in a courteous and respectful manner.",
-     "Diagnose and Troubleshoot: Identify the root cause of technical issues and implement solutions.",
-     "Document and escalate: Maintain records of support interactions, research and escalate complex cases to higher-level support as needed."
-    ],
-    "wants": [
-     "Provide training: Assist users with understanding of using software and hardware.",
-     "Adhere to company policies and procedures: Follow established company guidelines and complete annual training requirements by due date.",
-     "Technical Proficiency: Strong understanding of computer hardware, software, and networking concepts to diagnose and troubleshoot issues effectively.",
-     "Problem-solving: Ability to identify root causes of technical problems and implement solutions efficiently.",
-     "Customer Service Orientation: Ability to build rapport, handle difficult situations, and prioritize customer satisfaction to provide exceptional support."
-    ],
-    "nice": [],
-    "years": null,
-    "degree": false
-   }
-  },
-  {
    "id": "him:trinzic/jobs/enterprise-application-administrator-costpoint-boundary-applications",
    "title": "Enterprise Application Administrator, Costpoint Boundary Applications",
    "company": "Trinzic",
@@ -1129,52 +1261,6 @@
      "Additional compensation may be in the form of sign on bonus, relocation benefits, short term incentives, long term incentives, or discretionary payments for exceptional performance"
     ],
     "years": 4,
-    "degree": true
-   }
-  },
-  {
-   "id": "him:trinzic/jobs/enterprise-application-support-technician-financial-systems",
-   "title": "Enterprise Application Support Technician (Financial Systems)",
-   "company": "Trinzic",
-   "companySlug": "trinzic",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "",
-   "hourly": null,
-   "posted": "2026-11-01",
-   "expires": "2026-12-31",
-   "applyUrl": "https://himalayas.app/companies/trinzic/jobs/enterprise-application-support-technician-financial-systems?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/trinzic/jobs/enterprise-application-support-technician-financial-systems",
-   "source": "Himalayas",
-   "career": "helpdesk",
-   "summary": "Title:Enterprise Application Support Technician (Financial Systems)We are KBR At KBR, we partner with clients to provide purposeful and comprehensive science, technology and engineering solutions to governments as well as the top tier commercial clients in green hydrogen and gree",
-   "skills": [
-    "SQL",
-    "NIST"
-   ],
-   "flags": [],
-   "type": "Full Time",
-   "flagInfo": [],
-   "about": {
-    "does": [
-     "Investigate, troubleshoot, and resolve application-level issues, security/access requests, and routine system errors.",
-     "Monitor interface health, scheduled system jobs, and automated data pipelines to proactivelyidentifyfailures.",
-     "Assistthe architecture and administration teams with enterprise application upgrades, SaaS readiness initiatives, and system release management.",
-     "Maintain and update operational runbooks, system configurations, troubleshooting guides, and user access provisioning documentation."
-    ],
-    "wants": [
-     "BA/BS or working towards a degree in Computer Science, Information Systems, Information Technology, or equivalent technical experience.",
-     "2+ years of experience in IT support, application administration, or a relatedhighly-technicalsupport role.",
-     "Demonstrated, logical troubleshooting skills with the ability to isolate and diagnose complex software or system integration issues.",
-     "Foundational understanding of data structures, basic SQL querying, or API/interface concepts.",
-     "Familiarity with system access troubleshooting."
-    ],
-    "nice": [
-     "Experience supporting enterprise-grade applications, ERP systems (Deltek Costpoint highly preferred), or complex financial/ERPsoftware.",
-     "Additional Compensation: KBR may offer bonuses, commissions, or other forms of compensation to certain job titles or levels, per internal policy or contractual designation.",
-     "Additional compensation may be in the form of sign on bonus, relocation benefits, short term incentives, long term incentives, or discretionary payments for exceptional performance"
-    ],
-    "years": 2,
     "degree": true
    }
   },
@@ -1685,158 +1771,6 @@
    }
   },
   {
-   "id": "him:computer-world-services-corp/jobs/tier-1-2-service-desk-analyst-journeyman",
-   "title": "Tier 1/2 Service Desk Analyst (Journeyman)",
-   "company": "Computer World Services Corp.",
-   "companySlug": "computer-world-services-corp",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "$60,000-$90,000/yr",
-   "hourly": 28.85,
-   "posted": "2026-10-29",
-   "expires": "2026-12-28",
-   "applyUrl": "https://himalayas.app/companies/computer-world-services-corp/jobs/tier-1-2-service-desk-analyst-journeyman?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/computer-world-services-corp/jobs/tier-1-2-service-desk-analyst-journeyman",
-   "source": "Himalayas",
-   "career": "helpdesk",
-   "summary": "Computer World Services, Corp. (CWS) seeks Tier 1/2 Service Desk Analysts to provide customer-facing technical support for the USMEPCOM ENLIST program.",
-   "skills": [
-    "CompTIA A+",
-    "Network+",
-    "Security+",
-    "ITIL",
-    "AWS",
-    "ServiceNow",
-    "NIST",
-    "VPN"
-   ],
-   "flags": [],
-   "type": "Full Time",
-   "flagInfo": [],
-   "about": {
-    "does": [
-     "Serve as an initial point of contact, receiving incidents and requests via telephone, email, web, self-service, monitoring, and escalation channels.",
-     "Resolve first-contact issues using approved procedures, scripts, knowledge articles, and remote-support tools.",
-     "Troubleshoot laptops, desktops, thin/zero clients, mobile devices, printers, peripherals, LAN/WAN/VPN/wireless connectivity, accounts, passwords, email, collaboration, and enterpri",
-     "Recognize and immediately escalate outage signals, capturing symptoms, affected users and locations, start time, impact, and troubleshooting performed; support Severity (SEV) 1 and"
-    ],
-    "wants": [
-     "Associate\u2019s degree in Information Technology or a related field, or equivalent professional experience.",
-     "Minimum of three (3) years of relevant service-desk, help-desk, desktop-support, or end-user support experience.",
-     "Working knowledge of hardware, operating systems, productivity software, user accounts, networks, remote access, and enterprise applications.",
-     "Ability to recognize and escalate potential outages and maintain complete, accurate ticket documentation.",
-     "Strong customer-service and communication skills, and ability to work assigned shifts and after-hours, weekend, holiday, or surge coverage."
-    ],
-    "nice": [
-     "Preferred: CompTIA A+, CompTIA Network+, CompTIA Security+, or ITIL 4 Foundation.",
-     "Remote position; Chicago, IL\u2013area candidates preferred."
-    ],
-    "years": null,
-    "degree": true
-   }
-  },
-  {
-   "id": "him:goingclear-interactive/jobs/it-specialist",
-   "title": "IT SPECIALIST",
-   "company": "GoingClear Interactive",
-   "companySlug": "goingclear-interactive",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "",
-   "hourly": null,
-   "posted": "2026-10-29",
-   "expires": "2026-12-28",
-   "applyUrl": "https://himalayas.app/companies/goingclear-interactive/jobs/it-specialist?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/goingclear-interactive/jobs/it-specialist",
-   "source": "Himalayas",
-   "career": "helpdesk",
-   "summary": "Job Title: IT Support Specialist Job Type: (Remote)Job Summary: An IT Support Specialist provides technical assistance and support to an organization's employees or clients, ensuring the effective operation of computer systems, networks, and software applications.",
-   "skills": [
-    "CompTIA A+",
-    "Network+",
-    "macOS",
-    "Linux",
-    "Ticketing",
-    "Excel"
-   ],
-   "flags": [],
-   "type": "Full Time",
-   "flagInfo": [],
-   "about": {
-    "does": [
-     "Troubleshoot and resolve computer, printer, and peripheral device problems.",
-     "Install, configure, and maintain computer systems, software, and applications.",
-     "Monitor and maintain network performance, connectivity, and security.",
-     "Respond to IT support requests via phone, email, ticketing systems, or in person."
-    ],
-    "wants": [
-     "Proficiency in Windows, macOS, and/or Linux operating systems.",
-     "Knowledge of networking, cybersecurity, and hardware troubleshooting.",
-     "Familiarity with ticketing systems and IT support tools.",
-     "Ability to prioritize tasks, work under pressure, and manage multiple issues simultaneously."
-    ],
-    "nice": [
-     "Associate or bachelor's degree in Information Technology, Computer Science, or a related field preferred.",
-     "Previous experience in IT support, helpdesk, or technical support roles preferred.",
-     "Relevant certifications (e.g., CompTIA A+, Network+, Microsoft, Cisco) are a plus."
-    ],
-    "years": null,
-    "degree": true
-   }
-  },
-  {
-   "id": "him:decisionpoint-corporation/jobs/tier-1-2-service-desk-analyst-journeyman",
-   "title": "Tier 1/2 Service Desk Analyst (Journeyman)",
-   "company": "DecisionPoint Corporation",
-   "companySlug": "decisionpoint-corporation",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "",
-   "hourly": null,
-   "posted": "2026-10-28",
-   "expires": "2026-12-27",
-   "applyUrl": "https://himalayas.app/companies/decisionpoint-corporation/jobs/tier-1-2-service-desk-analyst-journeyman?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/decisionpoint-corporation/jobs/tier-1-2-service-desk-analyst-journeyman",
-   "source": "Himalayas",
-   "career": "helpdesk",
-   "summary": "OverviewDecisionPoint seeks two Tier 1/2 Service Desk Analysts to provide customer-facing technical support for the USMEPCOM ENLIST program.",
-   "skills": [
-    "CompTIA A+",
-    "Network+",
-    "Security+",
-    "ITIL",
-    "AWS",
-    "ServiceNow",
-    "NIST",
-    "VPN",
-    "Ticketing"
-   ],
-   "flags": [],
-   "type": "Full Time",
-   "flagInfo": [],
-   "about": {
-    "does": [
-     "Receive incidents and service requests through approved channels, including telephone, email, website, self-service portal, monitoring notification, or direct escalation.",
-     "Resolve approved first-contact issues using established technical procedures, scripts, diagnostic tools, and knowledge articles.",
-     "Troubleshoot laptops, desktops, zero clients, thin clients, mobile devices, printers, peripherals, and related end-user equipment.",
-     "Troubleshoot common email, collaboration, browser, productivity software, and enterprise-application issues."
-    ],
-    "wants": [
-     "Serve as an initial point of contact for USMEPCOM users requiring technical support.",
-     "Participate in required technical, security, customer-service, and process training.",
-     "Associate\u2019s degree in information technology or a related field, or equivalent professional experience.",
-     "Minimum of three years of relevant experience providing service-desk, help-desk, desktop-support, end-user support, or related technical services.",
-     "Working knowledge of computer hardware, operating systems, productivity software, user accounts, networks, remote access, and common enterprise applications."
-    ],
-    "nice": [
-     "These positions are remote, with Chicago-area candidates preferred.",
-     "The following qualifications are preferred but are not required: ."
-    ],
-    "years": null,
-    "degree": true
-   }
-  },
-  {
    "id": "muse:14824763",
    "title": "Help Desk Customer Service Advisor",
    "company": "Anthology",
@@ -1880,6 +1814,95 @@
     ],
     "years": null,
     "degree": true
+   }
+  },
+  {
+   "id": "him:brilliant/jobs/implementation-specialist",
+   "title": "Implementation Specialist",
+   "company": "Brilliant",
+   "companySlug": "brilliant",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "$65,000-$70,000/yr",
+   "hourly": 31.25,
+   "posted": "2026-11-04",
+   "expires": "2027-01-03",
+   "applyUrl": "https://himalayas.app/companies/brilliant/jobs/implementation-specialist?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/brilliant/jobs/implementation-specialist",
+   "source": "Himalayas",
+   "career": "support",
+   "summary": "Title: Implementation SpecialistLocation: Remote USReports To: Senior VP of Production Compensation: $65,000 - 70,000 base salary, plus benefits and equity About Brilliant:Brilliant is an innovative branded products and corporate gifting company.",
+   "skills": [
+    "Salesforce",
+    "NIST",
+    "Ticketing",
+    "Inventory",
+    "Excel",
+    "Sales"
+   ],
+   "flags": [],
+   "type": "Full Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "Troubleshoot issues and adjust setups as needed throughout the client lifecycle.",
+     "Contribute to internal documentation and training materials to support team adoption and consistency.",
+     "This role is responsible for translating client needs into well-planned, well-run implementations while coordinating closely with internal teams such as Sales, Account Management,"
+    ],
+    "wants": [
+     "Translate client goals and requirements into clear implementation plans, timelines, and configuration decisions.",
+     "Gather, document, and communicate client asset requirements, feedback, and revision requests.",
+     "2+ years of experience in software implementation, technical customer support, product specialist, business analyst, or a similar role.",
+     "Strong problem-solving skills with the ability to think analytically in a fast-paced environment.",
+     "Experience with CRM tools and support ticketing systems."
+    ],
+    "nice": [],
+    "years": 2,
+    "degree": false
+   }
+  },
+  {
+   "id": "him:filed/jobs/tax-software-qa-support-analyst",
+   "title": "Tax Software QA & Support Analyst",
+   "company": "Filed",
+   "companySlug": "filed",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "$66,000-$78,000/yr",
+   "hourly": 31.73,
+   "posted": "2026-11-03",
+   "expires": "2027-01-02",
+   "applyUrl": "https://himalayas.app/companies/filed/jobs/tax-software-qa-support-analyst?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/filed/jobs/tax-software-qa-support-analyst",
+   "source": "Himalayas",
+   "career": "support",
+   "summary": "This role is fully remote, open to candidates based anywhere in the United States outside New York, with a preference for the Pacific or Mountain time zones.",
+   "skills": [
+    "Zendesk",
+    "Jira",
+    "Ticketing"
+   ],
+   "flags": [],
+   "type": "Full Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "Answering customer tickets quickly and clearly in our support inbox",
+     "Troubleshooting technical issues and finding workarounds that keep firms moving",
+     "People who enjoy hunting down a problem more than answering the same question twice",
+     "So instead of a list of perks, we'll start with what's genuinely hard about it, then tell you why it might be the best move you'll make."
+    ],
+    "wants": [
+     "Customer support experience in a ticketing system such as Pylon, Zendesk, Intercom or Freshdesk",
+     "Familiarity with at least one major tax platform, such as CCH Axcess, UltraTax, Lacerte, ProConnect, Drake or GoSystem",
+     "A minimum of 30 days of paid holiday every year"
+    ],
+    "nice": [
+     "Bonus if you've used Linear or Jira, browser developer tools or screen recording to capture issues",
+     "This role is fully remote, open to candidates based anywhere in the United States outside New York, with a preference for the Pacific or Mountain time zones."
+    ],
+    "years": null,
+    "degree": false
    }
   },
   {
@@ -2278,23 +2301,87 @@
    }
   },
   {
-   "id": "him:advocate-aurora-health/jobs/application-analyst-genesys",
-   "title": "Application Analyst-Genesys",
-   "company": "Advocate Aurora Health",
-   "companySlug": "advocate-aurora-health",
+   "id": "him:hallford-travels/jobs/remote-travel-customer-support-specialist-8813024246",
+   "title": "Remote Travel Customer Support Specialist",
+   "company": "Hallford Travels",
+   "companySlug": "hallford-travels",
    "location": "Remote (US)",
    "remote": "Remote",
-   "pay": "$36-$53/yr",
-   "hourly": 35.5,
-   "posted": "2026-11-02",
-   "expires": "2027-01-01",
-   "applyUrl": "https://himalayas.app/companies/advocate-aurora-health/jobs/application-analyst-genesys?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/advocate-aurora-health/jobs/application-analyst-genesys",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-11-04",
+   "expires": "2027-01-03",
+   "applyUrl": "https://himalayas.app/companies/hallford-travels/jobs/remote-travel-customer-support-specialist-8813024246?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/hallford-travels/jobs/remote-travel-customer-support-specialist-8813024246",
    "source": "Himalayas",
    "career": "support",
-   "summary": "Department: 12207 Enterprise Corporate - Contact Center ApplicationsStatus: Full timeBenefits Eligible: YesHours Per Week: 40Schedule Details/Additional Information: M-F 8:00-5:00pm cst with on-call and holiday rotation Preferred: Speech and Voice Analytics, Call Flow Architect d",
+   "summary": "We are seeking friendly, dependable, and service-oriented individuals to join our team as a Remote Travel Customer Support Specialist.",
    "skills": [
     "Customer service",
+    "Scheduling",
+    "Excel"
+   ],
+   "flags": [],
+   "type": "Full Time",
+   "flagInfo": [],
+   "about": {
+    "does": [],
+    "wants": [],
+    "nice": [],
+    "years": null,
+    "degree": false
+   }
+  },
+  {
+   "id": "him:hallford-travels/jobs/remote-travel-planning-specialist-6058170545",
+   "title": "Remote Travel Planning Specialist",
+   "company": "Hallford Travels",
+   "companySlug": "hallford-travels",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-11-04",
+   "expires": "2027-01-03",
+   "applyUrl": "https://himalayas.app/companies/hallford-travels/jobs/remote-travel-planning-specialist-6058170545?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/hallford-travels/jobs/remote-travel-planning-specialist-6058170545",
+   "source": "Himalayas",
+   "career": "support",
+   "summary": "We are seeking friendly, dependable, and service-oriented individuals to join our team as a Remote Travel Customer Support Specialist.",
+   "skills": [
+    "Customer service",
+    "Scheduling",
+    "Excel"
+   ],
+   "flags": [],
+   "type": "Full Time",
+   "flagInfo": [],
+   "about": {
+    "does": [],
+    "wants": [],
+    "nice": [],
+    "years": null,
+    "degree": false
+   }
+  },
+  {
+   "id": "him:foodtec-solutions/jobs/restaurant-pos-service-analyst-9650494153",
+   "title": "Restaurant POS Service Analyst",
+   "company": "FoodTec Solutions",
+   "companySlug": "foodtec-solutions",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "$22-$30/yr",
+   "hourly": 22.0,
+   "posted": "2026-11-03",
+   "expires": "2027-01-02",
+   "applyUrl": "https://himalayas.app/companies/foodtec-solutions/jobs/restaurant-pos-service-analyst-9650494153?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/foodtec-solutions/jobs/restaurant-pos-service-analyst-9650494153",
+   "source": "Himalayas",
+   "career": "support",
+   "summary": "Restaurant POS Service AnalystFoodTec SolutionsDepartmentProfessional ServicesClassificationFull-Time, Non-ExemptReports ToProfessional Services ManagerLocationRemote or Needham, MAScheduleMonday\u2013Friday, 9:00 AM\u20136:00 PMPay Band$22.",
+   "skills": [
+    "Inventory",
     "Excel"
    ],
    "flags": [],
@@ -2302,70 +2389,64 @@
    "flagInfo": [],
    "about": {
     "does": [
-     "Monitor system functionality and clinical and business processes instituting changes as needed.",
-     "Effectively explains the functioning of the assigned application(s) and related systems to the users. Assists users with using the full functionality of the application(s) and proc",
-     "Family benefits such as adoption assistance and paid parental leave"
+     "Serve as a day-to-day point of contact for new and existing FoodTec customers",
+     "Coordinate with managers and teammates to schedule work, maintain momentum, and keep projects moving",
+     "Document customer needs clearly and ensure information is communicated internally in a useful, actionable way"
     ],
     "wants": [
-     "Identify, map, measure, analyze and improve routine to moderately complex clinical and business processes, problems and information requirements for assigned application(s). Perfor",
-     "Prepare documentation for business requirements by using case diagrams, data flow diagrams, data models, and object models to present, discuss and analyze various dimensions. Evalu",
-     "Translate user requirements into functional and technical design specifications and reviews with the user to insure accuracy. Prioritize requirements based on business needs and di",
-     "Perform applicable system(s) configuration that meets business requirements.",
-     "Develop and maintain product documentation including: current workflows, requirements, functional specifications, installation instructions, product test procedures, user manuals,"
+     "Ability to understand restaurant urgency and operational impact",
+     "Ability to ask good questions, uncover the real issue, and document it clearly",
+     "Comfortable guiding customers through change, training, and new system functionality",
+     "Able to balance multiple priorities in a fast-paced service environment",
+     "Comfortable learning and working across multiple connected restaurant technology solutions"
     ],
     "nice": [
-     "M-F 8:00-5:00pm cst with on-call and holiday rotation Preferred: Speech and Voice Analytics, Call Flow Architect design and Implementation.",
-     "Preferred remote locations in IL, WI, NC, GA Fully Remote Role from these states: AL, AK, AR, AZ, DE, FL, GA, IA, ID, IL, IN, LA, KS, KY, ME, MI, MO, MS, MT, NC, ND, NE, NH, NM, NV"
+     "Basic familiarity with HTML or design tools is a plus, but not required"
     ],
     "years": 3,
     "degree": true
    }
   },
   {
-   "id": "him:nomad-ecommerce/jobs/part-time-support-specialist",
-   "title": "Part Time Support Specialist",
-   "company": "Nomad eCommerce",
-   "companySlug": "nomad-ecommerce",
+   "id": "him:american-income-life-insurance-company/jobs/entry-level-customer-service-work-from-home-4974522191",
+   "title": "Entry Level Customer Service - Work From Home",
+   "company": "American Income Life Insurance Company",
+   "companySlug": "american-income-life-insurance-company",
    "location": "Remote (US)",
    "remote": "Remote",
-   "pay": "$24-$27/yr",
-   "hourly": 24.0,
-   "posted": "2026-11-02",
-   "expires": "2027-01-01",
-   "applyUrl": "https://himalayas.app/companies/nomad-ecommerce/jobs/part-time-support-specialist?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/nomad-ecommerce/jobs/part-time-support-specialist",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-11-03",
+   "expires": "2027-01-02",
+   "applyUrl": "https://himalayas.app/companies/american-income-life-insurance-company/jobs/entry-level-customer-service-work-from-home-4974522191?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/american-income-life-insurance-company/jobs/entry-level-customer-service-work-from-home-4974522191",
    "source": "Himalayas",
    "career": "support",
-   "summary": "Product Support Specialist \u2013 Entry to Mid Level (1\u20133 Years Experience) Nomad eCommerce is seeking a resourceful, client-focused Part-Time Product Support Specialist to join our growing support team.",
+   "summary": "We are growing our remote team and looking for dependable, motivated individuals who enjoy helping people, answering questions, and providing a positive client experience.",
    "skills": [
-    "SQL",
-    "Ticketing",
     "Customer service",
-    "Excel"
+    "Sales"
    ],
    "flags": [],
-   "type": "Part Time",
+   "type": "Full Time",
    "flagInfo": [],
    "about": {
     "does": [
-     "Manage and resolve client support tickets, ensuring timely communication and follow-up.",
-     "Troubleshoot application issues and coordinate resolutions with internal teams or third-party vendors.",
-     "Document support cases thoroughly, contributing to knowledge bases and self-help resources.",
-     "Identify recurring issues and recommend product improvements or documentation updates."
+     "Answer questions related to current or requested coverage",
+     "Maintain accurate notes and client records",
+     "We are growing our remote team and looking for dependable, motivated individuals who enjoy helping people, answering questions, and providing a positive client experience.",
+     "As a Client Support &amp; Benefits Specialist, you will work with individuals who need help understanding their available benefit options."
     ],
     "wants": [
-     "1\u20133 years of experience in client support, technical support, or account management.",
-     "Ability to manage multiple active tickets with strong multitasking and follow-through skills.",
-     "Technically savvy with a demonstrated ability to learn new systems quickly.",
-     "Familiarity with helpdesk or ticketing systems, remote support tools, and common business applications.",
-     "Strong multi-tasking skills with the ability to pause and resume work efficiently, managing multiple tickets simultaneously and driving each to completion within designated deadlin"
+     "Ability to build trust and rapport with clients",
+     "Comfortable working independently from home",
+     "Organized and able to manage multiple tasks",
+     "Sales, customer service, or client-facing experience is helpful but not required",
+     "Able to communicate clearly by phone, video, and email"
     ],
-    "nice": [
-     "Technical writing or documentation experience (preferred, not required).",
-     "Associate or bachelor\u2019s degree in business, IT, or a related field (preferred, not required)."
-    ],
-    "years": 3,
-    "degree": true
+    "nice": [],
+    "years": null,
+    "degree": false
    }
   },
   {
@@ -2538,81 +2619,225 @@
    }
   },
   {
-   "id": "him:teleperformanceusa/jobs/bilingual-healthcare-customer-service-rep-remote-remote-3149392802",
-   "title": "Bilingual Healthcare Customer Service Rep - Remote- Remote",
-   "company": "Teleperformance",
-   "companySlug": "teleperformanceusa",
+   "id": "him:motu-novu-llc/jobs/jr-e-commerce-assistant-flex-time-remote-global",
+   "title": "Jr. E-Commerce Assistant (Flex-Time) (Remote/Global)",
+   "company": "Motu Novu LLC",
+   "companySlug": "motu-novu-llc",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "$15-$25/yr",
+   "hourly": 15.0,
+   "posted": "2026-11-04",
+   "expires": "2026-12-04",
+   "applyUrl": "https://himalayas.app/companies/motu-novu-llc/jobs/jr-e-commerce-assistant-flex-time-remote-global?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/motu-novu-llc/jobs/jr-e-commerce-assistant-flex-time-remote-global",
+   "source": "Himalayas",
+   "career": "support",
+   "summary": "BasicsType: Independent Contractor Schedule: Flex-Time (5-15 hours/week) Education: Any Work Experience: Any Location: Remote Motu Novu seeks a remote Junior E-Commerce Assistant contractor, with or without prior relevant experience, to help the firm\u2019s clients in developing, mana",
+   "skills": [
+    "Linux",
+    "Inventory",
+    "Excel"
+   ],
+   "flags": [],
+   "type": "Contractor",
+   "flagInfo": [
+    {
+     "label": "Contractor (1099), not employee",
+     "why": "No taxes are taken out, so you owe them yourself (set aside about 25-30%). Usually no benefits or overtime.",
+     "level": "check"
+    }
+   ],
+   "about": {
+    "does": [
+     "Assist in the planning, development, and deployment of new physical goods e-commerce stores.",
+     "Assist in product principal product photography and in post-processing.",
+     "Assist in catalog development, purchasing, and inventory management.",
+     "Type: Independent Contractor Schedule: Flex-Time (5-15 hours/week) Education: Any Work Experience : Any Location: Remote Motu Novu seeks a remote Junior E-Commerce Assistant contra"
+    ],
+    "wants": [
+     "Optionally, familiarity with the GNU/Linux operating system (any distro.)",
+     "Optionally, working knowledge of e-commerce and e-commerce fulfillment tools.",
+     "Relocation: If interested, opportunity to relocate to Cody, Wyoming, USA, with visa sponsorship if foreign, after at least 3 years of successful collaboration."
+    ],
+    "nice": [
+     "Benefits: Discretionary yearly performance bonus."
+    ],
+    "years": 3,
+    "degree": false
+   }
+  },
+  {
+   "id": "him:american-income-life-insurance-company/jobs/appointment-setter-work-from-home-7544036707",
+   "title": "Appointment Setter (Work From Home)",
+   "company": "American Income Life Insurance Company",
+   "companySlug": "american-income-life-insurance-company",
    "location": "Remote (US)",
    "remote": "Remote",
    "pay": "",
    "hourly": null,
-   "posted": "2026-11-02",
-   "expires": "2027-01-01",
-   "applyUrl": "https://himalayas.app/companies/teleperformanceusa/jobs/bilingual-healthcare-customer-service-rep-remote-remote-3149392802?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/teleperformanceusa/jobs/bilingual-healthcare-customer-service-rep-remote-remote-3149392802",
+   "posted": "2026-11-03",
+   "expires": "2027-01-02",
+   "applyUrl": "https://himalayas.app/companies/american-income-life-insurance-company/jobs/appointment-setter-work-from-home-7544036707?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/american-income-life-insurance-company/jobs/appointment-setter-work-from-home-7544036707",
    "source": "Himalayas",
    "career": "support",
-   "summary": "OverviewAs a Bilingual Spanish/English Customer Specialist, you will serve as a primary point of contact for our clients, managing inbound and outbound communications with professional excellence.",
-   "skills": [
-    "VPN",
-    "Customer service",
-    "Excel",
-    "Sales"
-   ],
+   "summary": "American Income Life provides supplemental benefit solutions to working families across the United States, Canada, New Zealand, and through National Income Life Insurance Company in New York.",
+   "skills": [],
    "flags": [],
    "type": "Full Time",
    "flagInfo": [],
    "about": {
     "does": [
-     "Connect with customers via phone/email/chat/and or social media to resolve their questions or concerns",
-     "Calmly attempt to resolve and de-escalate any issues",
-     "Respond to requests for assistance and/or possible processing payments",
-     "As a Bilingual Spanish/English Customer Specialist, you will serve as a primary point of contact for our clients, managing inbound and outbound communications with professional exc"
+     "Respond to incoming service calls and member inquiries",
+     "Assist members who request information about coverage options",
+     "Focus on maintaining a healthy work-life balance",
+     "Our representatives work directly with clients to provide clear information, answer questions, and help families understand the options available to them."
     ],
-    "wants": [
-     "6 months customer service experience minimum",
-     "Ability to use Windows operating systems",
-     "6 months sales experience minimum",
-     "Able to work independently",
-     "Ability to stay composed and objective"
-    ],
+    "wants": [],
     "nice": [
-     "6 months Call Center experience, preferred"
+     "Weekly pay with bonus opportunities"
     ],
     "years": null,
     "degree": false
    }
   },
   {
-   "id": "him:coinbase/jobs/customer-success-team-agent-ii",
-   "title": "Customer Success Team Agent II",
-   "company": "Coinbase",
-   "companySlug": "coinbase",
+   "id": "him:naples-jet-center/jobs/online-chat-agent",
+   "title": "Online Chat Agent",
+   "company": "Naples Jet Center",
+   "companySlug": "naples-jet-center",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-11-03",
+   "expires": "2027-01-02",
+   "applyUrl": "https://himalayas.app/companies/naples-jet-center/jobs/online-chat-agent?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/naples-jet-center/jobs/online-chat-agent",
+   "source": "Himalayas",
+   "career": "support",
+   "summary": ", permanentPosition: Online Chat AgentNaplesjetcenter is seeking a highly motivated and customer-oriented Online Chat Agent to join our team on a full-time, permanent basis.",
+   "skills": [
+    "Customer service",
+    "Excel"
+   ],
+   "flags": [],
+   "type": "Full Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "Respond to customer inquiries and provide accurate information and assistance through our online chat platform",
+     "Build and maintain strong relationships with customers by providing personalized and timely responses",
+     "Proactively engage with customers to identify and resolve any issues or concerns they may have",
+     "As an Online Chat Agent, you will be responsible for providing exceptional customer service and support through our online chat platform."
+    ],
+    "wants": [
+     "Ability to work in a fast-paced and dynamic environment",
+     "Proficient in using technology and online chat platforms"
+    ],
+    "nice": [
+     "Previous customer service experience, preferably in a call center or online chat environment"
+    ],
+    "years": null,
+    "degree": false
+   }
+  },
+  {
+   "id": "him:fujifilm/jobs/vendor-support-strategy-specialist-mi",
+   "title": "Vendor Support Strategy Specialist, MI",
+   "company": "Fujifilm",
+   "companySlug": "fujifilm",
    "location": "Remote (US)",
    "remote": "Remote",
    "pay": "",
    "hourly": null,
    "posted": "2026-11-02",
    "expires": "2027-01-01",
-   "applyUrl": "https://himalayas.app/companies/coinbase/jobs/customer-success-team-agent-ii?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/coinbase/jobs/customer-success-team-agent-ii",
+   "applyUrl": "https://himalayas.app/companies/fujifilm/jobs/vendor-support-strategy-specialist-mi?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/fujifilm/jobs/vendor-support-strategy-specialist-mi",
    "source": "Himalayas",
    "career": "support",
-   "summary": "Ready to do the most impactful work of your career?",
+   "summary": "Position OverviewThe Vendor Support Strategy Specialist, Medical Informatics (MI) shapes and governs third-party support arrangements across the MI product portfolio.",
    "skills": [
-    "AWS"
+    "AWS",
+    "Salesforce",
+    "NIST",
+    "Microsoft Office",
+    "Excel",
+    "Sales"
    ],
    "flags": [],
-   "type": "Full Time",
+   "type": "Other",
    "flagInfo": [],
    "about": {
-    "does": [],
-    "wants": [
-     "Demonstrates the ability to responsibly use generative AI tools and copilots (e.g., LibreChat, Gemini, Glean) in daily workflows, continuously learn as tools evolve, and apply huma"
+    "does": [
+     "Develop and maintain the third-party support strategy for the Medical Informatics product portfolio.",
+     "Review vendor proposals and agreements to identify coverage gaps, unclear responsibilities, unfavorable limitations, and customer-impact risks.",
+     "Maintain support entitlements, lifecycle information, vendor scorecards, risk registers, renewal forecasts, and leadership reporting.",
+     "Monitor vendor responsiveness and performance, support escalations, and recommend corrective actions or support-level changes."
     ],
-    "nice": [],
-    "years": null,
-    "degree": false
+    "wants": [
+     "Comply with all applicable U.S. Food and Drug Administration (U.S. FDA) medical device regulatory requirements, applicable ISO 13485 standard requirements and all other applicable",
+     "Bachelor\u2019s degree or an equivalent combination of education and relevant experience.",
+     "3-5 years of relevant experience.",
+     "Experience in vendor management, contract administration, product operations, service strategy, healthcare technology, or a related field.",
+     "Working understanding of enterprise technology, clinical software, hardware, integrations, and product lifecycle concepts."
+    ],
+    "nice": [
+     "Healthcare technology, medical devices, clinical software, or regulated environments is preferred.",
+     "Negotiating support provisions in master agreements, statements of work, amendments, or renewals is preferred.",
+     "Experience creating entitlement matrices, vendor scorecards, risk registers, dashboards, or executive reporting is preferred."
+    ],
+    "years": 3,
+    "degree": true
+   }
+  },
+  {
+   "id": "him:nomad-ecommerce/jobs/part-time-support-specialist",
+   "title": "Part Time Support Specialist",
+   "company": "Nomad eCommerce",
+   "companySlug": "nomad-ecommerce",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "$24-$27/yr",
+   "hourly": 24.0,
+   "posted": "2026-11-02",
+   "expires": "2027-01-01",
+   "applyUrl": "https://himalayas.app/companies/nomad-ecommerce/jobs/part-time-support-specialist?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/nomad-ecommerce/jobs/part-time-support-specialist",
+   "source": "Himalayas",
+   "career": "support",
+   "summary": "Product Support Specialist \u2013 Entry to Mid Level (1\u20133 Years Experience) Nomad eCommerce is seeking a resourceful, client-focused Part-Time Product Support Specialist to join our growing support team.",
+   "skills": [
+    "SQL",
+    "Ticketing",
+    "Customer service",
+    "Excel"
+   ],
+   "flags": [],
+   "type": "Part Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "Manage and resolve client support tickets, ensuring timely communication and follow-up.",
+     "Troubleshoot application issues and coordinate resolutions with internal teams or third-party vendors.",
+     "Document support cases thoroughly, contributing to knowledge bases and self-help resources.",
+     "Identify recurring issues and recommend product improvements or documentation updates."
+    ],
+    "wants": [
+     "1\u20133 years of experience in client support, technical support, or account management.",
+     "Ability to manage multiple active tickets with strong multitasking and follow-through skills.",
+     "Technically savvy with a demonstrated ability to learn new systems quickly.",
+     "Familiarity with helpdesk or ticketing systems, remote support tools, and common business applications.",
+     "Strong multi-tasking skills with the ability to pause and resume work efficiently, managing multiple tickets simultaneously and driving each to completion within designated deadlin"
+    ],
+    "nice": [
+     "Technical writing or documentation experience (preferred, not required).",
+     "Associate or bachelor\u2019s degree in business, IT, or a related field (preferred, not required)."
+    ],
+    "years": 3,
+    "degree": true
    }
   },
   {
@@ -2703,93 +2928,51 @@
    }
   },
   {
-   "id": "him:infinx/jobs/coding-specialist",
-   "title": "Coding Specialist",
-   "company": "Infinx",
-   "companySlug": "infinx",
-   "location": "Remote (US)",
+   "id": "jcy:158090",
+   "title": "Technical Support Engineer",
+   "company": "Kustomer",
+   "companySlug": "",
+   "location": "Remote (USA)",
    "remote": "Remote",
-   "pay": "$19-$22/yr",
-   "hourly": 19.0,
-   "posted": "2026-11-01",
-   "expires": "2026-12-31",
-   "applyUrl": "https://himalayas.app/companies/infinx/jobs/coding-specialist?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/infinx/jobs/coding-specialist",
-   "source": "Himalayas",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-11-04",
+   "expires": "",
+   "applyUrl": "https://jobicy.com/jobs/158090-technical-support-engineer-5",
+   "sourceUrl": "https://jobicy.com/jobs/158090-technical-support-engineer-5",
+   "source": "Jobicy",
    "career": "support",
-   "summary": "About Our Company: At Infinx, we're a fast-growing company focused on delivering innovative technology solutions to meet our clients' needs.",
+   "summary": "About Kustomer Kustomer is the AI-native customer experience platform that turns every interaction into a lasting relationship and a measurable business outcome. By unifying customer data, conversations and AI-native workflows into a single connected timeline, Kustomer helps team",
+   "type": "Full-Time",
    "skills": [
-    "Excel"
+    "Zendesk",
+    "Salesforce",
+    "Python",
+    "SQL",
+    "JavaScript",
+    "REST API",
+    "Customer service",
+    "Sales"
    ],
    "flags": [],
-   "type": "Full Time",
    "flagInfo": [],
    "about": {
     "does": [
-     "Review clinical documentation to confirm medical necessity and support code selection; submit compliant, non-leading physician queries when documentation is unclear, incomplete, or",
-     "Identify and report charge capture errors, missing charges, and documentation deficiencies to the appropriate upstream owner",
-     "Maintain coding accuracy at or above the client-defined threshold (typically 95%) and meet daily productivity targets (charts or encounters per hour, or RVU-based as defined by cli",
-     "Document coding rationale and query activity clearly in the encoder, EHR, or coding workflow tool"
+     "Troubleshooting AI agent behavior, such as misrouted or incorrect resolutions, knowledge gaps, and failed actions or integrations, and recommending configuration or knowledge fixes",
+     "Writing runbooks, troubleshooting guides, and escalation playbooks for our AI agent and BPO partners",
+     "Joining the on-call rotation for critical events and premier support customers",
+     "By unifying customer data, conversations and AI-native workflows into a single connected timeline, Kustomer helps teams cultivate customers, not tickets, resolving issues faster an"
     ],
     "wants": [
-     "Maintain current working knowledge of best coding practices, payer policy, and regulatory changes by accessing NCD, LCD, and coding policy resources and participating in continuing",
-     "High School Diploma or GED",
-     "1+ years of medical coding experience",
-     "Familiarity with NCCI edits, MUE edits, global edits, and LCD/NCD policies",
-     "Proficiency with encoder tools (3M, TruCode, Optum EncoderPro, or comparable) and EHR, PMS systems"
+     "4+ years experience in technical support, developer support, or support engineering at a B2B SaaS company, including Tier 2/3 or escalation experience",
+     "Working proficiency in JavaScript/TypeScript and JSON, and comfort reading and writing API requests (Postman, curl, browser dev tools)",
+     "Experience with workflow or automation platforms, such as rules engines, workflow builders, or iPaaS tools (Zapier, Workato)",
+     "Experience with logging and monitoring tools (Datadog, Sentry, Kibana) and basic SQL or Python for data investigation",
+     "Experience with CRM or CX platforms (Kustomer, Zendesk, Salesforce, Shopify) and their integrations"
     ],
-    "nice": [
-     "Multi-specialty coding experience (e.g., surgery, cardiology, GI, orthopedics, oncology, primary care) preferred",
-     "Experience with split/shared visit, incident-to, and time-based E&amp;M coding under current CMS guidelines preferred",
-     "Prior experience supporting coding audits, formal appeals authoring, or external payer audit response preferred"
-    ],
-    "years": 1,
-    "degree": true
-   }
-  },
-  {
-   "id": "him:affirm/jobs/customer-operations-associate-i",
-   "title": "Customer Operations Associate I",
-   "company": "Affirm",
-   "companySlug": "affirm",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "$44,000-$70,000/yr",
-   "hourly": 21.15,
-   "posted": "2026-11-01",
-   "expires": "2026-12-31",
-   "applyUrl": "https://himalayas.app/companies/affirm/jobs/customer-operations-associate-i?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/affirm/jobs/customer-operations-associate-i",
-   "source": "Himalayas",
-   "career": "support",
-   "summary": "At Affirm, we exist for the moments that matter\u2014giving people a clear, predictable way to pay over time, with no hidden fees, no surprises, and no tradeoffs on what matters most.",
-   "skills": [
-    "Google Workspace",
-    "Excel"
-   ],
-   "flags": [],
-   "type": "Full Time",
-   "flagInfo": [],
-   "about": {
-    "does": [
-     "Resolve escalated customer inquiries via predominantly email, with occasional need for phone calls to support customers.",
-     "Responsible for maintaining a high level of professionalism and maintaining excellent Quality Assurance scores with clients while working to establish a positive rapport",
-     "Utilization of your in-depth product and financial knowledge to communicate, investigate, and resolve customer issues on a larger variety of case types.",
-     "Participate and assist in ongoing training to develop new skills and responsibilities"
-    ],
-    "wants": [
-     "Proficient in both English and French",
-     "1-3 years required experience interacting with customers in an omnichannel environment (phone, email, chat, etc)",
-     "Ability to apply analytical thinking in decision making with keen organizational skills and attention to detail",
-     "Strong follow-through and ability to manage competing priorities",
-     "Comfortable with working with Key Performance Indicators (KPIs) to assess and drive performance"
-    ],
-    "nice": [
-     "Experience within the financial industry is a plus",
-     "Mac (iOS) and Google Workspace (formerly G Suite) knowledge a plus"
-    ],
-    "years": 1,
-    "degree": true
+    "nice": [],
+    "years": 4,
+    "degree": false
    }
   },
   {
@@ -3583,105 +3766,6 @@
     ],
     "nice": [],
     "years": 4,
-    "degree": true
-   }
-  },
-  {
-   "id": "him:peraton/jobs/mainframe-security-administrator",
-   "title": "Mainframe Security Administrator",
-   "company": "Peraton",
-   "companySlug": "peraton",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "$66,000-$106,000/yr",
-   "hourly": 31.73,
-   "posted": "2026-10-31",
-   "expires": "2026-12-30",
-   "applyUrl": "https://himalayas.app/companies/peraton/jobs/mainframe-security-administrator?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/peraton/jobs/mainframe-security-administrator",
-   "source": "Himalayas",
-   "career": "security",
-   "summary": "Peraton OverviewPeraton is a next-generation national security company that drives missions of consequence spanning the globe and extending to the farthest reaches of the galaxy.",
-   "skills": [
-    "NIST",
-    "Ticketing",
-    "Excel"
-   ],
-   "flags": [],
-   "type": "Full Time",
-   "flagInfo": [],
-   "about": {
-    "does": [
-     "Account and access control administration, security reports, recertification reviews, and security violation monitoring for mainframe role-based access control.",
-     "Work with other security team to assist technical support groups in the design and testing of information security products to provide solutions for information security issues and",
-     "Working with the System Security Officers, investigates noncompliance, alerts, and escalates appropriately. Assists in migrations, implementations, and investigations.",
-     "Maintains the oversight and compliance of existing information systems through technical reviews and system auditing."
-    ],
-    "wants": [
-     "Analyze basic customer security requirements and makes recommendations for improvement to information security processes and documentation.",
-     "Strong written and verbal communication; able to coordinate with and support technicians, system admins, developers, business analysts, and on-call staff.",
-     "2 years with BS/BA; 0 years with MS/MA; 6 years with HS Diploma/equivalent",
-     "Ability to obtain a Public Trust clearance",
-     "Working z/OS RACF and ACF2 security skills, with the ability to review, correct, and coach others on mainframe security."
-    ],
-    "nice": [
-     "Depending on the position, employees may be eligible for overtime, shift differential, and a discretionary bonus in addition to base pay."
-    ],
-    "years": 0,
-    "degree": false
-   }
-  },
-  {
-   "id": "him:vitu/jobs/information-security-analyst-ii",
-   "title": "Information Security Analyst II",
-   "company": "Vitu",
-   "companySlug": "vitu",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "$73,000-$95,000/yr",
-   "hourly": 35.1,
-   "posted": "2026-10-31",
-   "expires": "2026-12-30",
-   "applyUrl": "https://himalayas.app/companies/vitu/jobs/information-security-analyst-ii?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/vitu/jobs/information-security-analyst-ii",
-   "source": "Himalayas",
-   "career": "security",
-   "summary": "Information Security Analyst II (Remote) As the leading innovator in Vehicle-to-Government (V2Gov) technology, Vitu is transforming the way vehicles, businesses, government, and drivers interact with one another.",
-   "skills": [
-    "Security+",
-    "CySA+",
-    "Active Directory",
-    "Azure",
-    "Entra ID",
-    "AWS",
-    "Linux",
-    "SIEM",
-    "NIST",
-    "Vulnerability management",
-    "Incident response",
-    "TCP/IP",
-    "DNS",
-    "VPN"
-   ],
-   "flags": [],
-   "type": "Full Time",
-   "flagInfo": [],
-   "about": {
-    "does": [
-     "Monitor and investigate security alerts generated by SIEM, EDR, cloud security, and threat detection tools.",
-     "Document findings, evidence, and recommendations.",
-     "Assist with deployment, tuning, and optimization of CrowdStrike capabilities including: Falcon Sensor, Falcon Secure, and Falcon Data Protection where applicable",
-     "Assist with User Access reviews and identity/access management tasks."
-    ],
-    "wants": [
-     "Prioritize remediation activities based on Exploitability, Asset Criticality, External exposure, Regulatory requirements, and/or Business Risk.",
-     "Bachelor's degree in Cybersecurity, IT, Computer Science or related, or equivalent training/certifications.",
-     "2-5 years of experience in Information Security, Cybersecurity Operations, Security Engineering, or Vulnerability Management.",
-     "Strong understanding of Networking of OSI model, TCP/IP, DNS, Firewalls, VPNs, and network architecture.",
-     "Practical Experience with modern EDR tools."
-    ],
-    "nice": [],
-    "years": 2,
     "degree": true
    }
   },
@@ -5300,47 +5384,6 @@
    }
   },
   {
-   "id": "him:sbt-global/jobs/jr-front-end-developer-korean-bilingual-2601921050",
-   "title": "Jr. Front-End Developer(Korean Bilingual)",
-   "company": "SBT Global",
-   "companySlug": "sbt-global",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "$6,474/yr",
-   "hourly": 37.36,
-   "posted": "2026-10-26",
-   "expires": "2026-12-25",
-   "applyUrl": "https://himalayas.app/companies/sbt-global/jobs/jr-front-end-developer-korean-bilingual-2601921050?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/sbt-global/jobs/jr-front-end-developer-korean-bilingual-2601921050",
-   "source": "Himalayas",
-   "career": "python",
-   "summary": "The ideal candidate will be responsible for the development and maintenance of user interfaces for our web applications.",
-   "skills": [
-    "Excel"
-   ],
-   "flags": [],
-   "type": "Contractor",
-   "flagInfo": [],
-   "about": {
-    "does": [
-     "Ensure the technical feasibility of UI/UX designs and maintain code quality.",
-     "The ideal candidate will be responsible for the development and maintenance of user interfaces for our web applications."
-    ],
-    "wants": [
-     "Bachelor's degree in Computer Science, Engineering, or a related field.",
-     "5 Plus years of experience as a Front-end Developer or similar role.",
-     "Proficiency in jQuery, ES6, React, CSS, and HTML.",
-     "Experience with Content Management Systems (CMS)",
-     "Solid understanding of responsive design principles and mobile-first development."
-    ],
-    "nice": [
-     "Experience with test automation tools and frameworks (e.g., Selenium, Cypress) is a plus."
-    ],
-    "years": null,
-    "degree": true
-   }
-  },
-  {
    "id": "him:liberty-university/jobs/quality-analyst-engineer-apprentice-5518770604",
    "title": "Quality Analyst Engineer Apprentice",
    "company": "Liberty University",
@@ -5922,51 +5965,6 @@
    }
   },
   {
-   "id": "him:careerswift/jobs/junior-software-developer-1334449295",
-   "title": "Junior Software Developer",
-   "company": "Careerswift",
-   "companySlug": "careerswift",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "$60,000-$78,000/yr",
-   "hourly": 28.85,
-   "posted": "2026-09-22",
-   "expires": "2026-11-21",
-   "applyUrl": "https://himalayas.app/companies/careerswift/jobs/junior-software-developer-1334449295?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/careerswift/jobs/junior-software-developer-1334449295",
-   "source": "Himalayas",
-   "career": "python",
-   "summary": "CerebriOS is a software company building B2B SaaS products that help businesses make better decisions, streamline operations, and get more value from their data.",
-   "skills": [
-    "Jira",
-    "Python",
-    "SQL",
-    "JavaScript",
-    "REST API"
-   ],
-   "flags": [],
-   "type": "Full Time",
-   "flagInfo": [],
-   "about": {
-    "does": [
-     "Develop and maintain software features under the guidance of senior developers.",
-     "Write clean, readable, and maintainable code.",
-     "Write and maintain basic unit and integration tests.",
-     "Assist with debugging and troubleshooting application issues."
-    ],
-    "wants": [
-     "0\u20132 years of professional software development experience, including internships or relevant projects.",
-     "Knowledge of at least one programming language such as JavaScript, TypeScript, Python, Java, or C#.",
-     "Basic understanding of software development principles and object-oriented programming.",
-     "Familiarity with Git and version-control workflows.",
-     "Understanding of REST APIs and basic web development concepts."
-    ],
-    "nice": [],
-    "years": 2,
-    "degree": false
-   }
-  },
-  {
    "id": "him:ngo-consulting-partners/jobs/junior-software-engineer-qa-automation",
    "title": "Junior Software Engineer (QA & Automation)",
    "company": "Ngo Consulting Partners",
@@ -6005,6 +6003,96 @@
     "nice": [],
     "years": 3,
     "degree": false
+   }
+  },
+  {
+   "id": "him:canonical/jobs/junior-ubuntu-software-engineer",
+   "title": "Junior Ubuntu Software Engineer",
+   "company": "Canonical",
+   "companySlug": "canonical",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-10-18",
+   "expires": "2026-12-17",
+   "applyUrl": "https://himalayas.app/companies/canonical/jobs/junior-ubuntu-software-engineer?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/canonical/jobs/junior-ubuntu-software-engineer",
+   "source": "Himalayas",
+   "career": "python",
+   "summary": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets.",
+   "skills": [
+    "Linux",
+    "Python",
+    "Excel"
+   ],
+   "flags": [],
+   "type": "Full Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "Foundations : maintaining foundational software: architectures, package managers, compilers, toolchains, bootloaders, filesystems and core utilities",
+     "Debcrafters: a new team responsible for the forward movement, maintenance and overall health of the Ubuntu archive: one of the most abundant repositories of open source software av",
+     "Automation : build and maintain the machinery responsible for building, testing and shipping Ubuntu",
+     "Authoring and improving technical and community documentation"
+    ],
+    "wants": [
+     "Undergraduate degree in Computer Science or STEM, or a compelling narrative about your alternative path",
+     "Experience with Rust, Go, Python, Flutter or C/C++",
+     "Ability to travel twice a year, for company events up to two weeks each",
+     "Familiarity with Linux distributions",
+     "Familiarity with system debugging tools and techniques"
+    ],
+    "nice": [
+     "In addition to base pay, we offer a performance-driven annual bonus."
+    ],
+    "years": null,
+    "degree": true
+   }
+  },
+  {
+   "id": "him:logical-paradigm/jobs/junior-level-quality-assurance-analyst",
+   "title": "Junior level Quality Assurance Analyst",
+   "company": "Logical Paradigm",
+   "companySlug": "logical-paradigm",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-10-14",
+   "expires": "2026-12-13",
+   "applyUrl": "https://himalayas.app/companies/logical-paradigm/jobs/junior-level-quality-assurance-analyst?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/logical-paradigm/jobs/junior-level-quality-assurance-analyst",
+   "source": "Himalayas",
+   "career": "python",
+   "summary": "\u2022 Design, code, test, deploy and maintain testing automation solutions that provide automated test coverage of business functionality for the team.",
+   "skills": [
+    "Python",
+    "SQL",
+    "JavaScript",
+    "Splunk"
+   ],
+   "flags": [],
+   "type": "Contractor",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "Design, code, test, deploy and maintain testing automation solutions that provide automated test coverage of business functionality for the team."
+    ],
+    "wants": [
+     "Entry level candidates are welcome to apply, they must have a Bachelor's or Master's degree from Computer Science or any IT related background (STEM Program).",
+     "Previous experience in software development, quality assurance, or other related fields",
+     "Knowledge of Java, Python, or other programming languages",
+     "Familiarity with relational databases such as MySQL, Oracle, and SQL Server",
+     "Should have at least 1 year of IT experience."
+    ],
+    "nice": [
+     "Building Framework and setting up the environment of Micro-services, API, JavaScript etc. is a plus.",
+     "Skilled in any one or more language preferably Java/Python",
+     "Working knowledge of writing scripts for Automation Frameworks is a plus."
+    ],
+    "years": 1,
+    "degree": true
    }
   },
   {
@@ -6168,52 +6256,6 @@
     ],
     "years": null,
     "degree": false
-   }
-  },
-  {
-   "id": "him:emergency-university/jobs/remote-junior-software-engineer",
-   "title": "Remote Junior Software Engineer",
-   "company": "Emergency University",
-   "companySlug": "emergency-university",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "",
-   "hourly": null,
-   "posted": "2026-10-03",
-   "expires": "2026-12-02",
-   "applyUrl": "https://himalayas.app/companies/emergency-university/jobs/remote-junior-software-engineer?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/emergency-university/jobs/remote-junior-software-engineer",
-   "source": "Himalayas",
-   "career": "python",
-   "summary": "As a Remote Junior Software Engineer, you will be responsible for developing and maintaining our online training platform.",
-   "skills": [
-    "Python",
-    "JavaScript",
-    "Excel",
-    "Teamwork"
-   ],
-   "flags": [],
-   "type": "Full Time",
-   "flagInfo": [],
-   "about": {
-    "does": [
-     "Write clean, efficient, and well-documented code that meets industry standards",
-     "Troubleshoot and debug issues with existing code",
-     "As a Remote Junior Software Engineer, you will be responsible for developing and maintaining our online training platform.",
-     "You will work closely with our team of experienced software engineers to design, develop, and implement new features and functionalities."
-    ],
-    "wants": [
-     "Communicate effectively with team members and stakeholders to gather requirements and provide updates on project status",
-     "Bachelor's degree in Computer Science, Software Engineering, or a related field",
-     "Proficiency in one or more programming languages such as Java, Python, or JavaScript",
-     "Experience with front-end development using HTML, CSS, and JavaScript frameworks such as React or Angular",
-     "Familiarity with database design and management"
-    ],
-    "nice": [
-     "1-2 years of experience in software development, preferably in a remote environment"
-    ],
-    "years": 1,
-    "degree": true
    }
   },
   {
@@ -6388,6 +6430,57 @@
    }
   },
   {
+   "id": "him:computer-world-services-corp/jobs/tier-1-2-service-desk-analyst-journeyman",
+   "title": "Tier 1/2 Service Desk Analyst (Journeyman)",
+   "company": "Computer World Services Corp.",
+   "companySlug": "computer-world-services-corp",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "$60,000-$90,000/yr",
+   "hourly": 28.85,
+   "posted": "2026-10-29",
+   "expires": "2026-12-28",
+   "applyUrl": "https://himalayas.app/companies/computer-world-services-corp/jobs/tier-1-2-service-desk-analyst-journeyman?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/computer-world-services-corp/jobs/tier-1-2-service-desk-analyst-journeyman",
+   "source": "Himalayas",
+   "career": "network",
+   "summary": "Computer World Services, Corp. (CWS) seeks Tier 1/2 Service Desk Analysts to provide customer-facing technical support for the USMEPCOM ENLIST program.",
+   "skills": [
+    "CompTIA A+",
+    "Network+",
+    "Security+",
+    "ITIL",
+    "AWS",
+    "ServiceNow",
+    "NIST",
+    "VPN"
+   ],
+   "flags": [],
+   "type": "Full Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "Serve as an initial point of contact, receiving incidents and requests via telephone, email, web, self-service, monitoring, and escalation channels.",
+     "Resolve first-contact issues using approved procedures, scripts, knowledge articles, and remote-support tools.",
+     "Troubleshoot laptops, desktops, thin/zero clients, mobile devices, printers, peripherals, LAN/WAN/VPN/wireless connectivity, accounts, passwords, email, collaboration, and enterpri",
+     "Recognize and immediately escalate outage signals, capturing symptoms, affected users and locations, start time, impact, and troubleshooting performed; support Severity (SEV) 1 and"
+    ],
+    "wants": [
+     "Associate\u2019s degree in Information Technology or a related field, or equivalent professional experience.",
+     "Minimum of three (3) years of relevant service-desk, help-desk, desktop-support, or end-user support experience.",
+     "Working knowledge of hardware, operating systems, productivity software, user accounts, networks, remote access, and enterprise applications.",
+     "Ability to recognize and escalate potential outages and maintain complete, accurate ticket documentation.",
+     "Strong customer-service and communication skills, and ability to work assigned shifts and after-hours, weekend, holiday, or surge coverage."
+    ],
+    "nice": [
+     "Preferred: CompTIA A+, CompTIA Network+, CompTIA Security+, or ITIL 4 Foundation.",
+     "Remote position; Chicago, IL\u2013area candidates preferred."
+    ],
+    "years": null,
+    "degree": true
+   }
+  },
+  {
    "id": "him:sana/jobs/contract-network-operations-associate",
    "title": "Contract Network Operations Associate",
    "company": "Sana",
@@ -6477,6 +6570,58 @@
     ],
     "nice": [],
     "years": 3,
+    "degree": true
+   }
+  },
+  {
+   "id": "him:decisionpoint-corporation/jobs/tier-1-2-service-desk-analyst-journeyman",
+   "title": "Tier 1/2 Service Desk Analyst (Journeyman)",
+   "company": "DecisionPoint Corporation",
+   "companySlug": "decisionpoint-corporation",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-10-28",
+   "expires": "2026-12-27",
+   "applyUrl": "https://himalayas.app/companies/decisionpoint-corporation/jobs/tier-1-2-service-desk-analyst-journeyman?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/decisionpoint-corporation/jobs/tier-1-2-service-desk-analyst-journeyman",
+   "source": "Himalayas",
+   "career": "network",
+   "summary": "OverviewDecisionPoint seeks two Tier 1/2 Service Desk Analysts to provide customer-facing technical support for the USMEPCOM ENLIST program.",
+   "skills": [
+    "CompTIA A+",
+    "Network+",
+    "Security+",
+    "ITIL",
+    "AWS",
+    "ServiceNow",
+    "NIST",
+    "VPN",
+    "Ticketing"
+   ],
+   "flags": [],
+   "type": "Full Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "Receive incidents and service requests through approved channels, including telephone, email, website, self-service portal, monitoring notification, or direct escalation.",
+     "Resolve approved first-contact issues using established technical procedures, scripts, diagnostic tools, and knowledge articles.",
+     "Troubleshoot laptops, desktops, zero clients, thin clients, mobile devices, printers, peripherals, and related end-user equipment.",
+     "Troubleshoot common email, collaboration, browser, productivity software, and enterprise-application issues."
+    ],
+    "wants": [
+     "Serve as an initial point of contact for USMEPCOM users requiring technical support.",
+     "Participate in required technical, security, customer-service, and process training.",
+     "Associate\u2019s degree in information technology or a related field, or equivalent professional experience.",
+     "Minimum of three years of relevant experience providing service-desk, help-desk, desktop-support, end-user support, or related technical services.",
+     "Working knowledge of computer hardware, operating systems, productivity software, user accounts, networks, remote access, and common enterprise applications."
+    ],
+    "nice": [
+     "These positions are remote, with Chicago-area candidates preferred.",
+     "The following qualifications are preferred but are not required: ."
+    ],
+    "years": null,
     "degree": true
    }
   },
@@ -7069,53 +7214,6 @@
      "With Mibura NetMetal, customers can rapidly deploy their preferred silicon with dedicated network infrastructure and interact with every available TelCo at datacenters, ground stat"
     ],
     "years": 1,
-    "degree": true
-   }
-  },
-  {
-   "id": "him:vc3/jobs/noc-analyst-ii-weekends-fri-mon",
-   "title": "NOC Analyst II (weekends, Fri-Mon)",
-   "company": "VC3",
-   "companySlug": "vc3",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "",
-   "hourly": null,
-   "posted": "2026-10-02",
-   "expires": "2026-12-01",
-   "applyUrl": "https://himalayas.app/companies/vc3/jobs/noc-analyst-ii-weekends-fri-mon?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/vc3/jobs/noc-analyst-ii-weekends-fri-mon",
-   "source": "Himalayas",
-   "career": "network",
-   "summary": "At VC3, we don\u2019t just solve IT problems \u2014 we own them.",
-   "skills": [
-    "Linux",
-    "DNS",
-    "VPN",
-    "Ticketing",
-    "Excel"
-   ],
-   "flags": [],
-   "type": "Full Time",
-   "flagInfo": [],
-   "about": {
-    "does": [
-     "Monitor network and system performance using various monitoring tools and software.",
-     "Identify and troubleshoot complex network and system issues, escalating as necessary.",
-     "Perform and assist identification and troubleshooting of complex network and system issues, acting as a point of escalation as necessary.",
-     "Maintain accurate documentation of network and system configurations and changes."
-    ],
-    "wants": [
-     "Additional duties as required.",
-     "Associate's degree in Computer Science or related field, or equivalent work experience.",
-     "3+ years of experience in network and system monitoring or related field.",
-     "Knowledge of advanced networking concepts such as load balancing, VPN, and firewalls.",
-     "Advanced understanding of server and operating system concepts, including Windows and Linux."
-    ],
-    "nice": [
-     "Experience with network and system monitoring tools; ConnectWise Ticketing, OpenDNS, Kaseya VSA, and PRTG a plus."
-    ],
-    "years": 3,
     "degree": true
    }
   },
@@ -7766,6 +7864,57 @@
    }
   },
   {
+   "id": "him:pavago/jobs/technical-support-specialist-8328599365",
+   "title": "Technical Support Specialist",
+   "company": "Pavago",
+   "companySlug": "pavago",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-11-01",
+   "expires": "2026-11-12",
+   "applyUrl": "https://himalayas.app/companies/pavago/jobs/technical-support-specialist-8328599365?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/pavago/jobs/technical-support-specialist-8328599365",
+   "source": "Himalayas",
+   "career": "cloud",
+   "summary": "Tech Support Specialist \u2013 SaaS & IT HelpdeskFull-Time | Remote | U.",
+   "skills": [
+    "CompTIA A+",
+    "Network+",
+    "ServiceNow",
+    "Zendesk",
+    "Jira",
+    "macOS",
+    "Linux",
+    "Splunk",
+    "NIST",
+    "Ticketing",
+    "Excel"
+   ],
+   "flags": [],
+   "type": "Full Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "Handle support requests through Zendesk, Freshdesk, Jira Service Management, ServiceNow , or similar tools",
+     "Troubleshoot login, access, connectivity, browser, software, and SaaS application issues",
+     "Resolve Level 1 and Level 2 technical support requests",
+     "Document troubleshooting steps, findings, and resolutions"
+    ],
+    "wants": [
+     "1\u20132+ years of experience in Technical Support, IT Helpdesk, SaaS Support, or customer-facing troubleshooting",
+     "Experience with ticketing platforms such as .",
+     "Understanding of SaaS applications and basic networking concepts",
+     "Familiarity with Windows and macOS environments",
+     "Comfortable managing multiple tickets and priorities"
+    ],
+    "nice": [],
+    "years": 2,
+    "degree": false
+   }
+  },
+  {
    "id": "him:foundation-finance-company-careers/jobs/collections-specialist-account-servicing-specialist-i-bilingual",
    "title": "Collections Specialist (Account Servicing Specialist I - Bilingual)",
    "company": "Foundation Finance Company Careers",
@@ -7945,53 +8094,48 @@
    }
   },
   {
-   "id": "him:everhelp/jobs/customer-support-specialist-german-and-english-2909298726",
-   "title": "Customer Support Specialist | German and English",
-   "company": "Everhelp",
-   "companySlug": "everhelp",
+   "id": "him:teleperformanceusa/jobs/bilingual-healthcare-customer-service-rep-remote-remote-3149392802",
+   "title": "Bilingual Healthcare Customer Service Rep - Remote- Remote",
+   "company": "Teleperformance",
+   "companySlug": "teleperformanceusa",
    "location": "Remote (US)",
    "remote": "Remote",
    "pay": "",
    "hourly": null,
-   "posted": "2026-11-03",
-   "expires": "2026-11-29",
-   "applyUrl": "https://himalayas.app/companies/everhelp/jobs/customer-support-specialist-german-and-english-2909298726?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/everhelp/jobs/customer-support-specialist-german-and-english-2909298726",
+   "posted": "2026-11-02",
+   "expires": "2027-01-01",
+   "applyUrl": "https://himalayas.app/companies/teleperformanceusa/jobs/bilingual-healthcare-customer-service-rep-remote-remote-3149392802?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/teleperformanceusa/jobs/bilingual-healthcare-customer-service-rep-remote-remote-3149392802",
    "source": "Himalayas",
    "career": "callcenter",
-   "summary": "EverHelp is a team of professionals, that\u2019s developing outsourcing support services for plenty of products all over the world at a dynamic tempo.",
+   "summary": "OverviewAs a Bilingual Spanish/English Customer Specialist, you will serve as a primary point of contact for our clients, managing inbound and outbound communications with professional excellence.",
    "skills": [
+    "VPN",
     "Customer service",
     "Excel",
-    "Teamwork"
+    "Sales"
    ],
-   "flags": [
-    "Interview over WhatsApp"
-   ],
+   "flags": [],
    "type": "Full Time",
-   "flagInfo": [
-    {
-     "label": "Interview over WhatsApp",
-     "why": "Real companies interview by phone or video. WhatsApp-only hiring is a common scam pattern.",
-     "level": "red"
-    }
-   ],
+   "flagInfo": [],
    "about": {
     "does": [
-     "Assisting guests with booking inquiries, reservation updates, property access, and other accommodation-related requests;",
-     "Resolving customer inquiries efficiently while maintaining a warm, professional, and empathetic communication style;",
-     "Accurately documenting customer interactions and case details in internal systems;",
-     "Strong multitasking skills while maintaining high service quality;"
+     "Connect with customers via phone/email/chat/and or social media to resolve their questions or concerns",
+     "Calmly attempt to resolve and de-escalate any issues",
+     "Respond to requests for assistance and/or possible processing payments",
+     "As a Bilingual Spanish/English Customer Specialist, you will serve as a primary point of contact for our clients, managing inbound and outbound communications with professional exc"
     ],
     "wants": [
-     "1\u20133 years of experience in Customer Support, Hospitality, or another customer-facing role;",
-     "German language proficiency (B2+) and English language proficiency (B2+);",
-     "Excellent problem-solving skills and the ability to make sound decisions independently;",
-     "Ability to remain calm, professional, and solution-oriented in challenging situations;",
-     "Ability to work fully remotely;"
+     "6 months customer service experience minimum",
+     "Ability to use Windows operating systems",
+     "6 months sales experience minimum",
+     "Able to work independently",
+     "Ability to stay composed and objective"
     ],
-    "nice": [],
-    "years": 3,
+    "nice": [
+     "6 months Call Center experience, preferred"
+    ],
+    "years": null,
     "degree": false
    }
   },
@@ -8125,48 +8269,6 @@
    }
   },
   {
-   "id": "him:allied-roofing-partners/jobs/customer-experience-specialist-pst-time-zone",
-   "title": "CUSTOMER EXPERIENCE SPECIALIST(Pst Time Zone)",
-   "company": "Allied Roofing Partners",
-   "companySlug": "allied-roofing-partners",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "$18-$22/yr",
-   "hourly": 18.0,
-   "posted": "2026-10-31",
-   "expires": "2026-12-30",
-   "applyUrl": "https://himalayas.app/companies/allied-roofing-partners/jobs/customer-experience-specialist-pst-time-zone?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/allied-roofing-partners/jobs/customer-experience-specialist-pst-time-zone",
-   "source": "Himalayas",
-   "career": "callcenter",
-   "summary": "CUSTOMER EXPERIENCE SPECIALISTAllied Roofing PartnersRemote | Full-Time | Hourly$18.",
-   "skills": [
-    "Customer service",
-    "Sales"
-   ],
-   "flags": [],
-   "type": "Full Time",
-   "flagInfo": [],
-   "about": {
-    "does": [
-     "Answer inbound calls from homeowners requesting to book an inspection or estimate. \u2022 Assist existing customers with job-related or basic questions. \u2022 Respond to new website and soc",
-     "Handle inbound calls independently.",
-     "You'll work from proven scripts and playbooks while bringing real listening and judgment to every call.",
-     "You'll start by supporting Capstone Roofing, with room to grow into other brands and tools as our CX team expands."
-    ],
-    "wants": [
-     "Experience in roofing, home services, or another trades or contractor business."
-    ],
-    "nice": [
-     "Location: Remote \u2013 United States(preferred Pst TIme)",
-     "$18.00\u2013$22.00 per hour, based on experience plus a incentive bonus plan \u2022 Medical insurance and company sponsored life insurance",
-     "$18.00\u2013$22.00 per hour, based on experience plus a Incentive Bonus Plan ."
-    ],
-    "years": null,
-    "degree": false
-   }
-  },
-  {
    "id": "him:trupanion/jobs/customer-retention-specialist-pacific-time-hours-9971941568",
    "title": "Customer Retention Specialist (Pacific Time Hours)",
    "company": "Trupanion",
@@ -8255,6 +8357,309 @@
    }
   },
   {
+   "id": "him:openlane/jobs/account-coordinator-contact-center-9am-6pm-est",
+   "title": "Account Coordinator - Contact Center (9am-6pm EST)",
+   "company": "OPENLANE",
+   "companySlug": "openlane",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-10-31",
+   "expires": "2026-12-30",
+   "applyUrl": "https://himalayas.app/companies/openlane/jobs/account-coordinator-contact-center-9am-6pm-est?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/openlane/jobs/account-coordinator-contact-center-9am-6pm-est",
+   "source": "Himalayas",
+   "career": "callcenter",
+   "summary": "Who We Are: At OPENLANE we make wholesale easy so our customers can be more successful.",
+   "skills": [
+    "Google Workspace",
+    "Customer service",
+    "Excel",
+    "Phone etiquette"
+   ],
+   "flags": [],
+   "type": "Full Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "Assist our Senior Account Managers in problem solving",
+     "Provide conflict-resolution as needed all while maintaining a professional demeanor",
+     "In this role, you will build on any existing customer service skills you have and act as a liaison for internal and external communications."
+    ],
+    "wants": [
+     ". You are comfortable working in a call center environment while working remotely",
+     "1 + years\u2019 experience in a high-volume customer service role (maintaining 10+ calls per hour)"
+    ],
+    "nice": [],
+    "years": null,
+    "degree": false
+   }
+  },
+  {
+   "id": "him:claritev/jobs/remote-data-entry-clerk-typing-part-time-entry-level-1398908360",
+   "title": "Remote Data Entry Clerk - Typing - Part Time Entry Level",
+   "company": "Claritev",
+   "companySlug": "claritev",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-11-04",
+   "expires": "2027-01-03",
+   "applyUrl": "https://himalayas.app/companies/claritev/jobs/remote-data-entry-clerk-typing-part-time-entry-level-1398908360?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/claritev/jobs/remote-data-entry-clerk-typing-part-time-entry-level-1398908360",
+   "source": "Himalayas",
+   "career": "office",
+   "summary": "Remote Data Entry Clerk - Typing - Part Time Entry Level This is your chance to begin a long-lasting career with endless opportunity.",
+   "skills": [
+    "Data entry",
+    "Excel"
+   ],
+   "flags": [],
+   "type": "Part Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "You will have sufficient opportunity for growth",
+     "Perform all other responsibilities as assigned",
+     "Assist in developing a positive, professional and safe workplace"
+    ],
+    "wants": [
+     "Multiple shifts are readily available from morning to night and no experience is required.",
+     "Must be able to carry out tasks with or without sensible accommodation",
+     "Ability to work within established turn-around times",
+     "Must have exceptional social skills and the ability to organize simultaneous tasks",
+     "Ability to translate and apply company policies and procedures"
+    ],
+    "nice": [],
+    "years": null,
+    "degree": false
+   }
+  },
+  {
+   "id": "him:molt-legal-partners-llc/jobs/litigation-paralegal",
+   "title": "Litigation Paralegal",
+   "company": "Molt Legal Partners, LLC",
+   "companySlug": "molt-legal-partners-llc",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "$35/yr",
+   "hourly": 35.0,
+   "posted": "2026-11-04",
+   "expires": "2027-01-03",
+   "applyUrl": "https://himalayas.app/companies/molt-legal-partners-llc/jobs/litigation-paralegal?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/molt-legal-partners-llc/jobs/litigation-paralegal",
+   "source": "Himalayas",
+   "career": "office",
+   "summary": "Litigation Paralegal | Remote | 1099 Independent Contractor$35/hour | U.",
+   "skills": [
+    "Microsoft 365",
+    "NIST",
+    "Excel"
+   ],
+   "flags": [],
+   "type": "Contractor",
+   "flagInfo": [
+    {
+     "label": "Contractor (1099), not employee",
+     "why": "No taxes are taken out, so you owe them yourself (set aside about 25-30%). Usually no benefits or overtime.",
+     "level": "check"
+    }
+   ],
+   "about": {
+    "does": [
+     "Prepare and electronically file pleadings, motions, and other legal documents in accordance with applicable court and agency rules.",
+     "Draft and respond to discovery requests, organize discovery materials, and assist with case preparation.",
+     "Assist with preparing exhibits, hearing materials, and supporting documentation.",
+     "Maintain case files, deadlines, documents, and tasks using Clio or comparable legal practice management software."
+    ],
+    "wants": [
+     "Strong experience with electronic filing systems, court procedures, and deadline management.",
+     "Ability to work independently and manage competing priorities.",
+     "Proficiency with Microsoft 365, Adobe Acrobat, and legal practice management systems.",
+     "Must reside in the United States.",
+     "Direct, hands-on experience with Clio case management software."
+    ],
+    "nice": [],
+    "years": null,
+    "degree": false
+   }
+  },
+  {
+   "id": "him:claritev/jobs/data-entry-clerk",
+   "title": "Data Entry Clerk",
+   "company": "Claritev",
+   "companySlug": "claritev",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-11-04",
+   "expires": "2027-01-03",
+   "applyUrl": "https://himalayas.app/companies/claritev/jobs/data-entry-clerk?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/claritev/jobs/data-entry-clerk",
+   "source": "Himalayas",
+   "career": "office",
+   "summary": "Overview: Under supervision, processes data entry transactions and performs other clerical duties as requested.",
+   "skills": [
+    "AWS",
+    "NIST",
+    "Customer service",
+    "Data entry",
+    "Microsoft Office"
+   ],
+   "flags": [],
+   "type": "Full Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "Performs other duties as assigned",
+     "Overview: Under supervision, processes data entry transactions and performs other clerical duties as requested."
+    ],
+    "wants": [
+     "High School Diploma or comparable work experience",
+     "Knowledge of privacy laws and regulations",
+     "Knowledge of customer service concepts and practices",
+     "Knowledge of basic systems as needed"
+    ],
+    "nice": [],
+    "years": null,
+    "degree": false
+   }
+  },
+  {
+   "id": "him:naples-jet-center/jobs/virtual-assistant-services-remote-personal-assistants",
+   "title": "Virtual Assistant Services & Remote Personal Assistants",
+   "company": "Naples Jet Center",
+   "companySlug": "naples-jet-center",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-11-04",
+   "expires": "2027-01-03",
+   "applyUrl": "https://himalayas.app/companies/naples-jet-center/jobs/virtual-assistant-services-remote-personal-assistants?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/naples-jet-center/jobs/virtual-assistant-services-remote-personal-assistants",
+   "source": "Himalayas",
+   "career": "office",
+   "summary": ", remote/telecommutePosition: Virtual Assistant Services & Remote Personal Assistants Naplesjetcenter is a leading private aviation company based in Naples, Florida.",
+   "skills": [
+    "NIST",
+    "Scheduling",
+    "Microsoft Office",
+    "Excel"
+   ],
+   "flags": [],
+   "type": "Full Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "Manage emails and respond to inquiries in a timely manner",
+     "Schedule appointments and maintain calendars for team members",
+     "Create and maintain spreadsheets, documents, and presentations",
+     "Organize and maintain important documents and files"
+    ],
+    "wants": [
+     "Proficient in Microsoft Office and Google Suite",
+     "Ability to work independently and handle multiple tasks simultaneously",
+     "The ideal candidate for this position is someone who is highly organized, detail-oriented, and able to work independently."
+    ],
+    "nice": [
+     "Previous experience in a similar role is preferred, but not required."
+    ],
+    "years": null,
+    "degree": false
+   }
+  },
+  {
+   "id": "him:naples-jet-center/jobs/data-entry",
+   "title": "Data Entry",
+   "company": "Naples Jet Center",
+   "companySlug": "naples-jet-center",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-11-04",
+   "expires": "2027-01-03",
+   "applyUrl": "https://himalayas.app/companies/naples-jet-center/jobs/data-entry?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/naples-jet-center/jobs/data-entry",
+   "source": "Himalayas",
+   "career": "office",
+   "summary": ", permanentPosition: Data Entry SpecialistNaplesjetcenter is seeking a highly organized and detail-oriented Data Entry Specialist to join our team on a full time, permanent basis.",
+   "skills": [
+    "NIST",
+    "Data entry",
+    "Microsoft Office",
+    "Excel"
+   ],
+   "flags": [],
+   "type": "Full Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "Maintain and update databases with new information",
+     "Generate reports and assist with data analysis as needed",
+     "Maintain confidentiality of sensitive information",
+     "As a Data Entry Specialist, you will be responsible for accurately entering and maintaining data in our systems, ensuring the integrity and consistency of information."
+    ],
+    "wants": [
+     "Proven experience in data entry or related field",
+     "Proficient in Microsoft Office and data entry software",
+     "Ability to multitask and prioritize in a fast-paced environment",
+     "Ability to work independently and in a team"
+    ],
+    "nice": [
+     "Knowledge of aviation industry is a plus"
+    ],
+    "years": null,
+    "degree": false
+   }
+  },
+  {
+   "id": "him:naples-jet-center/jobs/virtual-assistant",
+   "title": "Virtual Assistant",
+   "company": "Naples Jet Center",
+   "companySlug": "naples-jet-center",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-11-04",
+   "expires": "2027-01-03",
+   "applyUrl": "https://himalayas.app/companies/naples-jet-center/jobs/virtual-assistant?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/naples-jet-center/jobs/virtual-assistant",
+   "source": "Himalayas",
+   "career": "office",
+   "summary": ", remotePosition: Virtual AssistantNaplesjetcenter is currently seeking a highly organized and self-motivated Virtual Assistant to join our team.",
+   "skills": [
+    "NIST",
+    "Microsoft Office",
+    "Excel"
+   ],
+   "flags": [],
+   "type": "Full Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "Manage and maintain executives' schedules, appointments, and travel arrangements",
+     "Handle incoming and outgoing communications, including emails, phone calls, and mail",
+     "Organize and maintain electronic and physical files and records",
+     "Prepare and edit documents, presentations, and spreadsheets"
+    ],
+    "wants": [
+     "Proficient in Microsoft Office and Google Suite",
+     "Ability to work independently and manage multiple tasks simultaneously"
+    ],
+    "nice": [
+     "Bachelor's degree or equivalent experience preferred"
+    ],
+    "years": null,
+    "degree": true
+   }
+  },
+  {
    "id": "him:motu-novu-llc/jobs/virtual-assistant-flex-remote-global",
    "title": "Virtual Assistant (Flex-Time) (Remote/Global)",
    "company": "Motu Novu LLC",
@@ -8301,48 +8706,6 @@
     ],
     "years": 3,
     "degree": false
-   }
-  },
-  {
-   "id": "him:parsons-corporation/jobs/assistant-resource-coordinator",
-   "title": "Assistant Resource Coordinator",
-   "company": "Parsons Corporation",
-   "companySlug": "parsons-corporation",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "$23-$40/yr",
-   "hourly": 22.93,
-   "posted": "2026-11-02",
-   "expires": "2027-01-01",
-   "applyUrl": "https://himalayas.app/companies/parsons-corporation/jobs/assistant-resource-coordinator?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/parsons-corporation/jobs/assistant-resource-coordinator",
-   "source": "Himalayas",
-   "career": "office",
-   "summary": "In a world of possibilities, pursue one with endless opportunities.",
-   "skills": [
-    "NIST",
-    "Excel"
-   ],
-   "flags": [],
-   "type": "Full Time",
-   "flagInfo": [],
-   "about": {
-    "does": [
-     "As directed by the NRM, Maintains reports for training, employee resources and other metrics/reports as needed. Main POC for DOL rate requests across the program on a National basi",
-     "Assist the Resource team in maintenance of Resource program functions such as onboarding, offboarding, subcontractor badging, and employee rosters/records.",
-     "Assist the Resource team with coordination of new hire onboarding, assets, DOT Badging and cell phones along with other new hire onboarding activities.",
-     "Performs other responsibilities associated with this position as may be appropriate."
-    ],
-    "wants": [
-     "Good written and oral communication, organizational, and interpersonal skills are required. Proficiency in MS Office with expertise in Microsoft Word, PowerPoint and Excel is requi",
-     "Experience working with SCA/DBA or government is plus but not required.",
-     "This administrative position requires the incumbent to exercise good judgment and initiative in order to work within established deadlines."
-    ],
-    "nice": [
-     "Associate's Degree in Accounting, Finance, Business, HR (or equivalent experience) and 3-5 years of related work experience, preferable within government contracts."
-    ],
-    "years": 3,
-    "degree": true
    }
   },
   {
@@ -8637,6 +9000,49 @@
      "Self-Starters: You are comfortable with jumping into open-ended problems as a problem solver.",
      "Skilled Project Managers: You seamlessly adapt to changes, stay on top of deadlines, and are able to skillfully manage multiple priorities.",
      "Tech-Savvy Doers: You are comfortable with a variety of web-based applications and platforms commonly used in day-to-day business operations, including using AI tools thoughtfully."
+    ],
+    "nice": [],
+    "years": null,
+    "degree": false
+   }
+  },
+  {
+   "id": "him:emergency-university/jobs/virtual-receptionist",
+   "title": "Virtual Receptionist",
+   "company": "Emergency University",
+   "companySlug": "emergency-university",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-11-04",
+   "expires": "2027-01-03",
+   "applyUrl": "https://himalayas.app/companies/emergency-university/jobs/virtual-receptionist?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/emergency-university/jobs/virtual-receptionist",
+   "source": "Himalayas",
+   "career": "office",
+   "summary": "We are seeking a professional and friendly virtual receptionist to manage our front desk operations and provide exceptional customer service.",
+   "skills": [
+    "NIST",
+    "Customer service",
+    "Data entry",
+    "Scheduling",
+    "Microsoft Office",
+    "Excel"
+   ],
+   "flags": [],
+   "type": "Full Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "Answer and manage a high volume of incoming calls with a positive and professional demeanor.",
+     "Respond to customer inquiries via phone and email promptly and effectively.",
+     "Maintain accurate records of communications and transactions.",
+     "Assist with administrative tasks as needed, including data entry and document management."
+    ],
+    "wants": [
+     "Proficient in using phone systems, computers, and office software (e.g., Microsoft Office Suite).",
+     "Ability to work independently and as part of a team."
     ],
     "nice": [],
     "years": null,
@@ -9157,536 +9563,494 @@
    }
   },
   {
-   "id": "him:lehrer-family-chiropractic/jobs/remote-medical-scheduler",
-   "title": "Remote Medical Scheduler",
-   "company": "Lehrer Family Chiropractic",
-   "companySlug": "lehrer-family-chiropractic",
+   "id": "him:symbria/jobs/remote-ltc-pharmacy-adjudication-technician",
+   "title": "Remote LTC Pharmacy Adjudication Technician",
+   "company": "Symbria",
+   "companySlug": "symbria",
    "location": "Remote (US)",
    "remote": "Remote",
    "pay": "",
    "hourly": null,
-   "posted": "2026-10-18",
-   "expires": "2026-12-17",
-   "applyUrl": "https://himalayas.app/companies/lehrer-family-chiropractic/jobs/remote-medical-scheduler?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/lehrer-family-chiropractic/jobs/remote-medical-scheduler",
+   "posted": "2026-11-04",
+   "expires": "2027-01-03",
+   "applyUrl": "https://himalayas.app/companies/symbria/jobs/remote-ltc-pharmacy-adjudication-technician?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/symbria/jobs/remote-ltc-pharmacy-adjudication-technician",
    "source": "Himalayas",
    "career": "office",
-   "summary": "Position: Remote Medical SchedulerCompany Overview:Lehrer Family Chiropractic is a leading chiropractic clinic located in Melville, NY.",
+   "summary": "OverviewSymbria Rx Services is seeking a team oriented.",
    "skills": [
+    "NIST",
     "Customer service",
-    "Scheduling",
-    "Excel"
+    "Data entry",
+    "Microsoft Office",
+    "Excel",
+    "Teamwork"
    ],
    "flags": [],
-   "type": "Contractor",
+   "type": "Full Time",
    "flagInfo": [],
    "about": {
     "does": [
-     "Maintain accurate and up-to-date schedules for all patients",
-     "Respond to patient inquiries and provide exceptional customer service",
-     "Adhere to all HIPAA guidelines and maintain patient confidentiality",
-     "As a Remote Medical Scheduler, you will play a crucial role in ensuring the smooth operation of our clinic by managing the scheduling of patient appointments."
+     "Assist with data entry of orders as needed.",
+     "Assist with answering phone calls for the data entry department.",
+     "Perform insurance and billing clerical duties, including review and maintenance of patient account information.",
+     "Identify and resolve claim denials."
     ],
     "wants": [
-     "High school diploma or equivalent required",
-     "Strong attention to detail and ability to maintain accurate schedules",
-     "Proficient in using scheduling software and other computer programs",
-     "Ability to work independently and remotely",
-     "Knowledge of HIPAA guidelines and patient confidentiality"
+     "Must work rotating holidays.",
+     "Must currently live in a state Symbria Rx Services is licensed in: AZ, CO, FL, IL, IN, KS, MA, MI, MO, PA, OH, WI.",
+     "Must have high-speed, internet access provided by a cable or fiber provider (no DSL or satellite). Internet is not provided or reimbursed by Symbria . Users with no more than three",
+     "We recommend a wire connection to your home internet router. Slow or poor internet connection may impact or prohibit the ability to perform your job. The use of Wi-Fi \u2018air cards\u2019 (",
+     "Symbria reserves the right to verify that your system will meet or exceed these requirements."
     ],
-    "nice": [
-     "Previous experience in a medical scheduling role preferred"
+    "nice": [],
+    "years": null,
+    "degree": true
+   }
+  },
+  {
+   "id": "him:astra-health/jobs/data-entry-clerk-remote",
+   "title": "Data Entry Clerk - Remote",
+   "company": "Astra Health",
+   "companySlug": "astra-health",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-11-04",
+   "expires": "2027-01-03",
+   "applyUrl": "https://himalayas.app/companies/astra-health/jobs/data-entry-clerk-remote?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/astra-health/jobs/data-entry-clerk-remote",
+   "source": "Himalayas",
+   "career": "office",
+   "summary": "Job DescriptionAstra Health West is seeking a detail-oriented Remote Data Entry Clerk to support our healthcare operations team.",
+   "skills": [
+    "NIST",
+    "Data entry",
+    "Scheduling"
+   ],
+   "flags": [],
+   "type": "Full Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "Maintain confidentiality in compliance with HIPAA regulations",
+     "This role is responsible for entering, updating, and maintaining accurate patient and administrative data in our electronic systems while ensuring confidentiality and compliance wi"
     ],
+    "wants": [
+     "High school diploma or equivalent (required)",
+     "Basic computer skills and familiarity with data entry software",
+     "Ability to type efficiently and accurately",
+     "Ability to work independently and manage time effectively",
+     "Familiarity with electronic health records (EHR) systems"
+    ],
+    "nice": [],
     "years": null,
     "degree": false
    }
   },
   {
-   "id": "him:futuresight/jobs/co-founder-ceo-ai-accounting-agents-for-cpa-firms-3122281820",
-   "title": "Co-Founder & CEO - AI Accounting Agents for CPA Firms",
-   "company": "FutureSight",
-   "companySlug": "futuresight",
+   "id": "him:claritev/jobs/data-entry-typist-jobs-from-home",
+   "title": "Data Entry Typist Jobs From Home",
+   "company": "Claritev",
+   "companySlug": "claritev",
    "location": "Remote (US)",
    "remote": "Remote",
    "pay": "",
    "hourly": null,
+   "posted": "2026-11-04",
+   "expires": "2027-01-03",
+   "applyUrl": "https://himalayas.app/companies/claritev/jobs/data-entry-typist-jobs-from-home?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/claritev/jobs/data-entry-typist-jobs-from-home",
+   "source": "Himalayas",
+   "career": "office",
+   "summary": "Data Entry Typist Jobs From HomeThis is your opportunity to start a lifelong career with limitless opportunity.",
+   "skills": [
+    "Data entry",
+    "Excel"
+   ],
+   "flags": [],
+   "type": "Part Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "You will have ample opportunity for growth",
+     "Assist in developing a positive, professional and safe workplace"
+    ],
+    "wants": [
+     "Multiple shifts are available from early morning to night and no experience is required.",
+     "Must be able to perform tasks with or without sensible accommodation",
+     "Ability to work within recognized turnaround times",
+     "Must have excellent social skills and the ability to arrange simultaneous tasks",
+     "Ability to translate and apply company policies and procedures"
+    ],
+    "nice": [],
+    "years": null,
+    "degree": false
+   }
+  },
+  {
+   "id": "him:claritev/jobs/remote-data-entry-clerk-jobs-part-time-entry-level-6095839426",
+   "title": "Remote Data Entry Clerk Jobs  Part Time Entry Level",
+   "company": "Claritev",
+   "companySlug": "claritev",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-11-04",
+   "expires": "2027-01-03",
+   "applyUrl": "https://himalayas.app/companies/claritev/jobs/remote-data-entry-clerk-jobs-part-time-entry-level-6095839426?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/claritev/jobs/remote-data-entry-clerk-jobs-part-time-entry-level-6095839426",
+   "source": "Himalayas",
+   "career": "office",
+   "summary": "Remote Data Entry Clerk Jobs Part Time Entry Level This is your chance to begin a lifelong career with endless opportunity.",
+   "skills": [
+    "Data entry",
+    "Excel"
+   ],
+   "flags": [],
+   "type": "Full Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "You will have ample opportunity for growth",
+     "Perform all other responsibilities as assigned",
+     "Assist in developing a favorable, professional and safe work environment"
+    ],
+    "wants": [
+     "Multiple shifts are available from early morning to night and no experience is required.",
+     "Must have the ability to perform duties with or without sensible accommodation",
+     "Ability to work within established turn-around times",
+     "Must have excellent interpersonal skills and the ability to arrange simultaneous tasks",
+     "Ability to translate and apply company policies and procedures"
+    ],
+    "nice": [],
+    "years": null,
+    "degree": false
+   }
+  },
+  {
+   "id": "him:claritev/jobs/flexible-remote-data-entry-jobs",
+   "title": "Flexible Remote Data Entry Jobs",
+   "company": "Claritev",
+   "companySlug": "claritev",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-11-04",
+   "expires": "2027-01-03",
+   "applyUrl": "https://himalayas.app/companies/claritev/jobs/flexible-remote-data-entry-jobs?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/claritev/jobs/flexible-remote-data-entry-jobs",
+   "source": "Himalayas",
+   "career": "office",
+   "summary": "Flexible Remote Data Entry JobsThis is your opportunity to start a long-lasting career with endless opportunity.",
+   "skills": [
+    "Data entry",
+    "Excel"
+   ],
+   "flags": [],
+   "type": "Full Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "You will have adequate opportunity for growth",
+     "Perform all other responsibilities as appointed",
+     "Assist in developing a positive, professional and safe work environment"
+    ],
+    "wants": [
+     "Multiple shifts are readily available from morning to night and no experience is required.",
+     "Must have the ability to perform duties with or without sensible accommodation",
+     "Ability to work within recognized turnaround times",
+     "Must have excellent social skills and the ability to organize simultaneous tasks",
+     "Ability to interpret and apply company policies and procedures"
+    ],
+    "nice": [],
+    "years": null,
+    "degree": false
+   }
+  },
+  {
+   "id": "him:claritev/jobs/remote-data-entry-clerk-job",
+   "title": "Remote Data Entry Clerk Job",
+   "company": "Claritev",
+   "companySlug": "claritev",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-11-04",
+   "expires": "2027-01-03",
+   "applyUrl": "https://himalayas.app/companies/claritev/jobs/remote-data-entry-clerk-job?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/claritev/jobs/remote-data-entry-clerk-job",
+   "source": "Himalayas",
+   "career": "office",
+   "summary": "Remote Data Entry Clerk JobThis is your chance to start a long-lasting profession with endless opportunity.",
+   "skills": [
+    "Data entry",
+    "Excel"
+   ],
+   "flags": [],
+   "type": "Full Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "You will have ample opportunity for growth",
+     "Assist in developing a favorable, professional and safe work environment"
+    ],
+    "wants": [
+     "Multiple shifts are offered from morning to night and no experience is required.",
+     "Must be able to perform responsibilities with or without sensible accommodation",
+     "Ability to work within established turn-around times",
+     "Must have exceptional social skills and the ability to organize simultaneous tasks",
+     "Ability to analyze and use company policies and procedures"
+    ],
+    "nice": [],
+    "years": null,
+    "degree": false
+   }
+  },
+  {
+   "id": "him:gpm-investments-llc/jobs/retail-accountant",
+   "title": "Retail Accountant",
+   "company": "GPM Investments, LLC",
+   "companySlug": "gpm-investments-llc",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-11-04",
+   "expires": "2027-01-03",
+   "applyUrl": "https://himalayas.app/companies/gpm-investments-llc/jobs/retail-accountant?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/gpm-investments-llc/jobs/retail-accountant",
+   "source": "Himalayas",
+   "career": "office",
+   "summary": "OverviewAssociates work directly with the stores to ensure the cash and inventory data is entered,correct and supported with the proper documentation.",
+   "skills": [
+    "NIST",
+    "Inventory",
+    "Data entry",
+    "Excel"
+   ],
+   "flags": [],
+   "type": "Other",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "Assist Store Managers and District Managers with questions relating to information",
+     "Create and maintain excel worksheets",
+     "Assist with reconciling data files",
+     "Other job related responsibilities as they arise"
+    ],
+    "wants": [
+     "Ability to interact professionally at all levels",
+     "It is unlawful in Massachusetts to require or administer a lie detector test as a condition of employment or continued employment. An employer who violates this law shall be subjec"
+    ],
+    "nice": [
+     "Associates Degree in Accounting preferred but not required"
+    ],
+    "years": null,
+    "degree": true
+   }
+  },
+  {
+   "id": "him:claritev/jobs/data-entry-typing-jobs",
+   "title": "Data Entry Typing Jobs",
+   "company": "Claritev",
+   "companySlug": "claritev",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-11-04",
+   "expires": "2027-01-03",
+   "applyUrl": "https://himalayas.app/companies/claritev/jobs/data-entry-typing-jobs?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/claritev/jobs/data-entry-typing-jobs",
+   "source": "Himalayas",
+   "career": "office",
+   "summary": "Data Entry Typing JobsThis is your opportunity to begin a lifelong career with unlimited opportunity.",
+   "skills": [
+    "Data entry",
+    "Excel"
+   ],
+   "flags": [],
+   "type": "Part Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "You will have sufficient opportunity for growth",
+     "Assist in producing a positive, professional and safe workplace"
+    ],
+    "wants": [
+     "Multiple shifts are offered from morning to night and no experience is required.",
+     "Must be able to perform tasks with or without sensible accommodation",
+     "Ability to work within established turn-around times",
+     "Must have excellent interpersonal skills and the ability to arrange simultaneous tasks",
+     "Ability to interpret and apply company policies and procedures"
+    ],
+    "nice": [],
+    "years": null,
+    "degree": false
+   }
+  },
+  {
+   "id": "him:claritev/jobs/telecommute-data-entry-jobs-part-time-remote",
+   "title": "Telecommute Data Entry Jobs - Part Time Remote",
+   "company": "Claritev",
+   "companySlug": "claritev",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-11-04",
+   "expires": "2027-01-03",
+   "applyUrl": "https://himalayas.app/companies/claritev/jobs/telecommute-data-entry-jobs-part-time-remote?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/claritev/jobs/telecommute-data-entry-jobs-part-time-remote",
+   "source": "Himalayas",
+   "career": "office",
+   "summary": "This is your opportunity to start a lifelong profession with endless opportunity.",
+   "skills": [
+    "Excel"
+   ],
+   "flags": [],
+   "type": "Part Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "You will have sufficient opportunity for growth",
+     "Perform all other duties as appointed",
+     "Assist in producing a positive, professional and safe workplace"
+    ],
+    "wants": [
+     "Must be able to carry out duties with or without sensible accommodation",
+     "Ability to work within recognized turn-around times",
+     "Must have exceptional interpersonal skills and the ability to organize simultaneous tasks",
+     "Ability to interpret and use company policies and procedures",
+     "Ability to work both independently and within a team environment"
+    ],
+    "nice": [],
+    "years": null,
+    "degree": false
+   }
+  },
+  {
+   "id": "him:claritev/jobs/remote-data-entry-analyst",
+   "title": "Remote Data Entry Analyst",
+   "company": "Claritev",
+   "companySlug": "claritev",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-11-04",
+   "expires": "2027-01-03",
+   "applyUrl": "https://himalayas.app/companies/claritev/jobs/remote-data-entry-analyst?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/claritev/jobs/remote-data-entry-analyst",
+   "source": "Himalayas",
+   "career": "office",
+   "summary": "Remote Data Entry AnalystThis is your chance to start a long-lasting profession with unlimited opportunity.",
+   "skills": [
+    "Data entry",
+    "Excel"
+   ],
+   "flags": [],
+   "type": "Full Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "You will have sufficient opportunity for growth",
+     "Perform all other duties as appointed",
+     "Assist in creating a positive, professional and safe work environment"
+    ],
+    "wants": [
+     "Multiple shifts are offered from morning to night and no experience is required.",
+     "Must be able to perform duties with or without reasonable accommodation",
+     "Ability to work within established turnaround times",
+     "Must have exceptional interpersonal skills and the ability to arrange simultaneous tasks",
+     "Ability to interpret and use company policies and procedures"
+    ],
+    "nice": [],
+    "years": null,
+    "degree": false
+   }
+  },
+  {
+   "id": "him:spotter-labs/jobs/recruiting-operations-analyst",
+   "title": "Recruiting Operations Analyst",
+   "company": "Spotter Labs",
+   "companySlug": "spotter-labs",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "",
+   "hourly": null,
+   "posted": "2026-11-04",
+   "expires": "2026-12-04",
+   "applyUrl": "https://himalayas.app/companies/spotter-labs/jobs/recruiting-operations-analyst?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/spotter-labs/jobs/recruiting-operations-analyst",
+   "source": "Himalayas",
+   "career": "office",
+   "summary": "The Recruiting Operations Analyst will be responsible for keeping our driver recruiting process accurate and on track.",
+   "skills": [
+    "Data entry",
+    "Excel"
+   ],
+   "flags": [],
+   "type": "Full Time",
+   "flagInfo": [],
+   "about": {
+    "does": [
+     "The Recruiting Operations Analyst will be responsible for keeping our driver recruiting process accurate and on track."
+    ],
+    "wants": [
+     "1+ year in recruiting, operations, data entry or a similar role",
+     "Experience with a CRM or applicant tracking system, and Google Sheets or Excel",
+     "Coursework or training in business, data or operations is required",
+     "Key Responsibilities Reporting Requirements KPIs Compensation Other Requirements Originally posted on Himalayas"
+    ],
+    "nice": [
+     "Bachelor's degree in a related field is preferred",
+     "Trucking or logistics experience is a plus"
+    ],
+    "years": 1,
+    "degree": true
+   }
+  },
+  {
+   "id": "him:micro1/jobs/hospitality-worker-toast-pos-user",
+   "title": "Hospitality Worker (Toast POS User)",
+   "company": "micro1",
+   "companySlug": "micro1",
+   "location": "Remote (US)",
+   "remote": "Remote",
+   "pay": "$28-$92/yr",
+   "hourly": 28.0,
    "posted": "2026-11-03",
    "expires": "2027-01-02",
-   "applyUrl": "https://himalayas.app/companies/futuresight/jobs/co-founder-ceo-ai-accounting-agents-for-cpa-firms-3122281820?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/futuresight/jobs/co-founder-ceo-ai-accounting-agents-for-cpa-firms-3122281820",
+   "applyUrl": "https://himalayas.app/companies/micro1/jobs/hospitality-worker-toast-pos-user?utm_source=api",
+   "sourceUrl": "https://himalayas.app/companies/micro1/jobs/hospitality-worker-toast-pos-user",
    "source": "Himalayas",
    "career": "office",
-   "summary": "The OpportunityFutureSight is seeking a Co-Founder & CEO to lead Crossfoot, an AI-native accounting agent platform.",
-   "skills": [
-    "Data entry",
-    "Sales"
-   ],
-   "flags": [],
-   "type": "Full Time",
-   "flagInfo": [],
-   "about": {
-    "does": [
-     "Senior accountants spend 40%+ of their time on document intake and workbook compilation \u2014 $90K staff doing $20/hour data entry \u2014 while month-end close runs 10\u201315 business days on a",
-     "As Co-Founder &amp; CEO, you will set the venture's direction and lead its execution."
-    ],
-    "wants": [
-     "Fundraising fluency, with the ability to develop investor narratives and close capital",
-     "Proven ability to attract, develop, and retain top talent",
-     "Clear-eyed understanding of the risks and demands of co-founding a venture-backed company",
-     "Crossfoot connects to the tools firms already use (QuickBooks Online, Xero, Drake) and delivers finished work products ready for partner review, without requiring system migration"
-    ],
-    "nice": [],
-    "years": null,
-    "degree": false
-   }
-  },
-  {
-   "id": "him:revel-staffing/jobs/entry-level-medical-billing-assistant",
-   "title": "Entry Level Medical Billing Assistant",
-   "company": "Revel Staffing",
-   "companySlug": "revel-staffing",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "$50,000-$75,000/yr",
-   "hourly": 24.04,
-   "posted": "2026-11-02",
-   "expires": "2027-01-01",
-   "applyUrl": "https://himalayas.app/companies/revel-staffing/jobs/entry-level-medical-billing-assistant?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/revel-staffing/jobs/entry-level-medical-billing-assistant",
-   "source": "Himalayas",
-   "career": "office",
-   "summary": "The Medical Billing Assistant will help prepare and review insurance claims, assist with basic billing and coding tasks, update patient and insurance information, and support the administrative workflows that help keep clinical operations running smoothly.",
-   "skills": [
-    "NIST",
-    "Customer service",
-    "Data entry",
-    "Excel"
-   ],
-   "flags": [],
-   "type": "Full Time",
-   "flagInfo": [],
-   "about": {
-    "does": [
-     "Assist with translating medical procedures and diagnoses into standardized billing and coding formats",
-     "Work closely with medical providers and administrative teams to ensure accurate claim documentation",
-     "Maintain confidentiality and follow HIPAA, privacy, and company compliance guidelines",
-     "Perform general administrative tasks including data entry, document processing, scanning, and file management"
-    ],
-    "wants": [
-     "High school diploma or equivalent",
-     "Active HIPAA compliance / training credential required",
-     "Ability to manage multiple tasks in a structured office environment",
-     "Ability to handle confidential patient and billing information with professionalism",
-     "This role requires strong attention to detail, professionalism, and a willingness to learn."
-    ],
-    "nice": [],
-    "years": null,
-    "degree": false
-   }
-  },
-  {
-   "id": "him:carda-health/jobs/chronic-care-management-coach-78147498",
-   "title": "Chronic Care Management Coach",
-   "company": "Carda Health",
-   "companySlug": "carda-health",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "",
-   "hourly": null,
-   "posted": "2026-11-02",
-   "expires": "2027-01-01",
-   "applyUrl": "https://himalayas.app/companies/carda-health/jobs/chronic-care-management-coach-78147498?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/carda-health/jobs/chronic-care-management-coach-78147498",
-   "source": "Himalayas",
-   "career": "office",
-   "summary": "About CardaRehab is a pain. So much so that only 10% of qualifying Cardiac and Pulmonary patients attend, which results in complications for patients and at least $190B in costs.",
-   "skills": [
-    "NIST",
-    "Data entry",
-    "Excel"
-   ],
+   "summary": "Role Title: Hospitality Worker (Toast POS User) Role Type: ContractorLocation: Remotemicro1 is engaging hospitality workers to contribute to a customer initiative related to restaurant technology.",
+   "skills": [],
    "flags": [],
    "type": "Contractor",
    "flagInfo": [],
    "about": {
     "does": [
-     "Maintain medical documentation accurately and timely, ensuring proper organization and confidentiality",
-     "Monitor Vital signs during sessions and handle live emergencies, as needed",
-     "Provide general administrative support and assist with other tasks to maintain smooth operations in the medical office.",
-     "This role encourages patients to reach their health goals while maintaining patient safety, evaluates medical appropriateness for exercise-based programs, is responsive to patient\u2019"
+     "Create scenario-based documentation and step-by-step guides reflecting real restaurant operations using Toast POS.",
+     "Deliver comprehensive reviews of system functionalities, identifying opportunities for improvement and troubleshooting common pain points.",
+     "In this role, you'll apply your expertise to help train next-generation AI systems."
     ],
     "wants": [
-     "A Bachelor's degree in Clinical Exercise Physiology / Exercise Science",
-     "Proficiency with medical records systems and software.",
-     "Knowledge of medical terminology and understanding of medical record documentation.",
-     "Familiarity with HIPAA regulations and commitment to patient privacy and confidentiality",
-     "2+ years in a similar role"
+     "Annotate and evaluate authentic transaction data, menus, and order flows to enhance AI understanding of restaurant POS operations.",
+     "Deep understanding of operational workflows and how point of sale systems interface with order and payment processes.",
+     "Proven ability to document processes and provide user-friendly explanations for technical and non-technical audiences.",
+     "Familiarity with various restaurant concepts (quick service, casual, fine dining) and how POS requirements differ among them.",
+     "No prior experience in AI is required \u2014 your domain knowledge is what matters."
     ],
     "nice": [
-     "Minimum of two years of experience in a medical office setting, preferably in cardiac and pulmonary rehab."
-    ],
-    "years": 2,
-    "degree": true
-   }
-  },
-  {
-   "id": "him:graham-healthcare-group/jobs/referral-navigator",
-   "title": "Referral Navigator",
-   "company": "Graham Healthcare Group",
-   "companySlug": "graham-healthcare-group",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "$20-$24/yr",
-   "hourly": 20.0,
-   "posted": "2026-11-02",
-   "expires": "2027-01-01",
-   "applyUrl": "https://himalayas.app/companies/graham-healthcare-group/jobs/referral-navigator?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/graham-healthcare-group/jobs/referral-navigator",
-   "source": "Himalayas",
-   "career": "office",
-   "summary": "Job Title Referral NavigatorLocationRemote/Nationwide, USAAdditional Location(s)Employee TypeEmployeeWorking Hours Per Week40Job Description Compensation: $20.",
-   "skills": [
-    "Customer service",
-    "Data entry",
-    "Microsoft Office",
-    "Excel",
-    "Sales"
-   ],
-   "flags": [],
-   "type": "Full Time",
-   "flagInfo": [],
-   "about": {
-    "does": [
-     "Attach and Scan referral packet and documentation of any insurance pre-checks to intake."
-    ],
-    "wants": [
-     "Possesses knowledge of the services we offer and can speak confidently about them.",
-     "Conducts pre-checks on patient insurances as required.",
-     "Ensures timely escalation of referrals requiring clinical approval to the appropriate operations leader.",
-     "Ability to prioritize tasks and work efficiently in a fast-paced environment.",
-     "Proficiency in managing EMR portals and following acceptance guidelines."
-    ],
-    "nice": [
-     "Familiarity with medical terminology is preferred",
-     "Associate\u2019s degree Preferred.",
-     "At least one (1) year of experience in home health preferred."
-    ],
-    "years": null,
-    "degree": true
-   }
-  },
-  {
-   "id": "him:flex-fitness/jobs/data-entry-typist",
-   "title": "Data Entry Typist",
-   "company": "Flex Fitness",
-   "companySlug": "flex-fitness",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "$20-$25/yr",
-   "hourly": 20.0,
-   "posted": "2026-11-02",
-   "expires": "2027-01-01",
-   "applyUrl": "https://himalayas.app/companies/flex-fitness/jobs/data-entry-typist?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/flex-fitness/jobs/data-entry-typist",
-   "source": "Himalayas",
-   "career": "office",
-   "summary": "## Job TitleData Entry Typist## Company OverviewFlex Fitness is a dynamic and growing fitness company dedicated to helping people achieve their health and wellness goals.",
-   "skills": [
-    "NIST",
-    "Data entry",
-    "Excel"
-   ],
-   "flags": [],
-   "type": "Full Time",
-   "flagInfo": [],
-   "about": {
-    "does": [
-     "You will be responsible for accurately inputting, updating, and maintaining data across various systems, ensuring data integrity and timely processing."
-    ],
-    "wants": [],
-    "nice": [],
-    "years": null,
-    "degree": false
-   }
-  },
-  {
-   "id": "him:mutual-of-omaha/jobs/underwriting-support-analyst-call-center",
-   "title": "Underwriting Support Analyst - Call Center",
-   "company": "Mutual Of Omaha",
-   "companySlug": "mutual-of-omaha",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "$21-$22/yr",
-   "hourly": 21.0,
-   "posted": "2026-11-01",
-   "expires": "2026-12-31",
-   "applyUrl": "https://himalayas.app/companies/mutual-of-omaha/jobs/underwriting-support-analyst-call-center?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/mutual-of-omaha/jobs/underwriting-support-analyst-call-center",
-   "source": "Himalayas",
-   "career": "office",
-   "summary": "The Underwriting Support Analyst will be working in a high-volume call center taking incoming calls from agents, producers, and customers.",
-   "skills": [
-    "Customer service",
-    "Data entry"
-   ],
-   "flags": [],
-   "type": "Full Time",
-   "flagInfo": [],
-   "about": {
-    "does": [
-     "You'll perform a variety of functions within Individual Underwriting Support that contribute to the issuance and servicing of individual life and health new business applications.",
-     "Following training, you will work 9:00am-5:30pm, CST, Monday through Thursday and 8:30am-5:00pm, CST on Friday."
-    ],
-    "wants": [
-     "Applicants for this position must not now, nor at any point in the future, require sponsorship for employment.",
-     "Attention to detail is required. Notices when information and underwriting requirements appear wrong or incomplete or need verification. Distinguishes varying information to unders",
-     "Uses a variety of systems and tools to support multiple underwriting areas. Needs to be proficient in soft phone handling to transfer calls appropriately.",
-     "Strong customer service/call center skills with the ability to assess and understand the needs of our customers.",
-     "Ability to maintain regular and predictable attendance with adherence to department expectations, working in a fast-paced environment."
-    ],
-    "nice": [
-     "Estimated Hourly Wage: Minimum: $21.00 - $22.00, plus annual bonus opportunity."
-    ],
-    "years": null,
-    "degree": false
-   }
-  },
-  {
-   "id": "him:pria-healthcare/jobs/patient-access-specialist",
-   "title": "Patient Access Specialist",
-   "company": "PRIA Healthcare",
-   "companySlug": "pria-healthcare",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "$26-$32/yr",
-   "hourly": 26.0,
-   "posted": "2026-11-01",
-   "expires": "2026-12-31",
-   "applyUrl": "https://himalayas.app/companies/pria-healthcare/jobs/patient-access-specialist?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/pria-healthcare/jobs/patient-access-specialist",
-   "source": "Himalayas",
-   "career": "office",
-   "summary": "The Patient Access Specialist is responsible for supporting our client\u2019s reimbursement needs to facilitate patient access to their technologies and procedures.",
-   "skills": [
-    "Salesforce",
-    "Data entry",
-    "Excel",
-    "Sales"
-   ],
-   "flags": [],
-   "type": "Full Time",
-   "flagInfo": [],
-   "about": {
-    "does": [
-     "Healthcare Flexible Spending Account (FSA) -Employee Assistance Program (EAP) -Generous Paid Time Off (PTO) Program -Paid holidays (federal &amp; floating) -401(k) Plan with compan",
-     "The Patient Access Specialist is responsible for supporting our client\u2019s reimbursement needs to facilitate patient access to their technologies and procedures."
-    ],
-    "wants": [],
-    "nice": [
-     "High school diploma or equivalent; Associate\u2019s degree preferred. -Minimum of 2 years of experience in a healthcare setting, preferably in authorization or billing. -Understandersta"
-    ],
-    "years": 2,
-    "degree": true
-   }
-  },
-  {
-   "id": "him:daybook-group/jobs/data-entry-strategist-ph",
-   "title": "Data Entry Strategist PH",
-   "company": "Daybook Group",
-   "companySlug": "daybook-group",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "",
-   "hourly": null,
-   "posted": "2026-11-01",
-   "expires": "2026-12-31",
-   "applyUrl": "https://himalayas.app/companies/daybook-group/jobs/data-entry-strategist-ph?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/daybook-group/jobs/data-entry-strategist-ph",
-   "source": "Himalayas",
-   "career": "office",
-   "summary": "Data Entry StrategistDaybook Financial Group | Remote | Part-TimeWe're hiring a Data Entry Strategist to keep our marketing and recruiting data clean, connected, and usable \u2014 the person who makes sure nothing falls through the cracks between our tools.",
-   "skills": [
-    "NIST",
-    "Data entry",
-    "Excel"
-   ],
-   "flags": [],
-   "type": "Part Time",
-   "flagInfo": [],
-   "about": {
-    "does": [],
-    "wants": [
-     "1\u20132+ years in a data entry, operations, or systems-support role",
-     "Comfortable in spreadsheets (Excel/Google Sheets) and learning new platforms quickly"
-    ],
-    "nice": [],
-    "years": 2,
-    "degree": false
-   }
-  },
-  {
-   "id": "him:clarity-pediatrics/jobs/medical-assistant-ma-remote-ca-location-spanish-speaker-7626391987",
-   "title": "Medical Assistant (MA) - Remote, CA Location (Spanish-Speaker)",
-   "company": "Clarity Pediatrics",
-   "companySlug": "clarity-pediatrics",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "$20-$27/yr",
-   "hourly": 20.0,
-   "posted": "2026-11-01",
-   "expires": "2026-12-31",
-   "applyUrl": "https://himalayas.app/companies/clarity-pediatrics/jobs/medical-assistant-ma-remote-ca-location-spanish-speaker-7626391987?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/clarity-pediatrics/jobs/medical-assistant-ma-remote-ca-location-spanish-speaker-7626391987",
-   "source": "Himalayas",
-   "career": "office",
-   "summary": "About Clarity PediatricsClarity Pediatrics is reimagining pediatric chronic care, starting with ADHD.",
-   "skills": [
-    "Data entry",
-    "Scheduling",
-    "Excel"
-   ],
-   "flags": [],
-   "type": "Full Time",
-   "flagInfo": [],
-   "about": {
-    "does": [
-     "Respond to patient inquiries regarding appointment availability and reschedule as needed",
-     "Gather, organize, and maintain patient intake forms, medical histories, and relevant documentation",
-     "Strong attention to detail and accuracy in data entry and documentation",
-     "The Medical Assistant (MA) is an integral member of Clarity Pediatrics ' interdisciplinary care team, collaborating with physicians, advanced practice providers, nurse care coordin"
-    ],
-    "wants": [
-     "Proficiency with electronic health record (EHR) systems and multiple technology platforms",
-     "Ability to manage multiple priorities and deadlines in a fast-paced, remote environment"
-    ],
-    "nice": [
-     "High school diploma or GED; Medical Assistant certification (CCMA, AAMA, or equivalent) preferred but not required"
-    ],
-    "years": null,
-    "degree": false
-   }
-  },
-  {
-   "id": "him:daybook-group/jobs/data-entry-strategist-usa",
-   "title": "Data Entry Strategist USA",
-   "company": "Daybook Group",
-   "companySlug": "daybook-group",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "",
-   "hourly": null,
-   "posted": "2026-10-31",
-   "expires": "2026-12-30",
-   "applyUrl": "https://himalayas.app/companies/daybook-group/jobs/data-entry-strategist-usa?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/daybook-group/jobs/data-entry-strategist-usa",
-   "source": "Himalayas",
-   "career": "office",
-   "summary": "Data Entry StrategistDaybook Financial Group | Remote | Part-TimeWe're hiring a Data Entry Strategist to keep our marketing and recruiting data clean, connected, and usable \u2014 the person who makes sure nothing falls through the cracks between our tools.",
-   "skills": [
-    "Data entry",
-    "Excel"
-   ],
-   "flags": [],
-   "type": "Part Time",
-   "flagInfo": [],
-   "about": {
-    "does": [
-     "Maintain accurate, organized data across CRM, spreadsheets, and marketing platforms"
-    ],
-    "wants": [
-     "1\u20132+ years in a data entry, operations, or systems-support role",
-     "Comfortable in spreadsheets (Excel/Google Sheets) and learning new platforms quickly"
-    ],
-    "nice": [],
-    "years": 2,
-    "degree": false
-   }
-  },
-  {
-   "id": "him:purpose-financial/jobs/bi-lingual-spanish-collections-agent-greenville-sc-us-29601",
-   "title": "Bi-Lingual (Spanish) Collections Agent (Greenville, SC, US, 29601)",
-   "company": "Purpose Financial",
-   "companySlug": "purpose-financial",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "",
-   "hourly": null,
-   "posted": "2026-10-31",
-   "expires": "2026-12-30",
-   "applyUrl": "https://himalayas.app/companies/purpose-financial/jobs/bi-lingual-spanish-collections-agent-greenville-sc-us-29601?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/purpose-financial/jobs/bi-lingual-spanish-collections-agent-greenville-sc-us-29601",
-   "source": "Himalayas",
-   "career": "office",
-   "summary": "Brand: Purpose Financial Address: 4001 S. Decatur Blvd, Suite 7, Las Vegas, Nevada, United States - 89103 Purpose Financial, Inc.",
-   "skills": [
-    "AWS",
-    "Customer service",
-    "Data entry",
-    "Excel"
-   ],
-   "flags": [],
-   "type": "Full Time",
-   "flagInfo": [],
-   "about": {
-    "does": [
-     "Employee Assistance Program",
-     "Initiate and handle both inbound and outbound calling to collect a debt.",
-     "This position is responsible for contacting and successfully negotiating with customers to collect payment on overdue, defaulted or write-off loans, or other payments."
-    ],
-    "wants": [
-     "Minimum of one year call center or customer service related experience.",
-     "Three years of collections experience at a high-volume call center, and bi-lingual in Spanish is required.",
-     "Must be able to demonstrate critical thinking, negotiating, and problem-solving skills.",
-     "Assist in collection efforts with customers requiring a Spanish speaking collections agent.",
-     "Ability to read, write, evaluate, and apply information."
-    ],
-    "nice": [
-     "Background in a fast paced work environment a plus."
-    ],
-    "years": null,
-    "degree": false
-   }
-  },
-  {
-   "id": "him:healthcare-fraud-shield/jobs/customer-support-specialist",
-   "title": "Customer Support Specialist",
-   "company": "Healthcare Fraud Shield",
-   "companySlug": "healthcare-fraud-shield",
-   "location": "Remote (US)",
-   "remote": "Remote",
-   "pay": "",
-   "hourly": null,
-   "posted": "2026-10-31",
-   "expires": "2026-12-30",
-   "applyUrl": "https://himalayas.app/companies/healthcare-fraud-shield/jobs/customer-support-specialist?utm_source=api",
-   "sourceUrl": "https://himalayas.app/companies/healthcare-fraud-shield/jobs/customer-support-specialist",
-   "source": "Himalayas",
-   "career": "office",
-   "summary": "The Customer Support Specialist develops expertise in the HCFSPlatform and provides timely, accurate, and professional support to customers through phone and email.",
-   "skills": [
-    "Customer service",
-    "Microsoft Office",
-    "Excel"
-   ],
-   "flags": [],
-   "type": "Full Time",
-   "flagInfo": [],
-   "about": {
-    "does": [
-     "Respond to customer support questions and application issues received through phone and email.",
-     "Monitor assigned customer support cases and ensure timely updates, follow-up activities, and resolution within established service expectations.",
-     "Identify recurring customer questions or product issues and recommend improvements to support processes, internal documentation, FAQs, and reference materials.",
-     "Maintain and update software help content, release documentation, reference guides, and internal support resources as needed. This responsibility does not include delivering client"
-    ],
-    "wants": [
-     "Develop and maintain extensive working knowledge of the HCFSPlatform customer workflows, and applicable support procedures.",
-     "Investigate, document, and resolve customer issues; escalate matters to the appropriate internal teams when additional technical or product expertise is required.",
-     "Maintain thorough, accurate, and up-to-date documentation of all customer interactions, including communications, troubleshooting efforts, resolutions, and required follow-up actio",
-     "Review assigned news articles each business day, evaluate the information for relevance to established business criteria, and accurately enter required data into the designated sof",
-     "Complete vendor reporting updates related to customer support cases, ensuring required case information, status updates, and resolutions are accurately maintained and submitted wit"
-    ],
-    "nice": [
-     "Strong working knowledge of web-based applications; experience in healthcare IT, clinical informatics, or healthcare Fraud, Waste and Abuse (FWA) is preferred."
+     "Experience training, mentoring, or supporting others in adopting new restaurant technology solutions is a plus."
     ],
     "years": null,
     "degree": false
