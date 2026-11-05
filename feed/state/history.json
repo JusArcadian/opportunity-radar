@@ -1,21 +1,21 @@
 {
  "him:the-helmsman-group-llc/jobs/it-specialist-5949254529": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "IT SPECIALIST",
   "company": "The Helmsman Group LLC"
  },
  "him:fusion-medical-staffing/jobs/hosted-services-tier-2-technician": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Hosted Services Tier 2 Technician",
   "company": "Fusion Medical Staffing"
  },
  "him:arvig/jobs/help-desk-technician-tier-i-hybrid-opportunity-3895352192": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Help Desk Technician Tier I (Hybrid opportunity)",
   "company": "Arvig"
@@ -23,41 +23,42 @@
  "him:motorola-solutions/jobs/customer-support-technician-i-us-remote-4342040995": {
   "firstSeen": "2026-11-03",
   "lastSeen": "2026-11-04",
-  "status": "Open",
+  "status": "Closed",
   "title": "Customer Support Technician I (US Remote)",
-  "company": "Motorola Solutions"
+  "company": "Motorola Solutions",
+  "lastChecked": "2026-11-05"
  },
  "him:summit-healthcare-regional-medical-center/jobs/data-interface-analyst-full-time-remote": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Data Interface Analyst, Full Time, Remote",
   "company": "Summit Healthcare Regional Medical Center"
  },
  "him:homecomfort/jobs/help-desk-technician": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Help Desk Technician",
   "company": "Homecomfort"
  },
  "him:johns-hopkins-university/jobs/computer-support-assistant-it-jh-technology-acceleration-group-3495712908": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Computer Support Assistant (\tIT@JH Technology Acceleration Group)",
   "company": "Johns Hopkins University"
  },
  "him:cybersheath/jobs/helpdesk-technician-ii-2nd-shift-hawaiian-standard-time": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Helpdesk Technician II (2nd Shift Hawaiian Standard Time)",
   "company": "CyberSheath"
  },
  "him:dmi/jobs/bilingual-tier-i-technician": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Bilingual Tier I Technician",
   "company": "DMI"
@@ -72,49 +73,49 @@
  },
  "him:kids-creek-childrens-clinic/jobs/remote-help-desk-support": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Remote Help Desk Support",
   "company": "Kids Creek Childrens Clinic"
  },
  "him:liveops/jobs/agent-support-specialist": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Agent Support Specialist",
   "company": "Liveops"
  },
  "him:camp-systems/jobs/software-support-technician": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Software Support Technician",
   "company": "CAMP Systems"
  },
  "him:cardiff/jobs/it-salesforce-systems-administrator": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "IT & Salesforce Systems Administrator",
   "company": "Cardiff"
  },
  "him:action-labor-staffing-connection/jobs/technical-support-specialist": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Technical Support Specialist",
   "company": "Action Labor & Staffing Connection"
  },
  "him:waterfall-technology-consulting-partners/jobs/epic-home-health-hospice-analyst-perm-remote": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Epic Home Health / Hospice Analyst - Perm - Remote",
   "company": "Waterfall Technology Consulting Partners"
  },
  "him:spear-ai/jobs/it-engineer": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "IT Engineer",
   "company": "Spear AI"
@@ -129,7 +130,7 @@
  },
  "him:regeneron/jobs/temp-field-operations-specialist": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Temp - Field Operations Specialist",
   "company": "Regeneron"
@@ -155,7 +156,8 @@
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Enterprise Application Administrator, Costpoint Boundary Applications",
-  "company": "Trinzic"
+  "company": "Trinzic",
+  "lastChecked": "2026-11-05"
  },
  "him:trinzic/jobs/enterprise-application-support-technician-financial-systems": {
   "firstSeen": "2026-11-03",
@@ -167,7 +169,7 @@
  },
  "him:parkview-health/jobs/client-engagement-analyst-helpdesk": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Client Engagement Analyst  - Helpdesk",
   "company": "Parkview Health"
@@ -182,42 +184,42 @@
  },
  "him:job-duck/jobs/v102-receptionist-bilingual-legal-receptionist": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "V102 Receptionist- Bilingual Legal Receptionist",
   "company": "Job Duck"
  },
  "him:aviso-edge-inc/jobs/technical-support-agent-bilingual-job-id-mcgra1116": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Technical Support Agent - Bilingual (Job ID: MCGRA1116)",
   "company": "Aviso Edge, Inc."
  },
  "him:symetra/jobs/sales-support-specialist-retirement-remote": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Sales Support Specialist - Retirement - Remote",
   "company": "Symetra"
  },
  "him:thermalworks/jobs/service-operations-coordinator": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Service Operations Coordinator",
   "company": "ThermalWorks"
  },
  "him:dmi/jobs/it-service-desk-ticketing-system-administrator": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "IT Service Desk Ticketing System Administrator",
   "company": "DMI"
  },
  "him:totara-learning-solutions/jobs/it-support-engineer": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "IT Support Engineer",
   "company": "Totara Learning Solutions"
@@ -227,7 +229,8 @@
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Yardi Technical Analyst Remote",
-  "company": "National Church Residences"
+  "company": "National Church Residences",
+  "lastChecked": "2026-11-05"
  },
  "him:harris/jobs/support-specialist": {
   "firstSeen": "2026-11-03",
@@ -239,21 +242,21 @@
  },
  "him:digacore/jobs/level-3-it-technician": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Level 3 IT Technician",
   "company": "Digacore"
  },
  "him:dmi/jobs/microsoft-endpoint-specialist": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Microsoft Endpoint Specialist",
   "company": "DMI"
  },
  "him:tier-one-technologies/jobs/windows-systems-engineer-application-packaging-endpoint-environment-remote": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Windows Systems Engineer (Application Packaging / Endpoint Environment - Remote)",
   "company": "Tier One Technologies"
@@ -261,13 +264,14 @@
  "him:openlane/jobs/support-analyst": {
   "firstSeen": "2026-11-03",
   "lastSeen": "2026-11-04",
-  "status": "Open",
+  "status": "Closed",
   "title": "Support Analyst",
-  "company": "OPENLANE"
+  "company": "OPENLANE",
+  "lastChecked": "2026-11-05"
  },
  "him:t-mobile-usa-inc/jobs/solutions-engineer-wireless-4609494443": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Solutions Engineer, Wireless",
   "company": "T-Mobile USA, Inc."
@@ -277,21 +281,24 @@
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Third Party Specialist",
-  "company": "Mutual Of Omaha"
+  "company": "Mutual Of Omaha",
+  "lastChecked": "2026-11-05"
  },
  "him:cdw/jobs/engineer-managed-services": {
   "firstSeen": "2026-11-03",
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Engineer Managed Services",
-  "company": "CDW"
+  "company": "CDW",
+  "lastChecked": "2026-11-05"
  },
  "him:icrossing/jobs/production-specialist": {
   "firstSeen": "2026-11-03",
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Production Specialist",
-  "company": "iCrossing"
+  "company": "iCrossing",
+  "lastChecked": "2026-11-05"
  },
  "him:advocate-aurora-health/jobs/application-analyst-genesys": {
   "firstSeen": "2026-11-03",
@@ -311,14 +318,14 @@
  },
  "him:nomad-ecommerce/jobs/part-time-support-specialist": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Part Time Support Specialist",
   "company": "Nomad eCommerce"
  },
  "him:wesco/jobs/specialist-technical-sales": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Specialist - Technical Sales",
   "company": "Wesco"
@@ -341,7 +348,7 @@
  },
  "him:filed/jobs/support-qa-specialist-tax": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Support & QA Specialist, Tax",
   "company": "Filed"
@@ -351,11 +358,12 @@
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Technical Support Specialist, Tax",
-  "company": "Filed"
+  "company": "Filed",
+  "lastChecked": "2026-11-05"
  },
  "him:teleperformanceusa/jobs/bilingual-healthcare-customer-service-rep-remote-remote-3149392802": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Bilingual Healthcare Customer Service Rep - Remote- Remote",
   "company": "Teleperformance"
@@ -405,7 +413,8 @@
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Product Analyst (2026-8102)",
-  "company": "Caretria"
+  "company": "Caretria",
+  "lastChecked": "2026-11-05"
  },
  "him:infinx/jobs/coding-specialist": {
   "firstSeen": "2026-11-03",
@@ -426,13 +435,14 @@
  "him:alkami-technology-inc/jobs/compliance-specialist": {
   "firstSeen": "2026-11-03",
   "lastSeen": "2026-11-04",
-  "status": "Open",
+  "status": "Closed",
   "title": "Compliance Specialist",
-  "company": "Alkami Technology, Inc."
+  "company": "Alkami Technology, Inc.",
+  "lastChecked": "2026-11-05"
  },
  "him:planned-systems-international/jobs/cybersecurity-sme": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Cybersecurity SME",
   "company": "Planned Systems International"
@@ -440,13 +450,14 @@
  "him:devoted-health/jobs/third-party-security-risk-analyst": {
   "firstSeen": "2026-11-03",
   "lastSeen": "2026-11-04",
-  "status": "Open",
+  "status": "Closed",
   "title": "Third-Party Security Risk Analyst",
-  "company": "Devoted Health"
+  "company": "Devoted Health",
+  "lastChecked": "2026-11-05"
  },
  "him:caci-international-inc/jobs/audit-analyst-6288852569": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Audit Analyst",
   "company": "CACI International Inc"
@@ -461,7 +472,7 @@
  },
  "him:arctiq/jobs/soc-analyst-can": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "SOC Analyst (CAN)",
   "company": "Arctiq"
@@ -477,41 +488,42 @@
  "him:center-for-internet-security-inc/jobs/security-operations-center-analyst-ii-remote": {
   "firstSeen": "2026-11-03",
   "lastSeen": "2026-11-04",
-  "status": "Open",
+  "status": "Closed",
   "title": "Security Operations Center Analyst II - Remote",
-  "company": "Center for Internet Security, Inc."
+  "company": "Center for Internet Security, Inc.",
+  "lastChecked": "2026-11-05"
  },
  "him:arctiq/jobs/soc-analyst": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "SOC Analyst",
   "company": "Arctiq"
  },
  "him:taskus/jobs/cyber-investigator": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Cyber Investigator",
   "company": "TaskUs"
  },
  "him:allia-health-group/jobs/compliance-analyst": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Compliance Analyst",
   "company": "Allia Health Group"
  },
  "him:quanta-services/jobs/compliance-administrator": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Compliance Administrator",
   "company": "Quanta Services"
  },
  "him:sentinel-blue/jobs/soc-analyst-ii-685984209": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-03",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "SOC Analyst II",
   "company": "Sentinel Blue",
@@ -519,14 +531,14 @@
  },
  "him:asrc-federal/jobs/continuous-vetting-analyst": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Continuous Vetting Analyst",
   "company": "ASRC Federal"
  },
  "him:cobalt/jobs/associate-security-researcher": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Associate Security Researcher",
   "company": "Cobalt"
@@ -541,21 +553,21 @@
  },
  "him:crowdstrike/jobs/intelligence-analyst-west": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Intelligence Analyst - West",
   "company": "Crowdstrike"
  },
  "him:molina-healthcare/jobs/reporting-analytics-internship-summer-2027-undergraduate": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Reporting & Analytics Internship \u2013 Summer 2027 (Undergraduate)",
   "company": "Molina Healthcare"
  },
  "him:teleperformanceusa/jobs/security-engineer": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Security Engineer",
   "company": "Teleperformance"
@@ -565,7 +577,8 @@
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Cloud Security Engineer - Remote",
-  "company": "Appspace"
+  "company": "Appspace",
+  "lastChecked": "2026-11-05"
  },
  "him:peraton/jobs/mainframe-security-administrator": {
   "firstSeen": "2026-11-03",
@@ -585,133 +598,133 @@
  },
  "him:molina-healthcare/jobs/data-analytics-internship-summer-2027-undergraduate": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Data Analytics Internship \u2013 Summer 2027 (Undergraduate)",
   "company": "Molina Healthcare"
  },
  "him:molina-healthcare/jobs/cybersecurity-internship-summer-2027-undergraduate": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Cybersecurity Internship \u2013 Summer 2027 (Undergraduate)",
   "company": "Molina Healthcare"
  },
  "him:usable-life/jobs/it-internship-summer-2027-remote": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "IT Internship Summer 2027 - Remote",
   "company": "USAble Life"
  },
  "him:metasys/jobs/security-engineer-internship": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Security Engineer Internship",
   "company": "Metasys"
  },
  "him:pmat-inc/jobs/pmat-internship-opportunities-4089840717": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "PMAT Internship Opportunities",
   "company": "PMAT, Inc."
  },
  "him:doyensec/jobs/application-security-internship-remote-us-based": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Application Security Internship (Remote: US based)",
   "company": "Doyensec"
  },
  "him:vets2pm/jobs/dod-skillbridge-rapidascent-cybersecurity-job-readiness-training": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "DoD SkillBridge: RapidAscent Cybersecurity Job Readiness Training",
   "company": "Vets2PM"
  },
  "him:lumen-technologies/jobs/cybersecurity-risk-digital-trust-summer-2027-internship-pathway": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Cybersecurity, Risk & Digital Trust - Summer 2027 Internship Pathway",
   "company": "Lumen Technologies"
  },
  "him:centurylink/jobs/cybersecurity-risk-digital-trust-summer-2027-internship-pathway-remote-us": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Cybersecurity, Risk & Digital Trust - Summer 2027 Internship Pathway (Remote, US",
   "company": "CenturyLink"
  },
  "him:wikimedia-foundation/jobs/software-engineering-internship-program-2027": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Software Engineering Internship Program (2027)",
   "company": "Wikimedia Foundation"
  },
  "him:kimballelectronics/jobs/cybersecurity-intern": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Cybersecurity Intern",
   "company": "GES"
  },
  "him:guidepoint-security-llc/jobs/cybersecurity-presales-intern-gpsu-heartland-tulsa": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Cybersecurity Presales Intern - GPSU/Heartland (Tulsa)",
   "company": "GuidePoint Security LLC"
  },
  "him:azul/jobs/it-intern-ai-and-operations": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "IT Intern, AI and Operations",
   "company": "Azul"
  },
  "him:highmark-health/jobs/summer-2027-it-audit-undergraduate-intern": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Summer 2027 IT Audit Undergraduate Intern",
   "company": "Highmark Health"
  },
  "him:guidepoint-security-llc/jobs/application-security-intern-gpsu-ne": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Application Security Intern - GPSU/NE",
   "company": "GuidePoint Security LLC"
  },
  "him:aptiv/jobs/linux-software-development-intern": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Linux Software Development Intern",
   "company": "Aptiv"
  },
  "him:clouddfn/jobs/cyber-threat-intelligence-research-intern": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Cyber Threat Intelligence Research Intern",
   "company": "cloudDFN"
  },
  "him:applied-systems/jobs/junior-data-analyst-entry-level": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Junior Data Analyst (Entry-Level)",
   "company": "Applied Systems"
  },
  "him:enlyte-group-llc/jobs/junior-data-scientist": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Junior Data Scientist",
   "company": "Enlyte Group, LLC"
@@ -727,90 +740,91 @@
  "him:salesforce/jobs/summer-2027-intern-forward-deployed-engineer-global-public-sector": {
   "firstSeen": "2026-11-03",
   "lastSeen": "2026-11-04",
-  "status": "Open",
+  "status": "Closed",
   "title": "Summer 2027 Intern - Forward Deployed Engineer \u2013 Global Public Sector",
-  "company": "Salesforce"
+  "company": "Salesforce",
+  "lastChecked": "2026-11-05"
  },
  "him:sephora/jobs/intern-ai-automation-intern-wms-dc-systems-remote-remote-us-usa_519957": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Intern, AI Automation Intern - WMS & DC Systems (Remote, Remote, US, USA_519957)",
   "company": "Sephora"
  },
  "him:goldbelt/jobs/data-analyst-i-sb": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Data Analyst I (SB)",
   "company": "Goldbelt"
  },
  "him:goldbelt/jobs/data-analyst-i-erib": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Data Analyst I (ERIB)",
   "company": "Goldbelt"
  },
  "him:info-resume-edge/jobs/full-stack-software-engineer-new-graduates-united-states-3547250624": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Full-Stack Software Engineer (New graduates: United States)",
   "company": "Info Resume Edge"
  },
  "him:edgeq-technologies-private-limited/jobs/junior-data-engineer": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Junior Data Engineer",
   "company": "EdgeQ Technologies Private Limited"
  },
  "him:orbis-operations-llc/jobs/research-engineer-ai-entry-level": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Research Engineer, AI (Entry-Level)",
   "company": "Orbis Operations LLC"
  },
  "him:icf/jobs/seasonal-associate-full-stack-developer": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Seasonal Associate, Full Stack Developer",
   "company": "ICF"
  },
  "him:edgeq-technologies-private-limited/jobs/software-developer": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Software Developer",
   "company": "EdgeQ Technologies Private Limited"
  },
  "him:icf/jobs/data-scientist-remote-usa": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Data Scientist - Remote USA",
   "company": "ICF"
  },
  "him:mixrank/jobs/junior-software-engineer-remote-global-full-time": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Junior Software Engineer - Remote (Global), Full-Time",
   "company": "Mixrank"
  },
  "him:metasys/jobs/devsecops-engineer-internship": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "DevSecOps Engineer Internship",
   "company": "Metasys"
  },
  "him:tristero/jobs/junior-software-engineer-9779340255": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Junior Software Engineer",
   "company": "Tristero"
@@ -820,25 +834,27 @@
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Junior Software Developer",
-  "company": "AstroNetix LLC"
+  "company": "AstroNetix LLC",
+  "lastChecked": "2026-11-05"
  },
  "him:banco-plata-s-a-institucion-de-banca-multiple/jobs/antifraud-analyst-junior": {
   "firstSeen": "2026-11-03",
   "lastSeen": "2026-11-04",
-  "status": "Open",
+  "status": "Closed",
   "title": "Antifraud Analyst Junior",
-  "company": "Banco Plata, S.A., Instituci\u00f3n de Banca M\u00faltiple"
+  "company": "Banco Plata, S.A., Instituci\u00f3n de Banca M\u00faltiple",
+  "lastChecked": "2026-11-05"
  },
  "him:vsp-vision/jobs/internship-software-engineer": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Internship, Software Engineer",
   "company": "VSP Vision"
  },
  "him:healthequity/jobs/associate-cyber-engineer": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Associate Cyber Engineer",
   "company": "HealthEquity"
@@ -853,84 +869,84 @@
  },
  "him:liberty-university/jobs/quality-analyst-engineer-apprentice-5518770604": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Quality Analyst Engineer Apprentice",
   "company": "Liberty University"
  },
  "him:mimidentalclinic/jobs/junior-software-engineer": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Junior Software Engineer",
   "company": "Mimidentalclinic"
  },
  "him:caci-international-inc/jobs/software-test-engineer-intern-spring-2027": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Software Test Engineer Intern - Spring 2027",
   "company": "CACI International Inc"
  },
  "him:liberty-university/jobs/quality-analyst-engineer-i": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Quality Analyst Engineer I",
   "company": "Liberty University"
  },
  "him:veeva-systems/jobs/associate-qa-engineer": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Associate QA Engineer",
   "company": "Veeva Systems"
  },
  "him:lifelancer/jobs/associate-qa-engineer": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Associate QA Engineer",
   "company": "Lifelancer"
  },
  "him:constructivedialogue/jobs/software-engineer-early-career": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Software Engineer (Early Career)",
   "company": "Constructive Dialogue Institute"
  },
  "him:emetlab/jobs/junior-software-engineer": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Junior Software Engineer",
   "company": "Emetlab"
  },
  "him:jobs-for-humanity/jobs/systems-engineer-new-college-grad-2026-latam": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Systems Engineer, New College Grad \u2013 2026 (LATAM)",
   "company": "Jobs for Humanity"
  },
  "him:supersourcing/jobs/junior-rpa-developer": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Junior RPA Developer",
   "company": "Supersourcing"
  },
  "him:caretria/jobs/jr-software-engineer-2026-8079": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Jr. Software Engineer (2026-8079)",
   "company": "Caretria"
  },
  "him:ifit/jobs/junior-ai-engineer": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Junior AI Engineer",
   "company": "iFIT"
@@ -945,7 +961,7 @@
  },
  "him:lockheed-martin-corporation/jobs/engineering-aide-n1": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Engineering Aide - N1",
   "company": "Lockheed Martin Corporation"
@@ -960,21 +976,21 @@
  },
  "him:ngo-consulting-partners/jobs/junior-software-engineer-qa-automation": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Junior Software Engineer (QA & Automation)",
   "company": "Ngo Consulting Partners"
  },
  "him:rivet-tax/jobs/full-stack-engineering-intern": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Full-Stack Engineering Intern",
   "company": "Rivet"
  },
  "him:holiday-world/jobs/data-engineer-unpaid": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Data Engineer(UNPAID)",
   "company": "Holiday World"
@@ -989,14 +1005,14 @@
  },
  "him:focuskpi/jobs/internal-ai-engineer-trainee": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "[Internal] AI Engineer Trainee",
   "company": "FocusKPI"
  },
  "him:talent-journey/jobs/junior-backend-developer-future-position": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Junior Backend Developer - Future Position",
   "company": "Talent Journey"
@@ -1019,98 +1035,98 @@
  },
  "him:connection/jobs/associate-ai-solutions-engineer": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Associate AI Solutions Engineer",
   "company": "Connection"
  },
  "him:wanderlog/jobs/full-stack-software-engineer-new-graduates-united-states-974988927": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Full-Stack Software Engineer (New graduates: United States)",
   "company": "Wanderlog"
  },
  "him:binance/jobs/binance-accelerator-program-applied-ai-application-engineer-4805818739": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Binance Accelerator Program - Applied AI Application Engineer",
   "company": "Binance"
  },
  "him:yd-talent-solutions/jobs/remote-full-stack-software-engineer": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Remote Full-stack Software Engineer",
   "company": "YD Talent Solutions"
  },
  "him:computer-world-services-corp/jobs/tier-1-2-service-desk-analyst-journeyman": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Tier 1/2 Service Desk Analyst (Journeyman)",
   "company": "Computer World Services Corp."
  },
  "him:sana/jobs/contract-network-operations-associate": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Contract Network Operations Associate",
   "company": "Sana"
  },
  "him:transaction-network-services/jobs/noc-support-engineer": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "NOC Support Engineer",
   "company": "Transaction Network Services"
  },
  "him:decisionpoint-corporation/jobs/tier-1-2-service-desk-analyst-journeyman": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Tier 1/2 Service Desk Analyst (Journeyman)",
   "company": "DecisionPoint Corporation"
  },
  "him:resideo/jobs/network-technician": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Network Technician",
   "company": "Resideo"
  },
  "him:tusker/jobs/service-desk-analyst-i-m-f-9-30am-to-6pm-est": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Service Desk Analyst I (M - F 9:30am to 6pm EST)",
   "company": "Tusker"
  },
  "him:ngen/jobs/tier-2-technician-third-shift-137897789": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Tier 2 Technician \u2013 Third Shift",
   "company": "NGEN"
  },
  "him:frontline-wildfire-defense/jobs/customer-support-monitoring-specialist-emergency-response": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Customer Support & Monitoring Specialist - Emergency Response",
   "company": "Frontline Wildfire Defense"
  },
  "him:milsoft-utility-solutions/jobs/support-specialist-with-emphasis-on-engineering-analysis-ea-6119958860": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Support Specialist with Emphasis on Engineering Analysis (EA)",
   "company": "Milsoft Utility Solutions"
  },
  "him:vc3/jobs/part-time-noc-analyst-i-weekends-evenings-overnight": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Part-Time NOC Analyst I (Weekends, Evenings & Overnight)",
   "company": "VC3"
@@ -1118,48 +1134,49 @@
  "him:cit-net/jobs/it-support-engineer-level-2-5384026732": {
   "firstSeen": "2026-11-03",
   "lastSeen": "2026-11-04",
-  "status": "Open",
+  "status": "Closed",
   "title": "IT Support Engineer - Level 2",
-  "company": "Computer Integration Technologies"
+  "company": "Computer Integration Technologies",
+  "lastChecked": "2026-11-05"
  },
  "him:arting-digital/jobs/noc-analyst": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Noc Analyst",
   "company": "Arting Digital"
  },
  "him:unisys/jobs/l2-noc-windows-night-shift": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "L2 NOC (Windows) Night Shift",
   "company": "Unisys"
  },
  "him:global-channel-management-inc/jobs/cpe-network-trouble-shooter": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "CPE Network Trouble Shooter",
   "company": "Global Channel Management, Inc."
  },
  "him:military-veterans-and-diverse-job-seekers/jobs/noc-technician-100-remote": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "NOC Technician, 100% Remote",
   "company": "Military, Veterans and Diverse Job Seekers"
  },
  "him:mibura-inc/jobs/noc-triage-technician": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "NOC & Triage Technician",
   "company": "Mibura Inc."
  },
  "him:mibura-inc/jobs/network-support-engineer": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Network Support Engineer",
   "company": "Mibura Inc."
@@ -1174,56 +1191,56 @@
  },
  "him:vc3/jobs/noc-analyst-i-evenings-overnight": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "NOC Analyst I (evenings/overnight)",
   "company": "VC3"
  },
  "him:unisys/jobs/level-2-noc-systems-administrator-network-focus-98305430": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Level 2 NOC Systems Administrator \u2013 Network Focus",
   "company": "Unisys"
  },
  "him:true-zero-technologies/jobs/junior-noc-engineer": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Junior NOC Engineer",
   "company": "True Zero Technologies"
  },
  "him:net-at-work-llc/jobs/associate-systems-engineer": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Associate Systems Engineer",
   "company": "Net at Work, LLC"
  },
  "him:support-tech-llc/jobs/inside-sales-professional": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Inside Sales Professional",
   "company": "Support Tech LLC"
  },
  "him:koniag-government-services/jobs/help-desk-tier-i-support-specialist": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Help Desk Tier I Support Specialist",
   "company": "Koniag Government Services"
  },
  "him:general-dynamics-mission-systems/jobs/advanced-customer-support-technician-2nd-shift": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Advanced Customer Support Technician - 2nd Shift",
   "company": "General Dynamics Mission Systems"
  },
  "him:canonical/jobs/cloud-support-engineer": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Cloud Support Engineer",
   "company": "Canonical"
@@ -1246,21 +1263,21 @@
  },
  "him:the-ce-shop/jobs/business-intelligence-analyst": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Business Intelligence Analyst",
   "company": "The CE Shop"
  },
  "him:canonical/jobs/associate-linux-support-engineer": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Associate Linux Support Engineer",
   "company": "Canonical"
  },
  "him:topdog-law-llc/jobs/jr-it-helpdesk-specialist-pacific-standard-time": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Jr. IT Helpdesk Specialist (Pacific Standard Time)",
   "company": "TopDog Law LLC"
@@ -1268,20 +1285,21 @@
  "him:everbridge/jobs/security-operations-associate": {
   "firstSeen": "2026-11-03",
   "lastSeen": "2026-11-04",
-  "status": "Open",
+  "status": "Closed",
   "title": "Security Operations Associate",
-  "company": "Everbridge"
+  "company": "Everbridge",
+  "lastChecked": "2026-11-05"
  },
  "him:abacustechnology/jobs/analyst-enterprise-service-desk": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Analyst, Enterprise Service Desk",
   "company": "Abacus Technology"
  },
  "him:upwind-security/jobs/technical-support-specialist": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Technical Support Specialist",
   "company": "Upwind Security"
@@ -1296,21 +1314,21 @@
  },
  "muse:14824763": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Help Desk Customer Service Advisor",
   "company": "Anthology"
  },
  "him:alliant-insurance-services-inc/jobs/technical-assistant-1996128474": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Technical Assistant",
   "company": "Alliant Insurance Services, Inc."
  },
  "him:filed/jobs/tax-software-support-specialist": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Tax Software Support Specialist",
   "company": "Filed"
@@ -1320,46 +1338,47 @@
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Customer Experience Support Analyst",
-  "company": "Linus Health"
+  "company": "Linus Health",
+  "lastChecked": "2026-11-05"
  },
  "him:truck-driver-nation/jobs/logistics-coordinator-remote": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Logistics Coordinator \u2014 Remote",
   "company": "Truck Driver Nation"
  },
  "him:lifelancer/jobs/virtual-patient-support-specialist-syneos-health-careers-90731829": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Virtual Patient Support Specialist - Syneos Health Careers",
   "company": "Lifelancer"
  },
  "him:lifelancer/jobs/virtual-sales-specialist-syneos-health-careers-2137385400": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Virtual Sales Specialist - Syneos Health Careers",
   "company": "Lifelancer"
  },
  "him:sirva/jobs/customer-experience-operations-consultant-temporary-remote": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Customer Experience & Operations Consultant (Temporary, Remote)",
   "company": "SIRVA"
  },
  "him:absencesoft-llc/jobs/security-analyst": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Security Analyst",
   "company": "AbsenceSoft, LLC"
  },
  "muse:18044531": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Special Agent: Cybersecurity/Technology Expertise",
   "company": "The Federal Bureau of Investigation (FBI)"
@@ -1369,46 +1388,50 @@
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Collections Specialist (Account Servicing Specialist I - Bilingual)",
-  "company": "Foundation Finance Company Careers"
+  "company": "Foundation Finance Company Careers",
+  "lastChecked": "2026-11-05"
  },
  "him:american-income-life-insurance-company/jobs/entry-level-customer-service-and-work-from-home": {
   "firstSeen": "2026-11-03",
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Entry Level Customer Service and (Work From Home)",
-  "company": "American Income Life Insurance Company"
+  "company": "American Income Life Insurance Company",
+  "lastChecked": "2026-11-05"
  },
  "him:agent-alliance/jobs/entry-level-sales-rep-remote-work": {
   "firstSeen": "2026-11-03",
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Entry Level Sales Rep (remote work)",
-  "company": "Agent Alliance"
+  "company": "Agent Alliance",
+  "lastChecked": "2026-11-05"
  },
  "him:storage-scholars/jobs/inbound-sales-specialist-part-time-internship-8950372287": {
   "firstSeen": "2026-11-03",
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Inbound Sales Specialist (Part Time Internship)",
-  "company": "Storage Scholars"
+  "company": "Storage Scholars",
+  "lastChecked": "2026-11-05"
  },
  "him:broadridge/jobs/call-center-associate": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Call Center Associate",
   "company": "Broadridge"
  },
  "him:terac/jobs/remote-outbound-callers-ongoing-call-campaigns": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Remote Outbound Callers: Ongoing Call Campaigns",
   "company": "Terac"
  },
  "him:instacart/jobs/bilingual-customer-experience-t3-specialist-spanish": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Bilingual Customer Experience T3 Specialist (Spanish)",
   "company": "Instacart"
@@ -1426,21 +1449,24 @@
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Customer Retention Specialist (Pacific Time Hours)",
-  "company": "Trupanion"
+  "company": "Trupanion",
+  "lastChecked": "2026-11-05"
  },
  "him:silver-cross-hospital/jobs/medical-assistant-ii-remote": {
   "firstSeen": "2026-11-03",
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Medical Assistant II - Remote",
-  "company": "Silver Cross Hospital"
+  "company": "Silver Cross Hospital",
+  "lastChecked": "2026-11-05"
  },
  "him:motu-novu-llc/jobs/virtual-assistant-flex-remote-global": {
   "firstSeen": "2026-11-03",
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Virtual Assistant (Flex-Time) (Remote/Global)",
-  "company": "Motu Novu LLC"
+  "company": "Motu Novu LLC",
+  "lastChecked": "2026-11-05"
  },
  "him:parsons-corporation/jobs/assistant-resource-coordinator": {
   "firstSeen": "2026-11-03",
@@ -1455,116 +1481,123 @@
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "ANTARCTICA: FEMC-P Transition Assistant",
-  "company": "Trinzic"
+  "company": "Trinzic",
+  "lastChecked": "2026-11-05"
  },
  "him:ays-inc/jobs/virtual-assistant": {
   "firstSeen": "2026-11-03",
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Virtual Assistant",
-  "company": "AYS, Inc."
+  "company": "AYS, Inc.",
+  "lastChecked": "2026-11-05"
  },
  "him:flex-fitness/jobs/process-assistant": {
   "firstSeen": "2026-11-03",
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Process Assistant",
-  "company": "Flex Fitness"
+  "company": "Flex Fitness",
+  "lastChecked": "2026-11-05"
  },
  "him:performing-arts-consultants/jobs/virtual-assistant": {
   "firstSeen": "2026-11-03",
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Virtual Assistant",
-  "company": "Performing Arts Consultants"
+  "company": "Performing Arts Consultants",
+  "lastChecked": "2026-11-05"
  },
  "him:hydrosat/jobs/global-hr-associate": {
   "firstSeen": "2026-11-03",
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Global HR Associate",
-  "company": "Hydrosat"
+  "company": "Hydrosat",
+  "lastChecked": "2026-11-05"
  },
  "him:jobs-for-humanity/jobs/project-assistant-full-remote": {
   "firstSeen": "2026-11-03",
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Project Assistant - Full Remote",
-  "company": "Jobs for Humanity"
+  "company": "Jobs for Humanity",
+  "lastChecked": "2026-11-05"
  },
  "him:the-boutique-coo/jobs/virtual-assistant-houzz-pro-experience": {
   "firstSeen": "2026-11-03",
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Virtual Assistant - Houzz Pro Experience",
-  "company": "The Boutique COO"
+  "company": "The Boutique COO",
+  "lastChecked": "2026-11-05"
  },
  "him:legion-health/jobs/remote-patient-access-intake-medical-virtual-assistant-backed-by-y-combinator": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Remote Patient Access & Intake Medical Virtual Assistant (backed by Y Combinator",
   "company": "Legion Health"
  },
  "him:ays-inc/jobs/remote-receptionist": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Remote Receptionist",
   "company": "AYS, Inc."
  },
  "him:harmonycares/jobs/patient-advocate-11-30a-to-8p-est": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Patient Advocate 11:30a to 8p EST",
   "company": "HarmonyCares"
  },
  "him:assist-world/jobs/patient-coordinator-emr-specialist-part-time": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Patient Coordinator & EMR Specialist (Part-Time)",
   "company": "Assist World"
  },
  "him:neolytix/jobs/medical-front-desk-receptionist": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Medical Front Desk Receptionist",
   "company": "Neolytix"
  },
  "him:siu-consultant-group/jobs/appointment-scheduler": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Appointment Scheduler",
   "company": "SIU Consultant Group"
  },
  "him:getixhealth/jobs/patient-access-specialist-remote": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Patient Access Specialist - REMOTE",
   "company": "GetixHealth"
  },
  "him:carenet-health/jobs/bilingual-medical-receptionist-remote-8894629844": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Bilingual Medical Receptionist | Remote",
   "company": "Carenet Health"
  },
  "him:care-vma-health/jobs/front-desk-medical-virtual-assistant-gynecology-and-infertility-management": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Front Desk Medical Virtual Assistant Gynecology and Infertility Management",
   "company": "Care VMA Health"
  },
  "him:care-vma-health/jobs/virtual-medical-assistant-front-desk-specialist": {
   "firstSeen": "2026-11-03",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Virtual Medical Assistant- Front Desk Specialist",
   "company": "Care VMA Health"
@@ -1574,14 +1607,16 @@
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "VMA-Allergy and Immunology Specialist",
-  "company": "Care VMA Health"
+  "company": "Care VMA Health",
+  "lastChecked": "2026-11-05"
  },
  "him:ovationhc/jobs/pa-switchboard": {
   "firstSeen": "2026-11-03",
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "PA, Switchboard",
-  "company": "QHR"
+  "company": "QHR",
+  "lastChecked": "2026-11-05"
  },
  "him:lehrer-family-chiropractic/jobs/remote-medical-scheduler": {
   "firstSeen": "2026-11-03",
@@ -1689,28 +1724,28 @@
  },
  "him:piedmont-healthcare/jobs/is-service-ctr-technician": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "IS Service Ctr Technician",
   "company": "Piedmont Healthcare"
  },
  "him:alpaca/jobs/it-operations-specialist": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "IT Operations Specialist",
   "company": "Alpaca"
  },
  "him:piedmont-healthcare/jobs/epic-application-coord-ambulatory-3012017084": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "EPIC Application Coord - Ambulatory",
   "company": "Piedmont Healthcare"
  },
  "him:waterfall-technology-consulting-partners/jobs/epiccare-inpatient-quality-analyst-perm-remote": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "EpicCare Inpatient Quality Analyst - Perm - Remote",
   "company": "Waterfall Technology Consulting Partners"
@@ -1718,62 +1753,64 @@
  "him:brilliant/jobs/implementation-specialist": {
   "firstSeen": "2026-11-04",
   "lastSeen": "2026-11-04",
-  "status": "Open",
+  "status": "Closed",
   "title": "Implementation Specialist",
-  "company": "Brilliant"
+  "company": "Brilliant",
+  "lastChecked": "2026-11-05"
  },
  "him:filed/jobs/tax-software-qa-support-analyst": {
   "firstSeen": "2026-11-04",
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Tax Software QA & Support Analyst",
-  "company": "Filed"
+  "company": "Filed",
+  "lastChecked": "2026-11-05"
  },
  "him:hallford-travels/jobs/remote-travel-customer-support-specialist-8813024246": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Remote Travel Customer Support Specialist",
   "company": "Hallford Travels"
  },
  "him:hallford-travels/jobs/remote-travel-planning-specialist-6058170545": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Remote Travel Planning Specialist",
   "company": "Hallford Travels"
  },
  "him:foodtec-solutions/jobs/restaurant-pos-service-analyst-9650494153": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Restaurant POS Service Analyst",
   "company": "FoodTec Solutions"
  },
  "him:american-income-life-insurance-company/jobs/entry-level-customer-service-work-from-home-4974522191": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Entry Level Customer Service - Work From Home",
   "company": "American Income Life Insurance Company"
  },
  "him:motu-novu-llc/jobs/jr-e-commerce-assistant-flex-time-remote-global": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Jr. E-Commerce Assistant (Flex-Time) (Remote/Global)",
   "company": "Motu Novu LLC"
  },
  "him:american-income-life-insurance-company/jobs/appointment-setter-work-from-home-7544036707": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Appointment Setter (Work From Home)",
   "company": "American Income Life Insurance Company"
  },
  "him:naples-jet-center/jobs/online-chat-agent": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Online Chat Agent",
   "company": "Naples Jet Center"
@@ -1787,7 +1824,7 @@
  },
  "him:canonical/jobs/junior-ubuntu-software-engineer": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Junior Ubuntu Software Engineer",
   "company": "Canonical"
@@ -1797,11 +1834,12 @@
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Junior level Quality Assurance Analyst",
-  "company": "Logical Paradigm"
+  "company": "Logical Paradigm",
+  "lastChecked": "2026-11-05"
  },
  "him:pavago/jobs/technical-support-specialist-8328599365": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Technical Support Specialist",
   "company": "Pavago"
@@ -1811,123 +1849,124 @@
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Account Coordinator - Contact Center (9am-6pm EST)",
-  "company": "OPENLANE"
+  "company": "OPENLANE",
+  "lastChecked": "2026-11-05"
  },
  "him:claritev/jobs/remote-data-entry-clerk-typing-part-time-entry-level-1398908360": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Remote Data Entry Clerk - Typing - Part Time Entry Level",
   "company": "Claritev"
  },
  "him:molt-legal-partners-llc/jobs/litigation-paralegal": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Litigation Paralegal",
   "company": "Molt Legal Partners, LLC"
  },
  "him:claritev/jobs/data-entry-clerk": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Data Entry Clerk",
   "company": "Claritev"
  },
  "him:naples-jet-center/jobs/virtual-assistant-services-remote-personal-assistants": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Virtual Assistant Services & Remote Personal Assistants",
   "company": "Naples Jet Center"
  },
  "him:naples-jet-center/jobs/data-entry": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Data Entry",
   "company": "Naples Jet Center"
  },
  "him:naples-jet-center/jobs/virtual-assistant": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Virtual Assistant",
   "company": "Naples Jet Center"
  },
  "him:emergency-university/jobs/virtual-receptionist": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Virtual Receptionist",
   "company": "Emergency University"
  },
  "him:symbria/jobs/remote-ltc-pharmacy-adjudication-technician": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Remote LTC Pharmacy Adjudication Technician",
   "company": "Symbria"
  },
  "him:astra-health/jobs/data-entry-clerk-remote": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Data Entry Clerk - Remote",
   "company": "Astra Health"
  },
  "him:claritev/jobs/data-entry-typist-jobs-from-home": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Data Entry Typist Jobs From Home",
   "company": "Claritev"
  },
  "him:claritev/jobs/remote-data-entry-clerk-jobs-part-time-entry-level-6095839426": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Remote Data Entry Clerk Jobs  Part Time Entry Level",
   "company": "Claritev"
  },
  "him:claritev/jobs/flexible-remote-data-entry-jobs": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Flexible Remote Data Entry Jobs",
   "company": "Claritev"
  },
  "him:claritev/jobs/remote-data-entry-clerk-job": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Remote Data Entry Clerk Job",
   "company": "Claritev"
  },
  "him:gpm-investments-llc/jobs/retail-accountant": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Retail Accountant",
   "company": "GPM Investments, LLC"
  },
  "him:claritev/jobs/data-entry-typing-jobs": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Data Entry Typing Jobs",
   "company": "Claritev"
  },
  "him:claritev/jobs/telecommute-data-entry-jobs-part-time-remote": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Telecommute Data Entry Jobs - Part Time Remote",
   "company": "Claritev"
  },
  "him:claritev/jobs/remote-data-entry-analyst": {
   "firstSeen": "2026-11-04",
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-05",
   "status": "Open",
   "title": "Remote Data Entry Analyst",
   "company": "Claritev"
@@ -1937,7 +1976,8 @@
   "lastSeen": "2026-11-04",
   "status": "Open",
   "title": "Recruiting Operations Analyst",
-  "company": "Spotter Labs"
+  "company": "Spotter Labs",
+  "lastChecked": "2026-11-05"
  },
  "him:micro1/jobs/hospitality-worker-toast-pos-user": {
   "firstSeen": "2026-11-04",
@@ -1945,5 +1985,271 @@
   "status": "Open",
   "title": "Hospitality Worker (Toast POS User)",
   "company": "micro1"
+ },
+ "him:the-sydney-call-centre/jobs/work-at-home-contact-center-agent-9017746705": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Work at Home Contact Center Agent",
+  "company": "The Sydney Call Centre"
+ },
+ "him:onboarded/jobs/support-engineer": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Support Engineer",
+  "company": "Onboarded"
+ },
+ "him:edgeq-technologies-private-limited/jobs/end-user-computing-euc-engineer": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "End User Computing (EUC) Engineer",
+  "company": "EdgeQ Technologies Private Limited"
+ },
+ "him:leidos/jobs/migration-execution-intern": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Migration Execution Intern",
+  "company": "Leidos"
+ },
+ "him:wing-assistant/jobs/general-virtual-assistant-bilingual-cantonese-english-3985446984": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "General Virtual Assistant - Bilingual: Cantonese-English",
+  "company": "Wing Assistant"
+ },
+ "him:consensus-cloud-solutions-inc/jobs/implementation-analyst": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Implementation Analyst",
+  "company": "Consensus Cloud Solutions, Inc."
+ },
+ "him:urban-insight/jobs/digital-project-coordinator": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Digital Project Coordinator",
+  "company": "Urban Insight"
+ },
+ "him:abbott/jobs/clinical-associate-8296476102": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Clinical Associate",
+  "company": "Abbott"
+ },
+ "him:entrust-solutions-group/jobs/substation-owner-s-engineer": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Substation Owner's Engineer",
+  "company": "ENTRUST Solutions Group"
+ },
+ "him:hillwoodinvestmentproperties/jobs/client-support-specialist": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Client Support Specialist",
+  "company": "HIP"
+ },
+ "him:cotiviti/jobs/records-retrieval-agent-3-special-assignment-team": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Records Retrieval Agent 3 - Special Assignment Team",
+  "company": "Cotiviti"
+ },
+ "him:jerry/jobs/legal-operations-associate-7618045290": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Legal Operations Associate",
+  "company": "Jerry"
+ },
+ "him:jerry/jobs/customer-service-agent-remote-tech-startup-7365197937": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Customer Service Agent (Remote, Tech Startup)",
+  "company": "Jerry"
+ },
+ "him:clera/jobs/operations-intern-3419015891": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Operations Intern",
+  "company": "Clera"
+ },
+ "him:cybersheath/jobs/cyber-security-analyst-i": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Cyber Security Analyst I",
+  "company": "CyberSheath"
+ },
+ "him:zest-health/jobs/corporate-it-and-security-engineer": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Corporate IT and Security Engineer",
+  "company": "Zest Health"
+ },
+ "him:cincinnati-children-s/jobs/student-ii-security-analyst-b": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Student II - Security Analyst (B)",
+  "company": "Cincinnati Children's"
+ },
+ "him:cognyte/jobs/di-threat-intelligence-analyst": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "DI - Threat Intelligence Analyst",
+  "company": "Cognyte"
+ },
+ "him:wavelength-network/jobs/junior-ai-specialist-claude": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Junior AI Specialist (Claude)",
+  "company": "Wavelength Network"
+ },
+ "him:kodiak-solutions/jobs/product-support-analyst": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Product Support Analyst",
+  "company": "Kodiak Solutions"
+ },
+ "him:vector-security/jobs/customer-experience-associate-call-center": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Customer Experience Associate - Call Center",
+  "company": "Vector Security"
+ },
+ "him:vector-security/jobs/shared-services-customer-advocate": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Shared Services Customer Advocate",
+  "company": "Vector Security"
+ },
+ "him:higginbotham/jobs/certificate-processor": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Certificate Processor",
+  "company": "Higginbotham"
+ },
+ "him:jerry/jobs/remote-sales-associate-retail-service-backgrounds-welcome": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Remote Sales Associate - Retail/Service Backgrounds Welcome!",
+  "company": "Jerry"
+ },
+ "him:jerry/jobs/remote-inbound-sales-agent-fintech": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Remote Inbound Sales Agent (Fintech)",
+  "company": "Jerry"
+ },
+ "him:jerry/jobs/insurance-sales-agent-4644144049": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Insurance Sales Agent",
+  "company": "Jerry"
+ },
+ "him:vector-security/jobs/service-scheduling-coordinator": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Service Scheduling Coordinator",
+  "company": "Vector Security"
+ },
+ "him:jerry/jobs/customer-experience-advocate-remote-insurance-tech-startup": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Customer Experience Advocate (Remote, Insurance Tech Startup)",
+  "company": "Jerry"
+ },
+ "him:jerry/jobs/remote-sales-agent-insurtech-startup-8937833963": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Remote Sales Agent (Insurtech Startup)",
+  "company": "Jerry"
+ },
+ "him:binus-university/jobs/remote-office-support-specialist": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Remote Office Support Specialist",
+  "company": "BINUS UNIVERSITY"
+ },
+ "him:scalejet/jobs/sales-virtual-assistant-va-us-luxury-agency-7357671998": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Sales Virtual Assistant (VA) | US Luxury Agency",
+  "company": "ScaleJet"
+ },
+ "him:youthworks/jobs/virtual-assistant": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Virtual Assistant",
+  "company": "YouthWorks"
+ },
+ "him:go-lean-health/jobs/bilingual-virtual-assistant-english-spanish-receptionist-3635601621": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Bilingual Virtual Assistant (English/Spanish) Receptionist",
+  "company": "Go Lean Health"
+ },
+ "him:parsons-corporation/jobs/pc-associate-part-time": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "PC Associate (Part-time)",
+  "company": "Parsons Corporation"
+ },
+ "him:westcor-land-title-insurance-company/jobs/support-clerk-westcor-land-title-insurance-company": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Support Clerk - Westcor Land Title Insurance Company",
+  "company": "Westcor Land Title Insurance Company"
+ },
+ "him:go-lean-health/jobs/patient-care-communications-specialist-4877084418": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Patient Care Communications Specialist",
+  "company": "Go Lean Health"
+ },
+ "him:jobs-for-humanity/jobs/data-entry-specialist": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Data Entry Specialist",
+  "company": "Jobs for Humanity"
+ },
+ "him:rawmaxx/jobs/data-entry-specialist": {
+  "firstSeen": "2026-11-05",
+  "lastSeen": "2026-11-05",
+  "status": "Open",
+  "title": "Data Entry Specialist",
+  "company": "RawMaxx"
  }
 }
