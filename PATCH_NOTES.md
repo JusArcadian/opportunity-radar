@@ -1,5 +1,11 @@
 # Patch notes
 
+## v0.9.3 (2026-11-06): easier to tap on phones
+
+### Buffs
+- The "Show jobs below my pay floor" checkbox and every other tick-box row are now about 44px tall, so they're easy to hit with a thumb.
+- Folded boxes like "Skills and certificates you have" have a bigger tap area on their title line.
+
 ## v0.9.2 (2026-11-06): works from any US ZIP code
 
 ### Features

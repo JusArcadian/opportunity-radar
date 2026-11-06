@@ -357,3 +357,26 @@ re.search(r"(?<![a-z])" + re.escape(w.strip()) + r"(?![a-z])", t)
 **The lesson:** hard-coded lists only work for the people you thought of. Looking data up works for everyone. Search your code for your own city or state name to find these spots.
 
 **What's still regional:** the daily robot only searches a few cities, so in-person jobs don't reach everyone yet. Fixing that needs live searches by ZIP code.
+
+
+## Chapter 27: Making things easy to tap (v0.9.3)
+
+**What changed:** two things on the phone were hard to hit: the "Show jobs below my pay floor" checkbox and the "Skills and certificates" fold. They were only 20px tall. Apple and Google both say a tap target should be about 44px (roughly the size of a fingertip).
+
+**The code** (added to the end of `web/styles.css`):
+
+```css
+.check{min-height:44px}
+details.fold>summary{padding:12px 0;margin:-8px 0}
+details.fold[open]>summary{margin-bottom:0}
+```
+
+**How it works, like you're 5:**
+- `.check` is every label that holds a tick box. `min-height:44px` means "never be shorter than 44px." The box looks the same, but the area you can tap on is bigger, and tapping the words ticks it too because the box is inside the `<label>`.
+- `summary` is the title line of a fold (the part with the little triangle). `padding:12px 0` adds 12px of empty space above and below the words, so the tap area grows from 20px to 44px.
+- `margin:-8px 0` pulls the title back by 8px, the same amount of padding the fold box already has. Without it, the closed box would look taller and puffier.
+- `[open]` means "only when the fold is open." There we drop the bottom pull so the title doesn't overlap the content under it.
+
+**How we found it:** a test script opened the app at phone widths (320, 360 and 390 pixels) and measured every button, link and tick box. Anything under 30px tall got flagged.
+
+**When things break:** if a fold looks squashed or its text overlaps the next line, the negative margin is too big. Change `-8px` to `-4px`.

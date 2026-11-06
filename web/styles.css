@@ -152,3 +152,8 @@ details.fold>summary{cursor:pointer;font-weight:600;font-size:14px}
 details.fold.more{border:none;padding:0 2px;margin-top:2px}
 details.fold.more>summary{font-size:13px;color:var(--muted,inherit)}
 .adzuna{display:inline-block;min-width:116px;min-height:23px;line-height:23px;font-size:14px;font-weight:600}
+
+/* v0.9.3: bigger tap targets on phones (about 44px tall, the size a thumb can hit easily) */
+.check{min-height:44px}
+details.fold>summary{padding:12px 0;margin:-8px 0}
+details.fold[open]>summary{margin-bottom:0}
