@@ -86,9 +86,28 @@ function listingOf(id, job) {
   if (inFeed || (st && st.status === "Open")) return "Open";
   return feed.jobs.length ? "Unknown" : "";
 }
+/* Job picks (v0.9.0). ELI5: 13 kinds of jobs are sorted by the daily robot, so those match by "career".
+   Everything else in the picker (Cashier, Welder, or words someone typed) matches by the words in the job title. */
+const CAREER_LABELS = { helpdesk: "Help desk / IT", support: "Tech / customer support", security: "Security / SOC", python: "Python / automation",
+  network: "Network technician", cloud: "Cloud support", food: "Restaurant / food service", retail: "Retail / store", warehouse: "Warehouse / logistics",
+  callcenter: "Call center / customer service", office: "Office / admin", care: "Healthcare support", driver: "Driver / delivery" };
+const keyOfLabel = (label) => Object.keys(CAREER_LABELS).find((k) => CAREER_LABELS[k] === label) || "";
+const myPicks = (p) => p.picks || (p.careers || []).map((k) => ({ label: careerOf(k).label || CAREER_LABELS[k] || k, custom: false, terms: [] }));
+function pickMatcher(p) {
+  const careers = p.careers || [], extra = myPicks(p).filter((x) => !keyOfLabel(x.label));
+  const has = (label) => extra.some((x) => x.label === label);
+  const remote = has("Work from home / remote"), entry = has("Entry level / no experience");
+  const words = extra.filter((x) => x.label !== "Work from home / remote" && x.label !== "Entry level / no experience")
+    .flatMap((x) => x.terms || [x.label]).filter((t) => t.length >= 3)     // 2-letter words like "PA" also mean states and titles
+    .map((t) => t.replace(/[.*+?^${}()|[\]\\/]/g, "\\$&").replace(/ /g, "[ -]"));
+  const titleWords = words.length ? new RegExp("\\b(?:" + words.join("|") + ")s?\\b", "i") : null;
+  return (j) => careers.includes(j.career) || (titleWords && titleWords.test(`${j.title} ${j.type || ""}`))
+    || (remote && j.remote === "Remote") || (entry && ((j.about || {}).years ?? 0) <= 1 && !(j.about || {}).degree);
+}
 function myJobs() {
   const p = me.profile || {};
-  return feed.jobs.filter((j) => (p.careers || []).includes(j.career))
+  const wanted = pickMatcher(p);
+  return feed.jobs.filter(wanted)
     .filter((j) => (j.remote === "Remote" ? p.remote !== false : p.local))
     .map((j) => ({ ...j, fit: fitScore(j), paycheck: payCheck(j) }));
 }
@@ -104,7 +123,7 @@ const TABS = ["today", "jobs", "saved", "events", "skills", "me"];
 let view = "today";
 function setTab(tab) {
   if (!me.profile) tab = "setup";
-  view = tab; setupFilled = false;
+  view = tab; setupFilled = false; pickerTouched = false;
   me.ui.tab = tab === "setup" || tab === "resume" ? me.ui.tab : tab; persist();
   ["setup", "resume", ...TABS].forEach((v) => ($("v-" + v).hidden = v !== tab));
   document.querySelectorAll("nav.tabs button").forEach((b) => b.setAttribute("aria-current", b.dataset.tab === tab ? "page" : "false"));
@@ -161,6 +180,7 @@ function flagBlock(j) {
 }
 
 let setupFilled = false;   // fill the form once, so a background refresh never wipes what you're typing
+let picker = null, pickerTouched = false;   // the searchable "Jobs to look for" menu (web/job-picker.js)
 function renderSetup() {
   ["setup", ...TABS].forEach((v) => ($("v-" + v).hidden = v !== "setup"));
   document.querySelector("nav.tabs").hidden = true;
@@ -171,8 +191,8 @@ function renderSetup() {
   $("s-remote").checked = p.remote !== false; $("s-local").checked = !!p.local;
   $("s-city").innerHTML = `<option value="">Pick your city (South Florida list)</option>` + Object.keys(CITIES).map((c) => `<option value="${c}">${c.replace(/\b\w/g, (m) => m.toUpperCase())}</option>`).join("");
   $("s-zip").value = p.zip || ""; $("s-city").value = p.city || ""; $("s-miles").value = p.maxMi || 20; $("s-goal").value = p.goal || 5;
-  const careers = feed.meta.careers.length ? feed.meta.careers : [{ key: "helpdesk", label: "Help desk / IT" }];
-  $("s-careers").innerHTML = [...careers].sort((a, b) => a.label.localeCompare(b.label)).map((c) => `<label class="check"><input type="checkbox" value="${esc(c.key)}" ${(p.careers || ["helpdesk", "support"]).includes(c.key) ? "checked" : ""}> ${esc(c.label)}</label>`).join("");
+  if (!picker) picker = JobPicker.mount($("s-careers"), { onChange: () => { pickerTouched = true; } });
+  if (!pickerTouched) picker.setSelected(myPicks(p).map((x) => x.label));
   $("s-skills").innerHTML = [...new Set([...(feed.meta.skills || []), ...(p.skills || [])])].map((s) => `<label class="check"><input type="checkbox" value="${esc(s)}" ${(p.skills || []).includes(s) ? "checked" : ""}> ${esc(s)}</label>`).join("") || '<p class="small">Skills load with the job feed.</p>';
   skillCount();
 }
@@ -266,11 +286,13 @@ $("m-resumeFile").onchange = async (ev) => {
 $("setupForm").addEventListener("submit", (ev) => {
   ev.preventDefault();
   if ($("s-resume").value.trim() && !me.facts.trim()) { const r = readResume($("s-resume").value); if (r) { me.facts = r.facts; checkSkills(r.skills); } }
-  const careers = [...document.querySelectorAll("#s-careers input:checked")].map((i) => i.value);
-  if (!careers.length) { toast("Pick at least one kind of job."); return; }
+  const picks = picker.getItems();
+  if (!picks.length) { toast("Pick at least one kind of job."); return; }
+  const careers = picks.map((x) => keyOfLabel(x.label)).filter(Boolean);
   me.profile = {
     name: $("s-name").value.trim(),
     careers,
+    picks,
     floor: parseFloat($("s-floor").value) || 0,
     remote: $("s-remote").checked,
     local: $("s-local").checked,
@@ -394,7 +416,7 @@ function renderSkills() {
 
 function renderMe() {
   const p = me.profile;
-  const labels = p.careers.map((k) => careerOf(k).label || k).join(", ");
+  const labels = myPicks(p).map((x) => x.label).join(", ");
   $("meSummary").textContent = `Looking for: ${labels}. Pay floor: $${p.floor}/hr. ${p.remote ? "Remote" : ""}${p.remote && p.local ? " + " : ""}${p.local ? "local" : ""} jobs. ${p.skills.length} skill${p.skills.length === 1 ? "" : "s"} on file.${me.facts.trim() ? " Resume facts saved: every saved job gets a resume." : " Add your resume facts below to get automatic resumes."}`;
   if (document.activeElement !== $("m-facts")) $("m-facts").value = me.facts || "";
   $("installBtn").hidden = !installEvent;
@@ -454,7 +476,7 @@ const SEARCH_WORDS = { helpdesk: "help desk", support: "technical support", secu
 function searchNow(filter) {
   const P = me.profile || {}, zip = P.zip || "", remoteOnly = filter === "Remote" || (!P.local && P.remote !== false);
   const where = remoteOnly ? "remote" : (zip || "");
-  const kinds = (P.careers || []).map((k) => ({ label: careerOf(k).label || k, q: careerOf(k).search || SEARCH_WORDS[k] || k }));
+  const kinds = myPicks(P).slice(0, 8).map((x) => { const k = keyOfLabel(x.label); return { label: x.label, q: k ? careerOf(k).search || SEARCH_WORDS[k] : (x.terms || [])[1] || x.label }; });
   const links = (k) => {
     const q = encodeURIComponent(k.q), l = encodeURIComponent(where);
     return [

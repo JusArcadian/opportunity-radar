@@ -79,8 +79,9 @@ def pay_text(lo, hi, period, currency="USD"):
 
 
 def too_senior(title):
-    t = f" {title.lower()} "
-    return any(w in t for w in CONFIG["skip_title_words"])
+    """Whole words only. Without this, "iv" (as in Tier IV) also matched "driver" and "representative"."""
+    t = title.lower()
+    return any(re.search(r"(?<![a-z])" + re.escape(w.strip()) + r"(?![a-z])", t) for w in CONFIG["skip_title_words"])
 
 
 def find_skills(text):
@@ -161,7 +162,7 @@ def match_career(title, desc=""):
     for c in CONFIG["careers"]:
         if any(q.lower() in t for q in c["queries"] + c.get("title_words", [])):
             return c
-    return None
+    return next((c for c in CONFIG["careers"] if c.get("catch_all")), None)  # keep the rest for the app's job picker
 
 
 def iso(ts):
@@ -400,7 +401,11 @@ def main():
     for career in CONFIG["careers"]:
         found = (himalayas(career) if career.get("remote_search", True) else []) + adzuna(career) + [j for j in once if j["career"] == career["key"]]
         kept = 0
+        if career.get("max_jobs"):
+            found.sort(key=lambda j: j["remote"] == "Remote")   # capped list: in-person jobs first, they're the rarest
         for j in found:
+            if kept >= career.get("max_jobs", 10 ** 9):
+                break
             key = (j["title"].lower(), j["company"].lower())
             if not j["title"] or too_senior(j["title"]) or key in seen:
                 continue

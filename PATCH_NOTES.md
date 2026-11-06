@@ -1,5 +1,21 @@
 # Patch notes
 
+## v0.9.0 (2026-11-06): pick any job, not just 13
+
+### Features
+- **Searchable "Jobs to look for" menu.** The 13 checkboxes became one search box with 143 kinds of jobs in 18 groups. Type a job, another name for it, or a big employer ("Chipotle", "CNA", "WFH"), or open a group to browse. Small typos still work.
+- **Add your own job.** If it isn't listed, one tap adds it, and Radar matches it against job titles.
+- **Search right now** uses every pick, including custom jobs (first 8 picks).
+
+### Bugs fixed
+- **The senior-job filter was throwing away normal jobs.** "iv" (for Tier IV) also matched inside "driver", "delivery", "representative" and "executive", so jobs like Delivery Driver and Customer Service Representative never reached the app. The filter now checks whole words only.
+- "Staff" now only blocks senior titles like Staff Engineer, not Wait Staff.
+
+### Buffs
+- The daily feed keeps up to 300 jobs that fit no main career, as "Other jobs", in-person ones first. The app only shows them when they match someone's picks. Careers stay in `config/feed.json`.
+- New users start with nothing ticked instead of Help desk and Tech support.
+- Anyone already set up keeps their picks.
+
 ## v0.8.2 (2026-11-03): Radar is only about jobs
 
 ### Nerfs

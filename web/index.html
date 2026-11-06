@@ -35,7 +35,7 @@
       <div class="actions"><label class="btn" for="s-resumeFile">Pick a file (PDF, Word or text)</label><input id="s-resumeFile" type="file" accept=".pdf,.docx,.txt,application/pdf,text/plain" hidden>
         <button class="btn" type="button" id="s-read">Read my resume</button></div>
       <p class="small" id="s-readMsg">Works with PDF, Word (.docx) and text files. Your resume never leaves this phone.</p>
-      <fieldset><legend>Jobs to look for</legend><div id="s-careers" class="checks"></div></fieldset>
+      <div id="s-careers"></div>
       <label>Lowest pay you'll take ($ per hour)<input id="s-floor" type="number" inputmode="decimal" min="0" step="0.5" value="17"></label>
       <fieldset><legend>Where</legend>
         <label class="check"><input id="s-remote" type="checkbox" checked> Remote jobs (anywhere in the US)</label>
@@ -190,7 +190,7 @@ SUMMARY: (optional) 1–2 sentences about you, in your words</pre></details>
       <div class="card"><h3 class="title">Start over</h3><p class="why">Deletes everything Radar saved on this phone.</p>
         <div class="actions"><button class="btn danger" type="button" id="resetBtn">Delete my Radar data</button></div>
         <div class="actions" id="resetConfirm" hidden><span class="small">Are you sure? This can't be undone.</span><button class="btn danger" type="button" id="resetYes">Yes, delete</button><button class="btn quiet" type="button" id="resetNo">Keep it</button></div></div>
-      <p class="small">Opportunity Radar v0.8.2</p>
+      <p class="small">Opportunity Radar v0.9.0</p>
     </div>
   </section>
 </main>
@@ -204,6 +204,7 @@ SUMMARY: (optional) 1–2 sentences about you, in your words</pre></details>
   <button type="button" data-tab="me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>Me</button>
 </div></nav>
 <div class="toast" id="toast" role="status" hidden></div>
+<script src="job-picker.js"></script>
 <script src="resume.js"></script>
 <script src="talk.js"></script>
 <script src="app.js"></script>

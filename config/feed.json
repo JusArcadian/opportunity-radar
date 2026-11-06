@@ -289,6 +289,19 @@
       "bench_low": null,
       "bench_mid": null,
       "bench_source": ""
+    },
+    {
+      "key": "other",
+      "label": "Other jobs",
+      "catch_all": true,
+      "max_jobs": 300,
+      "queries": [
+        "entry level"
+      ],
+      "bench_low": null,
+      "bench_mid": null,
+      "bench_source": "",
+      "title_words": []
     }
   ],
   "skip_title_words": [
@@ -299,7 +312,9 @@
     "manager",
     "director",
     "principal",
-    "staff ",
+    "staff engineer",
+    "staff software",
+    "staff developer",
     "head of",
     "architect",
     "iii",
@@ -528,4 +543,4 @@
     "pages": 2
   },
   "_remote_search": "remote_search: false = these jobs are mostly in-person, so don't ask the remote-only sites (Himalayas) about them. Local sources (The Muse, Adzuna) still find them."
-}
+}

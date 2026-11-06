@@ -310,3 +310,30 @@ Removing a tab means removing **all three parts** together, or the app breaks:
 3. the calls to those functions (`render()` and `loadGigs()`)
 If you remove the HTML but keep `$("dealForm").addEventListener(...)`, `$("dealForm")` is `null` and the whole app stops with "Cannot read properties of null."
 We kept the old data fields in `blank()` (`gigs`, `deals`…) so old backups still load, and saved the removed code in `docs/money_tab_moved_out.txt`.
+
+
+## Chapter 24: The job picker and the "iv" bug (v0.9.0)
+
+**The picker (`web/job-picker.js`).** ELI5: it's a phone book of jobs. Each line has the name people see, then other names for that job:
+
+```js
+["Cook / line cook", "cook, line cook, prep cook, short order, chef, kitchen"],
+```
+
+To add a job, add one line to `GROUPS`. Search looks at the names first, then the other names. Only if nothing matches does it try "close enough" spelling, so "recieptionist" still finds Receptionist.
+
+**How picks find jobs (`pickMatcher()` in app.js).** Two ways:
+1. The 13 main careers are sorted by the daily robot, so they match by `career`.
+2. Everything else matches by words in the job title. `\b` means "edge of a word", and `s?` means "with or without an s", so "cook" finds "Line Cooks" but not "Cookie".
+
+```js
+new RegExp("\\b(?:" + words.join("|") + ")s?\\b", "i")
+```
+
+**The "iv" bug (`too_senior()` in fetch_jobs.py).** The old code asked "is the text `iv` anywhere in this title?" That's true for Tier IV, but also for dr**iv**er and representat**iv**e, so normal jobs got thrown away as senior. The fix only counts `iv` when no letter touches it on either side:
+
+```python
+re.search(r"(?<![a-z])" + re.escape(w.strip()) + r"(?![a-z])", t)
+```
+
+**Lesson:** when you search for a short word inside text, always think about what bigger words contain it.
