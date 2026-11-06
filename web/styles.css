@@ -151,3 +151,4 @@ details.fold{margin:8px 0;border:1px solid var(--line,rgba(127,127,127,.25));bor
 details.fold>summary{cursor:pointer;font-weight:600;font-size:14px}
 details.fold.more{border:none;padding:0 2px;margin-top:2px}
 details.fold.more>summary{font-size:13px;color:var(--muted,inherit)}
+.adzuna{display:inline-block;min-width:116px;min-height:23px;line-height:23px;font-size:14px;font-weight:600}

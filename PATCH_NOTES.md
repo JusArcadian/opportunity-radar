@@ -1,5 +1,19 @@
 # Patch notes
 
+## v0.9.1 (2026-11-06): more jobs inside Radar
+
+### Features
+- **Local jobs are on.** Adzuna now adds in-person jobs around Miami, Fort Lauderdale and West Palm Beach to the daily feed, as normal Radar cards with Save and My resume.
+
+### Buffs
+- "Search right now" is now a small folded **Search other job sites** box, so Radar's own jobs come first. When nothing matches, the card says why and what to change.
+- New users have local jobs turned on by default.
+- In-person jobs only show for South Florida ZIPs (or no ZIP), since the feed only covers that area for now.
+- Adzuna: one search per job type per city, up to 50 results each, spaced out to stay under the free key's limits.
+
+### Bugs fixed
+- The Adzuna credit now links to Adzuna and meets their minimum size.
+
 ## v0.9.0 (2026-11-06): pick any job, not just 13
 
 ### Features

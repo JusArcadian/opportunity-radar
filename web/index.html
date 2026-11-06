@@ -39,7 +39,7 @@
       <label>Lowest pay you'll take ($ per hour)<input id="s-floor" type="number" inputmode="decimal" min="0" step="0.5" value="17"></label>
       <fieldset><legend>Where</legend>
         <label class="check"><input id="s-remote" type="checkbox" checked> Remote jobs (anywhere in the US)</label>
-        <label class="check"><input id="s-local" type="checkbox"> Local jobs near me (when available)</label>
+        <label class="check"><input id="s-local" type="checkbox" checked> Local jobs near me (when available)</label>
         <label>Home ZIP<input id="s-zip" type="text" inputmode="numeric" maxlength="5" placeholder="e.g. 33101"></label>
         <label>Home city (distance and drive times work in South Florida for now)<select id="s-city"></select></label>
         <label>How far will you travel? (miles)<input id="s-miles" type="number" inputmode="numeric" min="1" max="100" value="20"></label>
@@ -190,7 +190,7 @@ SUMMARY: (optional) 1–2 sentences about you, in your words</pre></details>
       <div class="card"><h3 class="title">Start over</h3><p class="why">Deletes everything Radar saved on this phone.</p>
         <div class="actions"><button class="btn danger" type="button" id="resetBtn">Delete my Radar data</button></div>
         <div class="actions" id="resetConfirm" hidden><span class="small">Are you sure? This can't be undone.</span><button class="btn danger" type="button" id="resetYes">Yes, delete</button><button class="btn quiet" type="button" id="resetNo">Keep it</button></div></div>
-      <p class="small">Opportunity Radar v0.9.0</p>
+      <p class="small">Opportunity Radar v0.9.1</p>
     </div>
   </section>
 </main>

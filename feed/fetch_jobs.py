@@ -231,17 +231,17 @@ def adzuna(career):
         return []
     jobs = []
     for place in CONFIG["local"]["places"]:
-        for q in career["queries"][:2]:
+        for q in career["queries"][: CONFIG["local"].get("queries_per_career", 1)]:
             qs = urllib.parse.urlencode({
                 "app_id": app_id, "app_key": app_key, "what": q, "where": place,
                 "distance": int(CONFIG["local"]["distance_miles"] * 1.609), "max_days_old": 7,
-                "results_per_page": 20, "content-type": "application/json"})
+                "results_per_page": CONFIG["local"].get("results_per_page", 20), "content-type": "application/json"})
             try:
                 data = get_json(f"https://api.adzuna.com/v1/api/jobs/us/search/1?{qs}")
             except Exception as e:
                 print(f"  ! Adzuna '{q}' in {place} failed: {e}")
                 continue
-            time.sleep(1)
+            time.sleep(2.6)  # stay under Adzuna's limit of about 25 calls a minute
             for j in data.get("results", []):
                 desc = strip_html(j.get("description"))
                 lo, hi = j.get("salary_min"), j.get("salary_max")

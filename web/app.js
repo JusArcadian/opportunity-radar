@@ -104,11 +104,13 @@ function pickMatcher(p) {
   return (j) => careers.includes(j.career) || (titleWords && titleWords.test(`${j.title} ${j.type || ""}`))
     || (remote && j.remote === "Remote") || (entry && ((j.about || {}).years ?? 0) <= 1 && !(j.about || {}).degree);
 }
+// The robot only looks for in-person jobs around South Florida (ZIPs starting 330-334) for now.
+const feedCovers = (p) => !p.zip || /^33[0-4]/.test(p.zip);
 function myJobs() {
   const p = me.profile || {};
   const wanted = pickMatcher(p);
   return feed.jobs.filter(wanted)
-    .filter((j) => (j.remote === "Remote" ? p.remote !== false : p.local))
+    .filter((j) => (j.remote === "Remote" ? p.remote !== false : p.local && feedCovers(p)))
     .map((j) => ({ ...j, fit: fitScore(j), paycheck: payCheck(j) }));
 }
 
@@ -155,7 +157,7 @@ function payChip(p) { return p ? chip("Pay: " + p.toLowerCase(), p === "Strong" 
 function fitDots(n) { let s = `<span class="fit" aria-label="Fit ${n} of 5">`; for (let i = 1; i <= 5; i++) s += `<i class="${i <= n ? "on" : ""}"></i>`; return s + " fit</span>"; }
 function sourceLine(j) {
   const u = safeUrl(j.sourceUrl);
-  if (j.source === "Adzuna") return `<div class="source">${u ? `<a href="${esc(u)}" target="_blank" rel="noopener">Jobs by Adzuna</a>` : "Jobs by Adzuna"}</div>`;
+  if (j.source === "Adzuna") return `<div class="source"><a class="adzuna" href="https://www.adzuna.com" target="_blank" rel="noopener">Jobs by Adzuna</a></div>`;
   if (j.source === "Himalayas") return `<div class="source">via ${u ? `<a href="${esc(u)}" target="_blank" rel="noopener">Himalayas</a>` : "Himalayas"}${j.posted ? " · posted " + esc(nice(j.posted)) : ""}</div>`;
   if (j.source) return `<div class="source">via ${u ? `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(j.source)}</a>` : esc(j.source)}${j.posted ? " · posted " + esc(nice(j.posted)) : ""}</div>`;
   return "";
@@ -188,7 +190,7 @@ function renderSetup() {
   setupFilled = feed.meta.careers.length > 0;
   const p = me.profile || {};
   $("s-name").value = p.name || ""; $("s-floor").value = p.floor ?? 17; $("s-resume").value = p.resume || "";
-  $("s-remote").checked = p.remote !== false; $("s-local").checked = !!p.local;
+  $("s-remote").checked = p.remote !== false; $("s-local").checked = p.local ?? true;
   $("s-city").innerHTML = `<option value="">Pick your city (South Florida list)</option>` + Object.keys(CITIES).map((c) => `<option value="${c}">${c.replace(/\b\w/g, (m) => m.toUpperCase())}</option>`).join("");
   $("s-zip").value = p.zip || ""; $("s-city").value = p.city || ""; $("s-miles").value = p.maxMi || 20; $("s-goal").value = p.goal || 5;
   if (!picker) picker = JobPicker.mount($("s-careers"), { onChange: () => { pickerTouched = true; } });
@@ -365,7 +367,7 @@ function renderJobs() {
         ${j.location && !/remote/i.test(`${j.location} ${j.remote || ""}`) ? `<a class="btn quiet" href="${esc(mapsLink((me.profile || {}).zip || "", j.location))}" target="_blank" rel="noopener">Directions</a>` : ""}
         <button class="btn primary" type="button" data-save="${esc(j.id)}">Save</button>
         ${me.skipped[j.id] ? `<button class="btn quiet" type="button" data-unskip="${esc(j.id)}">Bring back</button>` : `<button class="btn quiet" type="button" data-skip="${esc(j.id)}">Skip</button>`}
-      </div>${sourceLine(j)}</article>`).join("");
+      </div>${sourceLine(j)}</article>`).join("") + `<div class="card">${searchNow(me.ui.filter, true)}</div>`;
 }
 
 const BSTAT = ["Saved", "Applying", "Applied", "Interview", "Offer", "Rejected", "Dropped"];
@@ -473,7 +475,7 @@ function inArea(home, maxMi, loc) {
 const SEARCH_WORDS = { helpdesk: "help desk", support: "technical support", security: "security analyst", python: "python developer entry level",
   network: "network technician", cloud: "cloud support", food: "restaurant crew member", retail: "retail sales associate", warehouse: "warehouse associate",
   callcenter: "customer service representative", office: "administrative assistant", care: "medical assistant", driver: "delivery driver" };
-function searchNow(filter) {
+function searchNow(filter, sitesOnly) {
   const P = me.profile || {}, zip = P.zip || "", remoteOnly = filter === "Remote" || (!P.local && P.remote !== false);
   const where = remoteOnly ? "remote" : (zip || "");
   const kinds = myPicks(P).slice(0, 8).map((x) => { const k = keyOfLabel(x.label); return { label: x.label, q: k ? careerOf(k).search || SEARCH_WORDS[k] : (x.terms || [])[1] || x.label }; });
@@ -486,10 +488,13 @@ function searchNow(filter) {
     ].map(([n, u]) => `<a class="btn" href="${esc(u)}" target="_blank" rel="noopener">${esc(n)}</a>`).join("");
   };
   const why = filter === "Skipped" ? "You haven't skipped anything." : feedError ? "You're offline, so Radar's list can't load." :
-    "Radar's list doesn't have a match right now. It looks for new jobs every morning.";
-  return `<div class="card"><h3 class="title">Search right now</h3><p class="why">${why} You don't have to wait: these open real searches for the jobs you picked${remoteOnly ? " (remote)" : zip ? ` near ${esc(zip)}` : ""}.</p>
-    ${kinds.map((k) => `<p class="small"><b>${esc(k.label)}</b></p><div class="actions">${links(k)}</div>`).join("")}
-    <p class="small">Found one you like? Go to <b>Saved → + Add any job</b> and Radar makes your resume for it.${!zip && !remoteOnly ? " Add your ZIP in Me → Edit what I'm looking for for searches near you." : ""}</p></div>`;
+    "Radar's list doesn't have a match right now. New jobs arrive every morning.";
+  const tip = filter === "Skipped" || feedError ? "" : !P.local && !P.zip ? " Tip: turn on local jobs in Me → Edit what I'm looking for."
+    : P.local && !feedCovers(P) ? " Local jobs only cover South Florida for now, so remote jobs may show more." : P.remote === false ? " Tip: turn on remote jobs in Me → Edit what I'm looking for." : "";
+  const sites = `<details class="fold"><summary>Search other job sites</summary>
+    <p class="small">These open outside Radar${remoteOnly ? " (remote)" : zip ? ` near ${esc(zip)}` : ""}. Found one you like? Go to <b>Saved → + Add any job</b> and Radar makes your resume for it.</p>
+    ${kinds.map((k) => `<p class="small"><b>${esc(k.label)}</b></p><div class="actions">${links(k)}</div>`).join("")}</details>`;
+  return sitesOnly ? sites : `<div class="card"><h3 class="title">No matches yet</h3><p class="why">${why}${tip}</p>${sites}</div>`;
 }
 function localSources(zip, cityName) {
   const z = encodeURIComponent(zip || ""), city = cityName || "my area", g = (q) => "https://www.google.com/search?q=" + encodeURIComponent(q);

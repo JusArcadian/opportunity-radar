@@ -337,3 +337,13 @@ re.search(r"(?<![a-z])" + re.escape(w.strip()) + r"(?![a-z])", t)
 ```
 
 **Lesson:** when you search for a short word inside text, always think about what bigger words contain it.
+
+## Chapter 25: Keeping people in the app (v0.9.1)
+
+**Why the keys stay on GitHub.** Your website is public, so anything in `web/` can be read by anyone. The daily robot runs on GitHub and reads the keys from GitHub Secrets. It writes only the job list into `web/data/jobs.json`. Visitors see the jobs, never the keys.
+
+**Why one search per job type.** The free key has limits, reported as about 25 calls a minute, 250 a day and 2,500 a month. Radar makes 14 job types x 1 search x 3 cities = 42 calls a day, about 1,260 a month. Two searches each would be about 2,520 a month, just over the limit.
+
+**Waiting between calls.** `time.sleep(2.6)` makes the robot pause so it stays under the per-minute limit.
+
+**Before selling Radar.** Adzuna's free key is for trying out the API. Anything that earns money or generates leads needs a license.
