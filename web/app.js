@@ -104,13 +104,13 @@ function pickMatcher(p) {
   return (j) => careers.includes(j.career) || (titleWords && titleWords.test(`${j.title} ${j.type || ""}`))
     || (remote && j.remote === "Remote") || (entry && ((j.about || {}).years ?? 0) <= 1 && !(j.about || {}).degree);
 }
-// The robot only looks for in-person jobs around South Florida (ZIPs starting 330-334) for now.
-const feedCovers = (p) => !p.zip || /^33[0-4]/.test(p.zip);
+// In-person jobs only show if they're within a long drive of home, wherever home is. Unknown distance = show it.
+const closeEnough = (j, p) => { const c = commute(homePoint(p), j.location, j); return !c || c.remote || c.miles <= 100; };
 function myJobs() {
   const p = me.profile || {};
   const wanted = pickMatcher(p);
   return feed.jobs.filter(wanted)
-    .filter((j) => (j.remote === "Remote" ? p.remote !== false : p.local && feedCovers(p)))
+    .filter((j) => (j.remote === "Remote" ? p.remote !== false : p.local && closeEnough(j, p)))
     .map((j) => ({ ...j, fit: fitScore(j), paycheck: payCheck(j) }));
 }
 
@@ -191,8 +191,7 @@ function renderSetup() {
   const p = me.profile || {};
   $("s-name").value = p.name || ""; $("s-floor").value = p.floor ?? 17; $("s-resume").value = p.resume || "";
   $("s-remote").checked = p.remote !== false; $("s-local").checked = p.local ?? true;
-  $("s-city").innerHTML = `<option value="">Pick your city (South Florida list)</option>` + Object.keys(CITIES).map((c) => `<option value="${c}">${c.replace(/\b\w/g, (m) => m.toUpperCase())}</option>`).join("");
-  $("s-zip").value = p.zip || ""; $("s-city").value = p.city || ""; $("s-miles").value = p.maxMi || 20; $("s-goal").value = p.goal || 5;
+  $("s-zip").value = p.zip || ""; $("s-place").textContent = placeOf(p); $("s-miles").value = p.maxMi || 20; $("s-goal").value = p.goal || 5;
   if (!picker) picker = JobPicker.mount($("s-careers"), { onChange: () => { pickerTouched = true; } });
   if (!pickerTouched) picker.setSelected(myPicks(p).map((x) => x.label));
   $("s-skills").innerHTML = [...new Set([...(feed.meta.skills || []), ...(p.skills || [])])].map((s) => `<label class="check"><input type="checkbox" value="${esc(s)}" ${(p.skills || []).includes(s) ? "checked" : ""}> ${esc(s)}</label>`).join("") || '<p class="small">Skills load with the job feed.</p>';
@@ -285,11 +284,26 @@ $("m-resumeFile").onchange = async (ev) => {
   ev.target.value = "";
 };
 
-$("setupForm").addEventListener("submit", (ev) => {
+$("s-zip").addEventListener("input", async () => {
+  const zip = $("s-zip").value.trim(), msg = $("s-place");
+  msg.textContent = "";
+  if (!/^\d{5}$/.test(zip)) return;
+  msg.textContent = "Finding your city…";
+  const r = await lookupZip(zip);
+  if ($("s-zip").value.trim() !== zip) return;     // they kept typing, so this answer is old
+  msg.textContent = r && r.place ? r.place : r ? "We couldn't find that ZIP code. Check the numbers." : "Couldn't check that right now. Radar will try again later.";
+});
+
+$("setupForm").addEventListener("submit", async (ev) => {
   ev.preventDefault();
   if ($("s-resume").value.trim() && !me.facts.trim()) { const r = readResume($("s-resume").value); if (r) { me.facts = r.facts; checkSkills(r.skills); } }
   const picks = picker.getItems();
   if (!picks.length) { toast("Pick at least one kind of job."); return; }
+  if (!$("s-remote").checked && !$("s-local").checked) { toast("Tick remote jobs, local jobs, or both."); return; }
+  const zip = $("s-zip").value.trim(), old = me.profile || {};
+  const found = zip ? await lookupZip(zip) : null;
+  if (found && !found.place) { toast("We couldn't find that ZIP code. Check the numbers."); return; }
+  const home = found || (zip && zip === old.zip ? old : {});
   const careers = picks.map((x) => keyOfLabel(x.label)).filter(Boolean);
   me.profile = {
     name: $("s-name").value.trim(),
@@ -298,7 +312,7 @@ $("setupForm").addEventListener("submit", (ev) => {
     floor: parseFloat($("s-floor").value) || 0,
     remote: $("s-remote").checked,
     local: $("s-local").checked,
-    zip: $("s-zip").value.trim(), city: $("s-city").value, maxMi: parseFloat($("s-miles").value) || 20, goal: parseInt($("s-goal").value) || 5,
+    zip, place: home.place || "", lat: home.lat ?? null, lon: home.lon ?? null, city: home.city || "", maxMi: parseFloat($("s-miles").value) || 20, goal: parseInt($("s-goal").value) || 5,
     skills: [...document.querySelectorAll("#s-skills input:checked")].map((i) => i.value),
     resume: $("s-resume").value.trim(),
   };
@@ -342,10 +356,10 @@ function renderJobs() {
   list = me.ui.filter === "Skipped" ? list.filter((j) => me.skipped[j.id]) : list.filter((j) => !me.skipped[j.id]);
   if (!$("showBelow").checked) list = list.filter((j) => !j.hourly || j.hourly >= floor);
   if (me.ui.filter === "Remote") list = list.filter((j) => j.remote === "Remote");
-  const P = me.profile, home = P.city || "", maxMi = P.maxMi || 20;
-  if (me.ui.filter === "Local") list = list.filter((j) => j.remote !== "Remote" && inArea(home, maxMi, j.location));
-  if (me.ui.filter === "Near me") list = list.filter((j) => inArea(home, maxMi, `${j.location} ${j.remote}`));
-  $("localSources").innerHTML = localSources(P.zip || "", (home || "").replace(/\b\w/g, (m) => m.toUpperCase())).map((x) => `<div><a href="${esc(x.url)}" target="_blank" rel="noopener"><b>${esc(x.name)}</b></a> ${chip(x.who === "auto" ? "Radar can check this" : "You check this", x.who === "auto" ? "good" : "plain")}<div class="small">${esc(x.why)}</div></div>`).join("");
+  const P = me.profile, home = homePoint(P), maxMi = P.maxMi || 20;
+  if (me.ui.filter === "Local") list = list.filter((j) => j.remote !== "Remote" && inArea(home, maxMi, j.location, j));
+  if (me.ui.filter === "Near me") list = list.filter((j) => inArea(home, maxMi, `${j.location} ${j.remote}`, j));
+  $("localSources").innerHTML = localSources(P.zip || "", placeOf(P)).map((x) => `<div><a href="${esc(x.url)}" target="_blank" rel="noopener"><b>${esc(x.name)}</b></a> ${chip(x.who === "auto" ? "Radar can check this" : "You check this", x.who === "auto" ? "good" : "plain")}<div class="small">${esc(x.why)}</div></div>`).join("");
   list.sort(me.ui.filter === "Newest" ? (a, b) => (b.posted || "").localeCompare(a.posted || "") : (a, b) => b.fit - a.fit || (b.hourly || 0) - (a.hourly || 0));
   if (!feed.jobs.length) { $("jobs").innerHTML = `<p class="empty">${feedError ? "Jobs will show up when you're back online." : feedLoaded ? "No jobs in the feed yet. The daily robot fills this in every morning." : "Loading jobs…"}</p>`; return; }
   let hint = "";
@@ -358,7 +372,7 @@ function renderJobs() {
       <div class="chips">${fitDots(j.fit)}${chip(careerOf(j.career).label, "plain")}</div>
       <h3 class="title">${esc(j.title)}</h3>
       <div class="meta">${esc(j.company)} · ${esc(j.location)}</div>
-      <div class="chips">${chip(j.pay || "Pay not listed", "plain")}${takeHomeChip(j.pay, j.hourly)}${commuteChip((me.profile || {}).city || "", (me.profile || {}).zip, `${j.location} ${j.remote}`)}${payChip(j.paycheck)}${j.hourly && j.hourly < floor ? chip("Below your floor", "bad") : ""}</div>
+      <div class="chips">${chip(j.pay || "Pay not listed", "plain")}${takeHomeChip(j.pay, j.hourly)}${commuteChip(homePoint(me.profile || {}), (me.profile || {}).zip, `${j.location} ${j.remote}`, j)}${payChip(j.paycheck)}${j.hourly && j.hourly < floor ? chip("Below your floor", "bad") : ""}</div>
       ${j.summary ? `<p class="why">${esc(j.summary)}</p>` : ""}
       ${aboutBlock(j)}${flagBlock(j)}
       ${j.skills && j.skills.length ? `<p class="small">Mentions: ${esc(j.skills.join(", "))}</p>` : ""}
@@ -382,7 +396,7 @@ function renderSaved() {
       <div class="chips">${chip(s.status, STATUS_CLS[s.status])}${listingChip(l)}${s.appliedOn ? chip("Applied " + nice(s.appliedOn), "plain") : ""}</div>
       <h3 class="title">${esc(j.title)}</h3>
       <div class="meta">${esc(j.company)}${j.location ? " · " + esc(j.location) : ""}${j.pay ? " · " + esc(j.pay) : ""}</div>
-      <div class="chips">${takeHomeChip(j.pay, j.hourly)}${commuteChip(me.profile.city || "", me.profile.zip, j.location)}</div>
+      <div class="chips">${takeHomeChip(j.pay, j.hourly)}${commuteChip(homePoint(me.profile), me.profile.zip, j.location, j)}</div>
       ${s.notes ? `<p class="why">${esc(s.notes)}</p>` : ""}
       <div class="actions">
         ${safeUrl(j.applyUrl) ? `<a class="btn" href="${esc(safeUrl(j.applyUrl))}" target="_blank" rel="noopener">Apply on site</a>` : ""}
@@ -425,8 +439,8 @@ function renderMe() {
 }
 
 /* ---------------------------------------------------------------- where jobs are: distance, commute and local sources ----------
-  ELI5: Radar knows roughly where South Florida cities are (a dot on a map for each). It measures the straight
-  line from your home city to the job's city, adds 30% for real roads, and guesses minutes (~28 mph locally, ~45 mph on longer highway trips).
+  ELI5: your ZIP code gives Radar a dot on the map, anywhere in the US. Each job gets a dot from the job feed, or from
+  a short list of city names. It measures the straight line between the dots, adds 20% for real roads, and guesses minutes (~28 mph locally, ~45 mph on longer highway trips).
   It's a rough guess; the "Directions" link opens Google Maps for the real drive or bus time. */
 const CITIES = { "aventura": [25.957, -80.139], "boca raton": [26.368, -80.128], "boynton beach": [26.525, -80.066], "coconut grove": [25.728, -80.243],
   "coral gables": [25.721, -80.268], "coral springs": [26.271, -80.271], "cutler bay": [25.578, -80.337], "davie": [26.076, -80.252], "delray beach": [26.461, -80.073],
@@ -440,32 +454,54 @@ const ZIP_CITY = { "33030": "homestead", "33031": "homestead", "33032": "princet
   "33039": "homestead", "33157": "palmetto bay", "33170": "homestead", "33176": "kendall", "33177": "richmond heights", "33183": "west kendall", "33186": "west kendall", "33187": "the hammocks",
   "33189": "cutler bay", "33190": "cutler bay", "33156": "pinecrest", "33143": "south miami", "33173": "west kendall", "33175": "tamiami", "33196": "the hammocks" };
 const cityKey = (s) => { const t = String(s || "").toLowerCase(); const z = (t.match(/\b(33\d{3})\b/) || [])[1]; if (z && ZIP_CITY[z]) return ZIP_CITY[z]; return Object.keys(CITIES).sort((a, b) => b.length - a.length).find((c) => t.includes(c)) || ""; };
+// ZIP code -> "Boise, ID" + map dot. Free, no key; only the ZIP is sent. null = couldn't check, {} = no such ZIP.
+const zipCache = {};
+async function lookupZip(zip) {
+  if (zipCache[zip]) return zipCache[zip];
+  try {
+    const res = await fetch("https://api.zippopotam.us/us/" + encodeURIComponent(zip), { signal: AbortSignal.timeout(6000) });
+    if (res.status === 404) return {};
+    if (!res.ok) return null;
+    const x = ((await res.json()).places || [])[0];
+    if (!x) return {};
+    return (zipCache[zip] = { place: `${x["place name"]}, ${x["state abbreviation"]}`, lat: +x.latitude, lon: +x.longitude });
+  } catch { return null; }
+}
+const homePoint = (p) => (p && p.lat != null ? [p.lat, p.lon] : (p && CITIES[p.city]) || null);
+const placeOf = (p) => (p && p.place) || ((p && p.city) || "").replace(/\b\w/g, (m) => m.toUpperCase());
+// Profiles saved before ZIP lookup: fill in the city and map dot the next time the app opens.
+async function upgradeHome() {
+  const p = me.profile;
+  if (!p || !p.zip || p.lat != null) return;
+  const r = await lookupZip(p.zip);
+  if (r && r.place) { Object.assign(p, r); persist(); render(); }
+}
 function miles(a, b) {
-  if (!CITIES[a] || !CITIES[b]) return null;
-  const [la1, lo1] = CITIES[a], [la2, lo2] = CITIES[b], r = Math.PI / 180;
+  if (!a || !b) return null;
+  const [la1, lo1] = a, [la2, lo2] = b, r = Math.PI / 180;
   const d = Math.sin((la2 - la1) * r / 2) ** 2 + Math.cos(la1 * r) * Math.cos(la2 * r) * Math.sin((lo2 - lo1) * r / 2) ** 2;
   return 3959 * 2 * Math.asin(Math.sqrt(d));
 }
-function commute(home, loc) {
+function commute(home, loc, job) {
   if (/remote/i.test(loc || "")) return { remote: true };
-  const c = cityKey(loc); if (!c) return null;
-  const m = miles(home, c); if (m == null) return null;
+  const c = cityKey(loc), to = job && job.lat != null ? [job.lat, job.lon] : CITIES[c];
+  const m = miles(home, to); if (m == null) return null;
   const road = m * 1.2;                                                   // roads are ~20% longer than a straight line
   return { city: c, miles: Math.round(road), minutes: Math.max(5, Math.round(road / (road > 15 ? 45 : 28) * 60 + 5)) };   // highways faster than local roads
 }
 const mapsLink = (homeZip, loc) => `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(homeZip || "")}&destination=${encodeURIComponent(loc || "")}&travelmode=driving`;
-function commuteChip(home, homeZip, loc) {
-  const c = commute(home, loc);
+function commuteChip(home, homeZip, loc, job) {
+  const c = commute(home, loc, job);
   if (!c) return "";
   if (c.remote) return `<span class="chip good">No commute</span>`;
   return `<span class="chip ${c.minutes > 45 ? "warn" : "plain"}" title="Rough estimate. Tap Directions for the real time.">~${c.minutes} min drive (${c.miles} mi)</span>`;
 }
 function nearestLocal(home, jobs, locOf) {             // closest in-person job, for the "nothing near you" message
-  return jobs.map((j) => ({ j, c: commute(home, locOf(j)) })).filter((x) => x.c && !x.c.remote).sort((a, b) => a.c.miles - b.c.miles)[0];
+  return jobs.map((j) => ({ j, c: commute(home, locOf(j), j) })).filter((x) => x.c && !x.c.remote).sort((a, b) => a.c.miles - b.c.miles)[0];
 }
-function inArea(home, maxMi, loc) {
+function inArea(home, maxMi, loc, job) {
   if (/remote/i.test(loc || "")) return true;
-  const c = commute(home, loc);
+  const c = commute(home, loc, job);
   return c ? c.miles <= maxMi : false;
 }
 // Places worth checking for local jobs. "auto" = the morning run searches it; "you" = open it yourself
@@ -489,8 +525,10 @@ function searchNow(filter, sitesOnly) {
   };
   const why = filter === "Skipped" ? "You haven't skipped anything." : feedError ? "You're offline, so Radar's list can't load." :
     "Radar's list doesn't have a match right now. New jobs arrive every morning.";
-  const tip = filter === "Skipped" || feedError ? "" : !P.local && !P.zip ? " Tip: turn on local jobs in Me → Edit what I'm looking for."
-    : P.local && !feedCovers(P) ? " Local jobs only cover South Florida for now, so remote jobs may show more." : P.remote === false ? " Tip: turn on remote jobs in Me → Edit what I'm looking for." : "";
+  const noLocal = P.local && !myJobs().some((j) => j.remote !== "Remote");
+  const tip = filter === "Skipped" || feedError ? "" : !P.local ? " Tip: turn on local jobs in Me → Edit what I'm looking for."
+    : P.remote === false ? " Tip: turn on remote jobs in Me → Edit what I'm looking for."
+    : noLocal ? ` Radar doesn't have in-person jobs near ${esc(placeOf(P) || "you")} yet.` : "";
   const sites = `<details class="fold"><summary>Search other job sites</summary>
     <p class="small">These open outside Radar${remoteOnly ? " (remote)" : zip ? ` near ${esc(zip)}` : ""}. Found one you like? Go to <b>Saved → + Add any job</b> and Radar makes your resume for it.</p>
     ${kinds.map((k) => `<p class="small"><b>${esc(k.label)}</b></p><div class="actions">${links(k)}</div>`).join("")}</details>`;
@@ -513,7 +551,7 @@ function localSources(zip, cityName) {
 
 /* ---------------------------------------------------------------- take-home pay (same 2026 numbers as Paycheck Planner: IRS Rev. Proc. 2025-32) ----------
   ELI5: "$17/hr" isn't what lands in your bank. This takes out federal income tax and Social Security/Medicare
-  (7.65%) for a single filer working 40 hrs/week, every-2-weeks paydays. Florida has no state income tax. Estimate only. */
+  (7.65%) for a single filer working 40 hrs/week, every-2-weeks paydays. State income tax is not included. Estimate only. */
 const TAX = { std: 16100, fica: 0.0765, floors: [0, 12400, 50400, 105700, 201775, 256225, 640600], rates: [0.10, 0.12, 0.22, 0.24, 0.32, 0.35, 0.37] };
 function hourlyOf(pay, hourly) {
   if (+hourly > 0) return +hourly;
@@ -531,7 +569,7 @@ function takeHome(hourly) {
   const net = year - fed - year * TAX.fica;
   return { perCheck: Math.round(net / 26), perMonth: Math.round(net / 12), perYear: Math.round(net) };
 }
-const takeHomeChip = (pay, hourly) => { const t = takeHome(hourlyOf(pay, hourly)); return t ? `<span class="chip plain" title="Estimate: single filer, 40 hrs/week, Florida (no state tax)">≈ $${t.perCheck.toLocaleString()} take-home / 2 weeks</span>` : ""; };
+const takeHomeChip = (pay, hourly) => { const t = takeHome(hourlyOf(pay, hourly)); return t ? `<span class="chip plain" title="Estimate: single filer, 40 hrs/week, federal tax and FICA only. State tax not included.">≈ $${t.perCheck.toLocaleString()} take-home / 2 weeks</span>` : ""; };
 
 /* ---------------------------------------------------------------- AI prompts (free: you paste them into Claude) */
 function tailorPrompt(s) {
@@ -772,7 +810,7 @@ function mergeIn(d) {
   const evHave = new Set(me.events.map((e) => `${e.name}|${e.date}`));
   (d.events || []).forEach((e) => { if (!evHave.has(`${e.name}|${e.date}`)) { me.events.push(e); evs++; } });
   if (d.facts && !me.facts.trim()) me.facts = d.facts;
-  if (d.profile && me.profile) ["zip", "city", "maxMi", "goal", "floor"].forEach((k) => { if (!me.profile[k] && d.profile[k]) me.profile[k] = d.profile[k]; });
+  if (d.profile && me.profile) ["zip", "place", "lat", "lon", "city", "maxMi", "goal", "floor"].forEach((k) => { if (!me.profile[k] && d.profile[k]) me.profile[k] = d.profile[k]; });
   return `Added ${jobs} saved job${jobs === 1 ? "" : "s"} and ${evs} event${evs === 1 ? "" : "s"}. Nothing you already had was changed.`;
 }
 $("resetBtn").onclick = () => { $("resetConfirm").hidden = false; };
@@ -789,4 +827,5 @@ document.addEventListener("visibilitychange", () => { if (document.visibilitySta
 
 /* ---------------------------------------------------------------- start */
 setTab(me.profile ? me.ui.tab || "today" : "setup");
+upgradeHome();
 loadFeed();

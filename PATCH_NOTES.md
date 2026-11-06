@@ -1,5 +1,19 @@
 # Patch notes
 
+## v0.9.2 (2026-11-06): works from any US ZIP code
+
+### Features
+- **ZIP code replaces Home ZIP + Home city.** Type a ZIP code anywhere in the US and Radar finds your city. The South Florida city list is gone from Setup.
+- **Distance and drive times work anywhere** when a job has a map location. Adzuna jobs include one when available.
+
+### Buffs
+- In-person jobs show if they're within about 100 road miles of home, wherever home is. This replaces the South Florida ZIP check.
+- Setup won't save with both Remote and Local unticked, since that shows no jobs.
+- Pay that Adzuna estimated says "(estimate)".
+- Take-home pay no longer says Florida: it covers federal tax and FICA, and says state tax isn't included.
+- Event form examples are no longer South Florida names.
+- Old profiles get their city and map dot the next time the app opens.
+
 ## v0.9.1 (2026-11-06): more jobs inside Radar
 
 ### Features

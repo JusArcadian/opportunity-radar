@@ -347,3 +347,13 @@ re.search(r"(?<![a-z])" + re.escape(w.strip()) + r"(?![a-z])", t)
 **Waiting between calls.** `time.sleep(2.6)` makes the robot pause so it stays under the per-minute limit.
 
 **Before selling Radar.** Adzuna's free key is for trying out the API. Anything that earns money or generates leads needs a license.
+
+## Chapter 26: From one region to the whole US (v0.9.2)
+
+**The old way:** a hand-made list of South Florida cities. If your city wasn't on it, Radar couldn't help.
+
+**The new way:** `lookupZip()` asks a free service about your ZIP code and gets back your city and a map dot (latitude and longitude). The app saves those on your phone.
+
+**The lesson:** hard-coded lists only work for the people you thought of. Looking data up works for everyone. Search your code for your own city or state name to find these spots.
+
+**What's still regional:** the daily robot only searches a few cities, so in-person jobs don't reach everyone yet. Fixing that needs live searches by ZIP code.

@@ -28,7 +28,7 @@
   <!-- First-time setup -->
   <section id="v-setup" hidden>
     <h1>Set up Radar</h1>
-    <p class="lede">Tell Radar what you're looking for. You can change this any time on the Me tab. Everything stays on this phone.</p>
+    <p class="lede">Tell Radar what you're looking for. You can change this any time on the Me tab. Your info stays on this phone.</p>
     <form id="setupForm" novalidate>
       <label>Your first name<input id="s-name" type="text" autocomplete="given-name" placeholder="Your first name"></label>
       <label>Start with your resume (optional). Radar reads your jobs and skills from it, so you type less<textarea id="s-resume" rows="5" placeholder="Paste your resume text…"></textarea></label>
@@ -40,8 +40,8 @@
       <fieldset><legend>Where</legend>
         <label class="check"><input id="s-remote" type="checkbox" checked> Remote jobs (anywhere in the US)</label>
         <label class="check"><input id="s-local" type="checkbox" checked> Local jobs near me (when available)</label>
-        <label>Home ZIP<input id="s-zip" type="text" inputmode="numeric" maxlength="5" placeholder="e.g. 33101"></label>
-        <label>Home city (distance and drive times work in South Florida for now)<select id="s-city"></select></label>
+        <label>ZIP code<input id="s-zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="5-digit ZIP code"></label>
+        <p class="small" id="s-place" role="status"></p>
         <label>How far will you travel? (miles)<input id="s-miles" type="number" inputmode="numeric" min="1" max="100" value="20"></label>
         <label>Weekly apply goal<input id="s-goal" type="number" inputmode="numeric" min="1" max="50" value="5"></label>
       </fieldset>
@@ -118,7 +118,7 @@
         <label>Event<input id="ev-name" type="text" placeholder="Career fair, hiring event, meetup…"></label>
         <label>Date<input id="ev-date" type="date"></label>
         <label>Time<input id="ev-time" type="time"></label>
-        <label>Group or company<input id="ev-group" type="text" placeholder="Publix, Miami Dade College, HackMiami…"></label>
+        <label>Group or company<input id="ev-group" type="text" placeholder="A local college, a store, a meetup group…"></label>
         <label>Where<input id="ev-where" type="text" placeholder="Address or Online"></label>
         <label>Cost<input id="ev-cost" type="text" placeholder="Free"></label>
         <label>Link (optional)<input id="ev-link" type="url" inputmode="url" placeholder="https://…"></label>
@@ -181,7 +181,7 @@ SUMMARY: (optional) 1–2 sentences about you, in your words</pre></details>
       <div class="card"><h3 class="title">About Radar and your privacy</h3>
         <p class="why">Radar is free. It finds job postings, helps you track what you applied to, and builds resumes from facts you give it.</p>
         <ul class="small">
-          <li>No account. Everything you type stays on this phone.</li>
+          <li>No account. What you type stays on this phone. The one exception: your ZIP code is sent to Zippopotam.us to find your city.</li>
           <li>Your resume is read on this phone and is never uploaded.</li>
           <li>Radar never applies for you and never messages anyone.</li>
           <li>Jobs come from public job sites. Radar isn't part of any of them, and can't promise a posting is real, so check the red flags.</li>
@@ -190,7 +190,7 @@ SUMMARY: (optional) 1–2 sentences about you, in your words</pre></details>
       <div class="card"><h3 class="title">Start over</h3><p class="why">Deletes everything Radar saved on this phone.</p>
         <div class="actions"><button class="btn danger" type="button" id="resetBtn">Delete my Radar data</button></div>
         <div class="actions" id="resetConfirm" hidden><span class="small">Are you sure? This can't be undone.</span><button class="btn danger" type="button" id="resetYes">Yes, delete</button><button class="btn quiet" type="button" id="resetNo">Keep it</button></div></div>
-      <p class="small">Opportunity Radar v0.9.1</p>
+      <p class="small">Opportunity Radar v0.9.2</p>
     </div>
   </section>
 </main>
