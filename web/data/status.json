@@ -101,7 +101,7 @@
  },
  "him:job-duck/jobs/v102-receptionist-bilingual-legal-receptionist": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:aviso-edge-inc/jobs/technical-support-agent-bilingual-job-id-mcgra1116": {
   "status": "Open",
@@ -333,19 +333,19 @@
  },
  "him:metasys/jobs/security-engineer-internship": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:pmat-inc/jobs/pmat-internship-opportunities-4089840717": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:doyensec/jobs/application-security-internship-remote-us-based": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:vets2pm/jobs/dod-skillbridge-rapidascent-cybersecurity-job-readiness-training": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:lumen-technologies/jobs/cybersecurity-risk-digital-trust-summer-2027-internship-pathway": {
   "status": "Open",
@@ -353,10 +353,10 @@
  },
  "him:centurylink/jobs/cybersecurity-risk-digital-trust-summer-2027-internship-pathway-remote-us": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:wikimedia-foundation/jobs/software-engineering-internship-program-2027": {
-  "status": "Open",
+  "status": "Closed",
   "lastSeen": "2026-11-22"
  },
  "him:kimballelectronics/jobs/cybersecurity-intern": {
@@ -381,15 +381,15 @@
  },
  "him:aptiv/jobs/linux-software-development-intern": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:clouddfn/jobs/cyber-threat-intelligence-research-intern": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:applied-systems/jobs/junior-data-analyst-entry-level": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:enlyte-group-llc/jobs/junior-data-scientist": {
   "status": "Closed",
@@ -417,7 +417,7 @@
  },
  "him:info-resume-edge/jobs/full-stack-software-engineer-new-graduates-united-states-3547250624": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:edgeq-technologies-private-limited/jobs/junior-data-engineer": {
   "status": "Closed",
@@ -441,7 +441,7 @@
  },
  "him:mixrank/jobs/junior-software-engineer-remote-global-full-time": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:metasys/jobs/devsecops-engineer-internship": {
   "status": "Open",
@@ -473,15 +473,15 @@
  },
  "him:liberty-university/jobs/quality-analyst-engineer-apprentice-5518770604": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:mimidentalclinic/jobs/junior-software-engineer": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:caci-international-inc/jobs/software-test-engineer-intern-spring-2027": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:liberty-university/jobs/quality-analyst-engineer-i": {
   "status": "Closed",
@@ -489,19 +489,19 @@
  },
  "him:veeva-systems/jobs/associate-qa-engineer": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:lifelancer/jobs/associate-qa-engineer": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:constructivedialogue/jobs/software-engineer-early-career": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:emetlab/jobs/junior-software-engineer": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:jobs-for-humanity/jobs/systems-engineer-new-college-grad-2026-latam": {
   "status": "Removed",
@@ -509,7 +509,7 @@
  },
  "him:supersourcing/jobs/junior-rpa-developer": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:caretria/jobs/jr-software-engineer-2026-8079": {
   "status": "Closed",
@@ -517,7 +517,7 @@
  },
  "him:ifit/jobs/junior-ai-engineer": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:micro1/jobs/software-engineer-new-grad-1608881568": {
   "status": "Open",
@@ -525,7 +525,7 @@
  },
  "him:lockheed-martin-corporation/jobs/engineering-aide-n1": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:careerswift/jobs/junior-software-developer-1334449295": {
   "status": "Closed",
@@ -533,15 +533,15 @@
  },
  "him:ngo-consulting-partners/jobs/junior-software-engineer-qa-automation": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:rivet-tax/jobs/full-stack-engineering-intern": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:holiday-world/jobs/data-engineer-unpaid": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:affirm/jobs/software-engineer-i-fullstack-search-731138032": {
   "status": "Open",
@@ -549,10 +549,10 @@
  },
  "him:focuskpi/jobs/internal-ai-engineer-trainee": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:talent-journey/jobs/junior-backend-developer-future-position": {
-  "status": "Open",
+  "status": "Closed",
   "lastSeen": "2026-11-22"
  },
  "him:vorkis-knows-what-employer-wants/jobs/software-engineer-part-time-full-time-4767629016": {
@@ -565,11 +565,11 @@
  },
  "him:connection/jobs/associate-ai-solutions-engineer": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:wanderlog/jobs/full-stack-software-engineer-new-graduates-united-states-974988927": {
-  "status": "Closed",
-  "lastSeen": "2026-11-21"
+  "status": "Open",
+  "lastSeen": "2026-11-23"
  },
  "him:binance/jobs/binance-accelerator-program-applied-ai-application-engineer-4805818739": {
   "status": "Closed",
@@ -577,7 +577,7 @@
  },
  "him:yd-talent-solutions/jobs/remote-full-stack-software-engineer": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:computer-world-services-corp/jobs/tier-1-2-service-desk-analyst-journeyman": {
   "status": "Open",
@@ -589,7 +589,7 @@
  },
  "him:transaction-network-services/jobs/noc-support-engineer": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:decisionpoint-corporation/jobs/tier-1-2-service-desk-analyst-journeyman": {
   "status": "Open",
@@ -617,7 +617,7 @@
  },
  "him:vc3/jobs/part-time-noc-analyst-i-weekends-evenings-overnight": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:cit-net/jobs/it-support-engineer-level-2-5384026732": {
   "status": "Closed",
@@ -633,19 +633,19 @@
  },
  "him:global-channel-management-inc/jobs/cpe-network-trouble-shooter": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:military-veterans-and-diverse-job-seekers/jobs/noc-technician-100-remote": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:mibura-inc/jobs/noc-triage-technician": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:mibura-inc/jobs/network-support-engineer": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:vc3/jobs/noc-analyst-ii-weekends-fri-mon": {
   "status": "Closed",
@@ -665,15 +665,15 @@
  },
  "him:net-at-work-llc/jobs/associate-systems-engineer": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:support-tech-llc/jobs/inside-sales-professional": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:koniag-government-services/jobs/help-desk-tier-i-support-specialist": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:general-dynamics-mission-systems/jobs/advanced-customer-support-technician-2nd-shift": {
   "status": "Closed",
@@ -681,7 +681,7 @@
  },
  "him:canonical/jobs/cloud-support-engineer": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:myriad360/jobs/security-strategic-alliance-associate": {
   "status": "Open",
@@ -693,11 +693,11 @@
  },
  "him:the-ce-shop/jobs/business-intelligence-analyst": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:canonical/jobs/associate-linux-support-engineer": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:topdog-law-llc/jobs/jr-it-helpdesk-specialist-pacific-standard-time": {
   "status": "Closed",
@@ -713,7 +713,7 @@
  },
  "him:upwind-security/jobs/technical-support-specialist": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:goingclear-interactive/jobs/it-specialist": {
   "status": "Open",
@@ -1001,7 +1001,7 @@
  },
  "him:pavago/jobs/technical-support-specialist-8328599365": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:openlane/jobs/account-coordinator-contact-center-9am-6pm-est": {
   "status": "Open",
@@ -1157,7 +1157,7 @@
  },
  "him:wavelength-network/jobs/junior-ai-specialist-claude": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:kodiak-solutions/jobs/product-support-analyst": {
   "status": "Closed",
@@ -1213,7 +1213,7 @@
  },
  "him:go-lean-health/jobs/bilingual-virtual-assistant-english-spanish-receptionist-3635601621": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:parsons-corporation/jobs/pc-associate-part-time": {
   "status": "Open",
@@ -1225,7 +1225,7 @@
  },
  "him:go-lean-health/jobs/patient-care-communications-specialist-4877084418": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:jobs-for-humanity/jobs/data-entry-specialist": {
   "status": "Open",
@@ -1485,7 +1485,7 @@
  },
  "him:wing-assistant/jobs/customer-service-representative-us": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:pavago/jobs/customer-service-representative-658744950": {
   "status": "Open",
@@ -1645,7 +1645,7 @@
  },
  "him:online-river/jobs/remote-data-entry-assistant": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:the-boutique-coo/jobs/virtual-assistant-medical-billing-experience": {
   "status": "Open",
@@ -1657,7 +1657,7 @@
  },
  "him:resolv-global/jobs/remote-patient-scheduling-specialist-7175778487": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:job-duck/jobs/v104-client-experience-representative-ii": {
   "status": "Closed",
@@ -1821,7 +1821,7 @@
  },
  "rem:1185979": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "rem:2091166": {
   "status": "Open",
@@ -1829,11 +1829,11 @@
  },
  "rem:1749306": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "rem:2091165": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "rem:2091161": {
   "status": "Open",
@@ -1845,7 +1845,7 @@
  },
  "rem:2086540": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "jcy:159343": {
   "status": "Open",
@@ -2025,7 +2025,7 @@
  },
  "him:applied-systems/jobs/associate-salesforce-administrator": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:brightfin/jobs/junior-client-onboarding-support-specialist-restricted-accounts": {
   "status": "Closed",
@@ -2188,7 +2188,7 @@
   "lastSeen": "2026-11-08"
  },
  "him:highmark-health/jobs/summer-2027-vulnerability-management-analyst-undergraduate-intern": {
-  "status": "Open",
+  "status": "Closed",
   "lastSeen": "2026-11-22"
  },
  "him:yo-ai-labs/jobs/intelligence-operations-collection-expert-remote": {
@@ -2197,7 +2197,7 @@
  },
  "him:highmark-health/jobs/summer-2027-responsible-ai-undergraduate-intern": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:motorola-solutions/jobs/software-engineer-cybersecurity-services-2027-summer-internship": {
   "status": "Closed",
@@ -2309,7 +2309,7 @@
  },
  "him:job-duck/jobs/v104-criminal-law-intake-specialist": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:medical-solutions/jobs/corporate-payroll-specialist": {
   "status": "Closed",
@@ -2373,7 +2373,7 @@
  },
  "rem:2091168": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "muse:18981676": {
   "status": "Open",
@@ -2621,11 +2621,11 @@
  },
  "him:coalfire/jobs/rochester-institute-of-technology-division-hex-pen-testing-2027-summer-inter": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:cyber-centaurs/jobs/digital-forensics-incident-response-intern": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:data-squared/jobs/junior-ci-cd-engineer": {
   "status": "Open",
@@ -2689,7 +2689,7 @@
  },
  "him:silver-cross-hospital/jobs/patient-services-representative-ii-call-center-remote": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:spartan-investment-group/jobs/inside-sales-representative": {
   "status": "Open",
@@ -2969,7 +2969,7 @@
  },
  "him:leidos/jobs/ai-automation-development-intern-assessment-authorization": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:leidos/jobs/amazon-connect-developer-jr": {
   "status": "Closed",
@@ -2977,7 +2977,7 @@
  },
  "him:pulsara/jobs/junior-software-engineer-mobile": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:penn-foster/jobs/financial-services-representative": {
   "status": "Open",
@@ -3213,7 +3213,7 @@
  },
  "him:convergint-federal-solutions/jobs/banking-specialist-1": {
   "status": "Open",
-  "lastSeen": "2026-11-20"
+  "lastSeen": "2026-11-23"
  },
  "him:western-growers-assurance-trust/jobs/customer-service-representative-i": {
   "status": "Open",
@@ -3361,7 +3361,7 @@
  },
  "him:connection/jobs/microsoft-solutions-associate": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:carlehealth/jobs/it-business-sys-analyst-beacon-onco": {
   "status": "Open",
@@ -3497,7 +3497,7 @@
  },
  "him:aprio/jobs/internship-information-assurance-services": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:opendor-media/jobs/jr-data-analyst-temporary-mat-leave-coverage": {
   "status": "Open",
@@ -3649,7 +3649,7 @@
  },
  "him:campusworks-inc/jobs/help-desk-technicians-english-and-bilingual-spanish": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:zmod-try-z-modular-services-llc/jobs/analytics-engineer": {
   "status": "Open",
@@ -3673,7 +3673,7 @@
  },
  "him:nexustek/jobs/service-desk-engineer": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:medsien/jobs/central-support-specialist": {
   "status": "Open",
@@ -3861,7 +3861,7 @@
  },
  "him:lockheed-martin-corporation/jobs/junior-automation-openshift-engineer": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:bakertilly/jobs/associate-data-engineer": {
   "status": "Open",
@@ -3873,7 +3873,7 @@
  },
  "him:california-iso/jobs/energy-data-acquisition-specialist-hybrid-or-remote-3889619643": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:mercy/jobs/patient-access-representative": {
   "status": "Closed",
@@ -3921,7 +3921,7 @@
  },
  "him:go-lean-health/jobs/ophthalmology-inbound-calls-appointment-scheduling-1918093973": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:marketsource/jobs/sales-associate-172155123": {
   "status": "Open",
@@ -3933,7 +3933,7 @@
  },
  "rem:2091171": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "jcy:161518": {
   "status": "Open",
@@ -3964,7 +3964,7 @@
   "lastSeen": "2026-11-14"
  },
  "him:job-duck/jobs/v101-virtual-assistant-documentation-coordinator": {
-  "status": "Open",
+  "status": "Closed",
   "lastSeen": "2026-11-13"
  },
  "him:the-suddath-companies/jobs/sgs-administrative-assistant": {
@@ -3972,7 +3972,7 @@
   "lastSeen": "2026-11-13"
  },
  "him:sirva/jobs/executive-assistant-virtual-us": {
-  "status": "Open",
+  "status": "Closed",
   "lastSeen": "2026-11-13"
  },
  "him:wonder-works-construction/jobs/professional-data-entry-keyer": {
@@ -3989,10 +3989,10 @@
  },
  "him:helpsquad-llc/jobs/family-medicine-patient-support-hd": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:highmark-health/jobs/registry-abstraction-nurse-cardiac-stroke-ahn": {
-  "status": "Open",
+  "status": "Closed",
   "lastSeen": "2026-11-12"
  },
  "him:wanzek/jobs/proposal-specialist": {
@@ -4000,7 +4000,7 @@
   "lastSeen": "2026-11-13"
  },
  "him:umass-global/jobs/admission-service-representative": {
-  "status": "Open",
+  "status": "Closed",
   "lastSeen": "2026-11-13"
  },
  "him:truck-centers-inc/jobs/parts-counter-sales-representative": {
@@ -4028,11 +4028,11 @@
   "lastSeen": "2026-11-12"
  },
  "him:bristol-bay-native-corporation/jobs/project-accountant": {
-  "status": "Open",
+  "status": "Closed",
   "lastSeen": "2026-11-12"
  },
  "him:sutherland/jobs/healthcare-medicare-enrollment-specialist": {
-  "status": "Open",
+  "status": "Closed",
   "lastSeen": "2026-11-12"
  },
  "jcy:161614": {
@@ -4120,7 +4120,7 @@
   "lastSeen": "2026-11-12"
  },
  "him:nexustek/jobs/support-technician-sun-thurs-2pm-11pm-est": {
-  "status": "Open",
+  "status": "Closed",
   "lastSeen": "2026-11-14"
  },
  "him:piedmont-healthcare/jobs/epic-application-coord-radiant-cupid": {
@@ -4132,11 +4132,11 @@
   "lastSeen": "2026-11-14"
  },
  "him:thomas-scientific/jobs/bids-quotes-analyst": {
-  "status": "Open",
+  "status": "Closed",
   "lastSeen": "2026-11-13"
  },
  "him:cross-country-healthcare/jobs/recruiting-support-cce-therapy-candidate-engagement-specialist": {
-  "status": "Open",
+  "status": "Closed",
   "lastSeen": "2026-11-13"
  },
  "him:itc-defense/jobs/logistics-analyst-journeyman": {
@@ -4156,7 +4156,7 @@
   "lastSeen": "2026-11-13"
  },
  "him:sunrun/jobs/escalation-expert": {
-  "status": "Open",
+  "status": "Closed",
   "lastSeen": "2026-11-13"
  },
  "him:salesforce/jobs/ops-analyst-slack-policy-operations": {
@@ -4184,7 +4184,7 @@
   "lastSeen": "2026-11-14"
  },
  "him:jctm/jobs/applications-systems-analyst-programmer": {
-  "status": "Open",
+  "status": "Closed",
   "lastSeen": "2026-11-14"
  },
  "him:wipfli/jobs/payroll-compliance-specialist": {
@@ -4197,15 +4197,15 @@
  },
  "him:patientpoint/jobs/software-engineer-intern": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:navitus-health-solutions/jobs/specialist-ii-pharmacy-relations-9935462104": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:navitus-health-solutions/jobs/specialist-pharmacy-relations": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:heartbeat-health/jobs/patient-experience-coordinator-pacific-time": {
   "status": "Open",
@@ -4249,7 +4249,7 @@
  },
  "him:carenet-health/jobs/bilingual-medical-receptionist-remote-6232436500": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:fourlane/jobs/accounting-assistant": {
   "status": "Open",
@@ -4389,11 +4389,11 @@
  },
  "him:digacore/jobs/level-2-it-technician": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:blue-mantis/jobs/eux-associate-l1-engineer-remote-us-only": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:gainwell-technologies/jobs/contact-center-provider-services-remote-usa-any-city-ny-us-99999": {
   "status": "Open",
@@ -4433,7 +4433,7 @@
  },
  "him:tantalus-systems/jobs/advanced-application-support-specialist": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:danaher/jobs/field-applications-specialist-chicago-il": {
   "status": "Open",
@@ -4549,15 +4549,15 @@
  },
  "him:lightcast/jobs/economic-research-analyst-junior-data-scientist-1089": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:global-channel-management-inc/jobs/data-entry-claims-processor": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:third-way-health/jobs/patient-care-representative": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "jcy:162143": {
   "status": "Open",
@@ -4641,7 +4641,7 @@
  },
  "him:job-duck/jobs/v102-virtual-legal-receptionist": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:mercy/jobs/patient-access-representative-remote-693530037": {
   "status": "Open",
@@ -4853,15 +4853,15 @@
  },
  "him:aretum/jobs/junior-web-developer-engineer-contingent": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:micro1/jobs/junior-machine-learning-engineer": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:lyric-inc/jobs/software-engineering-internship": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:piedmont-healthcare/jobs/customer-service-patient-liability-rep-i-5496394444": {
   "status": "Open",
@@ -4913,7 +4913,7 @@
  },
  "rem:2091173": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "jcy:162469": {
   "status": "Open",
@@ -5169,19 +5169,19 @@
  },
  "him:clera/jobs/forward-deployed-engineer-5954537114": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:bask-health/jobs/junior-applied-ai-engineer": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:bask-health/jobs/junior-full-stack-engineer": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:adams-telephone-co-operative/jobs/tier-ii-technician": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:iqvia/jobs/bi-lingual-pharmacy-tech-support-call-center-rep-remote-work-from-home": {
   "status": "Open",
@@ -5405,11 +5405,11 @@
  },
  "him:certik/jobs/blockchain-security-expert-intern-ai-track": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:anavation/jobs/computer-science-internship-summer-2027-6225405403": {
   "status": "Open",
-  "lastSeen": "2026-11-20"
+  "lastSeen": "2026-11-23"
  },
  "him:jobstack-inc/jobs/inside-sales-medium-voltage-wire-cable": {
   "status": "Open",
@@ -5437,7 +5437,7 @@
  },
  "him:turf-casa/jobs/virtual-receptionist": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:turf-casa/jobs/receiving-documentation-assistant": {
   "status": "Open",
@@ -5537,11 +5537,11 @@
  },
  "him:convergint-federal-solutions/jobs/learning-systems-operations-specialist": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:unisys/jobs/tech-service-desk-l2": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:turf-casa/jobs/it-support-technician": {
   "status": "Open",
@@ -5725,11 +5725,11 @@
  },
  "him:crowdstrike/jobs/active-defense-services-analyst": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:my-amazon-guy/jobs/security-administrator-intern": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:compassx-group/jobs/security-analyst-cyber-risk-grc": {
   "status": "Open",
@@ -5745,15 +5745,15 @@
  },
  "him:bask-health/jobs/junior-revenue-operations-analyst": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:tomorrow-hire/jobs/junior-controls-engineer": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:zact/jobs/software-development-engineer-in-test-sdet-us-recent-grad": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:guidewell/jobs/bundled-payment-program-associate": {
   "status": "Open",
@@ -5837,7 +5837,7 @@
  },
  "him:hirehawk/jobs/patient-care-coordinator-usa": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:irhythm/jobs/commercial-operations-coordinator": {
   "status": "Open",
@@ -5965,11 +5965,11 @@
  },
  "him:home-matters-construction/jobs/help-desk-technician": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:encoreautoclave/jobs/help-desk-technician": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:bcd-travel/jobs/travel-automation-analyst-us-virtual-noam-4137983906": {
   "status": "Open",
@@ -5997,7 +5997,7 @@
  },
  "him:blue-mantis/jobs/it-eux-associate-l1-engineer-remote-us-only": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:aqueduct-technologies/jobs/infrastructure-engineer": {
   "status": "Open",
@@ -6009,11 +6009,11 @@
  },
  "him:geeks-uneek-inc/jobs/it-field-technician-remote-msp-technician": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:teleperformanceusa/jobs/remote-customer-service-representative-bilingual-canadian-french-english": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:culture-fits/jobs/project-support-engineer": {
   "status": "Open",
@@ -6101,23 +6101,23 @@
  },
  "him:the-squires-group/jobs/soc-analyst-tier-1": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:atos/jobs/security-engineer-remote-home-us-3298771769": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:shorepoint-inc/jobs/threat-hunter": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:yo-ai-labs/jobs/security-onion-specialist-remote-3853156819": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:crowdstrike/jobs/security-advisor-i-falcon-complete": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:control-risks/jobs/intelligence-analyst": {
   "status": "Open",
@@ -6145,7 +6145,7 @@
  },
  "him:caci-international-inc/jobs/cybersecurity-intern-summer-2027": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:lifelancer/jobs/information-technology-development-program-internship": {
   "status": "Open",
@@ -6153,27 +6153,27 @@
  },
  "him:leidos/jobs/network-migration-engineer-jr": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:vori-health/jobs/jr-devops-engineer-100-remote": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:customertimes/jobs/jr-226156-azure-ai-foundry-engineer": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:leidos/jobs/network-integration-engineer-junior": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:leidos/jobs/sd-wan-network-engineer-jr": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:smile-digital-health/jobs/associate-cloud-engineer": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:navitus-health-solutions/jobs/remote-clinic-administered-medication-coordinator": {
   "status": "Open",
@@ -6225,15 +6225,15 @@
  },
  "him:universal-hospital-services-inc/jobs/call-center-specialist": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:gitlab-com/jobs/executive-assistant-office-of-the-cto": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:iaal/jobs/ft-pt-customer-service-role-admin": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:nava/jobs/executive-assistant": {
   "status": "Open",
@@ -6329,23 +6329,23 @@
  },
  "him:allbridge/jobs/service-desk-engineer-ii-the-woodlands-tx-or-remote": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:the-edh-global/jobs/it-support-specialist-contractor": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:symplr/jobs/customer-support-specialist-2421581028": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:bridgepoint-works/jobs/technical-support-representative": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:bd/jobs/technical-support-specialist-3": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:engine/jobs/it-support-technician-av-workplace-technology": {
   "status": "Open",
@@ -6389,7 +6389,7 @@
  },
  "him:teleperformanceusa/jobs/remote-customer-engagement-specialist-8370471869": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:taxwell/jobs/customer-service-representative-oltp": {
   "status": "Open",
@@ -6449,7 +6449,7 @@
  },
  "him:micro1/jobs/airline-customer-service-specialist": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:health-services-of-north-texas/jobs/remote-client-support-specialist": {
   "status": "Open",
@@ -6509,19 +6509,19 @@
  },
  "him:highmark-health/jobs/summer-2027-network-cybersecurity-engineer-undergraduate-intern": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:bask-health/jobs/junior-implementation-engineer": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:copeland/jobs/field-service-specialist-ii-9149217223": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:atmosera/jobs/cloud-support-technician": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:globelifeinsurance/jobs/outbound-sales-specialist": {
   "status": "Open",
@@ -6533,7 +6533,7 @@
  },
  "him:nan-mckay-associates/jobs/inspections-admin-representative-3807241956": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:casella-waste-systems-inc/jobs/customer-care-representative": {
   "status": "Open",
@@ -6581,15 +6581,15 @@
  },
  "him:bridgepoint-works/jobs/data-entry-clerk": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:zumper/jobs/executive-assistant": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:health-services-of-north-texas/jobs/remote-human-resources-assistant": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:wirb-copernicus-group/jobs/project-specialist-scientific-review": {
   "status": "Open",
@@ -6609,7 +6609,7 @@
  },
  "him:included-health/jobs/referral-support-advocate-contract": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:respro-health/jobs/care-management-scheduler": {
   "status": "Open",
@@ -6649,31 +6649,31 @@
  },
  "him:chaos/jobs/sales-development-representative-us-remote-m-f-d": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:fisher-agencies-american-income/jobs/entry-level-management-1968362658": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:fisher-agencies-american-income/jobs/entry-level-growth-management-professional": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:leland/jobs/insurance-career-coach": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:american-income-life-insurance-company/jobs/entry-level-benefits-specialist-remote-flexible-schedule": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:leland/jobs/break-into-ai-careers-coach": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:atlys/jobs/growth-intern": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:american-income-life-insurance-company/jobs/entry-level-customer-service-remote-flexible-schedule": {
   "status": "Open",
@@ -6685,7 +6685,7 @@
  },
  "rem:2091177": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "jcy:163555": {
   "status": "Open",
@@ -6745,23 +6745,23 @@
  },
  "him:xperteez-technology/jobs/telecommunications-customer-support-specialist-remote-contract": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:agelessrx/jobs/customer-engagement-associate-phone-support": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:health-services-of-north-texas/jobs/remote-it-help-desk-service-desk-technician": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:bridgepoint-works/jobs/customer-service-representative": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:modivcare/jobs/device-support-specialist": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:vanderbilt-university-medical-center/jobs/clinical-epic-it-trainer-7207241884": {
   "status": "Open",
@@ -6769,11 +6769,11 @@
  },
  "him:simpligov/jobs/technical-support-specialist": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:invicta-software/jobs/desktop-support-specialist": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:university-of-california-irvine/jobs/clinical-applications-professional-3-hx-lis-it-applications-ancillary-ft": {
   "status": "Open",
@@ -6785,7 +6785,7 @@
  },
  "him:pearster/jobs/service-desk-analyst-french-english-remote-latam-or-europe-9316454677": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:piedmont-healthcare/jobs/epic-application-coord-inpatient-hod": {
   "status": "Open",
@@ -6793,11 +6793,11 @@
  },
  "him:parasol-alliance/jobs/systems-administrator": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:bridgepoint-works/jobs/it-technician": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:shiperp/jobs/it-support-specialist": {
   "status": "Open",
@@ -6805,7 +6805,7 @@
  },
  "him:directmeds/jobs/patient-success-advocate-remote-5327303361": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "jcy:163621": {
   "status": "Open",
@@ -6829,7 +6829,7 @@
  },
  "him:directmeds/jobs/account-resolution-agent-remote-5531348426": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:ehs-support-llc/jobs/wetland-scientist": {
   "status": "Open",
@@ -6869,7 +6869,7 @@
  },
  "him:assist-world/jobs/dispatch-support-specialist-us-facing": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:business-wire/jobs/client-service-representative": {
   "status": "Open",
@@ -6897,7 +6897,7 @@
  },
  "him:crowdstrike/jobs/analyst-i-falcon-complete": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:carringtonwholesale/jobs/analyst-cyber-risk-ii": {
   "status": "Open",
@@ -6913,7 +6913,7 @@
  },
  "him:bnsf-railway/jobs/bnsf-tech-summer-intern-2027-remote-us-remote-us-us-76131": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "jcy:151013": {
   "status": "Open",
@@ -6921,11 +6921,11 @@
  },
  "him:american-oncology-network/jobs/trainer-pharmacy-operations-transitions": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:miller-tanner-associates/jobs/proposals-specialist": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:hilton-grand-vacations/jobs/marketing-representative-pre-arrival-1740667802": {
   "status": "Open",
@@ -6937,11 +6937,11 @@
  },
  "him:smi/jobs/customer-service-representative-sdu1-2328576441": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:shriners-children-s/jobs/patient-access-representative": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:nuvant-consulting-group/jobs/client-account-representative-6016850652": {
   "status": "Open",
@@ -6953,7 +6953,7 @@
  },
  "him:inizio-health/jobs/remote-inbound-call-center-representative": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:alliant-insurance-services-inc/jobs/benefit-advocate-i-7359067925": {
   "status": "Open",
@@ -6985,27 +6985,27 @@
  },
  "him:gitlab-com/jobs/executive-assistant-product-and-marketing": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:qc-servion-llc/jobs/executive-assistant-9903317293": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:health-services-of-north-texas/jobs/remote-administrative-assistant": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:north-american-electric-reliability-corporation/jobs/standards-development-administrator": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:health-services-of-north-texas/jobs/remote-virtual-assistant": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:job-duck/jobs/v104-legal-intake-coordinator": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:gray-hawk-land-solutions/jobs/document-specialist": {
   "status": "Open",
@@ -7045,7 +7045,7 @@
  },
  "him:singerlewak/jobs/entry-level-tax-staff-international": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "jcy:163707": {
   "status": "Open",
@@ -7125,43 +7125,43 @@
  },
  "him:baxter-international-inc/jobs/technical-support-specialist-5882430449": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:makpar/jobs/help-desk-specialist": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:emergent-software/jobs/it-support-technician": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:decisionpoint-corporation/jobs/help-desk-specialist": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:pointclickcare/jobs/solutions-analyst-ehr-clinexus-customer-support-us": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:guidepoint-security-llc/jobs/sales-operations-specialist-northeast": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:global-data-consultants-llc/jobs/part-time-service-desk-analyst-weekends": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:university-mechanical-engineering-contractors-inc/jobs/lan-wan-analyst-dow-skillbridge": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:veracity-insurance/jobs/customer-service-representative-spanish-speaking-8692193500": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:teleperformanceusa/jobs/remote-bilingual-spanish-customer-service-and-sales-representative-remo": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "jcy:156337": {
   "status": "Open",
@@ -7169,11 +7169,11 @@
  },
  "him:t-mobile-usa-inc/jobs/solutions-engineer-wireless-4875894228": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:akamai-technologies/jobs/server-tech-services-engineer": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:cdw/jobs/solution-specialist-networking-2265949946": {
   "status": "Open",
@@ -7181,15 +7181,15 @@
  },
  "him:innergy/jobs/product-support-specialist": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:rippling/jobs/scaled-operations-escalations-specialist": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:keeper-security-inc/jobs/implementation-specialist": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:franklin-electric/jobs/technical-support-engineer": {
   "status": "Open",
@@ -7197,35 +7197,35 @@
  },
  "him:chirohd/jobs/onboarding-specialist": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:yo-ai-labs/jobs/airline-customer-service-specialist-remote": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:vertigis-gmbh/jobs/inside-sales-representative": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:riskonnect/jobs/renewals-specialist-saas-usa-remote": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:captivateiq/jobs/customer-success-associate-velocity": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:acd-connect/jobs/jr-quality-assurance-specialist": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:hopskipdrive/jobs/safety-alerts-specialist": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:staples/jobs/spp-special-order-account-representative": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:brown-brown-insurance/jobs/claims-adjuster": {
   "status": "Open",
@@ -7237,11 +7237,11 @@
  },
  "him:bswift/jobs/customer-service-representative": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:gainwell-technologies/jobs/call-center-representative-remote-us-any-city-ar-us-99999": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:xperteez-technology/jobs/retail-customer-support-specialist-remote-contract": {
   "status": "Open",
@@ -7249,15 +7249,15 @@
  },
  "him:biomarin-pharmaceutical-inc/jobs/patient-education-specialist": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:new-era-technology/jobs/physical-security-support-analyst": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:nmdp/jobs/product-analyst-member-experience": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:granum/jobs/customer-support-specialist-4535657493": {
   "status": "Open",
@@ -7269,35 +7269,35 @@
  },
  "him:bcm-one/jobs/security-analyst": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:stn-incorporated/jobs/data-center-soc-analyst-l1": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:stn-incorporated/jobs/data-center-soc-analyst-l2": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:abbvie/jobs/associate-security-analyst-ii-incident-response": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:caci-international-inc/jobs/experienced-background-investigator-westcoast-region": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:carrington/jobs/analyst-cyber-risk-ii": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:yo-ai-labs/jobs/emerging-technology-threat-strategic-competition-advisor-remote": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:csg/jobs/information-security-analyst-ii": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:yo-ai-labs/jobs/counterintelligence-technology-program-sme-ai-evaluation-contract-remot": {
   "status": "Open",
@@ -7305,67 +7305,67 @@
  },
  "him:arc-risk-and-compliance/jobs/junior-anti-money-laundering-aml-data-analyst": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:remotejobsone/jobs/junior-machine-learning-engineer-remote-worldwide": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:xperteez-technology/jobs/junior-machine-learning-engineer-remote-contract": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:clera/jobs/expert-talent-pool-agents-and-reinforcement-learning-associate-0-5-years-2870943149": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:chr/jobs/remote-bilingual-customer-service-agent-triage-center-7428": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:startek/jobs/remote-french-english-customer-service-representative": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:lowe-s/jobs/central-selling-specialist-flooring-mst-pst": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:conduent/jobs/benefits-call-center-representative": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:conduent/jobs/customer-service-representative": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:porch-group/jobs/inside-sales-representative-ahp-5482785985": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:casella-waste-systems-inc/jobs/digital-customer-care-representative": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:brightree/jobs/patient-success-representative": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:lincoln-investment/jobs/virtual-sales-assistant": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:acosta-group/jobs/field-sales-representative-wireless-internet": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:empower-com/jobs/brokerage-trading-associate": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:northern-arizona-healthcare/jobs/patient-scheduling-representative-remote-see-full-posting-for-eligible-states": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:cotiviti/jobs/provider-relations-representative-i": {
   "status": "Open",
@@ -7373,91 +7373,91 @@
  },
  "him:velera/jobs/spanish-bilingual-inbound-customer-service-representative-remote": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:job-duck/jobs/v104-intake-specialist-client-intake-scheduling-coordinator": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:nemours/jobs/clerk-ii-care-on-call-part-time": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:shopmonkey/jobs/customer-support-representative-u-s-based": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:yo-ai-labs/jobs/retail-customer-support-specialist-remote": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:capital-blue-cross/jobs/member-services-representative-part-time": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:salvo-health/jobs/medical-assistant-remote": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:job-duck/jobs/v105c-bilingual-family-law-legal-assistant": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:invicta-software/jobs/remote-receptionist": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:comagine-health/jobs/project-coordinator-i": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:qlarant/jobs/nurse-specialist-ii": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:together-for-girls/jobs/development-associate": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:magnit/jobs/worker-onboarding-specialist-contract": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:emc-insurance/jobs/premium-audit-associate-i": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:centene-corporation/jobs/authorization-specialist-ii-3662029629": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:arion-care/jobs/team-coordinator": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:alpine-physician-partners/jobs/data-entry-specialist-coding-support": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:global-christian-relief/jobs/temporary-donor-support": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:invicta-software/jobs/accounts-payable-assistant-entry-level": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:wirb-copernicus-group/jobs/irb-operations-specialist-1": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:hashgraph/jobs/sales-development-representative-est-based-2142070096": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:clera/jobs/sales-intern-italian-speaking": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "him:clera/jobs/sales-development-associate-2441852164": {
   "status": "Open",
@@ -7465,7 +7465,7 @@
  },
  "him:cor-financial-partners/jobs/entry-level-financial-advisor-training-provided": {
   "status": "Open",
-  "lastSeen": "2026-11-22"
+  "lastSeen": "2026-11-23"
  },
  "jcy:163772": {
   "status": "Open",
@@ -7534,5 +7534,245 @@
  "jcy:146688": {
   "status": "Open",
   "lastSeen": "2026-11-22"
+ },
+ "him:itmiracle/jobs/data-engineer": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:emissary-ai/jobs/it-desktop": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:vetsez/jobs/ehrm-ops-support-analyst-remote-opportunity": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:health-choice-network/jobs/mipacs-admin-identity-security-analyst": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:leidos/jobs/junior-test-automation-engineer": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:roche/jobs/technical-support-specialist-2-fixed-term-24-months": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:yo-ai-labs/jobs/retail-customer-support-specialist-remote-549114128": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:reactive-markets/jobs/operations-engineer": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:safelyyou/jobs/clinical-consultant-2010714844": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:sedgwick/jobs/remote-customer-service-specialist": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:avantor/jobs/remote-customer-service-representative": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:humana/jobs/sales-support-professional": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:liveaboard-com-bv/jobs/customer-support-executive-emea-remote": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:irhythm/jobs/customer-care-advocate-2nd-shift": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:xperteez-technology/jobs/customer-experience-cx-specialist-remote-contract": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:micro1/jobs/talent-support-specialist": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:channel-fusion/jobs/bilingual-french-english-client-program-specialist": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:staples-canada/jobs/spp-special-order-account-representative": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:stearns-bank-n-a/jobs/product-systems-analyst": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:icf/jobs/salesforce-business-analyst-2059779679": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:sedgwick/jobs/tvm-specialist": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:rockwell-automation/jobs/consulting-analyst-intern-lcs": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:156647": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:164020": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:164019": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:redtech-recruitment-ltd/jobs/cybersecurity-operations-engineer-graduate-considered-2660299936": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:164021": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:henryscheins/jobs/inside-sales-representative-exports-english-spanish-required": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:boston-medical-center/jobs/hotline-operator-general-internal-medicine-research-safespot-per-diem-9237588952": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:job-duck/jobs/v104-intake-and-scheduling-specialist": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:davita-kidney-care/jobs/administrative-assistant": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:web-tpa-inc/jobs/claims-examiner-i-3722565114": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:abc-legal-services/jobs/data-entry-specialist-remote-2156885579": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:clera/jobs/sales-development-associate-4520581748": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:the-semler-agency/jobs/entry-level-remote-sales-no-experience-required": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:syd-life-ai/jobs/ai-research-engineer": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "him:the-semler-agency/jobs/entry-level-remote-life-insurance-sales": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:164022": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:163997": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:163996": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:163984": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:163979": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:163972": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:156682": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:156586": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:156590": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:156594": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:156583": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:156582": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:156581": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:156579": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:156600": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:151141": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:155006": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:153833": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:151300": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:151292": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:153807": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:153793": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
+ },
+ "jcy:153788": {
+  "status": "Open",
+  "lastSeen": "2026-11-23"
  }
 }
